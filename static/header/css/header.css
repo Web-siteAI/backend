@@ -1,0 +1,174 @@
+#nav{
+    float:left;
+    width:100%;
+    list-style:none;
+    font-weight: 600;
+    margin-bottom:10px;
+    margin: -8px -8px -8px -8px;
+    padding-top: 10px;
+}
+.menu__links{
+    display: flex;
+  align-items: center;
+  justify-content: center
+}
+#nav li{
+    float:left;
+    margin-right:10px;
+    position:relative;
+    display:block;
+
+}
+#nav li a{
+    display:block;
+    padding:7px;
+    color: #262656;
+    background:#FFFFFF;
+    text-decoration:none;
+    border-radius:2px;
+    font-size: 120%;
+}
+#nav li a:hover{
+    color: #c36891;
+    background-color: #F384AA;
+    
+    text-decoration: none;
+}
+
+/*----------------------*/
+#nav ul{
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity:0; /* Устанавливаем начальное состояние прозрачности */
+    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+}
+#nav ul li{
+    padding-top:1px; 
+    float:none;
+    
+}
+#nav ul a{
+    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    display:block;
+}
+#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left: -25px; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    background-color: #f7ffed;
+   
+    text-decoration: none;
+}
+#nav li:hover ul a{ 
+    text-decoration: none;
+    -webkit-transition:-webkit-transform 0.075s linear;
+}
+#nav li:hover ul li a:hover{ 
+    background-color: #f7ffed;
+   
+    text-decoration: none;
+    -moz-transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+#nav li:hover img{
+
+}
+#im{
+    float:left;
+
+}
+
+
+
+.menu__icon {
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #262656;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+    top: 26px;
+}
+
+
+
+
+@media screen and (max-width: 999px) {
+    #nav{
+        width:100%;
+    }
+  .menu__icon{
+    display: inline-block;
+    float: right;
+  }
+  
+  .menu__links{
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .menu__links-item{
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+    display: block;  
+}

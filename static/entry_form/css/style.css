@@ -1,0 +1,71 @@
+body{
+	background:#f0f0f5;
+	background-repeat: repeat-x;
+}
+
+a{
+	color: #fff;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.container{
+	width: 400px;
+	height: 450px;
+	background-color: rgb(255, 255, 255);
+	margin: 100px auto 0 auto;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 5px ;
+}
+
+.container img{
+	width: 120px;
+	height: 120px;
+	margin: -60px 0 30px 0;
+	border-radius: 50%;
+}
+
+.inputWithIcon input[type="text"], input[type="Password"]{
+	width: 300px;
+	height: 50px;
+	font-size: 18px;
+	margin-bottom: 25px;
+	border-radius: 4px; 
+	padding-left: 10px;
+	padding-left: 40px;
+}
+
+.inputWithIcon{
+	position: relative;
+}
+
+.inputWithIcon i{
+	position: absolute;
+	padding: 20px 0 0 12px;
+	color: #aaa;
+}
+
+.dws-submit {
+	padding: 18px 150px;
+	margin: 5px 0 20px 0;
+	font-size: 15px;
+	color: #000000;
+	background-color: #007bff;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0 0 2px;
+}
+
+.dws-CreateAccount {
+	padding: 18px 125px;
+	margin: 5px 0 10px 0;
+	font-size: 15px;
+	color:#737373;
+	background-color:#ffffff;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0 0 2px;
+}
