@@ -11,4 +11,7 @@ def index(request):
 def register(request):
     return render(request, "MainApp/entry.html")
 
+def mainMethod(request):
+    return render(request, "MainApp/mainPage.html")
+
 # Create your views here.
