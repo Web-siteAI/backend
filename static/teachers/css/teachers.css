@@ -1,0 +1,46 @@
+.teachersMain {
+  min-height: 600px;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 2vw 0;
+}
+.teachersMain h1 {
+  font-family: 'Roboto';
+  margin-bottom: 40px;
+  color: #607d8b;
+}
+.teachersMain .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 230px);
+  grid-gap: 5.4vw;
+}
+.teachersMain .wrapper .gr-item {
+  width: 230px;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.teachersMain .wrapper .gr-item .gr-item-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: .3s;
+}
+.teachersMain .wrapper .gr-item:hover .gr-item-image {
+  filter: brightness(70%);
+}
+.teachersMain .wrapper .gr-item:hover .spanWrap{
+  bottom: 5px;
+}
+.teachersMain .wrapper .gr-item .spanWrap{
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+  color: #ffd600;
+  position: absolute;
+  bottom: -100px;
+  left: 5px;
+  transition: .3s;
+  text-align: center;
+}

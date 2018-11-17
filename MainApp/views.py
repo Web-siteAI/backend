@@ -14,4 +14,6 @@ def register(request):
 def mainMethod(request):
     return render(request, "MainApp/mainPage.html")
 
+def teachers(request):
+    return render(request, "MainApp/teachers.html")
 # Create your views here.
