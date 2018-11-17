@@ -1,0 +1,98 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.mainPage .slider {
+  width: 100%;
+  height: 460px;
+  position: relative;
+}
+.mainPage .slBut {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.3s;
+  z-index: 10;
+  cursor: pointer;
+}
+.mainPage .slBut:hover::before{
+  color: rgb(255, 214, 0);
+}
+
+.mainPage .slBut::before {
+  position: absolute;
+  font-size: 30px;
+  top: 8px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  transition: 0.3s;
+}
+.mainPage .prev {
+  top: 190px;
+  left: 30px;
+}
+.mainPage .prev::before {
+  content: "\f053";
+  left: 12px;
+}
+.mainPage .next {
+  top: 190px;
+  right: 30px;
+}
+.mainPage .next::before {
+  right: 12px;
+  content: "\f054";
+}
+
+.mainPage .slider .img {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+
+  display: none;
+}
+.mainPage .slider .curry {
+  display: block;
+}
+.mainPage .slider div:nth-child(1){
+  background-size: cover;
+}
+.mainPage .slider div:nth-child(2){
+  background-size: cover;
+}
+.mainPage .slider div:nth-child(3){
+  background-size: cover;
+}
+.mainPage .slider div:nth-child(1)::before{
+  content: "Національний Університет \"Львівська Політехніка\"";
+  font-size: 40px;
+  color: white;
+  font-family: RobotoConRegular;
+  display: block;
+  text-align:center;
+  margin-top: 130px;
+}
+.mainPage .slider div:nth-child(1)::after{
+  content: "Кафедра Систем Штучного Інтелекту";
+  font-size: 50px;
+  color: white;
+  font-family: RobotoConRegular;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mainPage .slider div:nth-child(2)::before {
+  content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
+  color: white;
+  font-size: 30px;
+  font-family: RobotoConRegular;
+  display: block;
+  width: 500px;
+  text-align: center;
+  margin-top: 150px;
+  margin-left: 90px;
+}

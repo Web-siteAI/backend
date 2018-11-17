@@ -1,0 +1,109 @@
+
+.mainPage .mainContent {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.mainPage .mainContent .history {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.mainPage .mainContent .history .text {
+  height: 400px;
+  width: 70%;
+  float: left;
+}
+.mainPage .mainContent .history .text p {
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #303030;
+}
+.mainPage .mainContent .history .text h1 {
+  color: #34515e;
+  font-size: 40px;
+  font-family: Arial;
+}
+
+.mainPage .mainContent .history .photo {
+  background-size: cover;
+  width: 30%;
+  height: 420px;
+  float: right;
+  margin: 30px 0 10px 0;
+}
+
+.mainPage .mainContent .teachers {
+  height: 400px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.mainPage .mainContent .teachers h1 {
+  font-size: 30px;
+  color: #34515e;
+  font-family: Arial;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.mainPage .mainContent .teachers {
+  height: 700px;
+  width: 100%;
+}
+.mainPage .mainContent .teacher {
+  display: inline-block;
+  margin: 0 15px;
+  width: 250px;
+  height: 430px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .3s;
+}
+.mainPage .mainContent .teacher:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+.mainPage .mainContent .teacher-img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+.mainPage .mainContent .teacher-name {
+  font-size: 20px;
+  color: #c7a500;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 16px;
+}
+.mainPage .mainContent .teacher-role {
+  font-size: 20px;
+  font-family: Arial;
+  color: #8eacbb;
+  text-align: center;
+  margin-top: 20px;
+}
+.teachers-but {
+  display: inline-block;
+  width: 230px;
+  height: 60px;
+  margin: 20px auto;
+  background-color: #607d8b;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+.teachers-but:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.teachers-but span {
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+  line-height: 60px;
+  font-family: Arial;
+}

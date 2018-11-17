@@ -1,174 +1,148 @@
-#nav{
-    float:left;
-    width:100%;
-    list-style:none;
-    font-weight: 600;
-    margin-bottom:10px;
-    margin: -8px -8px -8px -8px;
-    padding-top: 10px;
+body {
+  padding: 0;
+  margin: 0;
 }
-.menu__links{
-    display: flex;
-  align-items: center;
-  justify-content: center
-}
-#nav li{
-    float:left;
-    margin-right:10px;
-    position:relative;
-    display:block;
+header {
 
+  height: 50px;
+  background-color: #29434e;
+  overflow: hidden;
 }
-#nav li a{
-    display:block;
-    padding:7px;
-    color: #262656;
-    background:#FFFFFF;
-    text-decoration:none;
-    border-radius:2px;
-    font-size: 120%;
+.header-right {
+  float: right;
 }
-#nav li a:hover{
-    color: #c36891;
-    background-color: #F384AA;
-    
-    text-decoration: none;
+.hLogo {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  margin-left: 10px;
+  float: left;
 }
-
-/*----------------------*/
-#nav ul{
-    list-style:none;
-    position:absolute;
-    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
-    opacity:0; /* Устанавливаем начальное состояние прозрачности */
-    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+header a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 12.5px;
+  line-height: 25px;
+  font-size: 19px;
+  transition: 0.2s;
 }
-#nav ul li{
-    padding-top:1px; 
-    float:none;
-    
-}
-#nav ul a{
-    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
-    display:block;
-}
-#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
-    left: -25px; /* Приносим его обратно на экран, когда нужно */
-    opacity:1; /* Делаем непрозрачным */
-}
-#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
-    background-color: #f7ffed;
-   
-    text-decoration: none;
-}
-#nav li:hover ul a{ 
-    text-decoration: none;
-    -webkit-transition:-webkit-transform 0.075s linear;
-}
-#nav li:hover ul li a:hover{ 
-    background-color: #f7ffed;
-   
-    text-decoration: none;
-    -moz-transform:scale(1.05);
-    -webkit-transform:scale(1.05);
-}
-#nav li:hover img{
-
-}
-#im{
-    float:left;
-
+header a:hover {
+  background-color: #546e7a;
 }
 
 
-
-.menu__icon {
-    display: none;
-    width: 45px;
-    height: 35px;
-    position: relative;
-    cursor: pointer;
-}
-
-.menu__icon span {
-    display: block;
+.visuallyHidden {
     position: absolute;
-    height: 9px;
-    width: 100%;
-    background: #262656;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }
 
-.menu__icon span:nth-child(1) {
-    top: 0px;
-}
-
-.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
-    top: 13px;
-}
-
-.menu__icon span:nth-child(4) {
-    top: 26px;
-}
-
-
-
-
-@media screen and (max-width: 999px) {
-    #nav{
-        width:100%;
-    }
-  .menu__icon{
-    display: inline-block;
-    float: right;
-  }
-  
-  .menu__links{
-    position: fixed;
-    display: block;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin-top: 52px;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    overflow: auto;
-  }
-  
-  .menu__links-item{
-    display: block;
-    padding: 10px 0;
+h1 {
     text-align: center;
-    color: #ffffff;
-  }
+}
+
+.hamburger {
+    margin: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
 }
 
 
 
-.menu.menu_state_open .menu__icon span:nth-child(1) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
+.hamburger3 .bar1 {
+    transform-origin: 5%;
 }
 
-.menu.menu_state_open .menu__icon span:nth-child(2) {
+.hamburger3 .bar4 {
+    transform-origin: 5%;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar1{
     transform: rotate(45deg);
+    height: 3px;
+    width: 42px;
 }
 
-.menu.menu_state_open .menu__icon span:nth-child(3) {
+.checkbox3:checked + label > .hamburger3 > .bar3{
+    transform: rotate(45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar2{
     transform: rotate(-45deg);
+    height: 3px;
+    background-color: transparent;
 }
 
-.menu.menu_state_open .menu__icon span:nth-child(4) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
+.checkbox3:checked + label > .hamburger3 > .bar4{
+    transform: rotate(-45deg);
+    height: 3px;
+    width: 42px;
 }
 
-.menu.menu_state_open .menu__links {
-    display: block;  
+
+
+@media (max-width: 699px) {
+
+.hamburger {
+  display: block;
+}
+
+.header-right {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  background-color: #546e7a;
+  height: 300px;
+  display: none;
+}
+header a {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid  #29434e;
+}
+
+}
+.checkbox3:checked ~ .header-right {
+  display: block;
 }
