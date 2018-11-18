@@ -1,0 +1,39 @@
+{%  extends "MainApp/wrapper.html" %}
+{%  block content %}
+
+    {% load staticfiles %}
+
+    <div class="teachersMain">
+
+        <h1>Викладачі кафедри СШІ</h1>
+
+        <div class="wrapper">
+             <!-- I cut target there -->
+            {% for teacher in teachers_list %}
+                <a href="{{ teacher.id }}">
+                    <div class="gr-item">
+                        <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+                        <div class="spanWrap">
+                            <span class="teacher-name">{{ teacher }}</span>
+                            <br>
+                            <span class="teacher-role">{{ teacher.role }}</span>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+            <a href="#" target="_blank">
+                <div class="gr-item">
+                    <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+                    <div class="spanWrap">
+                        <span class="teacher-name">Шаховська Наталя Богданівна</span>
+                        <br>
+                        <span class="teacher-role">Д.Т.Н</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

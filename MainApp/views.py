@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from TeachersApp.models import Teacher
 
 # from django.http import HttpResponse
 
@@ -8,12 +8,9 @@ def index(request):
     return render(request, 'MainApp/homePage.html')
 
 
-def register(request):
-    return render(request, "MainApp/entry.html")
-
 def mainMethod(request):
-    return render(request, "MainApp/mainPage.html")
+    teachers_list = Teacher.objects.all()
+    content = {"teachers_list": teachers_list}
+    return render(request, "MainApp/mainPage.html", content)
 
-def teachers(request):
-    return render(request, "MainApp/teachers.html")
 # Create your views here.

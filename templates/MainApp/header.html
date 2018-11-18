@@ -3,23 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>Header</title>
+
     {% load staticfiles %}
+
     <link rel="stylesheet" type="text/css" href="{% static "header/css/header.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "mainPage/css/slider.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "mainPage/css/mainPage.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "teachers/css/teachers.css" %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static "mainPage/js/slider.js"%}" charset="utf-8"></script>
 
 </head>
+
 <body>
+
   <header>
-    <div class="hLogo" style="background-image: url('{% static "header/images/logo.png" %}')"></div>
-    <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-          <label for="checkbox3">
+      <div class="hLogo" style="background-image: url('{% static "header/images/logo.png" %}')"></div>
+
+      <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
+
+      <label for="checkbox3">
               <div class="hamburger hamburger3">
                   <span class="bar bar1"></span>
                   <span class="bar bar2"></span>
@@ -27,6 +35,7 @@
                   <span class="bar bar4"></span>
               </div>
           </label>
+
     <div class="header-right" style="font-family: 'Roboto Condensed'">
       <a href="#">Про кафедру</a>
       <a href="#">Абітурієнтам</a>
@@ -35,9 +44,14 @@
       <a href="#">Проекти</a>
       <a href="#">Співпраця</a>
     </div>
+
   </header>
+
   {% block content %}
 
+
   {%  endblock %}
-{%  include "MainApp/footer.html" %}
+
+  {%  include "MainApp/footer.html" %}
+
 </body>

@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'MainApp',
+    'EntryApp',
+    'TeachersApp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

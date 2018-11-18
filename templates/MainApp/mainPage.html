@@ -1,88 +1,132 @@
 {%  extends "MainApp/wrapper.html"%}
 {%  block content %}
-     {% load staticfiles %}
+
+    {% load staticfiles %}
 
     <div class="mainPage">
-      <div class="prev slBut"></div>
-      <div class="next slBut"></div>
-      <div class="slider">
-        <div class="img curry" style="background-image: url('{% static "mainPage\images\img3.jpg" %}')"></div>
-        <div class="img"  style="background-image: url('{% static "mainPage\images\img4.jpg" %}')"></div>
-        <div class="img"  style="background-image: url('{% static "mainPage\images\img5.jpg" %}')"></div>
-      </div>
-      <div class="mainContent">
-        <div class="history">
-          <div class="text" style="font-family: 'Roboto'">
-            <h1>Історія кафедри</h1>
-            <p>Кафедра систем штучного інтелекту утворилась 26 червня 2017 року.</p>
-            <p>В основу підготовки фахівців лягла робота професора Нікольського Юрія Володимировича,
-               який у 2002 році розробив навчальний план спеціальності «Системи штучного інтелекту», напрям «Комп’ютерні науки».
-              У 2004 році на кафедрі інформаційних систем та мереж здійснено перший набір.</p>
-            <p>У жовтні 2016 року почалася робота з модернізації змісту навчання за ініціативи професора
-               кафедри інформаційних систем та мереж Інституту комп’ютерних наук та інформаційних технологій (ІКНІ)
-               Наталії Шаховської і випускника кафедри та Solutions Lead в Softserve Івана Загороднього.</p>
-            <p>Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною технікою за підтримки Львівського ІТ-кластеру.</p>
 
-          </div>
-          <div class="photo" style="background-image: url('{% static "mainPage\images\build1.jpg" %}')">
+        <div class="prev slBut"></div>
+        <div class="next slBut"></div>
 
-          </div>
-        </div>
-        <div class="teachers" style="font-family: 'Roboto'">
-          <h1>Професорсько-викладацький склад кафедри</h1>
-          <div class="wrapper">
+        <div class="slider">
 
-            <a href="#" target="_blank">
-            <div class="gr-item">
-              <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-              <div class="spanWrap">
-                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                <br>
-                <span class="teacher-role">Д.Т.Н</span>
-              </div>
-            </div>
-            </a>
+            <div class="img curry" style="background-image: url('{% static "mainPage\images\img3.jpg" %}')"></div>
+            <div class="img"  style="background-image: url('{% static "mainPage\images\img4.jpg" %}')"></div>
+            <div class="img"  style="background-image: url('{% static "mainPage\images\img5.jpg" %}')"></div>
 
-            <a href="#" target="_blank">
-            <div class="gr-item">
-              <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-              <div class="spanWrap">
-                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                <br>
-                <span class="teacher-role">Д.Т.Н</span>
-              </div>
-            </div>
-            </a>
-
-            <a href="#" target="_blank">
-            <div class="gr-item">
-              <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-              <div class="spanWrap">
-                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                <br>
-                <span class="teacher-role">Д.Т.Н</span>
-              </div>
-            </div>
-            </a>
-
-            <a href="#" target="_blank">
-            <div class="gr-item">
-              <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-              <div class="spanWrap">
-                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                <br>
-                <span class="teacher-role">Д.Т.Н</span>
-              </div>
-            </div>
-            </a>
-
-          </div>
-          <div class="teachers-but">
-            <span>Усі викладачі</span>
-          </div>
         </div>
 
-      </div>
+        <div class="mainContent">
+            <div class="history">
+
+                <div class="text" style="font-family: 'Roboto'">
+
+                    <h1>Історія кафедри</h1>
+
+                    <p>Кафедра систем штучного інтелекту утворилась 26 червня 2017 року.</p>
+
+                    <p>В основу підготовки фахівців лягла робота професора Нікольського Юрія Володимировича,
+                        який у 2002 році розробив навчальний план спеціальності «Системи штучного інтелекту», напрям «Комп’ютерні науки».
+                        У 2004 році на кафедрі інформаційних систем та мереж здійснено перший набір.</p>
+
+                    <p>У жовтні 2016 року почалася робота з модернізації змісту навчання за ініціативи професора
+                        кафедри інформаційних систем та мереж Інституту комп’ютерних наук та інформаційних технологій (ІКНІ)
+                        Наталії Шаховської і випускника кафедри та Solutions Lead в Softserve Івана Загороднього.</p>
+
+                    <p>Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною технікою за підтримки Львівського ІТ-кластеру.</p>
+
+                </div>
+
+                <div class="photo" style="background-image: url('{% static "mainPage\images\build1.jpg" %}')">
+
+                </div>
+
+            </div>
+
+            <div class="teachers" style="font-family: 'Roboto'">
+
+                <h1>Професорсько-викладацький склад кафедри</h1>
+
+                <div class="wrapper">
+                    <!-- I cut target there and this cycle print all users in db (but image is almost Shahowska)) -->
+                    {% for teacher in teachers_list %}
+                        <a href="teachers/{{ teacher.id }}/">
+                            <div class="gr-item">
+                                <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+
+                                <div class="spanWrap">
+                                    <span class="teacher-name"> {{ teacher }} </span>
+                                    <br>
+                                    <span class="teacher-role"> {{teacher.role}} </span>
+                                </div>
+
+                            </div>
+                        </a>
+                    {% endfor %}
+
+                    <a href="#" target="_blank">
+                        <div class="gr-item">
+                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+
+                            <div class="spanWrap">
+                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
+                                <br>
+                                <span class="teacher-role">Д.Т.Н</span>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <div class="gr-item">
+                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+
+                            <div class="spanWrap">
+                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
+                                <br>
+                                <span class="teacher-role">Д.Т.Н</span>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <div class="gr-item">
+                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+
+                            <div class="spanWrap">
+                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
+                                <br>
+                                <span class="teacher-role">Д.Т.Н</span>
+                            </div>
+
+                        </div>
+                    </a>
+
+                   <!-- <a href="#" target="_blank">
+                        <div class="gr-item">
+
+                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+
+                            <div class="spanWrap">
+                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
+                                <br>
+                                <span class="teacher-role">Д.Т.Н</span>
+                            </div>
+
+                        </div>
+                    </a>-->
+
+                </div>
+                <!-- I add this migration to url on this button-->
+                <a href="teachers/">
+                    <div class="teachers-but">
+                        <span>Усі викладачі</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </div>
 
 {% endblock %}
