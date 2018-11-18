@@ -1,17 +1,18 @@
 from django.shortcuts import render
-
 from TeachersApp.models import Teacher
-
-
 # from django.http import HttpResponse
+
 
 def index(request):
     return render(request, 'MainApp/homePage.html')
 
-from scopus import AuthorRetrieval
 
 def mainMethod(request):
-    teachers_list = Teacher.objects.all()
+    k = 0
+    teachers_list = []
+    for teacher in Teacher.objects.all():
+        if k < 4:
+            teachers_list.append(teacher)
     content = {"teachers_list": teachers_list}
     return render(request, "MainApp/mainPage.html", content)
 
