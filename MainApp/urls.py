@@ -22,4 +22,6 @@ urlpatterns = [
     path('entry/', views.register, name='register'),
     path('AI/', views.mainMethod, name='mainMethod'),
     path('teachers/', views.teachers, name='teachers'),
+    path('teacher/', views.teacher, name='teacher'),
 ]
+

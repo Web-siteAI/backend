@@ -29,18 +29,19 @@
   transition: .3s;
 }
 .teachersMain .wrapper .gr-item:hover .gr-item-image {
-  filter: brightness(70%);
+  filter: brightness(80%);
 }
 .teachersMain .wrapper .gr-item:hover .spanWrap{
-  bottom: 5px;
+  bottom: 0px;
 }
 .teachersMain .wrapper .gr-item .spanWrap{
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
   font-family: 'Roboto Condensed';
   font-size: 18px;
   color: #ffd600;
   position: absolute;
   bottom: -100px;
-  left: 5px;
   transition: .3s;
   text-align: center;
 }
