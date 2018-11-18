@@ -52,7 +52,7 @@
                     {% for teacher in teachers_list %}
                         <a href="teachers/{{ teacher.id }}/">
                             <div class="gr-item">
-                                <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
+                                <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"> </div>
 
                                 <div class="spanWrap">
                                     <span class="teacher-name"> {{ teacher }} </span>
@@ -63,62 +63,9 @@
                             </div>
                         </a>
                     {% endfor %}
-
-                    <a href="#" target="_blank">
-                        <div class="gr-item">
-                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-
-                            <div class="spanWrap">
-                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                                <br>
-                                <span class="teacher-role">Д.Т.Н</span>
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="#" target="_blank">
-                        <div class="gr-item">
-                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-
-                            <div class="spanWrap">
-                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                                <br>
-                                <span class="teacher-role">Д.Т.Н</span>
-                            </div>
-
-                        </div>
-                    </a>
-
-                   <!-- <a href="#" target="_blank">
-                        <div class="gr-item">
-                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-
-                            <div class="spanWrap">
-                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                                <br>
-                                <span class="teacher-role">Д.Т.Н</span>
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="#" target="_blank">
-                        <div class="gr-item">
-
-                            <div class="gr-item-image" style="background-image: url('{% static "teachers/images/shahowska.jpg" %}')"></div>
-
-                            <div class="spanWrap">
-                                <span class="teacher-name">Шаховська Наталя Богданівна</span>
-                                <br>
-                                <span class="teacher-role">Д.Т.Н</span>
-                            </div>
-
-                        </div>
-                    </a>-->
-
+                
                 </div>
-                <!-- I add this migration to url on this button-->
+            
                 <a href="teachers/">
                     <div class="teachers-but">
                         <span>Усі викладачі</span>
