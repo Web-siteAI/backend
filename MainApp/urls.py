@@ -21,5 +21,6 @@ urlpatterns = [
     path('', views.mainMethod, name='mainMethod'),
     path('entry/', include("EntryApp.urls")),
     path('teachers/', include("TeachersApp.urls")),
+
 ]
 

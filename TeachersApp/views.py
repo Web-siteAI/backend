@@ -11,7 +11,7 @@ def teachers(request):
 def getTeacher(request, TeacherId):
     teacher = Teacher.objects.get(pk=int(TeacherId))
     content = {"teacher": teacher}
-    return render(request, "TeachersApp/teachers.html", content)
-    # create new html page and change it
+    return render(request, "TeachersApp/teacher.html", content)
+
 
 # Create your views here.
