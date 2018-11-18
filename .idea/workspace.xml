@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/TeachersApp/migrations/0002_teacher_photo.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TeachersApp/migrations/0003_auto_20181118_2348.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/AIWeb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AIWeb/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AIWeb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AIWeb/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainApp/views.py" afterDir="false" />
@@ -16,6 +17,8 @@
       <change beforePath="$PROJECT_DIR$/templates/TeachersApp/teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/TeachersApp/teachers.html" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> origin/serhii-branch
+=======
 >>>>>>> origin/serhii-branch
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,6 +70,7 @@
           <entry key="CSS" value="264" />
           <entry key="HTML" value="364" />
           <entry key="Python" value="1104" />
+<<<<<<< HEAD
         </counts>
       </usages-collector>
     </session>
@@ -103,6 +107,8 @@
         <counts>
           <entry key="HTML" value="18" />
           <entry key="Python" value="58" />
+=======
+>>>>>>> origin/serhii-branch
         </counts>
       </usages-collector>
     </session>
@@ -113,11 +119,15 @@
         <entry file="file://$PROJECT_DIR$/templates/MainApp/teacher.html">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
 =======
             <state relative-caret-position="68">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -145,6 +155,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainApp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+=======
+            <state relative-caret-position="391">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+              <folding>
+                <element signature="e#630#649#0" expanded="true" />
+              </folding>
+>>>>>>> origin/serhii-branch
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/static/teacher/css/teacher.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+>>>>>>> origin/serhii-branch
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/MainApp/mainPage.html">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -154,8 +192,17 @@
             <state relative-caret-position="391">
               <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
 >>>>>>> origin/serhii-branch
+=======
+        <entry file="file://$PROJECT_DIR$/MainApp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+>>>>>>> origin/serhii-branch
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1542544277404" expanded="true" signature="446:573" ph="..." />
+                <marker date="1542544277404" expanded="true" signature="521:573" ph="..." />
+                <marker date="1542544277404" expanded="true" signature="574:575" ph="..." />
               </folding>
             </state>
           </provider>
@@ -163,17 +210,37 @@
       </file>
       <file pinned="false" current-in-tab="false">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/MainApp/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+=======
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/author_retrieval.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3893">
+              <caret line="236" column="13" selection-start-line="236" selection-start-column="13" selection-end-line="236" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+>>>>>>> origin/serhii-branch
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainApp/admin.py">
           <provider selected="true" editor-type-id="text-editor" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/.scopus/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+>>>>>>> origin/serhii-branch
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
@@ -186,6 +253,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/TeachersApp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -259,10 +327,17 @@
 =======
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/utils/startup.py">
           <provider selected="true" editor-type-id="text-editor">
+=======
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/utils/startup.py">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> origin/serhii-branch
             <state relative-caret-position="476">
               <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> origin/serhii-branch
+=======
 >>>>>>> origin/serhii-branch
               </folding>
             </state>
@@ -270,14 +345,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeachersApp/views.py">
+        <entry file="file://$PROJECT_DIR$/templates/MainApp/teachers.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="221">
               <caret line="13" column="69" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="51">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+>>>>>>> origin/serhii-branch
 =======
             <state relative-caret-position="51">
               <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
@@ -292,7 +372,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="Python Script" />
+=======
+        <option value="HTML File" />
+        <option value="CSS File" />
+>>>>>>> origin/serhii-branch
 =======
         <option value="HTML File" />
         <option value="CSS File" />
@@ -307,9 +392,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/static/mainPage/css/slider.css" />
+        <option value="$PROJECT_DIR$/templates/MainApp/footer.html" />
         <option value="$PROJECT_DIR$/static/mainPage/css/mainPage.css" />
         <option value="$PROJECT_DIR$/static/footer/css/footer.css" />
         <option value="$PROJECT_DIR$/templates/MainApp/teachers.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/EntryApp/urls.py" />
         <option value="$PROJECT_DIR$/EntryApp/views.py" />
         <option value="$PROJECT_DIR$/templates/EntryApp/entry.html" />
@@ -337,6 +424,17 @@
         <option value="$PROJECT_DIR$/MainApp/views.py" />
         <option value="$USER_HOME$/.scopus/config.ini" />
 >>>>>>> origin/serhii-branch
+=======
+        <option value="$PROJECT_DIR$/templates/MainApp/mainPage.html" />
+        <option value="$PROJECT_DIR$/templates/MainApp/header.html" />
+        <option value="$PROJECT_DIR$/static/teacher/css/teacher.css" />
+        <option value="$PROJECT_DIR$/templates/MainApp/teacher.html" />
+        <option value="$PROJECT_DIR$/MainApp/models.py" />
+        <option value="$PROJECT_DIR$/MainApp/urls.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/utils/startup.py" />
+        <option value="$PROJECT_DIR$/MainApp/views.py" />
+        <option value="$USER_HOME$/.scopus/config.ini" />
+>>>>>>> origin/serhii-branch
       </list>
     </option>
   </component>
@@ -347,17 +445,23 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="526" />
     <option name="y" value="351" />
     <option name="width" value="1348" />
     <option name="height" value="690" />
+=======
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+>>>>>>> origin/serhii-branch
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,12 +483,15 @@
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
 <<<<<<< HEAD
               <item name="TeachersApp" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> origin/serhii-branch
             </path>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
@@ -399,39 +506,33 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="MainApp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="TeachersApp" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/Playlist" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/.scopus/config.ini" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+>>>>>>> origin/serhii-branch
 =======
     <property name="last_opened_file_path" value="$USER_HOME$/.scopus/config.ini" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
 >>>>>>> origin/serhii-branch
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\enviroment_for_programing\my_git_repo\backend\templates\TeachersApp" />
-      <recent name="E:\enviroment_for_programing\my_git_repo\backend\templates\EntryApp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\enviroment_for_programing\my_git_repo\backend\TeachersApp" />
-      <recent name="E:\enviroment_for_programing\my_git_repo\backend\EntryApp" />
+      <recent name="D:\Сайт кафедри\backend\static" />
     </key>
   </component>
   <component name="RecentsManager">
@@ -452,14 +553,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="AIWeb" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="AIWeb.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\с242\PycharmProjects\Project_Jango\backend\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -468,7 +570,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/AI" />
+      <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -500,6 +602,7 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12751678" />
@@ -525,6 +628,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2549168" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+>>>>>>> origin/serhii-branch
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3590164" />
@@ -538,6 +648,9 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.46393442" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.26885247" />
+<<<<<<< HEAD
+>>>>>>> origin/serhii-branch
+=======
 >>>>>>> origin/serhii-branch
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -582,6 +695,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -612,33 +726,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EntryApp/models.py">
+=======
+    <entry file="file://$PROJECT_DIR$/templates/MainApp/mainPage.html">
+>>>>>>> origin/serhii-branch
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="89">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EntryApp/tests.py">
+    <entry file="file://$PROJECT_DIR$/templates/MainApp/wrapper.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/Project_Jango/backend/Lib/site-packages/django/apps/config.py">
+    <entry file="file://$PROJECT_DIR$/static/header/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python37/Lib/importlib/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/MainApp/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="170">
+          <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/EntryApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -654,28 +772,44 @@
 >>>>>>> origin/serhii-branch
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/AIWeb/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> origin/serhii-branch
     </entry>
-    <entry file="file://$PROJECT_DIR$/EntryApp/views.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/utils/get_content.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="17">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/MainApp/footer.html">
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/configparser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="168">
+          <caret line="662" lean-forward="true" selection-start-line="662" selection-end-line="662" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/EntryApp/entry.html">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/utils/create_config.py">
+>>>>>>> origin/serhii-branch
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        <state relative-caret-position="168">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/MainApp/teacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/EntryApp/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -688,27 +822,28 @@
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/TeachersApp/admin.py">
+=======
+    <entry file="file://$PROJECT_DIR$/MainApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeachersApp/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeachersApp/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/static/teacher/css/teacher.css">
+>>>>>>> origin/serhii-branch
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="391">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding>
-            <element signature="e#630#667#0" expanded="true" />
+            <element signature="e#630#649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -717,6 +852,7 @@
 =======
     <entry file="file://$PROJECT_DIR$/static/header/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret lean-forward="true" />
         </state>
@@ -809,12 +945,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+=======
+        <state relative-caret-position="34">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
           <folding>
-            <element signature="e#630#649#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1542544277404" expanded="true" signature="446:573" ph="..." />
+            <marker date="1542544277404" expanded="true" signature="521:573" ph="..." />
+            <marker date="1542544277404" expanded="true" signature="574:575" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/author_retrieval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3893">
+          <caret line="236" column="13" selection-start-line="236" selection-start-column="13" selection-end-line="236" selection-end-column="13" />
+>>>>>>> origin/serhii-branch
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/TeachersApp/teachers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -830,10 +984,19 @@
             <marker date="1542544277404" expanded="true" signature="446:573" ph="..." />
             <marker date="1542544277404" expanded="true" signature="521:573" ph="..." />
             <marker date="1542544277404" expanded="true" signature="574:575" ph="..." />
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/scopus/utils/startup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+>>>>>>> origin/serhii-branch
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/AIWeb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -852,11 +1015,18 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/templates/MainApp/teachers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+>>>>>>> origin/serhii-branch
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/MainApp/mainPage.html">
+    <entry file="file://$USER_HOME$/.scopus/config.ini">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="457">
           <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
           <folding>
@@ -870,6 +1040,10 @@
             <element signature="e#0#34#0" expanded="true" />
 >>>>>>> origin/serhii-branch
           </folding>
+=======
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+>>>>>>> origin/serhii-branch
         </state>
       </provider>
     </entry>

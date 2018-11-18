@@ -1,0 +1,28 @@
+{%  extends "MainApp/wrapper.html" %}
+{%  block content %}
+
+    {% load staticfiles %}
+
+    <div class="teacher-main">
+        <div class="info-block">
+            <div class="photo" style="background-image: url('{{ teacher.photo }}')"></div>
+            <div class="teacher-info">
+                <div class="head">
+                    <div class="nameblock">
+                        <h2>{{ teacher.full_name }}</h2>
+                    </div>
+                    <div class ="orcid-block">
+                        <h1>1</h1>
+                    </div>
+                </div>
+                <p>{{ teacher.role }}</p>
+                <span>orcid: </span>
+                <span>{{ teacher.orc_id }}</span>
+                <br>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
