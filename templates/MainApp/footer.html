@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Footer</title>
+
+    {% load staticfiles %}
+
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static "footer/css/footer.css" %}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    </head>
+
+</head>
+
 <body>
-  <footer style="font-family: 'Roboto Condensed'">
-    <span class = "fcontact-inf">Контактна інформація</span>
-    <hr>
-    <div class="contacts">
-      <div class="item location">
-        <span>Львів, вул. Князя Романа, 5</span>
-      </div>
-      <div class="item home">
-        <span>ХХ Навчальний корпус, кім. 126</span>
-      </div>
-      <div class="item mail">
-        <span>mail@gmail.com</span>
-      </div>
-    </div>
-    <div class="contacts2">
-      <div class="item phone">
-        <span>(097) 111-11-11</span>
-      </div>
-      <div class="item facebook">
-        <span><a href="#" target="_blank">Facebook</a></span>
-        <i class="fab fa-facebook-f"></i>
-      </div>
-      <div class="item web">
-        <span><a href="http://ai.lviv.ua/" target="_blank">ai.lviv.ua<a></span>
-      </div>
-    </div>
-    <hr class = "fhr">
-    <div class = "fsshi-holder">
-      <span class = "fsshi">&#169; Кафедра СШІ</span>
-    </div>
+    <footer style="font-family: 'Roboto Condensed'">
+
+        <span class = "fcontact-inf">Контактна інформація</span>
+        <hr>
+        <div class="contacts">
+
+            <div class="item location">
+                <span>Львів, вул. Князя Романа, 5</span>
+            </div>
+
+            <div class="item home">
+                <span>ХХ Навчальний корпус, кім. 126</span>
+            </div>
+
+            <div class="item mail">
+                <span>mail@gmail.com</span>
+            </div>
+
+        </div>
+
+        <div class="contacts2">
+            <div class="item phone">
+                <span>(097) 111-11-11</span>
+            </div>
+
+            <div class="item facebook">
+                <span><a href="#" target="_blank">Facebook</a></span>
+                <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <div class="item web">
+                <span><a href="http://ai.lviv.ua/" target="_blank">ai.lviv.ua</a></span>
+            </div>
+        </div>
+
+        <hr class = "fhr">
+
+        <div class = "fsshi-holder">
+            <span class = "fsshi">&#169; Кафедра СШІ</span>
+        </div>
+
   </footer>
 </body>

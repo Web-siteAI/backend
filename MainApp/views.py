@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from TeachersApp.models import Teacher
+
 
 # from django.http import HttpResponse
 
@@ -8,19 +10,9 @@ def index(request):
 
 from scopus import AuthorRetrieval
 
-def register(request):
-    return render(request, "MainApp/entry.html")
-
 def mainMethod(request):
-    s = AuthorRetrieval(57198358655)
-    print(s)
-    return render(request, "MainApp/mainPage.html")
-
-def teachers(request):
-    return render(request, "MainApp/teachers.html")
-
-def teacher(request):
-    return render(request, "MainApp/teacher.html")
-
+    teachers_list = Teacher.objects.all()
+    content = {"teachers_list": teachers_list}
+    return render(request, "MainApp/mainPage.html", content)
 
 # Create your views here.
