@@ -15,13 +15,27 @@
                         <h1>1</h1>
                     </div>
                 </div>
-                <p>{{ teacher.role }}</p>
-                <span>orcid: </span>
+                <p style="color: #34515e">{{ teacher.role }}</p>
+                <p>{{ teacher.description }}</p>
+                <span style="color: #34515e">orcid: </span>
                 <span>{{ teacher.orc_id }}</span>
                 <br>
                 <span></span>
                 <span></span>
             </div>
+        </div>
+        <div class="sub-info-block">
+            <span class="flag">Наукові інтереси: </span>
+            <br>
+            <span>{{ teacher.science_interests }}</span>
+            <br>
+            <span class="flag">Напрямки наукових досліджень: </span>
+            <br>
+            <span>{{ teacher.science_researches }}</span>
+            <br>
+            <span class="flag">Хоббі: </span>
+            <br>
+            <span>{{ teacher.interests }}</span>
         </div>
     </div>
 

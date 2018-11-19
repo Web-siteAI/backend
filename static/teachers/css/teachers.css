@@ -36,10 +36,12 @@
 }
 .teachersMain .wrapper .gr-item .spanWrap{
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
+  width: 230px;
+  background-color: rgb(255, 255, 255);
   font-family: 'Roboto Condensed';
   font-size: 18px;
-  color: #ffd600;
+  color: #34515e;
+  border-bottom: 2px solid #ffd600;
   position: absolute;
   bottom: -100px;
   transition: .3s;

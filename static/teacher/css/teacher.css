@@ -3,25 +3,27 @@
     width: 1140px;
     margin: 0 auto;
     padding-top: 30px;
+    background-color: ghostwhite;
 }
 .teacher-main .info-block {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
+    margin-bottom: 30px;
 }
 .teacher-main .info-block .photo {
     width: 300px;
-    height: 100%;
+    height: 300px;
     display: inline-block;
-    background-color: aliceblue;
+
     float: left;
 }
 .teacher-main .info-block .teacher-info {
     display: inline-block;
     width: calc(100% - 330px);
-    height: 100%;
-    float: right;
+    min-height: 300px;
+
     margin-left: 30px;
-    background-color: aliceblue;
+    overflow: hidden;
 }
 
 .teacher-main .info-block .teacher-info .head{
@@ -67,9 +69,28 @@
     font-family: 'Roboto';
     padding: 0 15px;
     margin-bottom: 20px;
+    line-height: 26px;
 }
 .teacher-main .info-block .teacher-info span {
     font-size: 18px;
     font-family: 'Roboto';
     padding: 0 15px;
+}
+
+.teacher-main .sub-info-block {
+    min-height: 100px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.teacher-main .sub-info-block span {
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 5px 20px;
+    line-height: 26px;
+    display: inline-block;
+}
+.teacher-main .sub-info-block span.flag {
+    padding: 5px 0;
+    color: #34515e;
 }
