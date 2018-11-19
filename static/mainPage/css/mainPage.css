@@ -3,7 +3,6 @@
   width: 1140px;
   margin: 0 auto;
   overflow: hidden;
-  background-color: #ffffff;
 }
 
 .mainPage .mainContent .history {
@@ -76,17 +75,21 @@
   filter: brightness(70%);
 }
 .mainPage .mainContent .teachers .wrapper .gr-item:hover .spanWrap{
-  bottom: 5px;
+  bottom: 0;
 }
 .mainPage .mainContent .teachers .wrapper .gr-item .spanWrap{
   font-family: 'Roboto Condensed';
   font-size: 18px;
-  color: yellow;
+  width: 230px;
+  color: #34515e;
+  border-bottom: 2px solid #ffd600;
   position: absolute;
   bottom: -100px;
-  left: 5px;
+  left: 0;
+  padding: 5px;
   transition: .3s;
   text-align: center;
+  background-color: white;
 }
 
 
