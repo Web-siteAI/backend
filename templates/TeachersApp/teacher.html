@@ -11,14 +11,19 @@
                     <div class="nameblock">
                         <h2>{{ teacher.full_name }}</h2>
                     </div>
-                    <div class ="orcid-block">
-                        <h1>1</h1>
+                    <div class="scopus-info">
+                        <div class="scopus-el orcid-block">
+                            <h1>{{ teacher.scopus_hindex }}</h1>
+                        </div>
+                        <div class="scopus-el docs-block">
+                            <h1>{{ teacher.scopus_documents }}</h1>
+                        </div>
                     </div>
                 </div>
                 <p style="color: #34515e">{{ teacher.role }}</p>
                 <p>{{ teacher.description }}</p>
                 <span style="color: #34515e">orcid: </span>
-                <span>{{ teacher.orc_id }}</span>
+                <span><a href="{{ teacher.scopus_orcid }}" target="_blank">{{ teacher.scopus_orcid }}</a></span>
                 <br>
                 <span></span>
                 <span></span>

@@ -50,21 +50,31 @@
                 <div class="wrapper">
                     <!-- I cut target there and this cycle print all users in db (but image is almost Shahowska)) -->
 
-                    {% for teacher in teachers_list  %}
-
-                        <a href="teachers/{{ teacher.id }}/">
-                            <div class="gr-item">
-                                <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"> </div>
-
-                                <div class="spanWrap">
-                                    <span class="teacher-name"> {{ teacher }} </span>
-                                    <br>
-                                    <span class="teacher-role"> {{teacher.role}} </span>
-                                </div>
-
-                            </div>
-                        </a>
-                    {% endfor %}
+                    {% for teacher in teachers_list %}
+                {% if teacher.scopus_id > 1000 %}
+                    <a href="/AI/teachers/{{ teacher.scopus_id }}/">
+                    <div class="gr-item">
+                        <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
+                        <div class="spanWrap">
+                            <span class="teacher-name">{{ teacher }}</span>
+                            <br>
+                            <span class="teacher-role">{{ teacher.role }}</span>
+                        </div>
+                    </div>
+                    </a>
+                {% elif teacher.id != NULL %}
+                    <a href="/AI/teachers/{{ teacher.id }}/">
+                    <div class="gr-item">
+                        <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
+                        <div class="spanWrap">
+                            <span class="teacher-name">{{ teacher }}</span>
+                            <br>
+                            <span class="teacher-role">{{ teacher.role }}</span>
+                        </div>
+                    </div>
+                    </a>
+                {% endif %}
+            {% endfor %}
                 
                 </div>
             

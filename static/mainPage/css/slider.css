@@ -31,7 +31,7 @@ body{
   transition: 0.3s;
 }
 .mainPage .prev {
-  top: 190px;
+  top: 224px;
   left: 30px;
 }
 .mainPage .prev::before {
@@ -39,7 +39,7 @@ body{
   left: 12px;
 }
 .mainPage .next {
-  top: 190px;
+  top: 224px;
   right: 30px;
 }
 .mainPage .next::before {

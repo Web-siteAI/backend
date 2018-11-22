@@ -38,14 +38,29 @@
     font-family: "Arial";
 }
 
-.teacher-main .info-block .teacher-info .head .orcid-block {
+.teacher-main .info-block .teacher-info .head .scopus-info {
+    width: 120px;
+    height: 50px;
+    position: relative;
     float: right;
+    margin-right: 20px;
+}
+
+.teacher-main .info-block .teacher-info .head .scopus-info .scopus-el {
+    display: inline-block;
     width: 50px;
     height: 50px;
     position: relative;
     line-height: 0;
 }
-.teacher-main .info-block .teacher-info .head .orcid-block h1 {
+.teacher-main .info-block .teacher-info .head .scopus-info .orcid-block{
+    float: left;
+}
+.teacher-main .info-block .teacher-info .head .scopus-info .docs-block {
+    float: right;
+}
+
+.teacher-main .info-block .teacher-info .head .scopus-info  h1 {
     font-size: 40px;
     font-family: Arial;
     color: #8eacbb;
@@ -55,13 +70,19 @@
 .teacher-main .info-block .photo {
     background-size: cover;
 }
-.teacher-main .info-block .teacher-info .head .orcid-block::after {
-    content: "h-index";
+.teacher-main .info-block .teacher-info .head .scopus-info .scopus-el::after{
     position: absolute;
-    bottom: -5px;
-    left: 8px;
     font-size: 10px;
     font-family: "Roboto";
+    bottom: -5px;
+}
+.teacher-main .info-block .teacher-info .head .scopus-info .orcid-block::after {
+    content: "h-index";
+    left: 8px;
+}
+.teacher-main .info-block .teacher-info .head .scopus-info .docs-block::after {
+    content: "documents";
+    left: 0;
 }
 
 .teacher-main .info-block .teacher-info p {
