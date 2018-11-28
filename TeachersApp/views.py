@@ -2,8 +2,8 @@ from django.shortcuts import render
 from .models import Teacher
 import os
 import requests
-
 from bs4 import BeautifulSoup
+
 
 def teachers(request):
     teachers_list = Teacher.objects.all()
