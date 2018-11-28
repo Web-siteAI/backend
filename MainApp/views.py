@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from TeachersApp.models import Teacher
-# from django.http import HttpResponse
 
 
 def index(request):
