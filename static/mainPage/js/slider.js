@@ -34,3 +34,25 @@ $(document).ready(function(){
     prevImage.addClass("curry");
   });
 });
+
+$(document).ready(function () {
+  var
+  currentImage,
+  currentImageIndex,
+  nextImage,
+  nextImageIndex;
+
+  setInterval(function(){
+      currentImage = $(".curry");
+      currentImageIndex  = currentImage.index();
+      nextImageIndex = currentImageIndex + 1;
+      if(nextImageIndex == 3){
+        nextImageIndex = 0;
+      }
+      nextImage = $(".img").eq(nextImageIndex);
+      currentImage.fadeOut(1000);
+      currentImage.removeClass("curry");
+      nextImage.fadeIn(1000);
+      nextImage.addClass("curry");
+    }, 5000);
+});
