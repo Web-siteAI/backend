@@ -1,0 +1,32 @@
+
+body {
+	/*background:#f0f0f5;*/
+	margin: 0;
+	padding: 0;
+
+}
+.vstypnukam {
+	width: 100%;
+}
+.main_content {
+	margin: 0 auto;
+    width: 65%;
+}
+.title span {
+	/*background:#546e7a;*/
+	line-height: 120px;
+	color: #34515e;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: left;
+}
+.title span{
+	display: block;
+	width: 80%;
+	margin:0 auto;
+	 font-family:RobotoRegular;
+}
+p,ul {
+	font-size: 18px;
+	font-family:RobotoRegular;
+}

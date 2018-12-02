@@ -12,6 +12,11 @@ def teachers(request):
 
 
 def getTeacher(request, TeacherId):
+    id = int(TeacherId)
+    url = "http://ena.lp.edu.ua/simple-search?location=%2F&query=" + 'кривенчук+юрій' + " &rpp=10&sort_by=score&order=desc"
+    r = requests.get(url)
+    with open('./static/teachers/all/%d.html' % (2222), 'w') as output_file:
+        output_file.write(r.text.encode('utf8', 'ignore').decode('utf8', 'ignore'))
 
     id = int(TeacherId)
     orcid = " "
@@ -56,5 +61,7 @@ def getTeacher(request, TeacherId):
     else:
         teacher = Teacher.objects.get(pk=id)
         content = {"teacher": teacher}
+
+
         return render(request, "TeachersApp/teacher.html", content)
 # Create your views here.
