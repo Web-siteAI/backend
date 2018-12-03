@@ -16,4 +16,8 @@ def mainMethod(request):
     content = {"teachers_list": teachers_list}
     return render(request, "MainApp/mainPage.html", content)
 
-# Create your views here.
+def entrants(request):
+    return render(request, "MainApp/entrants.html")
+
+def science(request):
+    return render(request, "MainApp/science.html")

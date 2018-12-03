@@ -18,7 +18,7 @@ header {
   margin-left: 10px;
   float: left;
 }
-header a {
+header  a {
   float: left;
   color: white;
   text-decoration: none;
@@ -28,7 +28,9 @@ header a {
   font-size: 19px;
   transition: 0.2s;
 }
-header a:hover {
+header  a:hover {
+  text-decoration: none;
+    color: white;
   background-color: #546e7a;
 }
 
