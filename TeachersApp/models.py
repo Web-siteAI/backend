@@ -5,7 +5,6 @@ class Teacher (models.Model):
     full_name = models.CharField(max_length=255, null=True)
     photo = models.ImageField(blank=True, upload_to="pictures/%Y/%m/%D/", null=True, max_length=255)
     role = models.CharField(max_length=255, null=True)
-    #id = models.CharField(max_length=40, null=True)
     field_of_work = models.CharField(max_length=255, null=True)
     science_interests = models.CharField(max_length=255, null=True)
     science_researches = models.CharField(max_length=500, null=True)

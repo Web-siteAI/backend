@@ -1,18 +1,21 @@
 from django.shortcuts import render
 from .models import Teacher
+from MainApp.models import Footer
 import os
 import requests
 from bs4 import BeautifulSoup
 
 
 def teachers(request):
+    footer_fields = Footer.objects.get(pk=1)
     teachers_list = Teacher.objects.all()
-    content = {"teachers_list": teachers_list}
+    content = {"teachers_list": teachers_list, "footer_fields": footer_fields}
     return render(request, "TeachersApp/teachers.html", content)
 
 
 def getTeacher(request, TeacherId):
     id = int(TeacherId)
+    footer_fields = Footer.objects.get(pk=1)
     url = "http://ena.lp.edu.ua/simple-search?location=%2F&query=" + 'кривенчук+юрій' + " &rpp=10&sort_by=score&order=desc"
     r = requests.get(url)
     with open('./static/teachers/all/%d.html' % (2222), 'w') as output_file:
@@ -56,7 +59,7 @@ def getTeacher(request, TeacherId):
         teacher = teachers[0]
 
 
-        content = {"teacher": teacher}
+        content = {"teacher": teacher, "footer_fields": footer_fields}
         return render(request, "TeachersApp/teacher.html", content)
     else:
         teacher = Teacher.objects.get(pk=id)

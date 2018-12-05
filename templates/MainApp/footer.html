@@ -23,22 +23,22 @@
         <div class="contacts">
 
             <div class="itemz location">
-                <span>Львів, вул. Князя Романа, 5</span>
+                <span>{{ footer_fields.location }}</span>
             </div>
 
             <div class="itemz home">
-                <span>ХХ Навчальний корпус, кім. 126</span>
+                <span>{{ footer_fields.building }}</span>
             </div>
 
             <div class="itemz mail">
-                <span>mail@gmail.com</span>
+                <span>{{ footer_fields.email }}</span>
             </div>
 
         </div>
 
         <div class="contacts2">
             <div class="itemz phone">
-                <span>(097) 111-11-11</span>
+                <span>{{ footer_fields.phone_number }}</span>
             </div>
 
             <div class="itemz facebook">
@@ -47,7 +47,7 @@
             </div>
 
             <div class="itemz web">
-                <span><a href="http://ai.lviv.ua/" target="_blank">ai.lviv.ua</a></span>
+                <span><a href="http://{{ footer_fields.site }}/" target="_blank">{{ footer_fields.site }}</a></span>
             </div>
         </div>
 
