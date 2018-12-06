@@ -1,0 +1,690 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Електронний науковий архів Науково-технічної бібліотеки Національного університету "Львівська політехніка": Пошук</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="Generator" content="DSpace 6.2" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="/static/css/jquery-ui-1.10.3.custom/redmond/jquery-ui-1.10.3.custom.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/bootstrap/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/bootstrap/dspace-theme.css" type="text/css" />
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/open-search/description.xml" title="DSpace"/>
+
+        
+        <script type='text/javascript' src="/static/js/jquery/jquery-1.10.2.min.js"></script>
+        <script type='text/javascript' src='/static/js/jquery/jquery-ui-1.10.3.custom.min.js'></script>
+        <script type='text/javascript' src='/static/js/bootstrap/bootstrap.min.js'></script>
+        <script type='text/javascript' src='/static/js/holder.js'></script>
+        <script type="text/javascript" src="/utils.js"></script>
+        <script type="text/javascript" src="/static/js/choice-support.js"> </script>
+        
+
+
+    
+    
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-16398911-4', 'auto');
+            ga('send', 'pageview');
+        </script>
+    
+
+
+    
+        <script type="text/javascript">
+	var jQ = jQuery.noConflict();
+	jQ(document).ready(function() {
+		jQ( "#spellCheckQuery").click(function(){
+			jQ("#query").val(jQ(this).attr('data-spell'));
+			jQ("#main-query-submit").click();
+		});
+		jQ( "#filterquery" )
+			.autocomplete({
+				source: function( request, response ) {
+					jQ.ajax({
+						url: "/json/discovery/autocomplete?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+",
+						dataType: "json",
+						cache: false,
+						data: {
+							auto_idx: jQ("#filtername").val(),
+							auto_query: request.term,
+							auto_sort: 'count',
+							auto_type: jQ("#filtertype").val(),
+							location: ''	
+						},
+						success: function( data ) {
+							response( jQ.map( data.autocomplete, function( item ) {
+								var tmp_val = item.authorityKey;
+								if (tmp_val == null || tmp_val == '')
+								{
+									tmp_val = item.displayedValue;
+								}
+								return {
+									label: item.displayedValue + " (" + item.count + ")",
+									value: tmp_val
+								};
+							}))			
+						}
+					})
+				}
+			});
+	});
+	function validateFilters() {
+		return document.getElementById("filterquery").value.length > 0;
+	}
+</script>
+    
+    
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/static/js/html5shiv.js"></script>
+  <script src="/static/js/respond.min.js"></script>
+<![endif]-->
+    </head>
+
+    
+    
+    <body class="undernavigation">
+<a class="sr-only" href="#content">Skip navigation</a>
+<header class="navbar navbar-inverse navbar-fixed-top">    
+    
+            <div class="container">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/"><img height="25" src="/image/dspace-logo-only.png" alt="DSpace logo" /></a>
+       </div>
+       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+         <ul class="nav navbar-nav">
+           <li class=""><a href="/"><span class="glyphicon glyphicon-home"></span> Домівка</a></li>
+                
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Перегляд <b class="caret"></b></a>
+             <ul class="dropdown-menu">
+               <li><a href="/community-list">Фонди та зібрання</a></li>
+				<li class="divider"></li>
+        <li class="dropdown-header">Огляд матеріалів:</li>
+				
+				
+				
+				      			<li><a href="/browse?type=dateissued">Дати випуску</a></li>
+					
+				      			<li><a href="/browse?type=author">Автори</a></li>
+					
+				      			<li><a href="/browse?type=title">Заголовки</a></li>
+					
+				      			<li><a href="/browse?type=subject">Теми</a></li>
+					
+				      			<li><a href="/browse?type=dateaccessioned">Дати збереження</a></li>
+					
+				      			<li><a href="/browse?type=type">Типи вмісту</a></li>
+					
+				      			<li><a href="/browse?type=ispartof">Видання, що містить</a></li>
+					
+				      			<li><a href="/browse?type=issn">ISSN</a></li>
+					
+				      			<li><a href="/browse?type=publisher">Видавництва</a></li>
+					
+				      			<li><a href="/browse?type=language">Мови</a></li>
+					
+				    
+				
+
+            </ul>
+          </li>
+          <li class=""><script type="text/javascript">
+<!-- Javascript starts here
+document.write('<a href="#" onClick="var popupwin = window.open(\'/help/index.html\',\'dspacepopup\',\'height=600,width=550,resizable,scrollbars\');popupwin.focus();return false;">Довідка<\/a>');
+// -->
+</script><noscript><a href="/help/index.html" target="dspacepopup">Довідка</a></noscript></li>
+       </ul>
+
+ 
+    <div class="nav navbar-nav navbar-right">
+	 <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Мова<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+ 
+      <li>
+        <a onclick="javascript:document.repost.locale.value='ru';
+                  document.repost.submit();" href="http://ena.lp.edu.ua/simple-search?locale=ru">
+         русский
+       </a>
+      </li>
+ 
+      <li>
+        <a onclick="javascript:document.repost.locale.value='uk';
+                  document.repost.submit();" href="http://ena.lp.edu.ua/simple-search?locale=uk">
+         українська
+       </a>
+      </li>
+ 
+      <li>
+        <a onclick="javascript:document.repost.locale.value='pl';
+                  document.repost.submit();" href="http://ena.lp.edu.ua/simple-search?locale=pl">
+         polski
+       </a>
+      </li>
+ 
+      <li>
+        <a onclick="javascript:document.repost.locale.value='en';
+                  document.repost.submit();" href="http://ena.lp.edu.ua/simple-search?locale=en">
+         English
+       </a>
+      </li>
+ 
+     </ul>
+    </li>
+    </ul>
+  </div>
+ 
+ 
+       <div class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+         
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Вхід: <b class="caret"></b></a>
+	             
+             <ul class="dropdown-menu">
+               <li><a href="/mydspace">Мій архів матеріалів</a></li>
+               <li><a href="/subscribe">Оновлення на e-mail</a></li>
+               <li><a href="/profile">Обліковий запис</a></li>
+
+		
+             </ul>
+           </li>
+          </ul>
+          
+	
+	<form method="get" action="/simple-search" class="navbar-form navbar-right">
+	    <div class="form-group">
+          <input type="text" class="form-control" placeholder="Шукати&nbsp;в&nbsp;архіві" name="query" id="tequery" size="25"/>
+        </div>
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+
+	</form></div>
+    </nav>
+
+            </div>
+
+</header>
+
+<main id="content" role="main">
+
+
+
+
+                
+
+<div class="container">
+    
+
+
+
+  
+
+<ol class="breadcrumb btn-success">
+
+  <li><a href="/">Електронний науковий архів Науково-технічної бібліотеки Національного університету "Львівська політехніка"</a></li>
+
+</ol>
+
+</div>                
+
+
+
+        
+<div class="container">
+
+    <div class="row">
+    <div class="col-md-9">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<h2>Пошук</h2>
+
+<div class="discovery-search-form panel panel-default">
+    
+	<div class="discovery-query panel-heading">
+    <form action="simple-search" method="get">
+        <label for="tlocation">
+         	Пошук:
+        </label>
+        <select name="location" id="tlocation">
+
+            
+            <option selected="selected" value="/">Весь архів електронних ресурсів</option>
+
+            <option value="ntb/4" >
+                Відкритий науковий архів
+            </option>
+
+            <option value="ntb/1" >
+                Електронний архів Науково-технічної бібліотеки
+            </option>
+
+            <option value="ntb/5" >
+                Матеріали партнерів
+            </option>
+
+        </select><br/>
+        <label for="query">запит</label>
+        <input type="text" size="50" id="query" name="query" value="кривенчук&#x20;юрій&#x20;"/>
+        <input type="submit" id="main-query-submit" class="btn btn-primary" value="Перейти" />
+                  
+        <input type="hidden" value="10" name="rpp" />
+        <input type="hidden" value="score" name="sort_by" />
+        <input type="hidden" value="desc" name="order" />
+
+<a class="btn btn-default" href="/simple-search">Почати новий пошук</a>	
+		</form>
+		</div>
+
+		<div class="discovery-search-filters panel-body">
+		<h5>Додати фільтри:</h5>
+		<p class="discovery-search-filters-hint">Використовуйте фільтри для уточнення результатів пошуку.</p>
+		<form action="simple-search" method="get">
+		<input type="hidden" value="" name="location" />
+		<input type="hidden" value="кривенчук&#x20;юрій&#x20;" name="query" />
+		
+		<select id="filtername" name="filtername">
+		<option value="title">Назва</option><option value="author">Автор</option><option value="subject">Тема</option><option value="dateIssued">Дата випуску</option><option value="type">Тип вмісту</option><option value="has_content_in_original_bundle">Містить файл(и)</option>
+		</select>
+		<select id="filtertype" name="filtertype">
+		<option value="equals">Дорівнює</option><option value="contains">Містить</option><option value="authority">Ідент.</option><option value="notequals">Не дорівнює</option><option value="notcontains">Не містить</option><option value="notauthority">Не ідент.</option>
+		</select>
+		<input type="text" id="filterquery" name="filterquery" size="45" required="required" />
+		<input type="hidden" value="10" name="rpp" />
+		<input type="hidden" value="score" name="sort_by" />
+		<input type="hidden" value="desc" name="order" />
+		<input class="btn btn-default" type="submit" value="Додати" onclick="return validateFilters()" />
+		</form>
+		</div>        
+
+        
+   <div class="discovery-pagination-controls panel-footer">
+   <form action="simple-search" method="get">
+   <input type="hidden" value="" name="location" />
+   <input type="hidden" value="кривенчук&#x20;юрій&#x20;" name="query" />
+		
+           <label for="rpp">Вивести на сторінку</label>
+           <select name="rpp" id="rpp">
+
+                   <option value="5" >5</option>
+
+                   <option value="10" selected="selected">10</option>
+
+                   <option value="15" >15</option>
+
+                   <option value="20" >20</option>
+
+                   <option value="25" >25</option>
+
+                   <option value="30" >30</option>
+
+                   <option value="35" >35</option>
+
+                   <option value="40" >40</option>
+
+                   <option value="45" >45</option>
+
+                   <option value="50" >50</option>
+
+                   <option value="55" >55</option>
+
+                   <option value="60" >60</option>
+
+                   <option value="65" >65</option>
+
+                   <option value="70" >70</option>
+
+                   <option value="75" >75</option>
+
+                   <option value="80" >80</option>
+
+                   <option value="85" >85</option>
+
+                   <option value="90" >90</option>
+
+                   <option value="95" >95</option>
+
+                   <option value="100" >100</option>
+
+           </select>
+           &nbsp;|&nbsp;
+
+               <label for="sort_by">Сортування</label>
+               <select name="sort_by" id="sort_by">
+                   <option value="score">за ранжуванням</option>
+ <option value="dc.title_sort" >за назвою</option> <option value="dc.date.issued_dt" >за датою випуску</option>
+               </select>
+
+           <label for="order">Впорядкування</label>
+           <select name="order" id="order">
+               <option value="ASC" >за зростанням</option>
+               <option value="DESC" selected="selected">за спаданням</option>
+           </select>
+           <label for="etal">Автори</label>
+           <select name="etal" id="etal">
+
+               <option value="0" selected="selected">Усі</option>
+<option value="1" >1</option>
+                       <option value="5" >5</option>
+
+                       <option value="10" >10</option>
+
+                       <option value="15" >15</option>
+
+                       <option value="20" >20</option>
+
+                       <option value="25" >25</option>
+
+                       <option value="30" >30</option>
+
+                       <option value="35" >35</option>
+
+                       <option value="40" >40</option>
+
+                       <option value="45" >45</option>
+
+                       <option value="50" >50</option>
+
+           </select>
+           <input class="btn btn-default" type="submit" name="submit_search" value="Оновити" />
+
+
+</form>
+   </div>
+</div>   
+
+<hr/>
+<div class="discovery-result-pagination row container">
+
+    
+	<div class="alert alert-info">Результати 1-10 зі 17 (час пошуку: 0.007 секунди).</div>
+    <ul class="pagination pull-right">
+	<li class="disabled"><span>назад</span></li>
+	
+	<li class="active"><span>1</span></li>
+
+	
+	
+	<li><a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;start=10">2</a></li>
+
+	<li><a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;start=10">далі</a></li>
+	</ul>
+<!-- give a content to the div -->
+</div>
+<div class="discovery-result-results">
+
+
+
+
+
+    <div class="panel panel-info">
+    <div class="panel-heading">Знайдені матеріали:</div>
+    <table align="center" class="table" summary="This table browses all dspace content">
+<tr>
+<th id="t1" class="oddRowEvenCol">Попередній перегляд</th><th id="t2" class="oddRowOddCol">Тип</th><th id="t3" class="oddRowEvenCol">Дата випуску</th><th id="t4" class="oddRowOddCol">Назва</th><th id="t5" class="oddRowEvenCol">Автор(и)</th></tr><tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=uk_UA">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">2012</td><td headers="t4" ><a href="/handle/ntb/16122">Вимірювання&#x20;електричного&#x20;опору&#x20;мікророзмірних&#x20;об’єктів</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9">Кривенчук,&#x20;Юрій</a>; <a href="/browse?type=author&amp;value=%D0%9C%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%2C+%D0%86%D0%B3%D0%BE%D1%80">Микитин,&#x20;Ігор</a>; <a href="/browse?type=author&amp;value=%D0%A1%D0%B5%D0%B3%D0%B5%D0%B4%D0%B0%2C+%D0%9E%D0%BB%D0%B5%D0%B3">Сегеда,&#x20;Олег</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=uk_UA">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">2012</td><td headers="t4" ><a href="/handle/ntb/16117">Метод&#x20;комбінаційного&#x20;розсіювання&#x20;світла&#x20;в&#x20;термометрії&#x20;поверхні&#x20;мікрооб’єктів</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%A1%D0%B5%D0%B3%D0%B5%D0%B4%D0%B0%2C+%D0%9E%D0%BB%D0%B5%D0%B3">Сегеда,&#x20;Олег</a>; <a href="/browse?type=author&amp;value=%D0%AF%D1%86%D0%B8%D1%88%D0%B8%D0%BD%2C+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2">Яцишин,&#x20;Святослав</a>; <a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9">Кривенчук,&#x20;Юрій</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=uk_UA">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">2014</td><td headers="t4" ><a href="/handle/ntb/25794">Дослідження&#x20;впливу&#x20;нетемпературних&#x20;чинників&#x20;на&#x20;вимірювання&#x20;температури&#x20;об’єкта&#x20;методом&#x20;комбінаційного&#x20;розсіювання&#x20;світла</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9">Кривенчук,&#x20;Юрій</a>; <a href="/browse?type=author&amp;value=%D0%A1%D0%B5%D0%B3%D0%B5%D0%B4%D0%B0%2C+%D0%9E%D0%BB%D0%B5%D0%B3">Сегеда,&#x20;Олег</a>; <a href="/browse?type=author&amp;value=%D0%9C%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%2C+%D0%86%D0%B3%D0%BE%D1%80">Микитин,&#x20;Ігор</a>; <a href="/browse?type=author&amp;value=%D0%9A%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%87%D1%83%D0%BA%2C+%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE">Ковальчук,&#x20;Дмитро</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Conference+Abstract&amp;value_lang=">Conference&#x20;Abstract</a></em></td><td headers="t3" nowrap="nowrap" align="right">21-лис-2017</td><td headers="t4" ><a href="/handle/ntb/39742">Мобільний&#x20;додаток&#x20;«Clickers»,&#x20;як&#x20;інноваційний&#x20;&#x20;метод&#x20;проведення&#x20;лекційних&#x20;занять&#x20;у&#x20;вищих&#x20;навчальних&#x20;закладах</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%A1%D0%BA%D0%BE%D0%BF%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%2C+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD&amp;value_lang=">Скопівський,&#x20;Степан</a>; <a href="/browse?type=author&amp;value=%D0%93%D0%B5%D0%BB%D0%B5%D1%82%D1%96%D0%B9%2C+%D0%9B%D1%8E%D0%B4%D0%BC%D0%B8%D0%BB%D0%B0&amp;value_lang=">Гелетій,&#x20;Людмила</a>; <a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9&amp;value_lang=">Кривенчук,&#x20;Юрій</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">28-бер-2017</td><td headers="t4" ><a href="/handle/ntb/42987">Аналітичний&#x20;огляд&#x20;методів&#x20;та&#x20;засобів&#x20;вимірювання&#x20;температури&#x20;об’єктів&#x20;малих&#x20;розмірів</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9&amp;value_lang=">Кривенчук,&#x20;Юрій</a>; <a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%A3%D0%BB%D1%8F%D0%BD%D0%B0&amp;value_lang=">Кривенчук,&#x20;Уляна</a>; <a href="/browse?type=author&amp;value=Kryvenchuk%2C+Yurii&amp;value_lang=">Kryvenchuk,&#x20;Yurii</a>; <a href="/browse?type=author&amp;value=Kryvenchuk%2C+Uliana&amp;value_lang=">Kryvenchuk,&#x20;Uliana</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=uk_UA">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">2016</td><td headers="t4" ><a href="/handle/ntb/39804">Експериментальні&#x20;дослідження&#x20;залежності&#x20;вимірюваної&#x20;температури&#x20;від&#x20;частоти&#x20;антистоксової&#x20;компоненти&#x20;спектра&#x20;комбінаційного&#x20;розсіювання&#x20;світла&#x20;для&#x20;AL2O3</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9">Кривенчук,&#x20;Юрій</a>; <a href="/browse?type=author&amp;value=%D0%9C%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%2C+%D0%86%D0%B3%D0%BE%D1%80">Микитин,&#x20;Ігор</a>; <a href="/browse?type=author&amp;value=%D0%A1%D0%B5%D0%B3%D0%B5%D0%B4%D0%B0%2C+%D0%9E%D0%BB%D0%B5%D0%B3">Сегеда,&#x20;Олег</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=uk_UA">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">2013</td><td headers="t4" ><a href="/handle/ntb/24189">Дослідження&#x20;впливу&#x20;неідеальності&#x20;геометричної&#x20;форми&#x20;зразка&#x20;на&#x20;результат&#x20;вимірювання&#x20;температури&#x20;методом&#x20;комбінаційного&#x20;розсіювання&#x20;світла</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%A1%D0%B5%D0%B3%D0%B5%D0%B4%D0%B0%2C+%D0%9E%D0%BB%D0%B5%D0%B3">Сегеда,&#x20;Олег</a>; <a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9">Кривенчук,&#x20;Юрій</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Article&amp;value_lang=uk_UA">Article</a></em></td><td headers="t3" nowrap="nowrap" align="right">2011</td><td headers="t4" ><a href="/handle/ntb/24135">Контроль&#x20;температури&#x20;в&#x20;установках&#x20;реактивного&#x20;іонно-плазмового&#x20;напилення&#x20;з&#x20;використанням&#x20;термометра&#x20;випромінення</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%93%D0%BE%D1%86%2C+%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%96%D1%8F">Гоц,&#x20;Наталія</a>; <a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9">Кривенчук,&#x20;Юрій</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Autoreferat&amp;value_lang=uk_UA">Autoreferat</a></em></td><td headers="t3" nowrap="nowrap" align="right">2017</td><td headers="t4" ><a href="/handle/ntb/36103">Вимірювання&#x20;температури&#x20;за&#x20;зсувом&#x20;частоти&#x20;комбінаційного&#x20;розсіювання&#x20;світла</a></td><td headers="t5" ><em><a href="/browse?type=author&amp;value=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87">Кривенчук,&#x20;Юрій&#x20;Павлович</a></em></td></tr>
+<tr><td headers="t1" ></td><td headers="t2" ><em><a href="/browse?type=type&amp;value=Other&amp;value_lang=uk_UA">Other</a></em></td><td headers="t3" nowrap="nowrap" align="right">2014</td><td headers="t4" ><a href="/handle/ntb/25769">Зміст&#x20;до&#x20;збірника&#x20;«Вимірювальна&#x20;техніка&#x20;та&#x20;метрологія»&#x20;Випуск&#x20;75</a></td><td headers="t5" >-</td></tr>
+</table>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+	</div>
+	<div class="col-md-3">
+                    
+
+
+<h3 class="facets">Розкриття</h3>
+<div id="facets" class="facetsBox">
+
+<div id="facet_author" class="panel panel-success">
+	    <div class="panel-heading">за авторами</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">8</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9&amp;filtertype=equals"
+                title="Фільтр за Кривенчук, Юрій">
+                Кривенчук, Юрій</a></li><li class="list-group-item"><span class="badge">5</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%A1%D0%B5%D0%B3%D0%B5%D0%B4%D0%B0%2C+%D0%9E%D0%BB%D0%B5%D0%B3&amp;filtertype=equals"
+                title="Фільтр за Сегеда, Олег">
+                Сегеда, Олег</a></li><li class="list-group-item"><span class="badge">3</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9C%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%2C+%D0%86%D0%B3%D0%BE%D1%80&amp;filtertype=equals"
+                title="Фільтр за Микитин, Ігор">
+                Микитин, Ігор</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Kryvenchuk%2C+Uliana&amp;filtertype=equals"
+                title="Фільтр за Kryvenchuk, Uliana">
+                Kryvenchuk, Uliana</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Kryvenchuk%2C+Yurii&amp;filtertype=equals"
+                title="Фільтр за Kryvenchuk, Yurii">
+                Kryvenchuk, Yurii</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%91%D1%80%D0%B0%D0%BE%2C+%D0%86%D1%80%D0%B8%D0%BD%D0%B0&amp;filtertype=equals"
+                title="Фільтр за Брао, Ірина">
+                Брао, Ірина</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%93%D0%B5%D0%BB%D0%B5%D1%82%D1%96%D0%B9%2C+%D0%9B%D1%8E%D0%B4%D0%BC%D0%B8%D0%BB%D0%B0&amp;filtertype=equals"
+                title="Фільтр за Гелетій, Людмила">
+                Гелетій, Людмила</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%93%D0%BE%D1%86%2C+%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%96%D1%8F&amp;filtertype=equals"
+                title="Фільтр за Гоц, Наталія">
+                Гоц, Наталія</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9A%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%87%D1%83%D0%BA%2C+%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE&amp;filtertype=equals"
+                title="Фільтр за Ковальчук, Дмитро">
+                Ковальчук, Дмитро</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9A%D0%BE%D1%87%D0%B0%D0%BD%2C+%D0%9E%D1%80%D0%B5%D1%81%D1%82&amp;filtertype=equals"
+                title="Фільтр за Кочан, Орест">
+                Кочан, Орест</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%A3%D0%BB%D1%8F%D0%BD%D0%B0&amp;filtertype=equals"
+                title="Фільтр за Кривенчук, Уляна">
+                Кривенчук, Уляна</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9A%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA%2C+%D0%AE%D1%80%D1%96%D0%B9+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87&amp;filtertype=equals"
+                title="Фільтр за Кривенчук, Юрій Павлович">
+                Кривенчук, Юрій Павлович</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%9C%D0%B0%D0%BD%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C+%D0%95%D0%BC%D1%96%D0%BB%D1%96%D1%8F&amp;filtertype=equals"
+                title="Фільтр за Маньковська, Емілія">
+                Маньковська, Емілія</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%A1%D0%BA%D0%BE%D0%BF%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%2C+%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD&amp;filtertype=equals"
+                title="Фільтр за Скопівський, Степан">
+                Скопівський, Степан</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D0%BF%D0%B0%D0%B4%2C+%D0%9F%D0%B8%D0%BB%D0%B8%D0%BF&amp;filtertype=equals"
+                title="Фільтр за Скоропад, Пилип">
+                Скоропад, Пилип</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%A1%D1%82%D0%B0%D0%B4%D0%BD%D0%B8%D0%BA%2C+%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD&amp;filtertype=equals"
+                title="Фільтр за Стадник, Богдан">
+                Стадник, Богдан</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=%D0%AF%D1%86%D0%B8%D1%88%D0%B8%D0%BD%2C+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2&amp;filtertype=equals"
+                title="Фільтр за Яцишин, Святослав">
+                Яцишин, Святослав</a></li></ul></div><div id="facet_subject" class="panel panel-success">
+	    <div class="panel-heading">за темами</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">2</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=536.532&amp;filtertype=equals"
+                title="Фільтр за 536.532">
+                536.532</a></li><li class="list-group-item"><span class="badge">2</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%87%D0%BD%D0%B8%D0%B9+%D0%BF%D0%BE%D0%BA%D0%B0%D0%B6%D1%87%D0%B8%D0%BA&amp;filtertype=equals"
+                title="Фільтр за бібліографічний покажчик">
+                бібліографічний покажчик</a></li><li class="list-group-item"><span class="badge">2</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%D0%9D%D0%B0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE-%D1%82%D0%B5%D1%85%D0%BD%D1%96%D1%87%D0%BD%D0%B0+%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B0&amp;filtertype=equals"
+                title="Фільтр за Науково-технічна бібліотека">
+                Науково-технічна бібліотека</a></li><li class="list-group-item"><span class="badge">2</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%D0%9D%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9+%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%22%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BF%D0%BE%D0%BB%D1%96%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0%22&amp;filtertype=equals"
+                title="Фільтр за Національний університет "Львівська політехніка"">
+                Національний університет "Львівсь...</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%22Clickers%22&amp;filtertype=equals"
+                title="Фільтр за "Clickers"">
+                "Clickers"</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=004.9&amp;filtertype=equals"
+                title="Фільтр за 004.9">
+                004.9</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=equivalent+frequency+spectrum+components+antistokes&amp;filtertype=equals"
+                title="Фільтр за equivalent frequency spectrum components antistokes">
+                equivalent frequency spectrum com...</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=frequency+Raman+shift&amp;filtertype=equals"
+                title="Фільтр за frequency Raman shift">
+                frequency Raman shift</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=innovation+in+education&amp;filtertype=equals"
+                title="Фільтр за innovation in education">
+                innovation in education</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=mathematical+model&amp;filtertype=equals"
+                title="Фільтр за mathematical model">
+                mathematical model</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=method+of+light+scattering&amp;filtertype=equals"
+                title="Фільтр за method of light scattering">
+                method of light scattering</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=mobile+application&amp;filtertype=equals"
+                title="Фільтр за mobile application">
+                mobile application</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=new+teaching+methods&amp;filtertype=equals"
+                title="Фільтр за new teaching methods">
+                new teaching methods</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=programming+model&amp;filtertype=equals"
+                title="Фільтр за programming model">
+                programming model</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Raman+spectrum&amp;filtertype=equals"
+                title="Фільтр за Raman spectrum">
+                Raman spectrum</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=temperature+measurement+of+nano+objects&amp;filtertype=equals"
+                title="Фільтр за temperature measurement of nano objects">
+                temperature measurement of nano o...</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=thermometer&amp;filtertype=equals"
+                title="Фільтр за thermometer">
+                thermometer</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%C2%ABClickers%C2%BB&amp;filtertype=equals"
+                title="Фільтр за «Clickers»">
+                «Clickers»</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%D0%B2%D0%B8%D0%BC%D1%96%D1%80%D1%8E%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F+%D1%82%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B8+%D0%BD%D0%B0%D0%BD%D0%BE%D0%BE%D0%B1%E2%80%99%D1%94%D0%BA%D1%82%D1%96%D0%B2&amp;filtertype=equals"
+                title="Фільтр за вимірювання температури нанооб’єктів">
+                вимірювання температури нанооб’єктів</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=%D0%B5%D0%BA%D0%B2%D1%96%D0%B2%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%BD%D0%B0+%D1%87%D0%B0%D1%81%D1%82%D0%BE%D1%82%D0%B0+%D0%B0%D0%BD%D1%82%D0%B8%D1%81%D1%82%D0%BE%D0%BA%D1%81%D0%BE%D0%B2%D0%BE%D1%97+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B8+%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D0%B0&amp;filtertype=equals"
+                title="Фільтр за еквівалентна частота антистоксової компоненти спектра">
+                еквівалентна частота антистоксово...</a></li><li class="list-group-item"><span style="visibility: hidden;">.</span>
+	        
+            
+            <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;subject_page=1"><span class="pull-right">далі ></span></a>
+            </li></ul></div><div id="facet_dateIssued" class="panel panel-success">
+	    <div class="panel-heading">за датою випуску</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">16</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=dateIssued&amp;filterquery=%5B2010+TO+2018%5D&amp;filtertype=equals"
+                title="Фільтр за 2010 - 2018">
+                2010 - 2018</a></li></ul></div><div id="facet_type" class="panel panel-success">
+	    <div class="panel-heading">за типом вмісту</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">10</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=type&amp;filterquery=Article&amp;filtertype=equals"
+                title="Фільтр за Article">
+                Article</a></li><li class="list-group-item"><span class="badge">2</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=type&amp;filterquery=Book&amp;filtertype=equals"
+                title="Фільтр за Book">
+                Book</a></li><li class="list-group-item"><span class="badge">2</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=type&amp;filterquery=Other&amp;filtertype=equals"
+                title="Фільтр за Other">
+                Other</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=type&amp;filterquery=Autoreferat&amp;filtertype=equals"
+                title="Фільтр за Autoreferat">
+                Autoreferat</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=type&amp;filterquery=Conference+Abstract&amp;filtertype=equals"
+                title="Фільтр за Conference Abstract">
+                Conference Abstract</a></li></ul></div><div id="facet_has_content_in_original_bundle" class="panel panel-success">
+	    <div class="panel-heading">містить файли</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">16</span> <a href="/simple-search?query=%D0%BA%D1%80%D0%B8%D0%B2%D0%B5%D0%BD%D1%87%D1%83%D0%BA+%D1%8E%D1%80%D1%96%D0%B9+&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=has_content_in_original_bundle&amp;filterquery=true&amp;filtertype=equals"
+                title="Фільтр за true">
+                true</a></li></ul></div>
+
+</div>
+
+
+    </div>
+    </div>       
+
+</div>
+</main>
+            
+             <footer class="navbar navbar-inverse navbar-bottom">
+             <div id="designedby" class="container text-muted">
+             Тема від <a href="http://www.cineca.it"><img
+                                    src="/image/logo-cineca-small.png"
+                                    alt="Logo CINECA" /></a>
+			<div id="footer_feedback" class="pull-right">                                    
+                                <p class="text-muted"><a target="_blank" href="http://www.dspace.org/">Програмне забезпечення DSpace</a> Авторські права&nbsp;&copy;&nbsp;2002-2013&nbsp;<a target="_blank" href="http://web.mit.edu/">Массачусетський технологічний інститут</a>&nbsp;та&nbsp;<a target="_blank" href="http://www.hp.com/">Х’юлет Пакард</a>&nbsp;-
+                                <a target="_blank" href="/feedback">Зворотний зв’язок</a>
+                                <a href="/htmlmap"></a></p>
+                                </div>
+			</div>
+    </footer>
+    </body>
+</html>

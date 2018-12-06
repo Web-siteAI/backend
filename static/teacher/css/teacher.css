@@ -3,7 +3,9 @@
     width: 1140px;
     margin: 0 auto;
     padding-top: 30px;
-    background-color: ghostwhite;
+    background-color: aliceblue;
+    border-bottom: 5px solid #34515e;
+    margin-bottom: 30px;
 }
 .teacher-main .info-block {
     width: 100%;
@@ -114,4 +116,28 @@
 .teacher-main .sub-info-block span.flag {
     padding: 5px 0;
     color: #34515e;
+}
+.article {
+    min-height: 50px;
+    background-color: aliceblue;
+    padding: 10px;
+    border-bottom: 5px solid #34515e;
+    width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.article h6 {
+    font-family: Roboto;
+    color: #34515e;
+    font-size: 18px;
+}
+.article h6:first-child {
+    font-size: 22px;
+    font-weight: bold;
+}
+.dosl {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #34515e;
+    font-family: Arial;
 }

@@ -43,5 +43,12 @@
             <span>{{ teacher.interests }}</span>
         </div>
     </div>
-
+    <h3 class="dosl">Наукові дослідження:</h3>
+    {% for document in docs %}
+        <div class="article">
+            {% for el in document %}
+                <h6>{{ el }}</h6>
+            {% endfor %}
+        </div>
+    {% endfor %}
 {% endblock %}
