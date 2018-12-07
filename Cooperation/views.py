@@ -4,6 +4,7 @@ from .models import Cooperation
 
 # Create your views here.
 
+
 def cooperation(request):
     footer_fields = Footer.objects.get(pk=1)
     coop = Cooperation.objects.all()
