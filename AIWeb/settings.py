@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'projects',
+    'NewsApp',
     'MainApp',
     'EntryApp',
     'TeachersApp',
