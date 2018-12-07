@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from .models import Teacher
 from MainApp.models import Footer
+import bs4
+from bs4 import BeautifulSoup
 import os
 import requests
-from bs4 import BeautifulSoup
 import optparse
 import os
 import re
@@ -1013,20 +1014,6 @@ def citation_export(querier):
         print(art.as_citation() + '\n')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def teachers(request):
     footer_fields = Footer.objects.get(pk=1)
     teachers_list = Teacher.objects.all()
@@ -1036,145 +1023,142 @@ def teachers(request):
 
 def getTeacher(request, TeacherId):
     usage = """scholar.py [options] <query string>
-    A command-line interface to Google Scholar.
-    Examples:
-    # Retrieve one article written by Einstein on quantum theory:
-    scholar.py -c 1 --author "albert einstein" --phrase "quantum theory"
-    # Retrieve a BibTeX entry for that quantum theory paper:
-    scholar.py -c 1 -C 17749203648027613321 --citation bt
-    # Retrieve five articles written by Einstein after 1970 where the title
-    # does not contain the words "quantum" and "theory":
-    scholar.py -c 5 -a "albert einstein" -t --none "quantum theory" --after 1970"""
-    fmt = optparse.IndentedHelpFormatter(max_help_position=50, width=100)
-    parser = optparse.OptionParser(usage=usage, formatter=fmt)
-    group = optparse.OptionGroup(parser, 'Query arguments',
-                                 'These options define search query arguments and parameters.')
-    group.add_option('-a', '--author', metavar='AUTHORS', default=None,
-                     help='Author name(s)')
-    group.add_option('-A', '--all', metavar='WORDS', default=None, dest='allw',
-                     help='Results must contain all of these words')
-    group.add_option('-s', '--some', metavar='WORDS', default=None,
-                     help='Results must contain at least one of these words. Pass arguments in form -s "foo bar baz" for simple words, and -s "a phrase, another phrase" for phrases')
-    group.add_option('-n', '--none', metavar='WORDS', default=None,
-                     help='Results must contain none of these words. See -s|--some re. formatting')
-    group.add_option('-p', '--phrase', metavar='PHRASE', default=None,
-                     help='Results must contain exact phrase')
-    group.add_option('-t', '--title-only', action='store_true', default=False,
-                     help='Search title only')
-    group.add_option('-P', '--pub', metavar='PUBLICATIONS', default=None,
-                     help='Results must have appeared in this publication')
-    group.add_option('--after', metavar='YEAR', default=None,
-                     help='Results must have appeared in or after given year')
-    group.add_option('--before', metavar='YEAR', default=None,
-                     help='Results must have appeared in or before given year')
-    group.add_option('--no-patents', action='store_true', default=False,
-                     help='Do not include patents in results')
-    group.add_option('--no-citations', action='store_true', default=False,
-                     help='Do not include citations in results')
-    group.add_option('-C', '--cluster-id', metavar='CLUSTER_ID', default=None,
-                     help='Do not search, just use articles in given cluster ID')
-    group.add_option('-c', '--count', type='int', default=None,
-                     help='Maximum number of results')
-    parser.add_option_group(group)
-
-    group = optparse.OptionGroup(parser, 'Output format',
-                                 'These options control the appearance of the results.')
-    group.add_option('--txt', action='store_true',
-                     help='Print article data in text format (default)')
-    group.add_option('--txt-globals', action='store_true',
-                     help='Like --txt, but first print global results too')
-    group.add_option('--csv', action='store_true',
-                     help='Print article data in CSV form (separator is "|")')
-    group.add_option('--csv-header', action='store_true',
-                     help='Like --csv, but print header with column names')
-    group.add_option('--citation', metavar='FORMAT', default=None,
-                     help='Print article details in standard citation format. Argument Must be one of "bt" (BibTeX), "en" (EndNote), "rm" (RefMan), or "rw" (RefWorks).')
-    parser.add_option_group(group)
-
-    group = optparse.OptionGroup(parser, 'Miscellaneous')
-    group.add_option('--cookie-file', metavar='FILE', default=None,
-                     help='File to use for cookie storage. If given, will read any existing cookies if found at startup, and save resulting cookies in the end.')
-    group.add_option('-d', '--debug', action='count', default=0,
-                     help='Enable verbose logging to stderr. Repeated options increase detail of debug output.')
-    group.add_option('-v', '--version', action='store_true', default=False,
-                     help='Show version information')
-    parser.add_option_group(group)
-
-    options, _ = parser.parse_args()
-    options.author = "кривенчук юрій"
-    options.count = 5
-
-    querier = ScholarQuerier()
-    settings = ScholarSettings()
-
-    if options.citation == 'bt':
-        settings.set_citation_format(ScholarSettings.CITFORM_BIBTEX)
-    elif options.citation == 'en':
-        settings.set_citation_format(ScholarSettings.CITFORM_ENDNOTE)
-    elif options.citation == 'rm':
-        settings.set_citation_format(ScholarSettings.CITFORM_REFMAN)
-    elif options.citation == 'rw':
-        settings.set_citation_format(ScholarSettings.CITFORM_REFWORKS)
-    elif options.citation is not None:
-        print('Invalid citation link format, must be one of "bt", "en", "rm", or "rw".')
-        return 1
-
-    querier.apply_settings(settings)
-
-    if options.cluster_id:
-        query = ClusterScholarQuery(cluster=options.cluster_id)
-    else:
-        query = SearchScholarQuery()
-        if options.author:
-            query.set_author(options.author)
-        if options.allw:
-            query.set_words(options.allw)
-        if options.some:
-            query.set_words_some(options.some)
-        if options.none:
-            query.set_words_none(options.none)
-        if options.phrase:
-            query.set_phrase(options.phrase)
-        if options.title_only:
-            query.set_scope(True)
-        if options.pub:
-            query.set_pub(options.pub)
-        if options.after or options.before:
-            query.set_timeframe(options.after, options.before)
-        if options.no_patents:
-            query.set_include_patents(False)
-        if options.no_citations:
-            query.set_include_citations(False)
-
-    if options.count is not None:
-        options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
-        query.set_num_page_results(options.count)
-
-    querier.send_query(query)
-
-    txt(querier, with_globals=options.txt_globals)
-    articles = querier.articles
-    documents = []
-    for art in articles:
-        res = art.ret_list()
-        documents.append(res)
-
-
-
-
-
-
-
-
-
-
+        A command-line interface to Google Scholar.
+        Examples:
+        # Retrieve one article written by Einstein on quantum theory:
+        scholar.py -c 1 --author "albert einstein" --phrase "quantum theory"
+        # Retrieve a BibTeX entry for that quantum theory paper:
+        scholar.py -c 1 -C 17749203648027613321 --citation bt
+        # Retrieve five articles written by Einstein after 1970 where the title
+        # does not contain the words "quantum" and "theory":
+        scholar.py -c 5 -a "albert einstein" -t --none "quantum theory" --after 1970"""
     id = int(TeacherId)
-    footer_fields = Footer.objects.get(pk=1)
-    url = "http://ena.lp.edu.ua/simple-search?location=%2F&query=" + 'кривенчук+юрій' + " &rpp=10&sort_by=score&order=desc"
-    r = requests.get(url)
-    with open('./static/teachers/all/%d.html' % (2222), 'w') as output_file:
-        output_file.write(r.text.encode('utf8', 'ignore').decode('utf8', 'ignore'))
+    try:
+        teacher = Teacher.objects.get(scopus_id=id)
+    except Exception:
+        teacher = Teacher.objects.get(pk=id)
+    t = teacher.full_name.split()
+    documents = []
+    if os.path.isfile("./static/teachers/scholar/{0}.txt".format(t[0])):
+        f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "r")
+        buff = []
+        for line in f:
+            if line.split()[0] == "Title":
+                if len(buff) > 0:
+                    documents.append(buff)
+                    buff = []
+            buff.append(line)
+        f.close()
+    else:
 
+        fmt = optparse.IndentedHelpFormatter(max_help_position=50, width=100)
+        parser = optparse.OptionParser(usage=usage, formatter=fmt)
+        group = optparse.OptionGroup(parser, 'Query arguments',
+                                     'These options define search query arguments and parameters.')
+        group.add_option('-a', '--author', metavar='AUTHORS', default=None,
+                         help='Author name(s)')
+        group.add_option('-A', '--all', metavar='WORDS', default=None, dest='allw',
+                         help='Results must contain all of these words')
+        group.add_option('-s', '--some', metavar='WORDS', default=None,
+                         help='Results must contain at least one of these words. Pass arguments in form -s "foo bar baz" for simple words, and -s "a phrase, another phrase" for phrases')
+        group.add_option('-n', '--none', metavar='WORDS', default=None,
+                         help='Results must contain none of these words. See -s|--some re. formatting')
+        group.add_option('-p', '--phrase', metavar='PHRASE', default=None,
+                         help='Results must contain exact phrase')
+        group.add_option('-t', '--title-only', action='store_true', default=False,
+                         help='Search title only')
+        group.add_option('-P', '--pub', metavar='PUBLICATIONS', default=None,
+                         help='Results must have appeared in this publication')
+        group.add_option('--after', metavar='YEAR', default=None,
+                         help='Results must have appeared in or after given year')
+        group.add_option('--before', metavar='YEAR', default=None,
+                         help='Results must have appeared in or before given year')
+        group.add_option('--no-patents', action='store_true', default=False,
+                         help='Do not include patents in results')
+        group.add_option('--no-citations', action='store_true', default=False,
+                         help='Do not include citations in results')
+        group.add_option('-C', '--cluster-id', metavar='CLUSTER_ID', default=None,
+                         help='Do not search, just use articles in given cluster ID')
+        group.add_option('-c', '--count', type='int', default=None,
+                         help='Maximum number of results')
+        parser.add_option_group(group)
+
+        group = optparse.OptionGroup(parser, 'Output format',
+                                     'These options control the appearance of the results.')
+        group.add_option('--txt', action='store_true',
+                         help='Print article data in text format (default)')
+        group.add_option('--txt-globals', action='store_true',
+                         help='Like --txt, but first print global results too')
+        group.add_option('--csv', action='store_true',
+                         help='Print article data in CSV form (separator is "|")')
+        group.add_option('--csv-header', action='store_true',
+                         help='Like --csv, but print header with column names')
+        group.add_option('--citation', metavar='FORMAT', default=None,
+                         help='Print article details in standard citation format. Argument Must be one of "bt" (BibTeX), "en" (EndNote), "rm" (RefMan), or "rw" (RefWorks).')
+        parser.add_option_group(group)
+
+        group = optparse.OptionGroup(parser, 'Miscellaneous')
+        group.add_option('--cookie-file', metavar='FILE', default=None,
+                         help='File to use for cookie storage. If given, will read any existing cookies if found at startup, and save resulting cookies in the end.')
+        group.add_option('-d', '--debug', action='count', default=0,
+                         help='Enable verbose logging to stderr. Repeated options increase detail of debug output.')
+        group.add_option('-v', '--version', action='store_true', default=False,
+                         help='Show version information')
+        parser.add_option_group(group)
+
+        options, _ = parser.parse_args()
+        options.author = t[0]+' '+t[1]
+        options.count = 10
+
+        querier = ScholarQuerier()
+        settings = ScholarSettings()
+
+        querier.apply_settings(settings)
+
+        if options.cluster_id:
+            query = ClusterScholarQuery(cluster=options.cluster_id)
+        else:
+            query = SearchScholarQuery()
+            if options.author:
+                query.set_author(options.author)
+            if options.allw:
+                query.set_words(options.allw)
+            if options.some:
+                query.set_words_some(options.some)
+            if options.none:
+                query.set_words_none(options.none)
+            if options.phrase:
+                query.set_phrase(options.phrase)
+            if options.title_only:
+                query.set_scope(True)
+            if options.pub:
+                query.set_pub(options.pub)
+            if options.after or options.before:
+                query.set_timeframe(options.after, options.before)
+            if options.no_patents:
+                query.set_include_patents(False)
+            if options.no_citations:
+                query.set_include_citations(False)
+
+        if options.count is not None:
+            options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
+            query.set_num_page_results(options.count)
+        try:
+            querier.send_query(query)
+        except Exception:
+            querier.articles = []
+
+        txt(querier, with_globals=options.txt_globals)
+        articles = querier.articles
+        f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "w")
+        for art in articles:
+            res = art.ret_list()
+            documents.append(res)
+            for el in res:
+                f.write(el+"\n")
+        f.close()
+
+    footer_fields = Footer.objects.get(pk=1)
     id = int(TeacherId)
     orcid = " "
     hindex = 0
