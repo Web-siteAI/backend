@@ -5,7 +5,7 @@ body {
 header {
 
   height: 50px;
-  background-color: #29434e;
+  background-color: #0C0B09;
   overflow: hidden;
 }
 .header-right {
@@ -24,14 +24,16 @@ header  a {
   text-decoration: none;
   text-align: center;
   padding: 12.5px;
+  padding-bottom: 10.5px;
   line-height: 25px;
   font-size: 19px;
   transition: 0.2s;
+  border-bottom: 2px solid #0C0B09;
 }
 header  a:hover {
   text-decoration: none;
     color: white;
-  background-color: #546e7a;
+  border-bottom: 2px solid #ffd600;
 }
 
 

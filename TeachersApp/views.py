@@ -1043,7 +1043,9 @@ def getTeacher(request, TeacherId):
         f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "r")
         buff = []
         for line in f:
-            if line.split()[0] == "Title":
+            if line.strip() == "Title ВІДОМОСТІ ПРО АВТОРІВ":
+                continue
+            elif line.split()[0] == "Title":
                 if len(buff) > 0:
                     documents.append(buff)
                     buff = []

@@ -1,18 +1,22 @@
 
 .mainPage .mainContent {
-  width: 1140px;
+  width: 100%;
+  padding: 0px;
   margin: 0 auto;
   overflow: hidden;
+  background-color: #f0f0f0;
 }
 
 .mainPage .mainContent .history {
-  margin-top: 20px;
+  padding: 20px 0;
   overflow: hidden;
+  background-color: white;
 }
 
 .mainPage .mainContent .history .text {
+  padding: 0 20px;
   height: 400px;
-  width: 70%;
+  width: 65%;
   float: left;
 }
 .mainPage .mainContent .history .text p {
@@ -21,10 +25,14 @@
 
   color: #303030;
 }
-.mainPage .mainContent .history .text h1 {
-  color: #34515e;
-  font-size: 40px;
+.mainPage .mainContent .history h1 {
+  color: white;
+  font-size: 30px;
+  padding: 5px 20px;
   font-family: Arial;
+  background-color: #181712;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .mainPage .mainContent .history .photo {
@@ -32,21 +40,45 @@
   width: 30%;
   height: 420px;
   float: right;
-  margin: 30px 0 10px 0;
+  margin: 0px 20px 0px 0;
+}
+.mainPage .mainContent .history  h3{
+  font-size: 24px;
+  background-color: #f0f0f0;
+  color: #181712;
+  padding: 5px 10px;
+  width: 206px;
+  margin: 30px auto 0 auto;
+  transition: .3s;
+}
+.mainPage .mainContent .history  h3:hover {
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.mainPage .mainContent .history  h3 a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainPage .mainContent .wrapper {
+  margin: 0 100px;
 }
 
 .mainPage .mainContent .teachers {
-  min-height: 500px;
-  margin-top: 20px;
+  min-height: 400px;
+  background-color: #181712;
   width: 100%;
   text-align: center;
+  overflow: hidden;
 }
 .mainPage .mainContent .teachers h1 {
   font-size: 30px;
-  color: #34515e;
+  color: white;
   font-family: Arial;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 
@@ -81,7 +113,7 @@
   font-family: 'Roboto Condensed';
   font-size: 18px;
   width: 230px;
-  color: #34515e;
+  color: #b0aba0;
   border-bottom: 2px solid #ffd600;
   position: absolute;
   bottom: -100px;
@@ -89,7 +121,7 @@
   padding: 5px;
   transition: .3s;
   text-align: center;
-  background-color: white;
+  background-color: #181712;
 }
 
 
@@ -103,23 +135,58 @@
   width: 230px;
   height: 60px;
   margin: 20px auto;
-  background-color: #607d8b;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #181712;
   cursor: pointer;
-  border-radius: 5px;
   transition: .3s;
+  border-bottom: 2px solid #ffd600;
 }
 .teachers-but:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
-  background-color: #ffd600;
+  background-color: #0C0B09;
 }
 
 .teachers-but span {
   text-align: center;
-  font-size: 26px;
+  font-size: 30px;
   color: white;
-  font-weight: bold;
   line-height: 60px;
   font-family: Arial;
+  transition: .3s;
+}
+
+
+.programs{
+  min-height: 300px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.programs .prog {
+  width: 240px;
+  height: 200px;
+  display: inline-block;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3), inset 0 0 10px rgba(0,0,0,0);
+
+  transition: .3s;
+}
+.programs .prog:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0), inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.programs .prog:hover h4 {
+  font-size: 23px;
+}
+.programs .prog h4 {
+  text-align: center;
+  vert-align: middle;
+  line-height: 200px;
+  transition: .3s;
+  color: #181712;
 }
