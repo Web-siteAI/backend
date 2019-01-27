@@ -25,5 +25,6 @@ urlpatterns = [
     path('science/', views.science, name="science"),
     path('projects/', include("projects.urls")),
     path('cooperation/', include("Cooperation.urls")),
+    path('virtual-tour/', views.excursion, name="excursion"),
 ]
 
