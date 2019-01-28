@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 21:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\MainApp\footer.html:22
+msgid "Контактна інформація"
+msgstr "Contact information"
+
+#: .\templates\MainApp\footer.html:58
+msgid "Кафедра СШІ"
+msgstr "AIS Department"
+
+#: .\templates\MainApp\header.html:43
+msgid "Про кафедру"
+msgstr "About department"
+
+#: .\templates\MainApp\header.html:44
+msgid "Абітурієнтам"
+msgstr "Entrant"
+
+#: .\templates\MainApp\header.html:45
+msgid "Навчання"
+msgstr "Studying"
+
+#: .\templates\MainApp\header.html:46
+msgid "Наука"
+msgstr "Science"
+
+#: .\templates\MainApp\header.html:47
+msgid "Проекти"
+msgstr "Project"
+
+#: .\templates\MainApp\header.html:48
+msgid "Співпраця"
+msgstr "Collaboration"
+
+#: .\templates\MainApp\mainPage.html:23
+msgid "Історія кафедри"
+msgstr "Department history"
+
+#: .\templates\MainApp\mainPage.html:27
+msgid "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року."
+msgstr "The Department of Artificial Intelligence Systems was formed on June 26, 2017."
+
+
+#: .\templates\MainApp\mainPage.html:37
+msgid ""
+"Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною "
+"технікою за підтримки Львівського ІТ-кластеру."
+msgstr ""
+"During September 2017, the department's laboratories were equipped "
+"with computer technology supported by the Lviv IT cluster."
+
+#: .\templates\MainApp\mainPage.html:40
+msgid "Віртуальний тур"
+msgstr "Virtual tour"
+
+#: .\templates\MainApp\mainPage.html:54
+msgid "Професорсько-викладацький склад кафедри"
+msgstr "Professorial and academic staff of the department"
+
+#: .\templates\MainApp\mainPage.html:88
+msgid "Усі викладачі"
+msgstr "All academic"
+
+#: .\templates\MainApp\mainPage.html:96
+msgid "Бакалаврат"
+msgstr "Bachelor"
+
+#: .\templates\MainApp\mainPage.html:99
+msgid "Магістратура"
+msgstr "Magistracy"
+
+
+#~ msgid "lets translate"
+#~ msgstr "TAk"

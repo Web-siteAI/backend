@@ -2,9 +2,10 @@ from django.shortcuts import render
 from TeachersApp.models import Teacher
 from .models import Footer
 
-
-def index(request):
-    return render(request, 'MainApp/homePage.html')
+# from django.utils import translation
+#     user_language = 'uk'
+#     translation.activate(user_language)
+#     request.session[translation.LANGUAGE_SESSION_KEY] = user_language
 
 
 def mainMethod(request):
@@ -29,6 +30,7 @@ def science(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/science.html", content)
+
 
 def excursion(request):
     footer_fields = Footer.objects.get(pk=1)

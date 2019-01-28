@@ -1,0 +1,22 @@
+{%  extends "MainApp/wrapper.html" %}
+{%  block content %}
+    {%  load i18n %}
+    {% load staticfiles %}
+
+    <div class="vstypnukam">
+        <h1 class="title">
+			<span >
+				{%  trans "Співпраця" %}
+			</span>
+		</h1>
+        <div class="main_content">
+            <h3>{%  trans "Кафедра систем штучного інтелекту співпрацює з українськими та закордонними організаціями та органами місцевої влади:" %}</h3>
+            <ul>
+                {% for el in coop %}
+                    <li>{{ el }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,8 +1,9 @@
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Header</title>
+    <title>AI</title>
 
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static "header/css/header.css" %}">
@@ -37,20 +38,34 @@
                   <span class="bar bar4"></span>
               </div>
           </label>
-
+    {% get_current_language as LANGUAGE_CODE %}
     <div class="header-right" style="font-family: 'Roboto Condensed';">
-      <a href="/AI/">Про кафедру</a>
-      <a href="/AI/entrants/">Абітурієнтам</a>
-      <a href="#">Навчання</a>
-      <a href="/AI/science">Наука</a>
-      <a href="http://ai.lpnu.ua/projects.html" target="_blank">Проекти</a>
-      <a href="/AI/cooperation">Співпраця</a>
-    </div>
+      <a href="/">{%  trans "Про кафедру" %}</a>
+      <a href="/news">{%  trans "Новини" %}</a>
+      <a href="/entrants/">{%  trans "Абітурієнтам" %}</a>
+      <a href="#">{%  trans "Навчання" %}</a>
+      <a href="/science">{%  trans "Наука" %}</a>
+      <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a>
+      <a href="/cooperation">{%  trans "Співпраця" %}</a>
 
+    </div>
+<form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ redirect_to }} ">
+          <select name="language" id="">
+              {%  get_available_languages as LANGUAGES %}
+              {%  get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+                  <option value="{{  language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                      {{ language.name_local }} ({{ language.code }})
+                  </option>
+              {% endfor %}
+          </select>
+          <input type="submit" value="Go">
+      </form>
   </header>
 
   {% block content %}
-
 
   {%  endblock %}
 

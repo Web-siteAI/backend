@@ -1,3 +1,4 @@
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
 <body>
     <footer style="font-family: 'Roboto Condensed'">
 
-        <span class = "fcontact-inf">Контактна інформація</span>
+        <span class = "fcontact-inf">{%  trans "Контактна інформація" %}</span>
         <hr>
         <div class="contacts">
 
@@ -27,7 +28,7 @@
             </div>
 
             <div class="itemz home">
-                <span>{{ footer_fields.building }}</span>
+                <span>{{footer_fields.building }}</span>
             </div>
 
             <div class="itemz mail">
@@ -54,7 +55,7 @@
         <hr class = "fhr">
 
         <div class = "fsshi-holder">
-            <span class = "fsshi">&#169; Кафедра СШІ</span>
+            <span class = "fsshi">&#169; {%  trans "Кафедра СШІ" %}</span>
         </div>
 
   </footer>
