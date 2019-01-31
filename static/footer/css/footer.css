@@ -82,6 +82,11 @@ footer .phone::after {
   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f095";
   left: -34px;
 }
+footer .vns::after {
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f19d";
+  left: -35px;
+    font-size: 17px;
+}
 footer .facebook i {
   position: absolute;
   top: 16px;

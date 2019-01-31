@@ -36,3 +36,9 @@ def excursion(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/excursion.html", content)
+
+
+def bach(request):
+    footer_fields = Footer.objects.get(pk=1)
+    content = {"footer_fields": footer_fields}
+    return render(request, "MainApp/bachav.html", content)

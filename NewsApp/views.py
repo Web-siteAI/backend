@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from MainApp.models import Footer
 
 
 def news(request):
