@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a5d5524-c692-49e7-9470-fbba6474a62a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9c93c88-db42-4751-b1ac-7cb56f017bc3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9c93c88-db42-4751-b1ac-7cb56f017bc3/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/MainApp/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/MainApp/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +54,7 @@
           <entry key="html" value="107" />
           <entry key="py" value="36" />
           <entry key="py@backend" value="13" />
+          <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -70,6 +62,7 @@
           <entry key="CSS" value="25" />
           <entry key="CommandLine" value="13" />
           <entry key="HTML" value="107" />
+          <entry key="PLAIN_TEXT" value="22" />
           <entry key="Python" value="36" />
         </counts>
       </usages-collector>
@@ -306,6 +299,14 @@
       <option name="presentableId" value="Default" />
       <updated>1544310504041</updated>
     </task>
+    <task id="LOCAL-00001" summary="storinka z navchanniam">
+      <created>1548959361532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548959361532</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -341,6 +342,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="storinka z navchanniam" />
+    <option name="LAST_COMMIT_MESSAGE" value="storinka z navchanniam" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/MainApp/cooperation.html">
