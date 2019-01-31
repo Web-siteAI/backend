@@ -5,11 +5,12 @@ body {
 header {
 
   height: 50px;
-  background-color: #0C0B09;
+  background-color: var(--DARK);
   overflow: hidden;
 }
 .header-right {
   float: right;
+  margin-right: 105px;
 }
 .hLogo {
   width: 50px;
@@ -28,12 +29,12 @@ header  a {
   line-height: 25px;
   font-size: 19px;
   transition: 0.2s;
-  border-bottom: 2px solid #0C0B09;
+  border-bottom: 2px solid var(--DARK);
 }
 header  a:hover {
   text-decoration: none;
     color: white;
-  border-bottom: 2px solid #ffd600;
+  border-bottom: 2px solid var(--ORANGE);
 }
 
 
@@ -52,7 +53,7 @@ h1 {
 .hamburger {
     margin: 0;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 1px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -77,7 +78,7 @@ h1 {
 
 .bar2,
 .bar3 {
-    top: 13.5px;
+    top: 13.2px;
 }
 
 .bar3 {
@@ -122,7 +123,11 @@ h1 {
     width: 42px;
 }
 
-
+@media (max-width: 900px) {
+    .header-right {
+        margin-right: 0;
+    }
+}
 
 @media (max-width: 699px) {
 
@@ -135,15 +140,21 @@ h1 {
   width: 100%;
   top: 50px;
   left: 0;
-  background-color: #546e7a;
+  background-color: var(--DARK_LIGHT);
   height: 300px;
   display: none;
+  z-index: 100;
 }
 header a {
   width: 100%;
   text-align: left;
   padding: 12px;
-  border-bottom: 1px solid  #29434e;
+  padding-left: 20px;
+  border-bottom: 1px solid  var(--DARK);
+}
+
+header a:hover {
+  border-bottom: 1px solid  var(--ORANGE);
 }
 
 }
