@@ -26,5 +26,6 @@ urlpatterns = [
     path('projects/', include("projects.urls")),
     path('cooperation/', include("Cooperation.urls")),
     path('virtual-tour/', views.excursion, name="excursion"),
+    path('navch/', views.navch, name="navch"),
 ]
 
