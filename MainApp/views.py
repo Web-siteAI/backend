@@ -7,7 +7,6 @@ from .models import Footer
 #     translation.activate(user_language)
 #     request.session[translation.LANGUAGE_SESSION_KEY] = user_language
 
-
 def mainMethod(request):
     k = 0
     teachers_list = []
@@ -42,3 +41,9 @@ def bach(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/bachav.html", content)
+
+
+def navch(request):
+    footer_fields = Footer.objects.get(pk=1)
+    content = {"footer_fields": footer_fields}
+    return render(request, "MainApp/navch.html", content)

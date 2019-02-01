@@ -28,5 +28,6 @@ urlpatterns = [
     path('virtual-tour/', views.excursion, name="excursion"),
     path('bachalavrat/', views.bach, name="bach"),
     path('news/', include("NewsApp.urls")),
+    path('navch/', views.navch, name="navch"),
 ]
 
