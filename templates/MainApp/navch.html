@@ -1,15 +1,15 @@
-{%  extends "MainApp/wrapper.html"%}
+{%  extends "MainApp/../wrapping/wrapper.html" %}
 {%  block content %}
-
+    {%  load i18n %}
     {% load staticfiles %}
 	<div class="navch">
 		<h1 id="riven" class="titlenavch">
 			<span >
-				Структурно-логічна схема навчальних дисциплін
+				{%  trans "Структурно-логічна схема навчальних дисциплін" %}
 			</span>
 		</h1>
 		<h2 id="riven">
-			<span style="font-size: 30px;">Бакалаврат</span>
+			<span style="font-size: 30px;">{%  trans "Бакалаврат" %}</span>
 		</h2>
         <div id="im_sxema" >
             <img src ='{% static "navch\images\sxema.jpg" %}'>

@@ -40,7 +40,7 @@ def excursion(request):
 def bach(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
-    return render(request, "MainApp/bachav.html", content)
+    return render(request, "MainApp/bachelor.html", content)
 
 
 def navch(request):

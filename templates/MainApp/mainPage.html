@@ -1,4 +1,4 @@
-{%  extends "MainApp/wrapper.html"%}
+{%  extends "MainApp/../wrapping/wrapper.html" %}
 {%  block content %}
     {%  load i18n %}
     {% load staticfiles %}
@@ -93,7 +93,7 @@
         <div class="wrapper">
             <div class="programs">
                 <div class="prog">
-                    <h4><a href="/bachalavrat/"> {%  trans "Бакалаврат" %}</a></h4>
+                    <h4><a href="/bachelor/"> {%  trans "Бакалаврат" %}</a></h4>
                 </div>
                 <div class="prog">
                     <h4>{%  trans "Магістратура" %}</h4>

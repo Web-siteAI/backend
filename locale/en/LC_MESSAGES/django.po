@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 22:33+0200\n"
+"POT-Creation-Date: 2019-02-01 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\templates\CooperationApp\cooperation.html:9
-#: .\templates\MainApp\header.html:49
+#: .\templates\MainApp\header.html:50
 msgid "Співпраця"
 msgstr "Collaboration"
 
@@ -32,6 +32,7 @@ msgstr ""
 "and foreign organizations and local authorities:"
 
 #: .\templates\MainApp\bachav.html:5 .\templates\MainApp\mainPage.html:96
+#: .\templates\MainApp\navch.html:12
 msgid "Бакалаврат"
 msgstr "Bachelor"
 
@@ -46,6 +47,7 @@ msgid ""
 msgstr ""
 "Here you will find all the necessary information for joining the educational "
 "program “Artificial Intelligence Systems“!"
+
 #: .\templates\MainApp\entrants.html:15
 msgid "Спеціальність 122 “Комп’ютерні науки”"
 msgstr "Specialty 122 “Computer Science”"
@@ -55,11 +57,8 @@ msgid "Освітня програма (спеціалізація) “Сист�
 msgstr "Educational program (specialization) “Artificial Intelligence Systems”"
 
 #: .\templates\MainApp\entrants.html:17
-#, fuzzy
-#| msgid "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року."
 msgid "Кафедра систем штучного інтелекту"
-msgstr ""
-"The Department of Artificial Intelligence Systems"
+msgstr "The Department of Artificial Intelligence Systems"
 
 #: .\templates\MainApp\entrants.html:18
 msgid "Інститут комп'ютерних наук та інформаційних технологій (ІКНІ)"
@@ -196,27 +195,27 @@ msgstr "XX Academic building, r. 126"
 msgid "Кафедра СШІ"
 msgstr "AIS Department"
 
-#: .\templates\MainApp\header.html:43
+#: .\templates\MainApp\header.html:44
 msgid "Про кафедру"
 msgstr "About department"
 
-#: .\templates\MainApp\header.html:44
+#: .\templates\MainApp\header.html:45
 msgid "Новини"
 msgstr "News"
 
-#: .\templates\MainApp\header.html:45
+#: .\templates\MainApp\header.html:46
 msgid "Абітурієнтам"
 msgstr "Entrants"
 
-#: .\templates\MainApp\header.html:46
+#: .\templates\MainApp\header.html:47
 msgid "Навчання"
 msgstr "Studying"
 
-#: .\templates\MainApp\header.html:47
+#: .\templates\MainApp\header.html:48
 msgid "Наука"
 msgstr "Science"
 
-#: .\templates\MainApp\header.html:48
+#: .\templates\MainApp\header.html:49
 msgid "Проекти"
 msgstr "Project"
 
@@ -227,7 +226,8 @@ msgstr "Department history"
 #: .\templates\MainApp\mainPage.html:27
 msgid "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року."
 msgstr ""
-"The Department of Artificial Intelligence Systems was formed on June 26, 2017."
+"The Department of Artificial Intelligence Systems was formed on June 26, "
+"2017."
 
 #: .\templates\MainApp\mainPage.html:29
 msgid ""
@@ -285,6 +285,10 @@ msgstr "All academics"
 msgid "Магістратура"
 msgstr "Magistracy"
 
+#: .\templates\MainApp\navch.html:8
+msgid "Структурно-логічна схема навчальних дисциплін"
+msgstr "Structural-logical scheme of educational disciplines"
+
 #: .\templates\MainApp\science.html:9
 msgid "Наукові дослідження кафедри СШІ"
 msgstr "Scientific researches of the AIS department"
@@ -319,9 +323,9 @@ msgid ""
 "алгоритми проектування та виробництва мікроелектронних пристроїв, а також "
 "проектування і функціонування організаційно-технічних систем"
 msgstr ""
-" of the research work are new mathematical models, methods, algorithms for the design and production"
-" of microelectronic devices, as well as the design and operation of "
-"organizational and technical systems"
+" of the research work are new mathematical models, methods, algorithms for "
+"the design and production of microelectronic devices, as well as the design "
+"and operation of organizational and technical systems"
 
 #: .\templates\MainApp\science.html:19
 msgid "Практичні результати"
@@ -338,10 +342,11 @@ msgid ""
 "присутні представники з провідних ІТ компаній Львова, що є чудовою нагодою "
 "для студентів зарекомендувати себе"
 msgstr ""
-" are the projects on which students and professors of the Department of SRI work throughout the year "
-"and present at the end of each semester. Representatives from the leading "
-"IT companies of Lviv are present at the presentations of the projects, which"
-" is a great opportunity for students to prove themselves"
+" are the projects on which students and professors of the Department of SRI "
+"work throughout the year and present at the end of each semester. "
+"Representatives from the leading IT companies of Lviv are present at the "
+"presentations of the projects, which is a great opportunity for students to "
+"prove themselves"
 
 #: .\templates\TeachersApp\teacher.html:33
 msgid "Наукові інтереси: "
