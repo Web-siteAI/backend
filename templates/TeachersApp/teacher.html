@@ -9,7 +9,7 @@
             <div class="teacher-info">
                 <div class="head">
                     <div class="nameblock">
-                        <h2>{{ teacher.full_name }}</h2>
+                        <h2>{{ teacher }}</h2>
                     </div>
                     <div class="scopus-info">
                         <div class="scopus-el orcid-block">
@@ -20,8 +20,8 @@
                         </div>
                     </div>
                 </div>
-                <p style="color: #34515e">{{ teacher.role }}</p>
-                <p>{{ teacher.description }}</p>
+                <p style="color: #34515e">{{ teacher.get_role }}</p>
+                <p>{{ teacher.get_description }}</p>
                 <span style="color: #34515e">orcid: </span>
                 <span><a href="{{ teacher.scopus_orcid }}" target="_blank">{{ teacher.scopus_orcid }}</a></span>
                 <br>
@@ -32,15 +32,15 @@
         <div class="sub-info-block">
             <span class="flag">{%  trans "Наукові інтереси: " %}</span>
             <br>
-            <span>{{ teacher.science_interests }}</span>
+            <span>{{ teacher.get_science_interests }}</span>
             <br>
             <span class="flag">{%  trans "Напрямки наукових досліджень: " %}</span>
             <br>
-            <span>{{ teacher.science_researches }}</span>
+            <span>{{ teacher.get_science_researches }}</span>
             <br>
             <span class="flag">{%  trans "Хоббі: " %}</span>
             <br>
-            <span>{{ teacher.interests }}</span>
+            <span>{{ teacher.get_interests }}</span>
         </div>
     </div>
     <h3 class="dosl">{%  trans "Наукові дослідження:" %}</h3>

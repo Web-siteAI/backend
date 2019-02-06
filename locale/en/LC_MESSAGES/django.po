@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-01 15:38+0200\n"
+"POT-Creation-Date: 2019-02-06 09:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\templates\CooperationApp\cooperation.html:9
-#: .\templates\MainApp\header.html:50
+#: .\templates\wrapping\header.html:53
 msgid "Співпраця"
 msgstr "Collaboration"
 
@@ -31,7 +31,7 @@ msgstr ""
 "The Department of Artificial Intelligence Systems cooperates with Ukrainian "
 "and foreign organizations and local authorities:"
 
-#: .\templates\MainApp\bachav.html:5 .\templates\MainApp\mainPage.html:96
+#: .\templates\MainApp\bachelor.html:5 .\templates\MainApp\mainPage.html:96
 #: .\templates\MainApp\navch.html:12
 msgid "Бакалаврат"
 msgstr "Bachelor"
@@ -178,46 +178,6 @@ msgstr "Phone Numbers:"
 #: .\templates\MainApp\excursion.html:9
 msgid "Віртуальний тур кафедрою СШІ"
 msgstr "Virtual tour of the AIS department"
-
-#: .\templates\MainApp\footer.html:22
-msgid "Контактна інформація"
-msgstr "Contact information"
-
-#: .\templates\MainApp\footer.html:27
-msgid "Львів, вул. Князя Романа, 5"
-msgstr "Lviv, st. Kniazia Romana, 5"
-
-#: .\templates\MainApp\footer.html:31
-msgid "ХХ Навчальний корпус, кім. 126"
-msgstr "XX Academic building, r. 126"
-
-#: .\templates\MainApp\footer.html:57
-msgid "Кафедра СШІ"
-msgstr "AIS Department"
-
-#: .\templates\MainApp\header.html:44
-msgid "Про кафедру"
-msgstr "About department"
-
-#: .\templates\MainApp\header.html:45
-msgid "Новини"
-msgstr "News"
-
-#: .\templates\MainApp\header.html:46
-msgid "Абітурієнтам"
-msgstr "Entrants"
-
-#: .\templates\MainApp\header.html:47
-msgid "Навчання"
-msgstr "Studying"
-
-#: .\templates\MainApp\header.html:48
-msgid "Наука"
-msgstr "Science"
-
-#: .\templates\MainApp\header.html:49
-msgid "Проекти"
-msgstr "Project"
 
 #: .\templates\MainApp\mainPage.html:23
 msgid "Історія кафедри"
@@ -367,3 +327,42 @@ msgstr "Scientific research:"
 #: .\templates\TeachersApp\teachers.html:8
 msgid "Викладачі кафедри СШІ"
 msgstr "Academics of the AIS department"
+
+#: .\templates\wrapping\footer.html:23
+msgid "Контактна інформація"
+msgstr "Contact information"
+
+#: .\templates\wrapping\footer.html:69
+msgid "© Кафедра СШІ"
+msgstr "©AIS Department"
+
+#: .\templates\wrapping\header.html:47
+msgid "Про кафедру"
+msgstr "About department"
+
+#: .\templates\wrapping\header.html:48
+msgid "Новини"
+msgstr "News"
+
+#: .\templates\wrapping\header.html:49
+msgid "Абітурієнтам"
+msgstr "Entrants"
+
+#: .\templates\wrapping\header.html:50
+msgid "Навчання"
+msgstr "Studying"
+
+#: .\templates\wrapping\header.html:51
+msgid "Наука"
+msgstr "Science"
+
+#: .\templates\wrapping\header.html:52
+msgid "Проекти"
+msgstr "Project"
+
+
+#~ msgid "Львів, вул. Князя Романа, 5"
+#~ msgstr "Lviv, st. Kniazia Romana, 5"
+
+#~ msgid "ХХ Навчальний корпус, кім. 126"
+#~ msgstr "XX Academic building, r. 126"

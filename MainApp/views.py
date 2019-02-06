@@ -1,21 +1,17 @@
 from django.shortcuts import render
-from TeachersApp.models import Teacher
 from .models import Footer
+from TeachersApp.models import Teacher
 
-# from django.utils import translation
-#     user_language = 'uk'
-#     translation.activate(user_language)
-#     request.session[translation.LANGUAGE_SESSION_KEY] = user_language
 
 def mainMethod(request):
-    k = 0
     teachers_list = []
     footer_fields = Footer.objects.get(pk=1)
+    k = 0
     for teacher in Teacher.objects.all():
         if k < 4:
             teachers_list.append(teacher)
             k += 1
-    content = {"teachers_list": teachers_list, "footer_fields": footer_fields}
+    content = {"footer_fields": footer_fields, ' teachers_list':  teachers_list}
     return render(request, "MainApp/mainPage.html", content)
 
 

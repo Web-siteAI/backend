@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'ProjectsApp',
     'NewsApp',
     'MainApp',
-    'EntryApp',
     'TeachersApp',
     'CooperationApp',
     'django.contrib.admin',
@@ -88,7 +87,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -107,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -124,14 +121,19 @@ USE_TZ = True
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
+
 LANGUAGES = [
     ('en', 'English'),
     ('uk', 'Українська'),
 ]
+
 #Static files (CSS, JavaScript, Images)
 #https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/bootstrap'),
+]
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
