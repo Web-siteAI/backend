@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'MainApp',
     'TeachersApp',
     'CooperationApp',
+    'StudyingApp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
