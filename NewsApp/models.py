@@ -8,13 +8,13 @@ class News(models.Model):
     topic = models.CharField(max_length=255, blank=False, null=False)
     topic_en = models.CharField(max_length=255, blank=False, null=False)
 
-    short_description = models.TextField(blank=True, null=False)
-    short_description_en = models.TextField(blank=True, null=False)
+    short_description = models.TextField(max_length=500, blank=True, null=False)
+    short_description_en = models.TextField(max_length=500, blank=True, null=False)
 
     post = models.TextField(blank=False, null=False)
     post_en = models.TextField(blank=False, null=False)
 
-    data_post = models.DateField(default=date.today)
+    data_post = models.DateField(default=date.today, null=False)
 
     photo = models.ImageField(max_length=255, upload_to="pictures/%Y/%m/%D/", blank=True, null=True)
 

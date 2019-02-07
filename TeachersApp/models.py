@@ -7,10 +7,10 @@ class Teacher (models.Model):
     full_name = models.CharField(help_text="Прізвище Ім'я По-батькові", max_length=255, null=False)
     full_name_en = models.CharField(help_text="Last name Name Surname", max_length=255, null=False)
 
-    photo = models.ImageField(max_length=255, blank=True, upload_to="pictures/%Y/%m/%D/", null=False)
+    photo = models.ImageField(max_length=255, blank=True, upload_to="pictures/%Y/%m/%D/", null=True)
 
     role = models.CharField(max_length=255, blank=False, null=False)
-    role_en = models.CharField(max_length=255, null=False)
+    role_en = models.CharField(max_length=255, blank=True, null=False)
 
     field_of_work = models.CharField(max_length=255, blank=True, null=False)
     field_of_work_en = models.CharField(max_length=255, blank=True, null=False)

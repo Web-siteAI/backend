@@ -43,3 +43,9 @@ def navch(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/navch.html", content)
+
+
+def magister(request):
+    footer_fields = Footer.objects.get(pk=1)
+    content = {"footer_fields": footer_fields}
+    return render(request, "MainApp/magister.html", content)

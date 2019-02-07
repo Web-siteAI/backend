@@ -1,32 +1,28 @@
-
 body {
-	/*background:#f0f0f5;*/
-	margin: 0;
-	padding: 0;
-
-}
-.vstypnukam {
-	width: 100%;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .main_content {
-	margin: 0 auto;
-    width: 65%;
+  margin: 0 auto;
+    width: 80%;
+    font-size: 18px;
 }
-.title span {
-	/*background:#546e7a;*/
-	line-height: 120px;
-	color: #34515e;
-	font-weight: bold;
-	font-size: 40px;
-	text-align: left;
+.title {
+  line-height: 120px;
+  color: #34515e;
+  font-weight: bold;
+  font-size: 40px;
 }
 .title span{
-	display: block;
-	width: 80%;
-	margin:0 auto;
-	 font-family:RobotoRegular;
+  display: block;
+  margin:0 auto;
 }
-p,ul {
-	font-size: 18px;
-	font-family:RobotoRegular;
+.special {
+  list-style: none;
+}
+@media screen and (max-width: 900px){
+  .title {
+    text-align: center;
+  }
 }

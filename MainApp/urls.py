@@ -24,6 +24,7 @@ urlpatterns = [
     path('science/', views.science, name="science"),
     path('virtual-tour/', views.excursion, name="excursion"),
     path('bachelor/', views.bach, name="bach"),
+    path('magister/', views.magister, name="magister"),
     path('navch/', views.navch, name="navch"),
 
     path('teachers/', include("TeachersApp.urls")),
