@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b297dcb-294c-4c11-9f29-23262cc92f2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TeachersApp/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeachersApp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/kryvenchuk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/kryvenchuk_Ls8yOOk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/kryvenchuk_uEEwMkS.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/mochurad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/shahowska.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/shahowska_0zNOMLb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pictures/2019/02/02/06/19/zasoba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-viewlink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/magister/css/magister.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/magister/images/magi_struct_ais.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/magister/images/magi_struct_mdls.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/teachers/scholar/Мочурад.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/MainApp/magister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeachersApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeachersApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/entry_form/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/entry_form/images/signIn1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/mainPage/css/entrants.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mainPage/css/entrants.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CooperationApp/cooperation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CooperationApp/cooperation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/MainApp/entrants.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/MainApp/entrants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/MainApp/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/MainApp/mainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/MainApp/navch.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/MainApp/navch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/MainApp/science.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/MainApp/science.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/wrapping/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wrapping/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/wrapping/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wrapping/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/wrapping/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wrapping/wrapper.html" afterDir="false" />
-    </list>
+    <list default="true" id="0b297dcb-294c-4c11-9f29-23262cc92f2a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/MainApp/science.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -294,7 +255,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="937" />
     <option name="y" value="426" />
     <option name="width" value="980" />
@@ -316,12 +277,6 @@
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="MainApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="MainApp" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
@@ -471,7 +426,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -480,7 +435,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.5785235" visible="true" weight="0.024113474" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.5785235" visible="true" weight="0.024113474" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.13333334" />
@@ -755,27 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/CooperationApp/cooperation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/MainApp/entrants.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wrapping/wrapper.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="89" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -796,8 +730,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/MainApp/science.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="374">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wrapping/wrapper.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="89" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/MainApp/entrants.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CooperationApp/cooperation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
