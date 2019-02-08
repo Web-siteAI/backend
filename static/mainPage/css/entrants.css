@@ -21,6 +21,7 @@ body {
 .special {
   list-style: none;
 }
+
 @media screen and (max-width: 900px){
   .title {
     text-align: center;
