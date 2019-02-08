@@ -9,17 +9,19 @@ class Teacher (models.Model):
 
     photo = models.ImageField(max_length=255, blank=True, upload_to="pictures/%Y/%m/%D/", null=True)
 
-    role = models.CharField(max_length=255, blank=False, null=False)
-    role_en = models.CharField(max_length=255, blank=True, null=False)
+    role = models.CharField(max_length=255, default="", null=False)
+    role_en = models.CharField(max_length=255, default="", null=False)
 
-    field_of_work = models.CharField(max_length=255, blank=True, null=False)
-    field_of_work_en = models.CharField(max_length=255, blank=True, null=False)
+    scientific_rank = models.CharField(max_length=255, default="", blank=False, null=False)
+    scientific_rank_en = models.CharField(max_length=255, default=" ", blank=False, null=False)
 
-    science_interests = models.CharField(max_length=255, blank=True, null=False)
-    science_interests_en = models.CharField(max_length=255, blank=True, null=False)
+    academic_site = models.CharField(max_length=255, blank=True, null=False)
 
-    science_researches = models.CharField(max_length=500, blank=True, null=False)
-    science_researches_en = models.CharField(max_length=500, blank=True, null=False)
+    science_interests = models.CharField(max_length=500, blank=True, null=False)
+    science_interests_en = models.CharField(max_length=500, blank=True, null=False)
+
+    science_researches = models.TextField(max_length=1000, blank=True, null=False)
+    science_researches_en = models.TextField(max_length=1000, blank=True, null=False)
 
     interests = models.TextField(max_length=500, blank=True, null=False)
     interests_en = models.TextField(max_length=500, blank=True, null=False)
@@ -43,11 +45,11 @@ class Teacher (models.Model):
     def get_full_name(self):
         return self._get_translation_field('full_name')
 
+    def get_scientific_rank(self):
+        return self._get_translation_field('scientific_rank')
+
     def get_role(self):
         return self._get_translation_field('role')
-
-    def get_field_of_work(self):
-        return self._get_translation_field('field_of_work')
 
     def get_science_interests(self):
         return self._get_translation_field('science_interests')

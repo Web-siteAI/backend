@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 09:18+0200\n"
+"POT-Creation-Date: 2019-02-08 16:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\CooperationApp\cooperation.html:9
-#: .\templates\wrapping\header.html:53
+#: .\templates\CooperationApp\cooperation.html:11
+#: .\templates\wrapping\header.html:28
 msgid "Співпраця"
 msgstr "Collaboration"
 
-#: .\templates\CooperationApp\cooperation.html:13
+#: .\templates\CooperationApp\cooperation.html:15
 msgid ""
 "Кафедра систем штучного інтелекту співпрацює з українськими та закордонними "
 "організаціями та органами місцевої влади:"
@@ -31,16 +31,11 @@ msgstr ""
 "The Department of Artificial Intelligence Systems cooperates with Ukrainian "
 "and foreign organizations and local authorities:"
 
-#: .\templates\MainApp\bachelor.html:5 .\templates\MainApp\mainPage.html:96
-#: .\templates\MainApp\navch.html:12
-msgid "Бакалаврат"
-msgstr "Bachelor"
-
-#: .\templates\MainApp\entrants.html:9
+#: .\templates\MainApp\entrants.html:11
 msgid "Вступникам"
 msgstr "Entrants"
 
-#: .\templates\MainApp\entrants.html:13
+#: .\templates\MainApp\entrants.html:15
 msgid ""
 "Тут Ви знайдете усю необхідну інформацію щодо вступу на освітню програму "
 "“Системи штучного інтелекту”!"
@@ -48,31 +43,31 @@ msgstr ""
 "Here you will find all the necessary information for joining the educational "
 "program “Artificial Intelligence Systems“!"
 
-#: .\templates\MainApp\entrants.html:15
+#: .\templates\MainApp\entrants.html:17
 msgid "Спеціальність 122 “Комп’ютерні науки”"
 msgstr "Specialty 122 “Computer Science”"
 
-#: .\templates\MainApp\entrants.html:16
+#: .\templates\MainApp\entrants.html:18
 msgid "Освітня програма (спеціалізація) “Системи штучного інтелекту”"
 msgstr "Educational program (specialization) “Artificial Intelligence Systems”"
 
-#: .\templates\MainApp\entrants.html:17
+#: .\templates\MainApp\entrants.html:19
 msgid "Кафедра систем штучного інтелекту"
 msgstr "The Department of Artificial Intelligence Systems"
 
-#: .\templates\MainApp\entrants.html:18
+#: .\templates\MainApp\entrants.html:20
 msgid "Інститут комп'ютерних наук та інформаційних технологій (ІКНІ)"
 msgstr "Institute of Computer Science and Information Technologies (IKNI)"
 
-#: .\templates\MainApp\entrants.html:19
+#: .\templates\MainApp\entrants.html:21
 msgid "Національний університет “Львівська Політехніка”"
 msgstr "National University “Lviv Polytechnic”"
 
-#: .\templates\MainApp\entrants.html:21
+#: .\templates\MainApp\entrants.html:23
 msgid "Подача документів"
 msgstr "Filing documents"
 
-#: .\templates\MainApp\entrants.html:22
+#: .\templates\MainApp\entrants.html:24
 msgid ""
 "Заяви на вступ подаються в електронному вигляді. Для цього вступник повинен "
 "зареєструватись на веб-сайті."
@@ -80,15 +75,15 @@ msgstr ""
 "Applications for entry are submitted electronically for this purpose, the "
 "entrant must register on the website."
 
-#: .\templates\MainApp\entrants.html:24
+#: .\templates\MainApp\entrants.html:26
 msgid "Прийом документів відбуватиметься у електронному вигляді"
 msgstr "Documents will be received electronically"
 
-#: .\templates\MainApp\entrants.html:24
+#: .\templates\MainApp\entrants.html:26
 msgid "з 12 до 26 липня (до 18:00 год.) 2018 р."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:25
+#: .\templates\MainApp\entrants.html:27
 msgid ""
 "Електронну заяву подають вступники, які хочуть взяти участь у конкурсному "
 "відборі та не мають підстав для особливих умов вступу, визначених Умовами "
@@ -100,78 +95,78 @@ msgid ""
 "оцінювання."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:26
+#: .\templates\MainApp\entrants.html:28
 msgid "Не забудьте поставити 1 пріорітет при подачі заяви."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:27
+#: .\templates\MainApp\entrants.html:29
 msgid "Перелік конкурсних предметів ЗНО:"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:29
+#: .\templates\MainApp\entrants.html:31
 msgid "Українська мова та література (вага предмету сертифікату - 0,35)"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:30
+#: .\templates\MainApp\entrants.html:32
 msgid "Математика (вага предмету сертифікату - 0,4)"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:31
+#: .\templates\MainApp\entrants.html:33
 msgid ""
 "Фізика / іноземна мова (англійська мова, французька мова, німецька мова, "
 "іспанська мова) (вага предмету сертифікату - 0,25)"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:33
+#: .\templates\MainApp\entrants.html:35
 msgid "Ліцензований обсяг"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:33
+#: .\templates\MainApp\entrants.html:35
 msgid ""
 "(максимальна кількість студентів, які можуть бути зараховані до університету "
 "на напрям підготовки 'Комп'ютерні науки'): 300."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:34
+#: .\templates\MainApp\entrants.html:36
 msgid "Максимальний обсяг державного замовлення:"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:34
+#: .\templates\MainApp\entrants.html:36
 msgid ""
 "255, з яких min 88 місць буде відведено для студентів програми 'Штучний "
 "інтелект'."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:35
+#: .\templates\MainApp\entrants.html:37
 msgid ""
 "Після отримання рекомендації необхідно подати оригінали документів. Під час "
 "подачі оригіналів документів необхідно заповнити заявку з обраною "
 "спеціалізацією навчання - 'Системи штучного інтелекту'."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:36
+#: .\templates\MainApp\entrants.html:38
 msgid "Вартість навчання на контрактній формі:"
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:36
+#: .\templates\MainApp\entrants.html:38
 msgid "13500, 14850, 16340, 17970 грн./за перший-четвертий рік відповідно."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:37
+#: .\templates\MainApp\entrants.html:39
 msgid ""
 "Детальніше про правила вступу в Національний університет “Львівська "
 "політехніка” за посиланням."
 msgstr ""
 
-#: .\templates\MainApp\entrants.html:38
+#: .\templates\MainApp\entrants.html:40
 msgid "Приймальна комісія:"
 msgstr "Admissions:"
 
-#: .\templates\MainApp\entrants.html:39
+#: .\templates\MainApp\entrants.html:41
 msgid "м. Львів, вул. Степана Бандери, 12; Головний корпус НУ “ЛП”, к.101"
 msgstr "Lviv, st. Stepana Bandery, 12; The main building of NU “LP”, a.101"
 
-#: .\templates\MainApp\entrants.html:40
+#: .\templates\MainApp\entrants.html:42
 msgid "Номери телефонів:"
 msgstr "Phone Numbers:"
 
@@ -183,13 +178,13 @@ msgstr "Virtual tour of the AIS department"
 msgid "Історія кафедри"
 msgstr "Department history"
 
-#: .\templates\MainApp\mainPage.html:27
+#: .\templates\MainApp\mainPage.html:26
 msgid "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року."
 msgstr ""
 "The Department of Artificial Intelligence Systems was formed on June 26, "
 "2017."
 
-#: .\templates\MainApp\mainPage.html:29
+#: .\templates\MainApp\mainPage.html:28
 msgid ""
 "В основу підготовки фахівців лягла робота професора Нікольського Юрія "
 "Володимировича,\n"
@@ -205,7 +200,7 @@ msgstr ""
 "                       In 2004 at the Department of Information Systems and "
 "Networks the first set was made."
 
-#: .\templates\MainApp\mainPage.html:33
+#: .\templates\MainApp\mainPage.html:32
 msgid ""
 "У жовтні 2016 року почалася робота з модернізації змісту навчання за "
 "ініціативи професора\n"
@@ -221,7 +216,7 @@ msgstr ""
 "                       Natalia Shakhovskaya and graduate of the department "
 "and solutionsLead in Softserve Ivan Zagorodni."
 
-#: .\templates\MainApp\mainPage.html:37
+#: .\templates\MainApp\mainPage.html:36
 msgid ""
 "Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною "
 "технікою за підтримки Львівського ІТ-кластеру."
@@ -229,35 +224,37 @@ msgstr ""
 "During September 2017, the department's laboratories were equipped with "
 "computer technology supported by the Lviv IT cluster."
 
-#: .\templates\MainApp\mainPage.html:40
+#: .\templates\MainApp\mainPage.html:39
 msgid "Віртуальний тур"
 msgstr "Virtual tour"
 
-#: .\templates\MainApp\mainPage.html:54
+#: .\templates\MainApp\mainPage.html:53
 msgid "Професорсько-викладацький склад кафедри"
 msgstr "Professorial and academics staff of the department"
 
-#: .\templates\MainApp\mainPage.html:88
+#: .\templates\MainApp\mainPage.html:86
 msgid "Усі викладачі"
 msgstr "All academics"
 
-#: .\templates\MainApp\mainPage.html:99
+#: .\templates\MainApp\mainPage.html:94
+#: .\templates\StudyingApp\studying.html:8
+msgid "Бакалаврат"
+msgstr "Bachelor"
+
+#: .\templates\MainApp\mainPage.html:97
+#: .\templates\StudyingApp\magister.html:8
 msgid "Магістратура"
 msgstr "Magistracy"
 
-#: .\templates\MainApp\navch.html:8
-msgid "Структурно-логічна схема навчальних дисциплін"
-msgstr "Structural-logical scheme of educational disciplines"
-
-#: .\templates\MainApp\science.html:9
+#: .\templates\MainApp\science.html:11
 msgid "Наукові дослідження кафедри СШІ"
 msgstr "Scientific researches of the AIS department"
 
-#: .\templates\MainApp\science.html:13
+#: .\templates\MainApp\science.html:15
 msgid "Напрямки досліджень"
 msgstr "Directions of researches"
 
-#: .\templates\MainApp\science.html:14
+#: .\templates\MainApp\science.html:16
 msgid ""
 "Науково-дослідницька робота кафедри СШІ ведеться в напрямку вирішення "
 "алгоритмічно складних задач, аналізуванні даних великих обсягів, розробленні "
@@ -269,15 +266,15 @@ msgstr ""
 "developing algorithms for processing video, images or texts, programming and "
 "management of robotics"
 
-#: .\templates\MainApp\science.html:16
+#: .\templates\MainApp\science.html:18
 msgid "Теоретичні результати"
 msgstr "Theoretical results"
 
-#: .\templates\MainApp\science.html:17
+#: .\templates\MainApp\science.html:19
 msgid "Теоретичними результатами"
 msgstr "The theoretical results"
 
-#: .\templates\MainApp\science.html:17
+#: .\templates\MainApp\science.html:19
 msgid ""
 " виконання науково-дослідних робіт є нові математичні моделі, методи, "
 "алгоритми проектування та виробництва мікроелектронних пристроїв, а також "
@@ -287,15 +284,15 @@ msgstr ""
 "the design and production of microelectronic devices, as well as the design "
 "and operation of organizational and technical systems"
 
-#: .\templates\MainApp\science.html:19
+#: .\templates\MainApp\science.html:21
 msgid "Практичні результати"
 msgstr "Practical results"
 
-#: .\templates\MainApp\science.html:20
+#: .\templates\MainApp\science.html:22
 msgid "Практичнимим результатами"
 msgstr "Practical results"
 
-#: .\templates\MainApp\science.html:20
+#: .\templates\MainApp\science.html:22
 msgid ""
 " є проекти, над якими студенти та викладачі кафедри СШІ працюють впродовж "
 "року та презентують в кінці кожного семестру. На презентаціях проектів "
@@ -307,6 +304,42 @@ msgstr ""
 "Representatives from the leading IT companies of Lviv are present at the "
 "presentations of the projects, which is a great opportunity for students to "
 "prove themselves"
+
+#: .\templates\NewsApp\news.html:8 .\templates\wrapping\header.html:23
+msgid "Новини"
+msgstr "News"
+
+#: .\templates\StudyingApp\bachelor.html:13
+msgid "Карта курсів"
+msgstr "Course Map"
+
+#: .\templates\StudyingApp\bachelor.html:18
+msgid ""
+"Під час навчання, студенти будуть вивчати такі мови програмування: Java, "
+"Python, R; До базових предметів належать: лінійна алгебра та чисельні "
+"методи. З фокусом на спеціалізацію будуть вивчатися машинне навчання, бази "
+"та сховища даних, методи штучного інтелекту."
+msgstr ""
+"During the training, students will learn the following programming languages: Java,"
+"Python, R; The basic subject include: linear algebra and numerical"
+"methods. With a focus on specialization will be studied machine learning, bases"
+"and data warehouses, methods of artificial intelligence."
+
+#: .\templates\StudyingApp\magister.html:12
+msgid "Структурно-логічна схема вибіркового блоку «Системи штучного інтелекту»"
+msgstr "Structural-logical scheme of «Artificial Intelligence System» selective block"
+
+#: .\templates\StudyingApp\magister.html:18
+msgid ""
+"Структурно-логічна схема вибіркового блоку «Системи машинного глибинного "
+"навчання»"
+msgstr ""
+"Structural-logical scheme of «Machine Deep Learning System» selective block"
+""
+
+#: .\templates\StudyingApp\studying.html:12
+msgid "Структурно-логічна схема навчальних дисциплін"
+msgstr "Structural-logical scheme of educational disciplines"
 
 #: .\templates\TeachersApp\teacher.html:33
 msgid "Наукові інтереси: "
@@ -328,41 +361,30 @@ msgstr "Scientific research:"
 msgid "Викладачі кафедри СШІ"
 msgstr "Academics of the AIS department"
 
-#: .\templates\wrapping\footer.html:23
+#: .\templates\wrapping\footer.html:10
 msgid "Контактна інформація"
 msgstr "Contact information"
 
-#: .\templates\wrapping\footer.html:69
+#: .\templates\wrapping\footer.html:56
 msgid "© Кафедра СШІ"
 msgstr "©AIS Department"
 
-#: .\templates\wrapping\header.html:47
+#: .\templates\wrapping\header.html:22
 msgid "Про кафедру"
 msgstr "About department"
 
-#: .\templates\wrapping\header.html:48
-msgid "Новини"
-msgstr "News"
-
-#: .\templates\wrapping\header.html:49
+#: .\templates\wrapping\header.html:24
 msgid "Абітурієнтам"
 msgstr "Entrants"
 
-#: .\templates\wrapping\header.html:50
+#: .\templates\wrapping\header.html:25
 msgid "Навчання"
 msgstr "Studying"
 
-#: .\templates\wrapping\header.html:51
+#: .\templates\wrapping\header.html:26
 msgid "Наука"
 msgstr "Science"
 
-#: .\templates\wrapping\header.html:52
+#: .\templates\wrapping\header.html:27
 msgid "Проекти"
 msgstr "Project"
-
-
-#~ msgid "Львів, вул. Князя Романа, 5"
-#~ msgstr "Lviv, st. Kniazia Romana, 5"
-
-#~ msgid "ХХ Навчальний корпус, кім. 126"
-#~ msgstr "XX Academic building, r. 126"

@@ -23,10 +23,8 @@ urlpatterns = [
     path('entrants/', views.entrants, name="entrants"),
     path('science/', views.science, name="science"),
     path('virtual-tour/', views.excursion, name="excursion"),
-    path('bachelor/', views.bach, name="bach"),
-    path('magister/', views.magister, name="magister"),
-    path('navch/', views.navch, name="navch"),
 
+    path('studying/', include("StudyingApp.urls")),
     path('teachers/', include("TeachersApp.urls")),
     path('projects/', include("ProjectsApp.urls")),
     path('cooperation/', include("CooperationApp.urls")),
