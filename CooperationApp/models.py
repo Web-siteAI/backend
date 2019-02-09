@@ -4,10 +4,10 @@ from django.utils.translation import get_language, gettext_lazy as _
 
 # Create your models here.
 class Cooperation(models.Model):
-    name = models.TextField(blank=False, null=False)
-    name_en = models.TextField(blank=False, null=False)
+    name = models.TextField(verbose_name=_("name"), blank=False, null=False)
+    name_en = models.TextField(verbose_name=_("name_en"), blank=False, null=False)
 
-    coop_site = models.CharField(max_length=255, blank=True, null=False)
+    coop_site = models.CharField(verbose_name=_("coop_site"), max_length=255, blank=True, null=False)
 
     def __str__(self):
         return self.get_name()

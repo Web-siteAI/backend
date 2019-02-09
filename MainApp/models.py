@@ -3,18 +3,18 @@ from django.utils.translation import get_language, gettext_lazy as _
 
 
 class Footer(models.Model):
-    email = models.EmailField()
+    email = models.EmailField(verbose_name=_("email"))
 
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.CharField(verbose_name=_("phone_number"), max_length=20)
 
-    location = models.CharField(max_length=255)
-    location_en = models.CharField(max_length=255)
+    location = models.CharField(verbose_name=_("location"), max_length=255)
+    location_en = models.CharField(verbose_name=_("location_en"), max_length=255)
 
-    building = models.CharField(max_length=255)
-    building_en = models.CharField(max_length=255)
+    building = models.CharField(verbose_name=_("building"), max_length=255)
+    building_en = models.CharField(verbose_name=_("building_en"), max_length=255)
 
-    site = models.CharField(max_length=255)
-    site_en = models.CharField(max_length=255)
+    site = models.CharField(verbose_name=_("site"), max_length=255)
+    site_en = models.CharField(verbose_name=_("site_en"), max_length=255)
 
     def get_location(self):
         return self._get_translation_field('location')
