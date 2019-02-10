@@ -1,21 +1,17 @@
 from django.shortcuts import render
-from TeachersApp.models import Teacher
 from .models import Footer
-
-
-def index(request):
-    return render(request, 'MainApp/homePage.html')
+from TeachersApp.models import Teacher
 
 
 def mainMethod(request):
-    k = 0
     teachers_list = []
     footer_fields = Footer.objects.get(pk=1)
+    k = 0
     for teacher in Teacher.objects.all():
         if k < 4:
             teachers_list.append(teacher)
             k += 1
-    content = {"teachers_list": teachers_list, "footer_fields": footer_fields}
+    content = {"footer_fields": footer_fields, ' teachers_list':  teachers_list}
     return render(request, "MainApp/mainPage.html", content)
 
 
@@ -30,12 +26,8 @@ def science(request):
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/science.html", content)
 
+
 def excursion(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/excursion.html", content)
-
-def navch(request):
-    footer_fields = Footer.objects.get(pk=1)
-    content = {"footer_fields": footer_fields}
-    return render(request, "MainApp/navch.html", content)

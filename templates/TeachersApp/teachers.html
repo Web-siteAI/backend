@@ -1,11 +1,11 @@
-{%  extends "MainApp/wrapper.html" %}
+{%  extends "MainApp/../wrapping/wrapper.html" %}
 {%  block content %}
-
+    {%  load i18n %}
     {% load staticfiles %}
 
     <div class="teachersMain">
 
-        <h1>Викладачі кафедри СШІ</h1>
+        <h1>{%  trans "Викладачі кафедри СШІ" %}</h1>
 
         <div class="wrapper">
 
@@ -17,7 +17,7 @@
                         <div class="spanWrap">
                             <span class="teacher-name">{{ teacher }}</span>
                             <br>
-                            <span class="teacher-role">{{ teacher.role }}</span>
+                            <span class="teacher-role">{{ teacher.get_role }}</span>
                         </div>
                     </div>
                     </a>
@@ -28,7 +28,7 @@
                         <div class="spanWrap">
                             <span class="teacher-name">{{ teacher }}</span>
                             <br>
-                            <span class="teacher-role">{{ teacher.role }}</span>
+                            <span class="teacher-role">{{ teacher.get_role }}</span>
                         </div>
                     </div>
                     </a>

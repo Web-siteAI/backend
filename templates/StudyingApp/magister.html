@@ -1,0 +1,24 @@
+{%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  block content %}
+    {%  load i18n %}
+    {% load staticfiles %}
+	<div class="magister">
+		<h1 id="riven" class="titlemagister">
+			<span >
+				{%  trans "Магістратура" %}
+			</span>
+		</h1>
+		<h2 id="riven">
+			<span style="font-size: 30px;">{%  trans "Структурно-логічна схема вибіркового блоку «Системи штучного інтелекту»"%}</span>
+		</h2>
+        <div id="im_sxema" >
+            <img src ='{% static "magister\images\magi_struct_ais.jpg" %}'>
+        </div>
+        <h2 id="riven">
+			<span style="font-size: 30px;">{%  trans "Структурно-логічна схема вибіркового блоку «Системи машинного глибинного навчання»" %}</span>
+		</h2>
+        <div id="im_sxema" >
+            <img src ='{% static "magister\images\magi_struct_mdls.jpg" %}'>
+        </div>
+	</div>
+{% endblock %}

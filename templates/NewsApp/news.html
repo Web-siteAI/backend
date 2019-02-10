@@ -1,0 +1,28 @@
+{%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  block content %}
+    {%  load i18n %}
+    {% load staticfiles %}
+
+    <div class="all_news">
+		<h1 class="title_news">
+			<span>{% trans "Новини"%} </span>
+		</h1>
+        {%   for news in news_field %}
+		    <a href="#" style="text-decoration: none">
+			    <div class="news_post">
+				    <div class="img_news">
+                        <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
+				    </div>
+					    <div class="title_post">
+						    <span>{{ news.get_topic }}</span>
+					    </div>
+				    <div class="data_post">
+					    <time>{{ news.data_post }} </time>
+				    </div>
+				    <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
+			    </div>
+		    </a>
+        {% endfor %}
+	</div>
+
+{% endblock %}

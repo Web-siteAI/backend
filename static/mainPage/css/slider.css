@@ -96,3 +96,46 @@ body{
   margin-top: 150px;
   margin-left: 90px;
 }
+
+@media (max-width: 900px){
+    .mainPage .slider {
+        height: 400px;
+    }
+
+    .mainPage .prev {
+        top: 200px;
+        left: 20px;
+    }
+
+    .mainPage .next {
+        top: 200px;
+        right: 20px;
+    }
+
+    .mainPage .slider div:nth-child(1)::before {
+        font-size: 32px;
+    }
+    .mainPage .slider div:nth-child(1)::after {
+        font-size: 34px;
+    }
+    .mainPage .slider div:nth-child(2)::before {
+        font-size: 26px;
+        margin-top: 130px;
+        width: 360px;
+    }
+}
+
+@media (max-width: 699px){
+    .mainPage .slider {
+        height: 300px;
+    }
+
+    .mainPage .prev {
+        top: 160px;
+        left: 10px;
+    }
+    .mainPage .next {
+        top: 160px;
+        right: 10px;
+    }
+}
