@@ -1,7 +1,7 @@
-{%  extends "MainApp/wrapper.html"%}
+{%  extends "MainApp/../wrapping/wrapper.html" %}
 {%  block content %}
-
-    {% load staticfiles %}
+    {%  load i18n %}
+    {%  load staticfiles %}
 
     <div class="mainPage">
 
@@ -20,24 +20,23 @@
         <div class="wrapper">
             <div class="history">
 
-                <h1>Історія кафедри</h1>
+                <h1>{%  trans "Історія кафедри" %}</h1>
 
                 <div class="text" style="font-family: 'Roboto'">
+                      <p>{%  blocktrans %}Кафедра систем штучного інтелекту утворилась 26 червня 2017 року.{% endblocktrans %}</p>
 
-                    <p>Кафедра систем штучного інтелекту утворилась 26 червня 2017 року.</p>
-
-                    <p>В основу підготовки фахівців лягла робота професора Нікольського Юрія Володимировича,
+                    <p>{%  blocktrans %}В основу підготовки фахівців лягла робота професора Нікольського Юрія Володимировича,
                         який у 2002 році розробив навчальний план спеціальності «Системи штучного інтелекту», напрям «Комп’ютерні науки».
-                        У 2004 році на кафедрі інформаційних систем та мереж здійснено перший набір.</p>
+                        У 2004 році на кафедрі інформаційних систем та мереж здійснено перший набір.{% endblocktrans %}</p>
 
-                    <p>У жовтні 2016 року почалася робота з модернізації змісту навчання за ініціативи професора
+                    <p>{%  blocktrans %}У жовтні 2016 року почалася робота з модернізації змісту навчання за ініціативи професора
                         кафедри інформаційних систем та мереж Інституту комп’ютерних наук та інформаційних технологій (ІКНІ)
-                        Наталії Шаховської і випускника кафедри та Solutions Lead в Softserve Івана Загороднього.</p>
+                        Наталії Шаховської і випускника кафедри та Solutions Lead в Softserve Івана Загороднього.{% endblocktrans %}</p>
 
-                    <p>Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною технікою за підтримки Львівського ІТ-кластеру.</p>
+                    <p>{%  blocktrans %}Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною технікою за підтримки Львівського ІТ-кластеру.{% endblocktrans %}</p>
 
 
-                    <h3><a href="/AI/virtual-tour">Віртуальний тур</a></h3>
+                    <h3 align="center"><a href="/virtual-tour">{%  trans "Віртуальний тур" %}</a></h3>
 
 
                 </div>
@@ -51,25 +50,23 @@
 
             <div class="teachers" style="font-family: 'Roboto'">
 
-                <h1>Професорсько-викладацький склад кафедри</h1>
-
+                <h1>{%  trans "Професорсько-викладацький склад кафедри" %}</h1>
                 <div class="wrapper">
-                    <!-- I cut target there and this cycle print all users in db (but image is almost Shahowska)) -->
 
                     {% for teacher in teachers_list %}
                 {% if teacher.scopus_id > 1000 %}
-                    <a href="/AI/teachers/{{ teacher.scopus_id }}/">
+                    <a href="/teachers/{{ teacher.scopus_id }}/">
                     <div class="gr-item">
                         <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
                         <div class="spanWrap">
-                            <span class="teacher-name">{{ teacher }}</span>
+                            <span class="teacher-name"> {{ teacher }}</span>
                             <br>
-                            <span class="teacher-role">{{ teacher.role }}</span>
+                            <span class="teacher-role">{{ teacher.role }} </span>
                         </div>
                     </div>
                     </a>
                 {% elif teacher.id != NULL %}
-                    <a href="/AI/teachers/{{ teacher.id }}/">
+                    <a href="/teachers/{{ teacher.id }}/">
                     <div class="gr-item">
                         <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
                         <div class="spanWrap">
@@ -86,7 +83,7 @@
             
                 <a href="teachers/">
                     <div class="teachers-but">
-                        <span>Усі викладачі</span>
+                        <span>{%  trans "Усі викладачі" %}</span>
                     </div>
                 </a>
 
@@ -94,10 +91,10 @@
         <div class="wrapper">
             <div class="programs">
                 <div class="prog">
-                    <h4>Бакалаврат</h4>
+                    <h4><a href="/studying/bachelor"> {%  trans "Бакалаврат" %}</a></h4>
                 </div>
                 <div class="prog">
-                    <h4>Магістратура</h4>
+                    <h4><a href="/studying/magister">{%  trans "Магістратура" %}</a></h4>
                 </div>
                 <div class="prog">
                     <h4>Phd</h4>

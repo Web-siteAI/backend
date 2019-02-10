@@ -1183,7 +1183,6 @@ def getTeacher(request, TeacherId):
                     orcid = o.getText()
 
 
-
             hd = soup.findAll("span", class_="fontLarge")
             hindex = int(hd[0].getText())
             docs = int(hd[1].getText())
@@ -1195,9 +1194,8 @@ def getTeacher(request, TeacherId):
             teacher.scopus_documents = docs
             teacher.save()
 
-        teachers = Teacher.objects.filter(scopus_id = "%d" % (id));
+        teachers = Teacher.objects.filter(scopus_id="%d" % (id));
         teacher = teachers[0]
-
 
         content = {"teacher": teacher, "footer_fields": footer_fields, "docs": documents}
         return render(request, "TeachersApp/teacher.html", content)
@@ -1205,6 +1203,6 @@ def getTeacher(request, TeacherId):
         teacher = Teacher.objects.get(pk=id)
         content = {"teacher": teacher}
 
-
         return render(request, "TeachersApp/teacher.html", content)
+
 # Create your views here.

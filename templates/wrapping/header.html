@@ -1,0 +1,50 @@
+{%  load staticfiles %}
+{%  load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <header>
+  {% get_current_language as LANGUAGE_CODE %}
+      <div class="hLogo" style="background-image: url('{% static "header/images/logo.png" %}')"></div>
+
+      <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
+
+      <label for="checkbox3">
+              <div class="hamburger hamburger3">
+                  <span class="bar bar1"></span>
+                  <span class="bar bar2"></span>
+                  <span class="bar bar3"></span>
+                  <span class="bar bar4"></span>
+              </div>
+          </label>
+
+    <div class="header-right" style="font-family: 'Roboto Condensed';">
+      <a href="/">{%  trans "Про кафедру" %}</a>
+      <a href="/news">{%  trans "Новини" %}</a>
+      <a href="/entrants">{%  trans "Абітурієнтам" %}</a>
+      <a href="/studying/">{%  trans "Навчання" %}</a>
+      <a href="/science">{%  trans "Наука" %}</a>
+      <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a>
+      <a href="/cooperation">{%  trans "Співпраця" %}</a>
+      <a>
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ redirect_to }} ">
+          <select name="language" id="" onchange="this.form.submit()" >
+              {%  get_available_languages as LANGUAGES %}
+              {%  get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+                    <option data-icon="glyphicon-music" value="{{  language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                          {{ language.code }}
+                    </option>
+              {% endfor %}
+          </select>
+
+        </form>
+      </a>
+
+
+    </div>
+
+  </header>
+</body>

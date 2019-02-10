@@ -19,13 +19,16 @@ from . import views
 
 urlpatterns = [
     path('', views.mainMethod, name='mainMethod'),
-    path('entry/', include("EntryApp.urls")),
-    path('teachers/', include("TeachersApp.urls")),
+
     path('entrants/', views.entrants, name="entrants"),
     path('science/', views.science, name="science"),
-    path('projects/', include("projects.urls")),
-    path('cooperation/', include("Cooperation.urls")),
     path('virtual-tour/', views.excursion, name="excursion"),
-    path('navch/', views.navch, name="navch"),
+
+    path('studying/', include("StudyingApp.urls")),
+    path('teachers/', include("TeachersApp.urls")),
+    path('projects/', include("ProjectsApp.urls")),
+    path('cooperation/', include("CooperationApp.urls")),
+    path('news/', include("NewsApp.urls")),
+
 ]
 
