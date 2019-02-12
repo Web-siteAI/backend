@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db" uuid="cfe870c9-6b24-4ebc-9277-3d602f4dfd40">
+    <data-source name="db" uuid="4e965d42-ddf1-4c7b-8275-654442f4eaa8">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Django default" uuid="4d63a44a-8be1-4707-9ab2-d8fde36e4698">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
     </data-source>
   </component>
 </project>

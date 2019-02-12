@@ -2,7 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/static/teachers/scholar/Вовк.txt" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/static/teachers/scholar/Кривенчук.html" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/static/teachers/scholar/Кривенчук.txt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/static/teachers/scholar/Мочурад.txt" charset="windows-1251" />
+    <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

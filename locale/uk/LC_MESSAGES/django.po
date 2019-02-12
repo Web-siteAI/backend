@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-09 10:58+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: .\CooperationApp\models.py:7
+msgid "name"
+msgstr "назва"
+
+#: .\CooperationApp\models.py:8
+msgid "name_en"
+msgstr "назва_en"
+
+#: .\CooperationApp\models.py:10
+msgid "coop_site"
+msgstr "сайт_співпраці"
+
+#: .\MainApp\models.py:6
+msgid "email"
+msgstr "електорнна_пошта"
+
+#: .\MainApp\models.py:8
+msgid "phone_number"
+msgstr "телефон"
+
+#: .\MainApp\models.py:10
+msgid "location"
+msgstr "розтвшування"
+
+#: .\MainApp\models.py:11
+msgid "location_en"
+msgstr "розташування_en"
+
+#: .\MainApp\models.py:13
+msgid "building"
+msgstr "будівля"
+
+#: .\MainApp\models.py:14
+msgid "building_en"
+msgstr "будівля_en"
+
+#: .\MainApp\models.py:16
+msgid "site"
+msgstr "сайт"
+
+#: .\MainApp\models.py:17
+msgid "site_en"
+msgstr "сайт_en"
+
+#: .\NewsApp\models.py:8
+msgid "topic"
+msgstr "назва_посту"
+
+#: .\NewsApp\models.py:9
+msgid "topic_en"
+msgstr "назва_посту_en"
+
+#: .\NewsApp\models.py:12
+msgid "short_description"
+msgstr "короткий_опис"
+
+#: .\NewsApp\models.py:14
+msgid "short_description_en"
+msgstr "короткий_опис_еn"
+
+#: .\NewsApp\models.py:16
+msgid "post"
+msgstr "пост"
+
+#: .\NewsApp\models.py:17
+msgid "post_en"
+msgstr "пост_en"
+
+#: .\NewsApp\models.py:19
+msgid "data_post"
+msgstr "дата"
+
+#: .\NewsApp\models.py:22
+msgid "photo"
+msgstr "зображення"
+
+#: .\NewsApp\models.py:22
+msgid "Use ImagesForm if you want to add more than one image"
+msgstr "Використовуй Images якщо хочеш додати більше одного зображення"
+
+#: .\TeachersApp\models.py:8
+msgid "full_name"
+msgstr "ПІП"
+
+#: .\TeachersApp\models.py:10
+msgid "full_name_en"
+msgstr "ПІП_en"
+
+#: .\TeachersApp\models.py:14
+msgid "role"
+msgstr "посада"
+
+#: .\TeachersApp\models.py:15
+msgid "role_en"
+msgstr "посада_en"
+
+#: .\TeachersApp\models.py:18
+msgid "scientific_rank"
+msgstr "Наукове_звання"
+
+#: .\TeachersApp\models.py:20
+msgid "scientific_rank_en"
+msgstr "Наукове_звання_en"
+
+#: .\TeachersApp\models.py:22
+msgid "academic_site"
+msgstr "сайт_викладача"
+
+#: .\TeachersApp\models.py:25
+msgid "science_interests"
+msgstr "наукові інтереси"
+
+#: .\TeachersApp\models.py:27
+msgid "science_interests_en"
+msgstr "наукові_інтереси_en"
+
+#: .\TeachersApp\models.py:30
+msgid "science_researches"
+msgstr "наукові_дослідження"
+
+#: .\TeachersApp\models.py:32
+msgid "science_researches_en"
+msgstr "наукові_дослідження_en"
+
+#: .\TeachersApp\models.py:34
+msgid "interests"
+msgstr "хоббі"
+
+#: .\TeachersApp\models.py:35
+msgid "interests_en"
+msgstr "хоббі_en"
+
+#: .\TeachersApp\models.py:37
+msgid "description"
+msgstr "опис"
+
+#: .\TeachersApp\models.py:38
+msgid "description_en"
+msgstr "опис_en"
+
+#: .\TeachersApp\models.py:46
+msgid "scopus_documents"
+msgstr "scopus_документи"
+
+#: .\TeachersApp\models.py:48
+msgid "scopus_citations"
+msgstr "scopus_цитати"
