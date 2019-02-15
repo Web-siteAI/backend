@@ -156,7 +156,6 @@ label, a{ /*при наведении на стрелки или переклю�
 	transition: opacity 0.2s ease-out;
 }
 
-
 @media screen and (max-width: 900px){
 	.title {
 		text-align: center;

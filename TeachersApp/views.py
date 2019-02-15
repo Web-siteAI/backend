@@ -1201,7 +1201,7 @@ def getTeacher(request, TeacherId):
         return render(request, "TeachersApp/teacher.html", content)
     else:
         teacher = Teacher.objects.get(pk=id)
-        content = {"teacher": teacher}
+        content = {"teacher": teacher, "footer_fields": footer_fields}
 
         return render(request, "TeachersApp/teacher.html", content)
 
