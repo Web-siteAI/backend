@@ -1,25 +1,23 @@
 .navch {
 	width: 100%;
-}
-
-.titlenavch {
-	/*background:#546e7a;*/
-	padding-top: 30px;
-	font-weight: bold;
-	font-size: 40px;
-	text-align: left;
+	padding: 0px 1% 30px 10%;
 }
 
 #riven{
 	display: block;
 	width: 80%;
-	margin:0 auto;
-	line-height: 70px;
+	line-height: 50px;
 	color: #34515e;
-	
+	margin-left: 5%;
 }
-#im_sxema {
-	margin: 0px 20px 90px 20px;
-	width: 100%;
+
+.im_sxema {
+	width: 90%;
 	text-align: center;
+	margin-bottom: 30px;
+}
+
+#fotka_magist{
+	height: 100%;
+	width: 100%;
 }
