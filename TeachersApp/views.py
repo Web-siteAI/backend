@@ -1160,12 +1160,14 @@ def getTeacher(request, TeacherId):
                 f.write(el+"\n")
         f.close()
 
-    footer_fields = Footer.objects.get(pk=1)
     id = int(TeacherId)
     orcid = " "
     hindex = 0
     docs = 0
+    footer_fields = Footer.objects.get(pk=1)
     if id > 1000:
+        teachers = Teacher.objects.filter(scopus_id="%d" % (id));
+        teacher = teachers[0]
         if os.path.isfile("./static/teachers/all/%d.html"%(id)):
             k = 1
         else:
@@ -1177,32 +1179,24 @@ def getTeacher(request, TeacherId):
 
             orcids = soup.findAll("span", class_="anchorText")
 
-
             for o in orcids:
                 if o.getText()[0:4] == "http":
                     orcid = o.getText()
-
 
             hd = soup.findAll("span", class_="fontLarge")
             hindex = int(hd[0].getText())
             docs = int(hd[1].getText())
 
-            teachers = Teacher.objects.filter(scopus_id="%d" % (id));
-            teacher = teachers[0]
             teacher.scopus_orcid = orcid
             teacher.scopus_hindex = hindex
             teacher.scopus_documents = docs
             teacher.save()
 
-        teachers = Teacher.objects.filter(scopus_id="%d" % (id));
-        teacher = teachers[0]
-
         content = {"teacher": teacher, "footer_fields": footer_fields, "docs": documents}
-        return render(request, "TeachersApp/teacher.html", content)
     else:
         teacher = Teacher.objects.get(pk=id)
         content = {"teacher": teacher, "footer_fields": footer_fields}
 
-        return render(request, "TeachersApp/teacher.html", content)
+    return render(request, "TeachersApp/teacher.html", content)
 
 # Create your views here.

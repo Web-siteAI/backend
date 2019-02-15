@@ -7,7 +7,7 @@ class Cooperation(models.Model):
     name = models.TextField(verbose_name=_("name"), blank=False, null=False)
     name_en = models.TextField(verbose_name=_("name_en"), blank=False, null=False)
 
-    coop_site = models.CharField(verbose_name=_("coop_site"), max_length=255, blank=True, null=False)
+    coop_site = models.URLField(verbose_name=_("coop_site"), max_length=255, blank=True, null=False)
 
     def __str__(self):
         return self.get_name()

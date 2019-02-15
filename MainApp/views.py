@@ -11,7 +11,7 @@ def mainMethod(request):
         if k < 4:
             teachers_list.append(teacher)
             k += 1
-    content = {"footer_fields": footer_fields, ' teachers_list':  teachers_list}
+    content = {"footer_fields": footer_fields, 'teachers_list':  teachers_list}
     return render(request, "MainApp/mainPage.html", content)
 
 

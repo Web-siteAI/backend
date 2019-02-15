@@ -52,29 +52,29 @@
 
                 <h1>{%  trans "Професорсько-викладацький склад кафедри" %}</h1>
                 <div class="wrapper">
-
                     {% for teacher in teachers_list %}
-                {% if teacher.scopus_id > 1000 %}
-                    <a href="/teachers/{{ teacher.scopus_id }}/">
-                    <div class="gr-item">
-                        <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
-                        <div class="spanWrap">
-                            <span class="teacher-name"> {{ teacher }}</span>
-                            <br>
-                            <span class="teacher-role">{{ teacher.role }} </span>
-                        </div>
-                    </div>
-                    </a>
+
+                        {% if teacher.scopus_id > 1000 %}
+                            <a href="/teachers/{{ teacher.scopus_id }}/">
+                                <div class="gr-item">
+                                    <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
+                                        <div class="spanWrap">
+                                            <span class="teacher-name"> {{ teacher }}</span>
+                                            <br>
+                                            <span class="teacher-role">{{ teacher.role }} </span>
+                                        </div>
+                                </div>
+                            </a>
                 {% elif teacher.id != NULL %}
                     <a href="/teachers/{{ teacher.id }}/">
-                    <div class="gr-item">
-                        <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
-                        <div class="spanWrap">
-                            <span class="teacher-name">{{ teacher }}</span>
-                            <br>
-                            <span class="teacher-role">{{ teacher.role }}</span>
+                        <div class="gr-item">
+                            <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
+                            <div class="spanWrap">
+                                <span class="teacher-name">{{ teacher.get_full_name }}</span>
+                                <br>
+                                <span class="teacher-role">{{ teacher.get_role }}</span>
+                            </div>
                         </div>
-                    </div>
                     </a>
                 {% endif %}
             {% endfor %}

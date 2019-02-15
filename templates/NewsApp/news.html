@@ -7,9 +7,20 @@
 		<h1 class="title_news">
 			<span>{% trans "Новини"%} </span>
 		</h1>
+        <div class="container">
+        <h3>All tags</h3>
+            {% for taga in tags_list %}
+                <a href="#"> #{{ taga }} </a>
+            {%  endfor %}
+        </div>
         {%   for news in news_field %}
 		    <a href="#" style="text-decoration: none">
 			    <div class="news_post">
+                    <div>
+                        {% for tag in news.tags.all %}
+                            <p>#{{ tag }}</p>
+                        {%  endfor %}
+                    </div>
 				    <div class="img_news">
                         <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
 				    </div>

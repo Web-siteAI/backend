@@ -21,7 +21,12 @@
                     </div>
                 </div>
                 <p style="color: #34515e">{{ teacher.get_role }}</p>
+
+                <!-- new fields -->
+                <p>{{ teacher.get_scientific_rank}}</p>
+                <p><a href="{{ teacher.academic_site}}">{% trans "Сайт" %}</a></p>
                 <p>{{ teacher.get_description }}</p>
+
                 <span style="color: #34515e">orcid: </span>
                 <span><a href="{{ teacher.scopus_orcid }}" target="_blank">{{ teacher.scopus_orcid }}</a></span>
                 <br>

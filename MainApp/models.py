@@ -13,8 +13,12 @@ class Footer(models.Model):
     building = models.CharField(verbose_name=_("building"), max_length=255)
     building_en = models.CharField(verbose_name=_("building_en"), max_length=255)
 
+    social_net = models.CharField(verbose_name=_("social_net"), max_length=255)
+    social_net_url = models.URLField(verbose_name=_("social_net_url"), max_length=255)
+
     site = models.CharField(verbose_name=_("site"), max_length=255)
     site_en = models.CharField(verbose_name=_("site_en"), max_length=255)
+    site_url = models.URLField(verbose_name=_("site_url"), max_length=255)
 
     def get_location(self):
         return self._get_translation_field('location')

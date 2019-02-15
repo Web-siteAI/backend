@@ -19,7 +19,7 @@ class Teacher (models.Model):
     scientific_rank_en = models.CharField(
         verbose_name=_("scientific_rank_en"), max_length=255, default=" ", blank=False, null=False)
 
-    academic_site = models.CharField(verbose_name=_("academic_site"), max_length=255, blank=True, null=False)
+    academic_site = models.URLField(verbose_name=_("academic_site"), max_length=255, blank=True)
 
     science_interests = models.CharField(
         verbose_name=_("science_interests"), max_length=500, blank=True, null=False)

@@ -4,6 +4,32 @@ from django.utils.translation import get_language, ugettext_lazy as _
 
 
 # Create your models here
+class Tag(models.Model):
+    name = models.CharField(max_length=255, blank=False, null=False)
+    name_uk = models.CharField(max_length=255, blank=False, null=False)
+
+    def __str__(self):
+        return self.name
+
+    def get_name(self):
+        return self._get_translation_field('name')
+
+    def _get_translation_field(self, field_name):
+        original_field_name = field_name
+
+        lang_code = get_language()
+
+        if lang_code != 'en':
+            field_name = '{}_{}'.format(field_name, lang_code)
+
+        field_value = getattr(self, field_name)
+
+        if field_value:
+            return field_value
+        else:
+            return getattr(self, original_field_name)
+
+
 class News(models.Model):
     topic = models.CharField(verbose_name=_("topic"), max_length=255, blank=False, null=False)
     topic_en = models.CharField(verbose_name=_("topic_en"), max_length=255, blank=False, null=False)
@@ -21,6 +47,8 @@ class News(models.Model):
     photo = models.ImageField(
         verbose_name=_("photo"), help_text=_("Use ImagesForm if you want to add more than one image"),
         max_length=255, upload_to="pictures/%Y/%m/%D/", blank=True, null=True)
+
+    tags = models.ManyToManyField(Tag, blank=True)
 
     def __str__(self):
         return self.get_topic()
@@ -50,7 +78,7 @@ class News(models.Model):
             return getattr(self, original_field_name)
 
 
-class Images(models.Model):
+class Image(models.Model):
     news = models.ForeignKey(News, related_name="news", on_delete=models.CASCADE)
     image = models.ImageField(upload_to="pictures/%Y/%m/%D/", blank=False, null=False)
     image_name = models.CharField(max_length=255, default="", blank=True, null=False)
@@ -65,3 +93,7 @@ class Images(models.Model):
             string = str(self.image)
             img_name = string[(string.rfind("/") + 1):string.find(".")]
         return img_name
+
+
+
+

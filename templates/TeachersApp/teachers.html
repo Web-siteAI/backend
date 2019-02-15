@@ -15,7 +15,7 @@
                     <div class="gr-item">
                         <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
                         <div class="spanWrap">
-                            <span class="teacher-name">{{ teacher }}</span>
+                            <span class="teacher-name">{{ teacher.get_full_name }}</span>
                             <br>
                             <span class="teacher-role">{{ teacher.get_role }}</span>
                         </div>
