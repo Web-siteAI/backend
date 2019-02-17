@@ -21,4 +21,4 @@ def current_news(request, NewsId):
         if image.news.id == NewsId:
             image_list.append(image)
     content = {"footer_fields": footer_fields, "current_news": cur_news, "image_list": image_list}
-    return render(request, "NewsApp/news.html", content)
+    return render(request, "NewsApp/one_news.html", content)
