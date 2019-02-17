@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: .\templates\StudyingApp\magister.html:18
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 16:58+0200\n"
+"POT-Creation-Date: 2019-02-16 14:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +18,166 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\CooperationApp\models.py:7
+msgid "name"
+msgstr ""
+
+#: .\CooperationApp\models.py:8
+msgid "name_en"
+msgstr ""
+
+#: .\CooperationApp\models.py:10
+msgid "coop_site"
+msgstr ""
+
+#: .\MainApp\models.py:6
+msgid "email"
+msgstr ""
+
+#: .\MainApp\models.py:8
+msgid "phone_number"
+msgstr ""
+
+#: .\MainApp\models.py:10
+msgid "location"
+msgstr ""
+
+#: .\MainApp\models.py:11
+msgid "location_en"
+msgstr ""
+
+#: .\MainApp\models.py:13
+msgid "building"
+msgstr ""
+
+#: .\MainApp\models.py:14
+msgid "building_en"
+msgstr ""
+
+#: .\MainApp\models.py:16
+msgid "social_net"
+msgstr ""
+
+#: .\MainApp\models.py:17
+msgid "social_net_url"
+msgstr ""
+
+#: .\MainApp\models.py:19
+msgid "site"
+msgstr ""
+
+#: .\MainApp\models.py:20
+msgid "site_en"
+msgstr ""
+
+#: .\MainApp\models.py:21
+msgid "site_url"
+msgstr ""
+
+#: .\NewsApp\models.py:34
+msgid "topic"
+msgstr ""
+
+#: .\NewsApp\models.py:35
+msgid "topic_en"
+msgstr ""
+
+#: .\NewsApp\models.py:38
+msgid "short_description"
+msgstr ""
+
+#: .\NewsApp\models.py:40
+msgid "short_description_en"
+msgstr ""
+
+#: .\NewsApp\models.py:42
+msgid "post"
+msgstr ""
+
+#: .\NewsApp\models.py:43
+msgid "post_en"
+msgstr ""
+
+#: .\NewsApp\models.py:45
+msgid "data_post"
+msgstr ""
+
+#: .\NewsApp\models.py:48
+msgid "photo"
+msgstr ""
+
+#: .\NewsApp\models.py:48
+msgid "Use ImagesForm if you want to add more than one image"
+msgstr ""
+
+#: .\TeachersApp\models.py:8
+msgid "full_name"
+msgstr ""
+
+#: .\TeachersApp\models.py:10
+msgid "full_name_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:14
+msgid "role"
+msgstr ""
+
+#: .\TeachersApp\models.py:15
+msgid "role_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:18
+msgid "scientific_rank"
+msgstr ""
+
+#: .\TeachersApp\models.py:20
+msgid "scientific_rank_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:22
+msgid "academic_site"
+msgstr ""
+
+#: .\TeachersApp\models.py:25
+msgid "science_interests"
+msgstr ""
+
+#: .\TeachersApp\models.py:27
+msgid "science_interests_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:30
+msgid "science_researches"
+msgstr ""
+
+#: .\TeachersApp\models.py:32
+msgid "science_researches_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:34
+msgid "interests"
+msgstr ""
+
+#: .\TeachersApp\models.py:35
+msgid "interests_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:37
+msgid "description"
+msgstr ""
+
+#: .\TeachersApp\models.py:38
+msgid "description_en"
+msgstr ""
+
+#: .\TeachersApp\models.py:46
+msgid "scopus_documents"
+msgstr ""
+
+#: .\TeachersApp\models.py:48
+msgid "scopus_citations"
+msgstr ""
 
 #: .\templates\CooperationApp\cooperation.html:11
 #: .\templates\wrapping\header.html:28
@@ -237,14 +398,14 @@ msgid "Усі викладачі"
 msgstr "All academics"
 
 #: .\templates\MainApp\mainPage.html:94
-#: .\templates\StudyingApp\studying.html:8
+#: .\templates\StudyingApp\studying.html:7
 msgid "Бакалаврат"
 msgstr "Bachelor"
 
 #: .\templates\MainApp\mainPage.html:97
-#: .\templates\StudyingApp\magister.html:8
+#: .\templates\StudyingApp\studying.html:20
 msgid "Магістратура"
-msgstr "Magistracy"
+msgstr "Master's degree"
 
 #: .\templates\MainApp\science.html:11
 msgid "Наукові дослідження кафедри СШІ"
@@ -310,6 +471,7 @@ msgid "Новини"
 msgstr "News"
 
 #: .\templates\StudyingApp\bachelor.html:13
+#: .\templates\StudyingApp\magister.html:13
 msgid "Карта курсів"
 msgstr "Course Map"
 
@@ -320,40 +482,40 @@ msgid ""
 "методи. З фокусом на спеціалізацію будуть вивчатися машинне навчання, бази "
 "та сховища даних, методи штучного інтелекту."
 msgstr ""
-"During the training, students will learn the following programming languages: Java,"
-"Python, R; The basic subject include: linear algebra and numerical"
-"methods. With a focus on specialization will be studied machine learning, bases"
-"and data warehouses, methods of artificial intelligence."
-
-#: .\templates\StudyingApp\magister.html:12
-msgid "Структурно-логічна схема вибіркового блоку «Системи штучного інтелекту»"
-msgstr "Structural-logical scheme of «Artificial Intelligence System» selective block"
-
-#: .\templates\StudyingApp\magister.html:18
-msgid ""
-"Структурно-логічна схема вибіркового блоку «Системи машинного глибинного "
-"навчання»"
-msgstr ""
-"Structural-logical scheme of «Machine Deep Learning System» selective block"
-""
+"During the training, students will learn the following programming "
+"languages: Java,Python, R; The basic subject include: linear algebra and "
+"numericalmethods. With a focus on specialization will be studied machine "
+"learning, basesand data warehouses, methods of artificial intelligence."
 
 #: .\templates\StudyingApp\studying.html:12
 msgid "Структурно-логічна схема навчальних дисциплін"
 msgstr "Structural-logical scheme of educational disciplines"
 
-#: .\templates\TeachersApp\teacher.html:33
+#: .\templates\StudyingApp\studying.html:25
+msgid "Вибірковий блок 'Системи штучного інтелекту'"
+msgstr "'Artificial Intelligence Systems' selective block"
+
+#: .\templates\StudyingApp\studying.html:31
+msgid "Вибірковий блок 'Системи машинного глибинного навчання'"
+msgstr "'Machine Deep Learning System»' selective block"
+
+#: .\templates\TeachersApp\teacher.html:27
+msgid "Сайт"
+msgstr "Site"
+
+#: .\templates\TeachersApp\teacher.html:38
 msgid "Наукові інтереси: "
 msgstr "Scientific interests: "
 
-#: .\templates\TeachersApp\teacher.html:37
+#: .\templates\TeachersApp\teacher.html:42
 msgid "Напрямки наукових досліджень: "
 msgstr "Areas of research: "
 
-#: .\templates\TeachersApp\teacher.html:41
+#: .\templates\TeachersApp\teacher.html:46
 msgid "Хоббі: "
 msgstr "Hobby: "
 
-#: .\templates\TeachersApp\teacher.html:46
+#: .\templates\TeachersApp\teacher.html:51
 msgid "Наукові дослідження:"
 msgstr "Scientific research:"
 
@@ -388,3 +550,7 @@ msgstr "Science"
 #: .\templates\wrapping\header.html:27
 msgid "Проекти"
 msgstr "Project"
+
+#: .\templates\MainApp\magister.html:18
+msgid "Для магістрів доступні два напрямками підготовки: «Системи штучного інтелекту» та «Системи машинного глибинного навчання»"
+msgstr "For master's degree there are two areas of studying: «Artificial Intelligence Systems» and «Systems of Machine Depth Learning»"

@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html lang="en_US">
+<head>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META NAME="verify-v1" CONTENT="M5q4CxMVJyf1WE5UwVmHfV8q3LK1vh/3qmo894V0Pqg=">
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQQPUFdVCRADVVVXAwABVA=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script><script type="text/javascript" src="https://cdn.optimizely.com/js/277918141.js"></script>
+<style type="text/css">
+.jsEnabled {display:none;}
+</style>
+<link rel="SHORTCUT ICON" href="/static/images/favicon.ico?ver=1.0">
+<!-- This template is for all the global scripts like jquery.js, etc. -->
+<script type="text/javascript" src="/gzip_N92088051/bundles/jquery.js" ></script>
+<script type="text/javascript" src="https://acw.elsevier.com/SSOCore/jawr_loader.js"></script>
+<script>
+if(!window.JAWR){
+jQuery(document).ready(function(){
+jQuery('#headerWrapper .CARS_panelClass #login_pop_container').css('margin-top','100px');
+var errorMsgObj = "<div id='errorMsgContainer'><span id='ariaHidden' class='hidden-label'>Alert Error message.</span><span>Scopus couldn&#39;t be completely loaded. Please check your browser, firewall or proxy configuration as explained on this <a target='_blank' title='View Scopus help files (opens in a new window)' href='https://www.scopus.com/standard/help.uri?topic=11362'>help page</a>.</span></div>";
+jQuery("header").append(errorMsgObj);
+});
+}
+</script>
+<script type="text/javascript">
+JAWR.loader.script('/bundles/jcars.js');
+JAWR.loader.style('/bundles/jcars.css', 'all');
+</script>
+<script language="javascript" type="text/javascript">
+window.$ = window.jQuery;
+</script>
+<script type="text/javascript" src="/gzip_N1606155294/bundles/remoteAccMsg.js" ></script>
+<script>
+var feMetricUrl = new Object();
+feMetricUrl = 'https://els-eum.elsst.com';
+</script>
+<link rel="stylesheet" type="text/css" media="all" href="/gzip_N1858739131.@/bundles/AllCSS-Common.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/gzip_N178303733.@/bundles/ScopusLayout.css" />
+<script type="text/javascript" src="/gzip_354756789/bundles/AllTop.js" ></script>
+<script src="https://b2btagmgr.azalead.com/tag?az=aWRTdWJzY3JpYmVyPTIyMjYmaWRTaXRlPTIzMTYmb3JpZ2luPXd3dy5lbHNldmllci5jb20mY3VzdG9tPW5vbmU=" type="application/javascript" async> </script> 
+<script type="text/javascript">
+var MendeleybookmarkletUrl = '';
+var isPreviewPage = true;
+var selectedNav = "";
+var isRegisteredPreview = false;
+if(false){
+isRegisteredPreview = true;
+}
+</script>
+<script type="text/javascript">
+writeJavaScriptCookie();
+isLoggedInUser = 'true' === 'false';
+isShibUser = ('GUEST'==="SHIBBOLETHANON")?true:false;
+isIndividuallyAuthenticated = isLoggedInUser || (false);
+</script>
+<script type="text/javascript">
+var isIDPlusEnabled = 'true' === 'false';
+var isCarsForIDPlus = 'true' === 'false';
+</script>
+<script>
+var smapiVars = {};
+smapiVars["AFW_AUTHOR_MAX_SELECT_COUNT"] = "10";
+smapiVars["MAX_SOURCE_RESULTS_DISPLAYED"] = "1000";
+</script>
+<META NAME= "robots" CONTENT = "NOARCHIVE, NOFOLLOW, NOINDEX">
+<META NAME="description" CONTENT="Elsevier's Scopus, the largest abstract and citation database of peer-reviewed literature. Search and access research from the science, technology, medicine, social sciences and arts and humanities fields.">
+<title>
+Scopus preview -  
+Scopus - Page not found
+</title>
+<script type="text/javascript" src="/gzip_1742333926/bundles/SiteCatalystTop.js" ></script>
+<script type="text/javascript">
+var pageData = {
+page: {},
+visitor: {}
+};
+pageDataUtil.loadPageDataObject("false","178.212.111.37","en_US","","13341253","(13341253,U|289839,D|278641,A|72218,P|1,PL)(SCOPUS,CON|b7733d5f374588499458dec12184f92d3495gxrqa,SSO|ANON_GUEST,ACCESS_TYPE)",
+"GUEST","278641","", "Scopus Preview");
+</script>
+<script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-c74074f9c1cbd68a79f7ff7103e0cdc14b7e5f41.js"></script>
+</head>
+<body class="ScopusBody" onLoad="onBodyLoad();" id="resultsPagePreview">
+<div id="outerWrapper">	
+<header>
+<div id="headerWrapper">
+<div class="hidden-label">
+<h1>
+Scopus - Page not found
+</h1>
+</div>
+<div class="hidden-label">
+<h2>Header</h2>
+</div>
+<div class="skip-links">
+<a href="#skip1" title="Skip Main Navigation Links" >
+Skip Main Navigation Links
+</a>
+<a href="#skiptofooter" title="Jump to Footer">
+Jump to Footer
+</a>
+</div>
+<input type="hidden" id="txGid" value="6FE83569DDAC482362454011E14BFF29.wsnAw8kcdt7IPYLO0V48gA:2">
+<div id="header" class="zoomFix" title="Main Page Header">
+<script>var prs = {rt: function(label,ts) { this[label]=(ts||ts==0?ts:new Date().getTime());}};	</script>
+<div class="headerContainer pull-left no-select">
+<div class="headerTitle clear logoScopusImg">
+<div class="logoScopusPreviewImg"><a href="/home.uri?zone=TopNavBar&amp;origin=pagemissing" title="Select to go to the Scopus main search page"><img src="/static/images/preview/scopuspreviewOrange.svg" alt="Select to go to the Scopus main search page" ></a></div></div>                
+<nav id="navHeader" class="pull-right">
+<ul class="navHeader headerIcons verticalAlign guestNav">
+<li class="floatL"><a href="/freelookup/form/author.uri?zone=&amp;origin=pagemissing">
+<span class="anchorText">Author search</span></a></li>
+<li class="floatL"><a href="/sources?zone=&amp;origin=pagemissing"
+class=""><span class="anchorText"> Sources</span></a></li>
+<li class="helpMenuCont floatL">						
+<div id="helpMenu">
+<a href="javascript:void(0);" id="helpMenuLnk" title="Select to display help and Contact options" aria-haspopup="true"><span class="anchorText">Help</span><span class="iconNormal helpArrowDwn"></span></a>
+<div class="displayNone" id="helpMenuLnk-data">
+<div id="headerHelpLinks">
+<div class="custom-modal-arrow">
+<div class="custom-modal-top-border">
+<ul class="helpMenuList"> 		
+<li>
+<a role="menuitem" href="/standard/help.uri?topic=15533&anchor=tips" target="globalHelp" onClick="return openGlobalhelp('/standard/help.uri?zone=&amp;origin=pagemissing&amp;topic=15534','globalHelp',760,570,0)"
+title="View Scopus help files (opens in a new window)" class="secondaryLink">
+<span class="anchorText">Help</span>
+</a>
+</li>
+<li>
+<a href="#" target="globalHelp" onClick="return openGlobalhelp('/standard/tutorial.uri?zone=&amp;origin=pagemissing&amp;module=',
+'globalHelp',760,570,0)" title="Select to view tutorials (opens in a new window)">Tutorials</a>
+</li>
+<li>
+<a href="#" target="_blank" title="Contact us (opens in a new window)" onClick="return openGlobalhelp('/standard/contactForm.uri?zone=&amp;origin=pagemissing',
+'globalHelp',760,570,0)">Contact us</a>
+</li>		
+<a class="iconSmall close pull-right help-close-icon" href="javascript:void(0);" title="Close window"><span class="hidden-label">Close</span>&nbsp;</a> 			
+<span id="help-close-placeholder" tabindex="-1"></span>   			 
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="regLnk floatL">
+<div xmlns:cars="http://cars-services.elsevier.com/cars/server" class="CARS_panelClass" id="login-panel" displaystyle="">
+<div displaystyle="" id="login_page_main" class="    ">
+<div id="login_maincontroller" class="    " displaystyle=":right">
+<a id="login_reglink" displaystyle="" href="https://www.scopus.com/customer/profile/display.uri" title="Register a username and password for using alerts and other personal features">Register</a><a onclick="javascript:return CARS.submitCheck(&quot;toggleBackground,toggle&quot;,this)" href="javascript:void(0);" displaystyle="" id="login_loginlink" aria-haspopup="true" title="Login To Scopus" aria-controls="login_pop_container">
+<div class="CARS_displayNone">
+<script type="text/javascript">							if(true){							var metainfo = new CARS.metadata();							metainfo.elementId = 'login_loginlink_expand';							metainfo.action = 'toggle';							metainfo.dependency = 'login_loginlink_expand,login_loginlink_collapse,login_pop_container';							metainfo.name = 'login_loginlink_expand';							CARS_dataList.push(metainfo);							}						</script>
+</div>
+<img displaystyle=":expandImage" id="login_loginlink_expand"><div class="CARS_displayNone">
+<script type="text/javascript">							if(true){							var metainfo = new CARS.metadata();							metainfo.elementId = 'login_loginlink_collapse';							metainfo.action = 'toggle';							metainfo.dependency = 'login_loginlink_collapse,login_loginlink_expand,login_pop_container';							metainfo.name = 'login_loginlink_collapse';							CARS_dataList.push(metainfo);							}						</script>
+</div>
+<img displaystyle=":collapseImage:displaynone" id="login_loginlink_collapse">Login</a>
+<div class="CARS_displayNone">
+<script type="text/javascript">            if(true){            var metainfo = new CARS.metadata();            metainfo.elementId = 'login_loginlink';			metainfo.action = 'toggleBackground,toggle';			metainfo.dependency = 'login_pop_container';			if(metainfo.action.indexOf("toggle")!=-1){				metainfo.dependency = metainfo.dependency + "," + metainfo.elementId + "_expand," + metainfo.elementId + "_collapse";				metainfo.executeonload = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}			if(metainfo.action.indexOf("onchange")!=-1){				metainfo.selecttextdependency = '';				metainfo.executeonload = '';				metainfo.defaultselectvalue = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}            metainfo.name = '';            metainfo.validationcheck = '';			metainfo.error = '';			metainfo.togglestyle = ':background';			metainfo.togglestyleid = 'login_loginlink';            CARS_dataList.push(metainfo);            }        </script>
+</div>
+</div>
+<div class="CARS_clear"></div>
+<div id="login_pop_container" class="    " displaystyle=":paddingsmall:right:displaynone:background:border" focusrequired="true">
+<div id="login_pop_container_logform" class="    " displaystyle=":background:left:widthsmall">
+<div class="CARS_groupTitle">Login using your Elsevier credentials</div>
+<form action="https://www.scopus.com/customer/authenticate.uri" method="POST" enctype="form-data">
+<div id="login_username" displaystyle="" class="    ">
+<label for="username"><span>Username:</span></label><input type="text" name="username" id="username" aria-required="true" focusonload="true"><span displaystyle="" class="CARS_red">*</span>
+</div>
+<div id="login_password" displaystyle="" class="    ">
+<label for="login_password-password"><span>Password:</span></label><input type="password" name="password" id="login_password-password" aria-required="true"><span displaystyle="" class="CARS_red">*</span>
+</div>
+<div id="login_rem_forgot_submit" class="    " displaystyle="">
+<div displaystyle=":displayblock:paddingL120" class="    ">
+<input type="checkbox" id="login_rem_check" name="remember_flag" checked value="true" title="Remember me"><label for="login_rem_check">Remember me</label>
+</div>
+<div id="login_submit_btn" displaystyle=":displayinline:paddingL120" class="    ">
+<input type="submit" title="Login" aria-label="Login" value="Login" name="submit">
+</div>
+<a id="login_not_register" displaystyle="" href="https://www.scopus.com/customer/profile/display.uri" title="Register a username and password for using alerts and other personal features">Not Registered?<span displaystyle=":hidespan">Register a username and password for using alerts and other personal features</span></a>
+</div>
+<a id="login_forgot_pass" displaystyle=":fontverysmall:paddingL120:paddingT10" onclick="javascript:return CARS.submitCheck(&quot;openPopUp&quot;,this)" href="https://www.scopus.com/customer/reminder.uri" title="Opens in a new window." target="_popup">Forgotten your username or password?<span displaystyle=":hidespan">Opens in a new window.</span></a>
+<div class="CARS_displayNone">
+<script type="text/javascript">            if(true){            var metainfo = new CARS.metadata();            metainfo.elementId = 'login_forgot_pass';			metainfo.action = 'openPopUp';			metainfo.dependency = '';			if(metainfo.action.indexOf("toggle")!=-1){				metainfo.dependency = metainfo.dependency + "," + metainfo.elementId + "_expand," + metainfo.elementId + "_collapse";				metainfo.executeonload = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}			if(metainfo.action.indexOf("onchange")!=-1){				metainfo.selecttextdependency = '';				metainfo.executeonload = '';				metainfo.defaultselectvalue = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}            metainfo.name = '';            metainfo.validationcheck = '';			metainfo.error = '';			metainfo.togglestyle = '';			metainfo.togglestyleid = '';            CARS_dataList.push(metainfo);            }        </script>
+</div>
+<input type="hidden" name="auth_type" value="LOGIN_PASSWORD"><input type="hidden" name="http_method_name" value="POST"><input type="hidden" name="shibboleth_fence" value="true"><input type="hidden" name="isClaimingRemoteAccess" value="FALSE"><input type="hidden" name="remember_path_flag" value="false"><input type="hidden" name="path_choice" value=""><input type="hidden" name="path_choice_exists" value="false"><input type="hidden" name="acct_name" value=""><input type="hidden" name="dept_name" value=""><input type="hidden" name="PII_Req" value=""><input type="hidden" name="cars_cookie_flag" value="TRUE"><input type="hidden" name="origin" value="loginBox"><input type="hidden" name="zone" value="main">
+</form>
+</div>
+<div id="login_pop_container_socialform" class="    " displaystyle=":left:widthsmall:background">
+<form action="https://www.scopus.com/customer/authenticate.uri" method="POST" enctype="form-data">
+<a onclick="javascript:return CARS.submitCheck(&quot;submit&quot;,this,&quot;true&quot;)" href="javascript:void(0);" displaystyle="" id="login_open_athens" title="Log in using OpenAthens">OpenAthens login</a><input type="hidden" name="federation_id" value="6025"><input type="hidden" name="institution_id" value="88190"><input type="hidden" name="auth_type" value="SHIBBOLETH"><input type="hidden" name="domain_name" value="https://www.scopus.com/customer/authenticate.uri">
+</form>
+<div id="institutionAvail" class="    " displaystyle="">
+<div class="CARS_groupTitle">Login via your institution</div>
+<div id="rem-inst-choice-list" class="    " displaystyle="displayblock"></div>
+<a id="login_other_inst" displaystyle="" href="https://www.scopus.com/customer/institutionchoice.uri?shibboleth_fence=TRUE&amp;origin=loginBox&amp;zone=main" title="Other Institution login">Other Institution login</a>
+<div id="login-inst-choice-fed-inst-list" class="    " displaystyle=":displaynone">
+<div id="login-inst-choice-list" class="    " displaystyle="displayblock"></div>
+</div>
+</div>
+<div id="remotegroup" class="    " displaystyle="">
+<form action="https://www.scopus.com/customer/authenticate/manra.uri" method="POST" enctype="form-data">
+<a onclick="javascript:return CARS.submitCheck(&quot;submit&quot;,this,&quot;true&quot;)" href="javascript:void(0);" displaystyle="" id="login_remote_access" title="Apply for Remote Access">Apply for Remote Access</a>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>                
+</nav>		
+</div>
+<div class="sidebarMenu no-select">
+<div class="sidebarMenuHeader ">
+<nav class="subNav">
+<div class="user">
+<span class="pull-left userName">Guest user</span>
+<span id="spineHamburger" class="hamburger floatR">
+<a href="javascript:void(0);" class="toggleIcon" aria-expanded = "false" title="Expand navigation/Collapse navigation"></a>
+</span>
+</div>
+</nav>
+</div>
+<div class="sidebarBottom">
+<section class="otherProducts">
+<div>
+<nav class="navSection">
+<div class="loggedInUserOpt">
+<span id="carsLoginSpine"><li class="regLnk floatL"></li></span>
+<div class="clear"></div>
+<div id="CARS_SETTINGS_TEMPLATE" class="displayNone">
+</div>
+<div class="personalAccess userOptionCnt">
+<a id="spineProfileLink" href="javascript:void(0);" class="primaryLink limitToggle profileAccess collapsed not-signed-in-user-link" data-toggle="collapse" data-target="#profileAccessCnt" aria-expanded="false">Personal profile access<span class="iconBig collapsed-spine-icon pull-right"></span></a>
+<ul id="profileAccessCnt" class="accessOptions spineAccordianCollapsed"></ul>
+</div>	
+<div class="userOptionCnt">
+<a id="spineProfileLink" href="javascript:void(0);" class="primaryLink limitToggle profileAccess collapsed" aria-expanded="false">My Scopus<span class="iconBig collapsed-spine-icon pull-right"></span></a>
+<ul id="myScopusCnt" class="accessOptions spineAccordianCollapsed">
+<li><a href="javascript:void(0);" data-type="userDashboard" class="not-signed-in-user-link">Dashboard</a></li>
+<li><a href="javascript:void(0);" data-type="savedSearches" class="not-signed-in-user-link">Saved searches</a></li>
+<li><a href="javascript:void(0);" data-type="alerts" class="not-signed-in-user-link">Alerts</a></li>
+<li><a href="javascript:void(0);" data-type="savedLists" class="not-signed-in-user-link">Saved lists</a></li>
+<li><a href="javascript:void(0);" data-type="groupedAuthors" class="not-signed-in-user-link">Grouped authors</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<section class="userOptions">
+<ul>
+<li>
+<a target="_blank" href="https://www.scival.com/home">SciVal</a>
+</li>
+<li>
+<a target="_blank" href="https://www.mendeley.com">Mendeley</a>
+</li>
+<li>
+<a target="_blank" href="https://www.elsevier.com/solutions/pure">Pure</a>
+</li>
+<li id="privacyCenter">
+<a id="privacyCenterLink" href="javascript:void(0);" class="not-signed-in-user-link">Privacy center</a>
+</li>
+</ul>
+</section>
+</nav>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div id="userNameError" class="errorInput displayNone" role="alert">You must enter a username.</div>
+<div id="passwordError" class="errorInput displayNone" role="alert">You must enter your password.</div>
+<div class="clear"></div>
+<div class="headerToolbar preview1">
+<h1 class="pull-left"> Page not found</h1>
+</div>
+<div class="clear"></div>  
+</div>
+</header>
+<main role="main">
+<div id="contentWrapper">
+<noscript>
+<div class="jsMsgDisbld">
+<div class="jsMsgImg">
+<img src="/static/images/warning_small.gif" />
+</div>
+<div class="jsMsgTxt">
+<span class="Bold">We have detected that your browser has JavaScript disabled.</span>
+<br>
+<span>Scopus needs JavaScript to function correctly. Please turn on JavaScript to continue.</span>
+</div>
+</div>
+<div class="hr jsMsghr"></div>
+<div class="clear"></div>
+</noscript>
+<div id="container">
+<div id="warningMsgContainer" role="alert" aria-live="assertive" class="ie9InfoMsgCnt displayNone">
+<span class="ariaHidden">Warning message</span>
+<span>Scopus will soon cease the support of IE 9 and users are recommended to upgrade to the latest Internet Explorer, Firefox, or Chrome.</span>
+</div>
+<div class="clear"></div>   
+<a name="skip1" id="skip1" title="Skip Main Navigation marker" ></a>
+<div id="sciverseCanvasArea" class="searchContent">
+<div id="warningMsgContainer" role="alert" aria-live="assertive">
+<span class="ariaHidden">Warning message</span>
+<span>Page not found</span>
+</div>
+<div class="resultsQueryBar">
+<p class=" marginB5">
+This author profile does not exist or has merged with another author profile.
+Try to search on another author name.
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<a href="#" name="skiptofooter" id="skiptofooter"></a>
+<div class="productFooter">
+<div class="productCol aboutScopusCol">
+<h2>About Scopus</h2>
+<ul>
+<li><a target="_blank" href="https://www.elsevier.com/online-tools/scopus" title='Learn more about Scopus (opens in a new window)'>What is Scopus</a></li>
+<li><a target="_blank" href="https://www.elsevier.com/online-tools/scopus/content-overview/" title='Learn more about Scopus&#039; content coverage (opens in a new window)'>Content coverage</a></li>
+<li><a target="_blank" href="https://blog.scopus.com/" title='Read the Scopus Blog (opens in a new window)'>Scopus blog</a></li>
+<li><a target="_blank" href="https://dev.elsevier.com/" title='Learn more about Scopus API&#039;s (opens in a new window)'>Scopus API</a></li>
+<li><a target="_blank" href="https://www.elsevier.com/about/our-business/policies/privacy-principles" title='View privacy matters page (opens in a new window)'>Privacy matters</a></li>
+</ul>
+</div>
+<div class="productCol langCol">
+<h2>Language</h2>
+<ul class="list-unstyled" id="languageSwitchList" data-currentlocale="en_US">
+<li lang="ja" >
+<a lang="ja" hreflang="ja" href="/personalization/switch/Japanese.uri?origin=&zone=footer&locale=ja_JP" target="_top" title="">
+<span class="anchorText">
+
+</span>
+</a>
+</li>
+<li lang="zh-Hans" >
+<a lang="zh-Hans" hreflang="zh-Hans" href="/personalization/switch/Chinese.uri?origin=&zone=footer&locale=zh_CN" target="_top" title="">
+<span class="anchorText">
+
+</span>
+</a>
+</li>
+<li lang="zh-Hant" >
+<a lang="zh-Hant" hreflang="zh-Hant" href="/personalization/switch/Chinese.uri?origin=&zone=footer&locale=zh_TW" target="_top" title="">
+<span class="anchorText">
+
+</span>
+</a>
+</li>
+<li lang="ru" >
+<a lang="ru" hreflang="ru" href="/personalization/switch/Russian.uri?origin=&zone=footer&locale=ru_RU" target="_top" title="    ">
+<span class="anchorText">
+ 
+</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="productCol">
+<h2>Customer Service</h2>
+<ul>
+<li><a target="_blank" title="View Scopus help files (opens in a new window)" href="/standard/contactUs.uri?pageOrigin=footer">Help</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="companyFooter">
+<div class="companyCol elsevier"><a target="_blank" href="https://www.elsevier.com/" title="Go to the Elsevier site (opens in a new window)"><img src="/static/images/logo_Elsevier.svg" alt="Elsevier"></img></a></div>
+<div class="companyCol">
+<div>
+<div class="termsCondetions">
+<a target="_blank" href="https://www.elsevier.com/locate/termsandconditions" title="View the terms and conditions of Elsevier (opens in a new window)"  class="external">
+Terms and conditions
+</a>
+</div>
+<div class="privacyPolicy">
+<a target="_blank" href="https://www.elsevier.com/locate/privacypolicy" title="View the privacy policy of Elsevier (opens in a new window)" class="external">
+Privacy policy
+</a>
+</div>
+</div>
+<div class="copyright">Copyright  2019 <a target="_blank" href="https://www.elsevier.com" title="Go to the Elsevier site (opens in a new window)" class="external">Elsevier B.V</a>. All rights reserved. Scopus is a registered trademark of Elsevier B.V.</div>
+<div class="cookie">We use cookies to help provide and enhance our service and tailor content. By continuing, you agree to the <a href="/cookies/policy.uri" title="See Cookie details">use of cookies</a>.</div>
+</div>
+<div class="relxLogo"><a href="http://www.relx.com" title="Go to RELX Group Homepage (Opens in a new window)" target="_blank"><img src="/static/images/relexLogo.svg" alt="RELX Group"></img></a></div>
+<div class="clear"></div>
+</div>
+</footer>
+</div>
+<script type="text/javascript" src="/gzip_N1038037562/bundles/AllBottom.js" ></script>
+<input type="hidden" value="278641" id="accId" name="accId">
+<script type="text/javascript">	
+var WAM = new Object;
+WAM.sep = "#";
+WAM.ud = "GUEST#289839#278641#66a1-7b5bbeaf8615bc8c6e5-17b0d6df2aa9f8f3";
+WAM.cars = "CARS_LOGIN";
+WAM.part = "";
+WAM.exportAction=function(format, info, count) {return true;};
+</script>
+<script type="text/javascript"></script>
+<script type="text/javascript" src="/gzip_N1496246882/bundles/pendoTop.js" ></script>
+<script type="text/javascript">
+var pendoData = {};
+pendoDataUtil.loadPendoDataObject("13341253",
+"178.212.111.37",
+"(13341253,U|289839,D|278641,A|72218,P|1,PL)(SCOPUS,CON|b7733d5f374588499458dec12184f92d3495gxrqa,SSO|ANON_GUEST,ACCESS_TYPE)",
+"GUEST",
+"en_US",
+"278641",
+"Scopus Preview",
+"");
+(function(p, e, n, d, o) {
+var v, w, x, y, z;
+o = p[d] = p[d] || {};
+o._q = [];
+v = [ 'initialize', 'identify', 'updateOptions', 'pageLoad' ];
+for (w = 0, x = v.length; w < x; ++w)
+(function(m) {
+o[m] = o[m]
+|| function() {
+o._q[m === v[0] ? 'unshift' : 'push']([ m ]
+.concat([].slice.call(arguments, 0)));
+};
+})(v[w]);
+y = e.createElement(n);
+y.async = !0;
+y.src = 'https://cdn.pendo.io/agent/static/7108b796-60e0-44bd-6a6b-7313c4a99c35/pendo.js';
+z = e.getElementsByTagName(n)[0];
+z.parentNode.insertBefore(y, z);
+})(window, document, 'script', 'pendo');
+/* Call this whenever information about your visitors becomes available. 
+* Please use Strings, Numbers, or Bools for value types. */
+pendo.initialize({
+apiKey : '7108b796-60e0-44bd-6a6b-7313c4a99c35',
+visitor : {
+id : pendoData.userId,
+scopusOriginalId: pendoData.scopusOriginalId,
+ipAddress : pendoData.ipAddress,
+loginStatus : pendoData.loginStatus,
+language : pendoData.language,
+SCSessionID : pendoData.SCSessionID,
+navigatorLanguage : window.navigator.language
+},
+account : {
+id : pendoData.accountId,
+name : pendoData.accountName,
+accessType : pendoData.accessType,
+consortiumId : pendoData.consortiumId
+}
+});
+</script>
+<!-- Adobe Analytics recommended to place SiteCatalyst script right before closure of body tag. Should not move elsewhere -->
+<script type="text/javascript">
+pageDataUtil.loadFooterPageDataObject();
+pageData.page.loadTime = performance ? Math.round(performance.now()).toString() : '';
+pageDataTracker.trackPageLoad();
+siteCatPageUtil.afterPageLoad();
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"0268925da8","agent":"","beacon":"bam.nr-data.net","applicationTime":146,"applicationID":"31454162","transactionName":"MwAGYhBYX0oEABUNXQpKN0YQUF9eJgwPEEALCQhTEBZQTBELCAAdAAAQVwtVEREiJjVN","queueTime":0}</script></body>
+</html>

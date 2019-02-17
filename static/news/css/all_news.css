@@ -50,7 +50,9 @@ body {
 	text-align: center;
 	float: right;
 }
+
 #fotka{
+	object-fit: contain;
 	height: 100%;
 	width: 100%;
 }

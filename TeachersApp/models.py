@@ -48,7 +48,7 @@ class Teacher (models.Model):
     scopus_citations = models.IntegerField(verbose_name=_("scopus_citations"), default='0', null=False)
 
     def __str__(self):
-        return self.get_full_name()
+        return self.full_name
 
     def get_full_name(self):
         return self._get_translation_field('full_name')

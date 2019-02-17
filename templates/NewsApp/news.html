@@ -9,8 +9,9 @@
 		</h1>
         <div class="container">
         <h3>All tags</h3>
+            <a href="/news/all/1"> #{% trans "усі" %}</a>
             {% for taga in tags_list %}
-                <a href="#"> #{{ taga }} </a>
+                <a href="/news/{{ taga }}/1"> #{{ taga.get_name }} </a>
             {%  endfor %}
         </div>
         {%   for news in news_field %}
@@ -18,7 +19,7 @@
 			    <div class="news_post">
                     <div>
                         {% for tag in news.tags.all %}
-                            <p>#{{ tag }}</p>
+                            <p>#{{ tag.get_name }}</p>
                         {%  endfor %}
                     </div>
 				    <div class="img_news">

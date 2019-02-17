@@ -4,13 +4,8 @@ from TeachersApp.models import Teacher
 
 
 def mainMethod(request):
-    teachers_list = []
     footer_fields = Footer.objects.get(pk=1)
-    k = 0
-    for teacher in Teacher.objects.all():
-        if k < 4:
-            teachers_list.append(teacher)
-            k += 1
+    teachers_list = Teacher.objects.all()[:4]
     content = {"footer_fields": footer_fields, 'teachers_list':  teachers_list}
     return render(request, "MainApp/mainPage.html", content)
 
