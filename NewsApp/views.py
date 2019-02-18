@@ -30,4 +30,4 @@ def current_news(request, NewsId):
     cur_news = News.objects.get(pk=int(NewsId))
     image_list = Image.objects.filter(news.id == int(NewsId))
     content = {"footer_fields": footer_fields, "current_news": cur_news, "image_list": image_list}
-    return render(request, "NewsApp/news.html", content)
+    return render(request, "NewsApp/one_news.html", content)

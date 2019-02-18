@@ -1,7 +1,3 @@
-@font-face {
-  src: url("RobotoRegular.ttf");
-  font-family:RobotoRegular;
-}
 body {
 	margin: 0;
 	padding: 0;
@@ -11,47 +7,39 @@ a{
 	text-decoration: none;
 }
 
-.one_news {
-	display: block;
-}
-
 .title_news_one {	
 	font-weight: bold;
 	font-size: 40px;
 	display: block;
 	width: 100%;
 	margin:50px 0px 10px 0px;
-	padding: 100px 100px 100px 100px
-	font-family:RobotoRegular;
 	line-height: 70px;
-	color: #FFFFF0/*#34515e*/;
+	color: #FFFFF0;
 	background-color: gray;
 }
 
 .news_post_one{
 	display: block;
-	margin: 10px 100px 40px 100px;
+	margin: 10px 10% 40px 10%;
 }
 
 .data_post_one{
 	display: block;
-	margin: 10px 0px 0px 10px;
-	font-family:RobotoRegular;
+	margin-top: 10px;
 	color: #34515e;
 	font-size: 18px;
 }
 
 .img_news_one{
 	display: block;
- 	height: auto;
  	width: 80%;
-	text-align: center;
-	padding-left: 10%;
+	margin-left: 10%;
 	/*float: right;*/
 }
 #fotka_one{
 	height: 100%;
 	width: 100%;
+
 }
 
 #description{

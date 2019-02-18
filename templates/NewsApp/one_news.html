@@ -4,20 +4,20 @@
     {% load staticfiles %}
 
 		<div class="one_news">
-			<h1 style="padding-left: 100px" class="title_news_one">
-				<span>Якийсь заголовок про новину</span>
-			</h1>
+            <a href="/news"><img style="float: left; margin-top: 25px" src ='{% static "magister\css\prev.png" %}'></a>
+			<div class="title">
+				<span>{{ current_news.get_topic }}</span>
+			</div>
 			<div class="news_post_one">
 				<div class="img_news_one">
-					<img id="fotka_one" src="images/foto.jpg" >
+					<img id="fotka_one" src="{{ MEDIA_URL }}/{{ current_news.photo }}" >
 				</div>
-				<span id="description" class="data_post_one">Тут буде розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини. Розгорнутий опис новини.</span>
-				<div class="img_news_one">
-					<img id="fotka_one" src="images/another_foto.jpg" >
-				</div>
+				<span id="description" class="data_post_one">{{ current_news.get_post }}</span>
+
 				<div style="text-align: right" class="data_post_one">
-					<time>03.02.2019</time>
+					<time>{{ current_news.data_post }}</time>
 				</div>
 			</div>
 		</div>
+
 {% endblock %}
