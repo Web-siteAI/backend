@@ -28,6 +28,10 @@ def news(request, TagIndex):
 def current_news(request, NewsId):
     footer_fields = Footer.objects.get(pk=1)
     cur_news = News.objects.get(pk=int(NewsId))
-    image_list = Image.objects.filter(news.id == int(NewsId))
-    content = {"footer_fields": footer_fields, "current_news": cur_news, "image_list": image_list}
+    content = {"footer_fields": footer_fields, "current_news": cur_news}
+    try:
+        image_list = Image.objects.filter(news=int(NewsId))
+        content["image_list"] = image_list
+    except:
+        pass
     return render(request, "NewsApp/one_news.html", content)

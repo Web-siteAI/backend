@@ -14,8 +14,8 @@
                 <a href="/news/{{ taga }}/?page=1"> #{{ taga.get_name }} </a>
             {%  endfor %}
         </div>
-        {%   for news in news_field %}
-		    <a href="{{ news.id }}" style="text-decoration: none">
+        {%  for news in news_field %}
+		    <a href="/news/id/{{ news.id }}" style="text-decoration: none">
 			    <div class="news_post">
                     <div id="img_news">
                         <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
