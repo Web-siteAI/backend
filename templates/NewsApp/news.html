@@ -9,9 +9,9 @@
 		</h1>
         <div class="container">
         <h3>All tags</h3>
-            <a href="/news/all/1"> #{% trans "усі" %}</a>
+            <a href="/news/all/?page=1"> #{% trans "усі" %}</a>
             {% for taga in tags_list %}
-                <a href="/news/{{ taga }}/1"> #{{ taga.get_name }} </a>
+                <a href="/news/{{ taga }}/?page=1"> #{{ taga.get_name }} </a>
             {%  endfor %}
         </div>
         {%   for news in news_field %}
@@ -33,8 +33,33 @@
 				    </div>
 				    <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
 			    </div>
-		    </a>
+		    </a >
         {% endfor %}
-	</div>
-
+    </div>
+    <br>
+    <div class="pagination">
+        {% if news_field.has_previous %}
+            <a class="pagination-action" href="?page=1">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            </a>
+            <a class="pagination-action" href="?page={{ news_field.previous_page_number }}">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        {% for num in news_field.paginator.page_range %}
+            {% if news_field.number == num %}
+                <span class="pagination-number pagination-current">{{ num }}</span>
+            {% elif num > news_field.number|add:'-3' and num < news_field.number|add:'3' %}
+                <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        {% if news_field.has_next %}
+            <a class="pagination-action" href="?page={{ news_field.next_page_number }}">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            <a class="pagination-action" href="?page={{ news_field.paginator.num_pages }}">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+    </div>
 {% endblock %}
