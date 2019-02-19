@@ -1,12 +1,7 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
-{%  load i18n %}
-{% load staticfiles %}
-
-{%  block script %}
-
-{% endblock %}
-
 {%  block content %}
+    {%  load i18n %}
+    {% load staticfiles %}
 
     <div class="tmainPage">
 
@@ -14,6 +9,7 @@
             <h4>{%  trans "Віртуальний тур кафедрою СШІ" %}</h4>
 
                 <iframe title="Virtual tour by tourmaker" width="960" height="750" src="https://makevt.com/media/tourmaker/mwuozbgfal/" frameborder="0" allowfullscreen></iframe>
+
         </div>
     </div>
 

@@ -17,6 +17,5 @@ Citations list http://scholar.google.com/scholar?cites=14235298813025547316&as_s
            URL http://ena.lp.edu.ua/handle/ntb/41077
           Year 2018
      Citations 0
-      Versions 2
- Versions list http://scholar.google.com/scholar?cluster=18084884588990900227&hl=en&as_sdt=0,5
+      Versions 0
        Excerpt У дисертаційній роботі розв'язано актуальне наукове завдання розвитку математичних моделей та розробки нових методів розрахунку електростатичних полів класів електронно-оптичних систем з граничними поверхнями електродів, які володіють …

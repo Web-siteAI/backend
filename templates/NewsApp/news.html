@@ -3,30 +3,65 @@
     {%  load i18n %}
     {% load staticfiles %}
 
-    <div class="container">
-		<div class="row">
-            <div class="col-lg-12">
-                <h1 class="title">
-			        <span>{% trans "Новини"%} </span>
-		        </h1>
-                {%   for news in news_field %}
-                    <a href="#" style="text-decoration: none">
-                        <div class="news_post">
-                            <div class="img_news">
-                                <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
-                            </div>
-                            <div class="title_post">
-                                <span>{{ news.get_topic }}</span>
-                            </div>
-                            <div class="data_post">
-                                <time>{{ news.data_post }} </time>
-                            </div>
-                            <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
+    <div class="all_news">
+		<h1 class="title">
+			<span>{% trans "Новини"%} </span>
+		</h1>
+        <div class="main_content">
+        <h3 style="float: left">All tags:</h3>
+            <a href="/news/all/?page=1"> #{% trans "усі" %}</a>
+            {% for taga in tags_list %}
+                <a href="/news/{{ taga }}/?page=1"> #{{ taga.get_name }} </a>
+            {%  endfor %}
         </div>
-	</div>
-
+        {%  for news in news_field %}
+		    <a href="/news/id/{{ news.id }}" style="text-decoration: none">
+			    <div class="news_post">
+                    <div id="img_news">
+                        <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
+				    </div>
+                    <div class="title_post">
+                        <span>{{ news.get_topic }}</span>
+                    </div>
+				    <div class="data_post">
+					    <time>{{ news.data_post }} </time>
+				    </div>
+                    <div>
+				        <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
+                    </div>
+                    <div style="margin-left: 10px">
+                        {% for tag in news.tags.all %}
+                            #{{ tag.get_name }}
+                        {%  endfor %}
+                    </div>
+			    </div>
+		    </a>
+        {% endfor %}
+    </div>
+    <br>
+    <div class="pagination">
+        {% if news_field.has_previous %}
+            <a class="pagination-action" href="?page=1">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            </a>
+            <a class="pagination-action" href="?page={{ news_field.previous_page_number }}">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        {% for num in news_field.paginator.page_range %}
+            {% if news_field.number == num %}
+                <span class="pagination-number pagination-current">{{ num }}</span>
+            {% elif num > news_field.number|add:'-3' and num < news_field.number|add:'3' %}
+                <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        {% if news_field.has_next %}
+            <a class="pagination-action" href="?page={{ news_field.next_page_number }}">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            <a class="pagination-action" href="?page={{ news_field.paginator.num_pages }}">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+    </div>
 {% endblock %}
