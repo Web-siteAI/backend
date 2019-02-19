@@ -8,23 +8,24 @@
 
 {%  block content %}
 
-   <div class="vstypnukam">
+   <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="title">
-              <span >
+        <div class="col-lg-12">
+            <h1 class="title">
+            <span >
                 {%  trans "Співпраця" %}
-              </span>
+            </span>
             </h1>
-                <div class="main_content">
-                    <h3>{%  trans "Кафедра систем штучного інтелекту співпрацює з українськими та закордонними організаціями та органами місцевої влади:" %}</h3>
-                    <ul>
-                        {% for el in coop %}
-                            <li>{{ el }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
+            <div class="main_content">
+                <h3>{%  trans "Кафедра систем штучного інтелекту співпрацює з українськими та закордонними організаціями та органами місцевої влади:" %}</h3>
+                <ul>
+                    {% for el in coop %}
+                        <li>{{ el }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
+   </div>
+
 {% endblock %}
