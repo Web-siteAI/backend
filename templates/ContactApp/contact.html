@@ -1,0 +1,27 @@
+{%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  load i18n %}
+{%  load staticfiles %}
+
+{%  block script %}
+
+{% endblock %}
+
+{%  block content %}
+
+    <div>
+    <h3> Contacts </h3>
+    {%  for contact in contact_fields %}
+        {% if contact.selection_committee == False %}
+            <p> {{ contact.name }} </p>
+        {% endif %}
+    {%  endfor %}
+
+    <h3> Contacts selection committee</h3>
+    {%  for contact in contact_fields %}
+        {% if contact.selection_committee %}
+            <p> {{ contact.name }} </p>
+        {% endif %}
+    {%  endfor %}
+    </div>
+
+{% endblock %}

@@ -19,7 +19,7 @@ class Teacher (models.Model):
     scientific_rank_en = models.CharField(
         verbose_name=_("scientific_rank_en"), max_length=255, default=" ", blank=False, null=False)
 
-    academic_site = models.CharField(verbose_name=_("academic_site"), max_length=255, blank=True, null=False)
+    academic_site = models.URLField(verbose_name=_("academic_site"), max_length=255, blank=True)
 
     science_interests = models.CharField(
         verbose_name=_("science_interests"), max_length=500, blank=True, null=False)
@@ -48,7 +48,7 @@ class Teacher (models.Model):
     scopus_citations = models.IntegerField(verbose_name=_("scopus_citations"), default='0', null=False)
 
     def __str__(self):
-        return self.get_full_name()
+        return self.full_name
 
     def get_full_name(self):
         return self._get_translation_field('full_name')

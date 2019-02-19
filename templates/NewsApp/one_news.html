@@ -1,0 +1,31 @@
+{%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  load i18n %}
+{% load staticfiles %}
+
+ {%  block script %}
+
+ {% endblock %}
+
+{%  block content %}
+		<div class="one_news">
+            <a href="/news"><img style="float: left; margin-top: 25px" src ='{% static "magister\css\prev.png" %}'></a>
+			<div class="title">
+				<span>{{ current_news.get_topic }}</span>
+			</div>
+			<div class="news_post_one">
+				<div class="img_news_one">
+					<img id="fotka_one" src="{{ MEDIA_URL }}/{{ current_news.photo }}" >
+				</div>
+				<span id="description" class="data_post_one">{{ current_news.get_post }}</span>
+
+				<div style="text-align: right" class="data_post_one">
+					<time>{{ current_news.data_post }}</time>
+				</div>
+			</div>
+		</div>
+        <div>
+            {% for image in image_list %}
+                <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image}}">
+            {% endfor %}
+        </div>
+{% endblock %}

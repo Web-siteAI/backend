@@ -183,3 +183,7 @@
   color: #181712;
   font-size: 24px;
 }
+
+.prog a{
+  display: block;
+}

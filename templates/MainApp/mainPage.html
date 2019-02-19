@@ -1,7 +1,12 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  load i18n %}
+{%  load staticfiles %}
+
+{%  block script %}
+
+{% endblock %}
+
 {%  block content %}
-    {%  load i18n %}
-    {%  load staticfiles %}
 
     <div class="mainPage">
 
@@ -52,9 +57,9 @@
                                         <div class="gr-item">
                                             <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
                                             <div class="spanWrap">
-                                                <span class="teacher-name"> {{ teacher }}</span>
+                                                <span class="teacher-name"> {{ teacher.get_full_name }}</span>
                                                 <br>
-                                                <span class="teacher-role">{{ teacher.role }} </span>
+                                                <span class="teacher-role">{{ teacher.get_role }} </span>
                                             </div>
                                         </div>
                                     </a>
@@ -63,9 +68,9 @@
                                         <div class="gr-item">
                                             <div class="gr-item-image" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
                                             <div class="spanWrap">
-                                                <span class="teacher-name">{{ teacher }}</span>
+                                                <span class="teacher-name">{{ teacher.get_full_name }}</span>
                                                 <br>
-                                                <span class="teacher-role">{{ teacher.role }}</span>
+                                                <span class="teacher-role">{{ teacher.get_role }}</span>
                                             </div>
                                         </div>
                                     </a>
