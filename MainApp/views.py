@@ -26,6 +26,3 @@ def excursion(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
     return render(request, "MainApp/excursion.html", content)
-
-def head(request):
-    return render(request, "wrapping/head.html")

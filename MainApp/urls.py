@@ -29,9 +29,8 @@ urlpatterns = [
     path('projects/', include("ProjectsApp.urls")),
     path('cooperation/', include("CooperationApp.urls")),
     path('news/', include("NewsApp.urls")),
-    path('contacts/', include("ContactApp.urls"))
+    path('contacts/', include("ContactApp.urls")),
 
 
-    path('head/', views.head, name="head"),
 ]
 
