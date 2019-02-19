@@ -30,5 +30,7 @@ urlpatterns = [
     path('cooperation/', include("CooperationApp.urls")),
     path('news/', include("NewsApp.urls")),
 
+
+    path('head/', views.head, name="head"),
 ]
 

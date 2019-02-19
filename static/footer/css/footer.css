@@ -20,13 +20,10 @@ hr {
 a, h5 {
     color: #b0aba0;
     font-size: 20px;
-
 }
-
 a{
      text-decoration: none;
 }
-
 i {
     color: #000;
     margin-right: 20px;
@@ -65,9 +62,10 @@ i {
     padding-right: 9px;
     padding-left: 9px;
 }
-
 .qwerty {
     margin-bottom: 20px;
-
+}
+.container .flex {
+  display: flex;
 }
 

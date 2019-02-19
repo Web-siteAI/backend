@@ -1,8 +1,23 @@
-{%  load staticfiles %}
+{% load staticfiles %}
 {%  load i18n %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Header</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "header/css/header.css" %}">
+</head>
+
 <body>
+{#  {% get_current_language as LANGUAGE_CODE %}#}
+
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid" >
             <div class="navbar-header">
@@ -30,7 +45,7 @@
                             <li><a href="#">{%  trans "PHD" %}</a></li>
                         </ul>
                     </li>
-                    <li> <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a></li>
+                    <li> <a href="/science">{%  trans "Проекти" %}</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Інше" %}<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -59,4 +74,10 @@
             </div>
         </div>
     </nav>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
+</html>
