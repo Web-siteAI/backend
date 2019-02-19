@@ -32,5 +32,7 @@ urlpatterns = [
     path('contacts/', include("ContactApp.urls")),
 
 
+
+    path('head/', views.head, name="head"),
 ]
 
