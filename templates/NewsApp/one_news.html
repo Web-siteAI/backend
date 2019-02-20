@@ -4,7 +4,7 @@
     {% load staticfiles %}
 
 		<div class="one_news">
-            <a href="/news"><img style="float: left; margin-top: 25px" src ='{% static "magister\css\prev.png" %}'></a>
+{#            <a href="/news/all/?page=1"><img style="float: left; margin-top: 25px" src ='{% static "magister\css\prev.png" %}'></a>#}
 			<div class="title">
 				<span>{{ current_news.get_topic }}</span>
 			</div>
@@ -13,16 +13,15 @@
 					<img id="fotka_one" src="{{ MEDIA_URL }}/{{ current_news.photo }}" >
 				</div>
 				<span id="description" class="data_post_one">{{ current_news.get_post }}</span>
-
+                <div class="img_news_one">
+                    {% for image in image_list %}
+                        <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image}}">
+                    {% endfor %}
+                </div>
 				<div style="text-align: right" class="data_post_one">
 					<time>{{ current_news.data_post }}</time>
 				</div>
 			</div>
 		</div>
-    <div>
-        {% for image in image_list %}
-            <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image}}">
-        {% endfor %}
-    </div>
 
 {% endblock %}
