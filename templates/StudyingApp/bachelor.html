@@ -1,10 +1,14 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  load i18n %}
+{% load staticfiles %}
+
+{%  block script %}
+
+{% endblock %}
+
 {%  block content %}
-    {%  load i18n %}
-    {% load staticfiles %}
 
     <!--<h2 align="center">"Бакалаврат" %}</h2> -->
-
     <div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -14,9 +18,9 @@
 					</span>
 				</h1>
 				<div class="main_content">
-					<h5>
+					<h4>
 					{% trans "Під час навчання, студенти будуть вивчати такі мови програмування: Java, Python, R; До базових предметів належать: лінійна алгебра та чисельні методи. З фокусом на спеціалізацію будуть вивчатися машинне навчання, бази та сховища даних, методи штучного інтелекту." %}
-					</h5>
+					</h4>
 
 					<div class="all">
 						<input checked type="radio" name="respond" id="desktop">

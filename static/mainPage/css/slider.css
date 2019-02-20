@@ -16,6 +16,7 @@ body{
   transition: 0.3s;
   z-index: 10;
   cursor: pointer;
+
 }
 .mainPage .slBut:hover::before{
   color: rgb(255, 214, 0);
@@ -31,27 +32,26 @@ body{
   transition: 0.3s;
 }
 .mainPage .prev {
-  top: 224px;
-  left: 30px;
+    top: 30%;
+    left: 5%;
+
 }
 .mainPage .prev::before {
   content: "\f053";
   left: 12px;
 }
 .mainPage .next {
-  top: 224px;
-  right: 30px;
+    top: 30%;
+    right: 5%;
 }
 .mainPage .next::before {
   right: 12px;
   content: "\f054";
 }
-
 .mainPage .slider .img {
   width: 100%;
   height: inherit;
   position: absolute;
-
   display: none;
 }
 .mainPage .slider .curry {
@@ -118,11 +118,11 @@ body{
     .mainPage .slider div:nth-child(1)::after {
         font-size: 34px;
     }
-    .mainPage .slider div:nth-child(2)::before {
-        font-size: 26px;
-        margin-top: 130px;
-        width: 360px;
-    }
+    /*.mainPage .slider div:nth-child(2)::before {*/
+        /*font-size: 26px;*/
+        /*margin-top: 130px;*/
+        /*width: 360px;*/
+    /*}*/
 }
 
 @media (max-width: 699px){

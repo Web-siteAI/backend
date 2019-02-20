@@ -1,4 +1,11 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  load i18n %}
+{% load staticfiles %}
+
+{%  block script %}
+
+{% endblock %}
+
 {%  block content %}
     {%  load i18n %}
     {% load staticfiles %}
@@ -14,9 +21,9 @@
 					</span>
 				</h1>
 				<div class="main_content">
-					<h5>
+					<h4>
 					{% trans "Для магістрів доступні два напрямками підготовки: «Системи штучного інтелекту» та «Системи машинного глибинного навчання»" %}
-					</h5>
+					</h4>
 
 					<div class="all">
 						<input checked type="radio" name="respond" id="desktop">

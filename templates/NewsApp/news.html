@@ -1,9 +1,17 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
-{%  block content %}
-    {%  load i18n %}
-    {% load staticfiles %}
+{%  load i18n %}
+{% load staticfiles %}
 
-    <div class="all_news">
+{%  block script %}
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "news/css/all_news.css" %}">
+
+ {% endblock %}
+
+{%  block content %}
+
+    <div class="all_news container">
 		<h1 class="title">
 			<span>{% trans "Новини"%} </span>
 		</h1>
