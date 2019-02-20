@@ -7,22 +7,20 @@ footer {
     color: #b0aba0;
     padding-top: 20px;
 }
-h2 {
+.footer h2 {
     text-align: center;
     font-size: 26px;
 }
-hr {
+.footer hr {
     width: 60%;
     background-color: #ffd600;
     border-color: #ffd600;
     margin-bottom: 30px;
 }
-a, h5 {
+.footer .qwerty a, h5{
+    text-decoration: none;
     color: #b0aba0;
     font-size: 20px;
-}
-a{
-     text-decoration: none;
 }
 i {
     color: #000;
@@ -64,6 +62,8 @@ i {
 }
 .qwerty {
     margin-bottom: 20px;
+    /*color: #b0aba0;*/
+    /*font-size: 20px;*/
 }
 .container .flex {
   display: flex;

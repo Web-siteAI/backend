@@ -8,6 +8,12 @@
   width: 50px;
   margin: 0;
 }
+.navbar{
+  margin: 0;
+  z-index: 11;
+  position: fixed;
+  width: 100%;
+}
 .navbar-default .navbar-nav>li>a {
   color: #fff;
 }
@@ -32,7 +38,7 @@
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #ffd600;
 }
-a {
+.header a {
   line-height: 25px;
   font-size: 18px;
   transition: 0.2s;
@@ -53,7 +59,7 @@ select {
 }
 
 
-@media (max-width: 767px){
+@media (max-width: 780px){
 
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: white;
