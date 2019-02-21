@@ -7,44 +7,53 @@
 {% endblock %}
 
 {%  block content %}
-    <div class="container">
+   <div class="container">
         <div class="row">
-        <div class="col-lg-12">
-        <div class="title"> <h3> Contacts </h3>
-        </div>
-        {%  for contact in contact_fields %}
-            {% if contact.selection_committee == False %}
-                 {%  if contact.index == 1 %}
-                    <p> номер телефону: {{ contact.name }} </p>
-                 {%  elif contact.index == 2 %}
-                      <p> емейл: {{ contact.name }} </p>
-                     {%  elif contact.index == 3 %}
-                      <p>social network: {{ contact.name }} </p>
-                      {%  elif contact.index == 4 %}
-                      <p> поштовий індекс: {{ contact.name }} </p>
-                      {%  elif contact.index == 0 %}
-                      <p> інше: {{ contact.name }} </p>
-                 {% endif %}
-            {% endif %}
-        {%  endfor %}
+            <div class="col-lg-12">
+                <h1 class="title">  <span >
+                        {%  trans "Контакти" %}
+                    </span>
+                </h1>
+            </div>
+            <div class="main_content">
+            <h3> {%  trans "Контакти" %}</h3>
+                {%  for contact in contact_fields %}
+                    {% if contact.selection_committee == False %}
+                        <div>
+                             {%  if contact.index == 1 %}
+                                <p> номер телефону: {{ contact.name }} </p>
+                             {%  elif contact.index == 2 %}
+                                 <p> емейл: {{ contact.name }} </p>
+                             {%  elif contact.index == 3 %}
+                                  <p>social network: {{ contact.name }} </p>
+                             {%  elif contact.index == 4 %}
+                                  <p> поштовий індекс: {{ contact.name }} </p>
+                             {%  elif contact.index == 0 %}
+                                  <p> інше: {{ contact.name }} </p>
+                            {% endif %}
+                         </div>
+                    {% endif %}
+                {%  endfor %}
 
-        <h3> Contacts selection committee</h3>
-        {%  for contact in contact_fields %}
-            {% if contact.selection_committee %}
-               {%  if contact.index == 1 %}
-                    <p> номер телефону: {{ contact.name }} </p>
-                 {%  elif contact.index == 2 %}
-                      <p> емейл: {{ contact.name }} </p>
-                     {%  elif contact.index == 3 %}
-                      <p>social network: {{ contact.name }} </p>
-                      {%  elif contact.index == 4 %}
-                      <p> поштовий індекс: {{ contact.name }} </p>
-                      {%  elif contact.index == 0 %}
-                      <p> інше: {{ contact.name }} </p>
-                 {% endif %}
-            {% endif %}
-        {%  endfor %}
-        </div>
+                <h3> {%  trans "Контакти приймальної комісії" %}Contacts selection committee</h3>
+                {%  for contact in contact_fields %}
+                    {% if contact.selection_committee == False %}
+                        <div>
+                             {%  if contact.index == 1 %}
+                                <p> номер телефону: {{ contact.name }} </p>
+                             {%  elif contact.index == 2 %}
+                                 <p> емейл: {{ contact.name }} </p>
+                             {%  elif contact.index == 3 %}
+                                  <p>social network: {{ contact.name }} </p>
+                             {%  elif contact.index == 4 %}
+                                  <p> поштовий індекс: {{ contact.name }} </p>
+                             {%  elif contact.index == 0 %}
+                                  <p> інше: {{ contact.name }} </p>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {%  endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
