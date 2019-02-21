@@ -14,7 +14,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="#">
-                    <img src="{% static "header/images/logo.png" %}" class="logo" alt="">
+                    <img src="{% static "wraping/header/images/logo.png" %}" class="logo" alt="">
                 </a>
             </div>
 
@@ -25,7 +25,8 @@
                     <li><a href="/entrants">{%  trans "Абітурієнтам" %}</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Навчання" %}<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a href="/studying"> {%  trans "Структурно логічні схеми" %}</a></li>
                             <li><a href="/studying/bachelor"> {%  trans "Бакалаврат" %}</a></li>
                             <li><a href="/studying/magister">{%  trans "Магістратура" %}</a></li>
                             <li><a href="#">{%  trans "PHD" %}</a></li>
@@ -34,7 +35,7 @@
                     <li> <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Інше" %}<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-left">
                             <li> <a href="/science">{%  trans "Наука" %}</a></li>
                             <li><a href="/cooperation">{%  trans "Співпраця" %}</a></li>
                             <li><a href="/contacts/">{%  trans "Контакти" %}</a></li>

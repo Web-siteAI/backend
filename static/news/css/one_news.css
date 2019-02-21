@@ -1,12 +1,6 @@
-body {
-	margin: 0;
-	padding: 0;
-}
-
-a{
+.one_news a{
 	text-decoration: none;
 }
-
 .title_news_one {	
 	font-weight: bold;
 	font-size: 40px;

@@ -1,7 +1,3 @@
-body{
-  margin: 0;
-  padding: 0;
-}
 .mainPage .slider {
   width: 100%;
   height: 460px;
@@ -135,5 +131,66 @@ body{
     .mainPage .next {
         top: 160px;
         right: 10px;
+    }
+
+    .mainPage .slider div:nth-child(1)::before{
+      content: "Національний Університет \"Львівська Політехніка\"";
+      font-size: 30px;
+      color: white;
+      font-family: 'Roboto Condensed';
+      display: block;
+      text-align:center;
+      margin-top: 100px;
+    }
+    .mainPage .slider div:nth-child(1)::after{
+      content: "Кафедра Систем Штучного Інтелекту";
+      font-size: 30px;
+      color: white;
+      font-family: 'Roboto Condensed';
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .mainPage .slider div:nth-child(2)::before {
+      content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
+      color: white;
+      font-size: 25px;
+      font-family: 'Roboto Condensed';
+      display: block;
+      width: 70%;
+      text-align: center;
+      margin-top: 120px;
+    }
+}
+@media (max-width: 400px){
+    .mainPage .slider div:nth-child(1)::before{
+      content: "Національний Університет \"Львівська Політехніка\"";
+      font-size: 20px;
+      color: white;
+      font-family: 'Roboto Condensed';
+      display: block;
+      text-align:center;
+      margin-top: 100px;
+    }
+
+
+    .mainPage .slider div:nth-child(1)::after{
+      content: "Кафедра Систем Штучного Інтелекту";
+      font-size: 20px;
+      color: white;
+      font-family: 'Roboto Condensed';
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .mainPage .slider div:nth-child(2)::before {
+      content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
+      color: white;
+      font-size: 20px;
+      font-family: 'Roboto Condensed';
+      display: block;
+      width: 70%;
+      text-align: center;
+      margin-top: 90px;
     }
 }

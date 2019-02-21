@@ -1,7 +1,10 @@
+
 .all_news {
 	display: block;
 }
-
+.tags a {
+	margin-bottom: 20px;
+}
 .news_post{
 	margin: 0 12% 10px 12%;
 	background-color: #f0f0f0;
@@ -9,7 +12,7 @@
 }
 
 .title_post{
-	margin: 10px 10px 0px 10px;
+	margin: 10px 10px 0 10px;
 	font-family: Arial;
 	color: #34515e;
 	font-weight: bold;
@@ -24,8 +27,8 @@
 }
 
 #img_news{
-	height: 105px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
 	margin: 10px 10px 10px 10px;
 	float: right;
 }
@@ -60,7 +63,6 @@
 
 .pagination {
 	margin-bottom: 20px;
->>>>>>>>> Temporary merge branch 2
 }
 
 .pagination-number {
@@ -77,7 +79,7 @@
 }
 
 .pagination-action {
-    margin: 4px 5px 0px 5px;
+    margin: 4px 5px 0 5px;
 }
 
 .pagination-number_pagination-current{
@@ -88,4 +90,10 @@
 	font-weight: bold;
 	margin-right: 2px;
 	box-shadow: 0 0 20px rgba(0,0,0,0), inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.news .container{
+	width: 100%;
+}
+.news_post .row {
+	padding: 100px 5px 0 0;
 }
