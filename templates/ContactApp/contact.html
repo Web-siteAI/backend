@@ -1,27 +1,50 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
 {%  load i18n %}
-{%  load staticfiles %}
+{% load staticfiles %}
 
 {%  block script %}
 
 {% endblock %}
 
 {%  block content %}
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+        <div class="title"> <h3> Contacts </h3>
+        </div>
+        {%  for contact in contact_fields %}
+            {% if contact.selection_committee == False %}
+                 {%  if contact.index == 1 %}
+                    <p> номер телефону: {{ contact.name }} </p>
+                 {%  elif contact.index == 2 %}
+                      <p> емейл: {{ contact.name }} </p>
+                     {%  elif contact.index == 3 %}
+                      <p>social network: {{ contact.name }} </p>
+                      {%  elif contact.index == 4 %}
+                      <p> поштовий індекс: {{ contact.name }} </p>
+                      {%  elif contact.index == 0 %}
+                      <p> інше: {{ contact.name }} </p>
+                 {% endif %}
+            {% endif %}
+        {%  endfor %}
 
-    <div>
-    <h3> Contacts </h3>
-    {%  for contact in contact_fields %}
-        {% if contact.selection_committee == False %}
-            <p> {{ contact.name }} </p>
-        {% endif %}
-    {%  endfor %}
-
-    <h3> Contacts selection committee</h3>
-    {%  for contact in contact_fields %}
-        {% if contact.selection_committee %}
-            <p> {{ contact.name }} </p>
-        {% endif %}
-    {%  endfor %}
+        <h3> Contacts selection committee</h3>
+        {%  for contact in contact_fields %}
+            {% if contact.selection_committee %}
+               {%  if contact.index == 1 %}
+                    <p> номер телефону: {{ contact.name }} </p>
+                 {%  elif contact.index == 2 %}
+                      <p> емейл: {{ contact.name }} </p>
+                     {%  elif contact.index == 3 %}
+                      <p>social network: {{ contact.name }} </p>
+                      {%  elif contact.index == 4 %}
+                      <p> поштовий індекс: {{ contact.name }} </p>
+                      {%  elif contact.index == 0 %}
+                      <p> інше: {{ contact.name }} </p>
+                 {% endif %}
+            {% endif %}
+        {%  endfor %}
+        </div>
+        </div>
     </div>
-
 {% endblock %}
