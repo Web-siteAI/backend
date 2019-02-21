@@ -48,7 +48,7 @@
 
         <div class="teachers container" style="font-family: 'Roboto'">
             <h1>{%  trans "Професорсько-викладацький склад кафедри" %}</h1>
-            <div class="wrapper">
+            <div class="wrapper wrap">
                 {% for teacher in teachers_list %}
                     {% if teacher.scopus_id > 1000 %}
                         <a href="/teachers/{{ teacher.scopus_id }}/">

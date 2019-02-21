@@ -55,10 +55,12 @@
   margin-top: 25px;
 }
 
-.mainPage .teachers .wrapper {
+.wrap{
   display: grid;
-  grid-template-columns: repeat(4, 230px);
-  grid-gap: 5.4vw;
+  grid-template-columns: repeat(4, 25%);
+  padding-right: 5%;
+  padding-left: 5%;
+  justify-items: center;
 }
 .mainPage .teachers .wrapper .gr-item {
   width: 230px;
@@ -161,14 +163,27 @@
     width: 100%;
     padding-bottom: 40px;
 }
+
+
 @media screen and (max-width: 1200px){
 	.mainPage .history img{
     	width: 70%;
 		margin: 0 15% 10%;
 	}
+  .wrap{
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 55%);
+  }
 }
 @media screen and (max-width: 992px){
     .programs .prog {
       margin: 40px;
     }
+}
+
+@media screen and (max-width: 680px){
+     .wrap{
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(4, 27.5%);
+  }
 }
