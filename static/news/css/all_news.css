@@ -2,6 +2,11 @@
 .all_news {
 	display: block;
 }
+
+.teg_news{
+	margin-bottom: 20px;
+}
+
 .tags a {
 	margin-bottom: 20px;
 }
