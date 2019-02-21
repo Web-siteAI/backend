@@ -1,13 +1,14 @@
 {%  extends "MainApp/../wrapping/wrapper.html" %}
 {%  load i18n %}
 {% load staticfiles %}
-{%  block script %}
 
+{%  block script %}
+    <link rel="stylesheet" type="text/css" href="{% static "mainPage/css/entrants.css" %}">
 {% endblock %}
 
 {%  block content %}
 
-    <div class="vstypnukam">
+    <div class="container">
     <div class="row">
             <div class="col-lg-12">
                 <h1 class="title">
