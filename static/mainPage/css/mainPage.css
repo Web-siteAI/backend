@@ -157,7 +157,10 @@
 .prog a{
   display: block;
 }
-
+.buchlet {
+    width: 100%;
+    padding-bottom: 40px;
+}
 @media screen and (max-width: 1200px){
 	.mainPage .history img{
     	width: 70%;
