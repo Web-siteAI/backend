@@ -94,7 +94,6 @@
   text-align: center;
   background-color: #181712;
 }
-
 .teachers-but {
   display: inline-block;
   width: 230px;
@@ -109,7 +108,6 @@
   cursor: pointer;
   background-color: #0C0B09;
 }
-
 .teachers-but span {
   text-align: center;
   font-size: 30px;
@@ -118,7 +116,6 @@
   font-family: Arial;
   transition: .3s;
 }
-
 .programs{
   min-height: 300px;
   width: 100%;
@@ -158,6 +155,7 @@
   display: block;
 }
 
+
 @media screen and (max-width: 1200px){
 	.mainPage .history img{
     	width: 70%;
@@ -168,4 +166,5 @@
     .programs .prog {
       margin: 40px;
     }
+
 }
