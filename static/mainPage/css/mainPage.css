@@ -185,5 +185,6 @@
      .wrap{
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, 27.5%);
+       padding-bottom: 50px;
   }
 }
