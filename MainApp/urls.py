@@ -31,6 +31,5 @@ urlpatterns = [
     path('news/', include("NewsApp.urls")),
     path('contacts/', include("ContactApp.urls")),
 
-
 ]
 

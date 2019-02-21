@@ -11,12 +11,12 @@
 
 {%  block content %}
 
-    <div class="all_news">
+    <div class="all_news container">
 		<h1 class="title">
 			<span>{% trans "Новини"%} </span>
 		</h1>
         <div class="main_content">
-        <h3 style="float: left">All tags:</h3>
+        <h3>All tags:</h3>
             <a href="/news/all/?page=1"> #{% trans "усі" %}</a>
             {% for taga in tags_list %}
                 <a href="/news/{{ taga }}/?page=1"> #{{ taga.get_name }} </a>
@@ -46,8 +46,7 @@
 		    </a>
         {% endfor %}
     </div>
-    <br>
-    <div class="pagination">
+    <div class="pagin container">
         {% if news_field.has_previous %}
             <a class="pagination-action" href="?page=1">
                 <i class="fa fa-angle-double-left" aria-hidden="true"></i>

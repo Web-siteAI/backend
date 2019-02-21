@@ -7,37 +7,42 @@
 {% endblock %}
 
 {%  block content %}
-
-    <h1 class="title">
-        <span >
-            {%  trans "Бакалаврат" %}
-        </span>
-    </h1>
-    <div class="navch">
-		<h2 id="riven">
-			<span style="font-size: 30px;">{%  trans "Структурно-логічна схема навчальних дисциплін" %}</span>
-		</h2>
-        <div class="im_sxema" >
-            <img id="fotka_magist" src ='{% static "studying\images\sxema.jpg" %}'>
-        </div>
-    </div>
-        <h1 class="title">
-			<span >
-				{%  trans "Магістратура" %}
-			</span>
-		</h1>
-    <div class="navch">
-        <h2 id="riven">
-			<span style="font-size: 30px;">{%  trans "Вибірковий блок 'Системи штучного інтелекту'" %}</span>
-		</h2>
-        <div class="im_sxema" >
-            <img id="fotka_magist" src ='{% static "studying\images\magi_struct_mdls.jpg" %}'>
-        </div>
-        <h2 id="riven">
-			<span style="font-size: 30px;">{%  trans "Вибірковий блок 'Системи машинного глибинного навчання'" %}</span>
-		</h2>
-        <div class="im_sxema" >
-            <img id="fotka_magist" src ='{% static "studying\images\magi_struct_ais.jpg" %}'>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="title">
+                    <span >
+                        {%  trans "Бакалаврат" %}
+                    </span>
+                </h1>
+                <div class="main_content">
+                    <h2>
+                        <span style="font-size: 30px;">{%  trans "Структурно-логічна схема навчальних дисциплін" %}</span>
+                    </h2>
+                    <div class="im_sxema" >
+                        <img class="fotka_bachelor" src ='{% static "studying\images\sxema.jpg" %}'>
+                    </div>
+                </div>
+                <h1 class="title">
+                    <span >
+                        {%  trans "Магістратура" %}
+                    </span>
+                </h1>
+                <div class="main_content">
+                    <h2>
+                        <span style="font-size: 30px;">{%  trans "Вибірковий блок 'Системи штучного інтелекту'" %}</span>
+                    </h2>
+                    <div class="im_sxema" >
+                        <img class="fotka_magist" src ='{% static "studying\images\magi_struct_mdls.jpg" %}'>
+                    </div>
+                    <h2>
+                        <span style="font-size: 30px;">{%  trans "Вибірковий блок 'Системи машинного глибинного навчання'" %}</span>
+                    </h2>
+                    <div class="im_sxema" >
+                        <img class="fotka_magist" src ='{% static "studying\images\magi_struct_ais.jpg" %}'>
+                    </div>
+                </div>
+            </div>
         </div>
 	</div>
 {% endblock %}

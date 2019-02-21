@@ -3,48 +3,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-  <header>
-  {% get_current_language as LANGUAGE_CODE %}
-      <div class="hLogo" style="background-image: url('{% static "header/images/logo.png" %}')"></div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#">
+                    <img src="{% static "header/images/logo.png" %}" class="logo" alt="">
+                </a>
+            </div>
 
-      <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-
-      <label for="checkbox3">
-              <div class="hamburger hamburger3">
-                  <span class="bar bar1"></span>
-                  <span class="bar bar2"></span>
-                  <span class="bar bar3"></span>
-                  <span class="bar bar4"></span>
-              </div>
-          </label>
-
-    <div class="header-right" style="font-family: 'Roboto Condensed';">
-      <a href="/">{%  trans "Про кафедру" %}</a>
-      <a href="/news/all/?page=1">{%  trans "Новини" %}</a>
-      <a href="/entrants">{%  trans "Абітурієнтам" %}</a>
-      <a href="/studying/">{%  trans "Навчання" %}</a>
-      <a href="/science">{%  trans "Наука" %}</a>
-      <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a>
-      <a href="/cooperation">{%  trans "Співпраця" %}</a>
-      <a>
-        <form action="{% url 'set_language' %}" method="post">
-          {% csrf_token %}
-          <input type="hidden" name="next" value="{{ redirect_to }} ">
-          <select name="language" id="" onchange="this.form.submit()" >
-              {%  get_available_languages as LANGUAGES %}
-              {%  get_language_info_list for LANGUAGES as languages %}
-              {% for language in languages %}
-                    <option data-icon="glyphicon-music" value="{{  language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
-                          {{ language.code }}
-                    </option>
-              {% endfor %}
-          </select>
-
-        </form>
-      </a>
-
-
-    </div>
-
-  </header>
+            <div class="header collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">{%  trans "Про кафедру" %}</a></li>
+                    <li><a href="/news/all/?page=1">{%  trans "Новини" %}</a></li>
+                    <li><a href="/entrants">{%  trans "Абітурієнтам" %}</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Навчання" %}<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/studying/bachelor"> {%  trans "Бакалаврат" %}</a></li>
+                            <li><a href="/studying/magister">{%  trans "Магістратура" %}</a></li>
+                            <li><a href="#">{%  trans "PHD" %}</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Інше" %}<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="/science">{%  trans "Наука" %}</a></li>
+                            <li><a href="/cooperation">{%  trans "Співпраця" %}</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>{% get_current_language as LANGUAGE_CODE %}
+                            <form action="{% url 'set_language' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="next" value="{{ redirect_to }} ">
+                                <select name="language" id="" onchange="this.form.submit()" >
+                                    {%  get_available_languages as LANGUAGES %}
+                                    {%  get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option data-icon="glyphicon-music" value="{{  language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                            {{ language.code }}
+                                        </option>
+                                  {% endfor %}
+                                </select>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </body>
