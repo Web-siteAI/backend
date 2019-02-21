@@ -2,11 +2,20 @@
 .all_news {
 	display: block;
 }
+
+.teg_news{
+	margin-bottom: 20px;
+}
+
+.tags a {
+	margin-bottom: 20px;
+}
 .news_post{
 	margin: 0 12% 10px 12%;
 	background-color: #f0f0f0;
 	position: relative;
 }
+
 .title_post{
 	margin: 10px 10px 0 10px;
 	font-family: Arial;
@@ -14,28 +23,33 @@
 	font-weight: bold;
 	font-size: 26px;
 }
+
 .data_post{
 	margin-left: 10px;
 	font-family: Arial;
 	color: #34515e;
 	font-size: 18px;
 }
+
 #img_news{
-	height: 105px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
 	margin: 10px 10px 10px 10px;
 	float: right;
 }
+
 #fotka{
 	/* object-fit: contain;*/
 	height: 100%;
 	width: 100%;
 	object-position: right;
 }
+
 .news_post:hover{
 	cursor: pointer;
 	box-shadow: 0 0 10px rgba(0,0,0,0), inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 #short_description{
 	padding-bottom: 1px;
 }
@@ -81,4 +95,10 @@
 	font-weight: bold;
 	margin-right: 2px;
 	box-shadow: 0 0 20px rgba(0,0,0,0), inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.news .container{
+	width: 100%;
+}
+.news_post .row {
+	padding: 100px 5px 0 0;
 }

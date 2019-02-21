@@ -3,11 +3,11 @@
 {% load staticfiles %}
 
  {%  block script %}
-
+    <link rel="stylesheet" type="text/css" href="{% static "news/css/one_news.css" %}">
  {% endblock %}
 
 {%  block content %}
-		<div class="one_news">
+		<div class="one_news container">
 {#            <a href="/news/all/?page=1"><img style="float: left; margin-top: 25px" src ='{% static "magister\css\prev.png" %}'></a>#}
 			<div class="title">
 				<span>{{ current_news.get_topic }}</span>
