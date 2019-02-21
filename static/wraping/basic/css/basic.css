@@ -22,12 +22,16 @@ body {
 }
 a {
     color: #000000;
+    text-decoration: none;
 }
 .container{
     width: 80%;
 }
+.flex {
+  display: flex;
+}
 @media screen and (max-width: 1075px){
-  .title {
-    text-align: center;
-  }
+    .title {
+        text-align: center;
+    }
 }

@@ -13,33 +13,44 @@
 		<h1 class="title">
 			<span>{% trans "Новини"%} </span>
 		</h1>
-        <div class="main_content">
+        <div class="main_content news">
             <a href="/news/all/?page=1"> #{% trans "усі новини" %}</a>
             {% for taga in tags_list %}
                 <a href="/news/{{ taga }}/?page=1"> #{{ taga.get_name }} </a>
             {%  endfor %}
             {%  for news in news_field %}
-                <a href="/news/id/{{ news.id }}" style="text-decoration: none">
-                    <div class="news_post row flex">
-                        <div class="col-lg-8">
-                            <div class="title_post">
-                                <span>{{ news.get_topic }}</span>
+                <a href="/news/id/{{ news.id }}">
+                    <div class="container">
+                        <div class="news_post row">
+                            <div class="col-xs-9">
+                                <div class="title_post">
+                                    <span>{{ news.get_topic }}</span>
+                                </div>
+                                <div>
+                                    <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
+                                </div>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-9">
+                                            <div>
+                                                {% for tag in news.tags.all %}
+                                                    #{{ tag.get_name }}
+                                                {%  endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="data_post">
+                                                <time>{{ news.data_post }} </time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="data_post">
-                                <time>{{ news.data_post }} </time>
-                            </div>
-                            <div>
-                                <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
-                            </div>
-                            <div style="margin-left: 10px">
-                                {% for tag in news.tags.all %}
-                                    #{{ tag.get_name }}
-                                {%  endfor %}
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div id="img_news">
-                                <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
+                            <div class="col-xs-3">
+                                <div id="img_news">
+                                    <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
+                                </div>
                             </div>
                         </div>
                     </div>
