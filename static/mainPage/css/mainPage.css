@@ -55,10 +55,12 @@
   margin-top: 25px;
 }
 
-.mainPage .teachers .wrapper {
+.wrap{
   display: grid;
-  grid-template-columns: repeat(4, 230px);
-  grid-gap: 5.4vw;
+  grid-template-columns: repeat(4, 25%);
+  padding-right: 5%;
+  padding-left: 5%;
+  justify-items: center;
 }
 .mainPage .teachers .wrapper .gr-item {
   width: 230px;
@@ -94,6 +96,7 @@
   text-align: center;
   background-color: #181712;
 }
+
 .teachers-but {
   display: inline-block;
   width: 230px;
@@ -108,6 +111,7 @@
   cursor: pointer;
   background-color: #0C0B09;
 }
+
 .teachers-but span {
   text-align: center;
   font-size: 30px;
@@ -116,6 +120,7 @@
   font-family: Arial;
   transition: .3s;
 }
+
 .programs{
   min-height: 300px;
   width: 100%;
@@ -154,6 +159,10 @@
 .prog a{
   display: block;
 }
+.buchlet {
+    width: 100%;
+    padding-bottom: 40px;
+}
 
 
 @media screen and (max-width: 1200px){
@@ -161,10 +170,21 @@
     	width: 70%;
 		margin: 0 15% 10%;
 	}
+  .wrap{
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 55%);
+  }
 }
 @media screen and (max-width: 992px){
     .programs .prog {
       margin: 40px;
     }
+}
 
+@media screen and (max-width: 680px){
+     .wrap{
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(4, 27.5%);
+       padding-bottom: 50px;
+  }
 }

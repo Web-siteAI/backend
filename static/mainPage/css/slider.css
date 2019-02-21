@@ -16,7 +16,6 @@ body{
   transition: 0.3s;
   z-index: 10;
   cursor: pointer;
-
 }
 .mainPage .slBut:hover::before{
   color: rgb(255, 214, 0);
@@ -34,7 +33,6 @@ body{
 .mainPage .prev {
     top: 30%;
     left: 5%;
-
 }
 .mainPage .prev::before {
   content: "\f053";

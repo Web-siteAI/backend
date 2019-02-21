@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+{% get_current_language as LANGUAGE_CODE %}
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid" >
             <div class="navbar-header">
@@ -39,8 +40,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a>{% get_current_language as LANGUAGE_CODE %}
-                            <form action="{% url 'set_language' %}" method="post">
+                        <a><form action="{% url 'set_language' %}" method="post">
                                 {% csrf_token %}
                                 <input type="hidden" name="next" value="{{ redirect_to }} ">
                                 <select name="language" id="" onchange="this.form.submit()" >
@@ -53,6 +53,7 @@
                                   {% endfor %}
                                 </select>
                             </form>
+
                         </a>
                     </li>
                 </ul>
