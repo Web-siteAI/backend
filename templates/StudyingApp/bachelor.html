@@ -3,24 +3,21 @@
 {% load staticfiles %}
 
 {%  block script %}
-    <link rel="stylesheet" type="text/css" href="{% static "bachav/css/bachav.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "studying/css/bachav.css" %}">
 {% endblock %}
 
 {%  block content %}
 
-    <!--<h2 align="center">"Бакалаврат" %}</h2> -->
     <div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="title">
-					<span >
-						 {% trans "Карта курсів" %}
+					<span>
+						 {{contents.get_app_topic|safe}}
 					</span>
 				</h1>
 				<div class="main_content">
-					<h4>
-					{% trans "Під час навчання, студенти будуть вивчати такі мови програмування: Java, Python, R; До базових предметів належать: лінійна алгебра та чисельні методи. З фокусом на спеціалізацію будуть вивчатися машинне навчання, бази та сховища даних, методи штучного інтелекту." %}
-					</h4>
+					<h4>{{ contents.get_text|safe}}</h4>
 
 					<div class="all">
 						<input checked type="radio" name="respond" id="desktop">
@@ -33,10 +30,10 @@
 								<div id="slides">
 									<div id="overflow">
 										<div class="image">
-											<article> <img src='{% static "bachav\images\1.jpg" %}'></article>
-											<article> <img src='{% static "bachav\images\2.jpg" %}'></article>
-											<article> <img src='{% static "bachav\images\3.jpg" %}'></article>
-											<article> <img src='{% static "bachav\images\4.jpg" %}'></article>
+											<article> <img src='{% static "studying\images\1.jpg" %}'></article>
+											<article> <img src='{% static "studying\images\2.jpg" %}'></article>
+											<article> <img src='{% static "studying\images\3.jpg" %}'></article>
+											<article> <img src='{% static "studying\images\4.jpg" %}'></article>
 										</div>
 									</div>
 								</div>

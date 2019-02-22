@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Footer
 from TeachersApp.models import Teacher
+from ContactApp.models import Contact
+
 
 
 def mainMethod(request):
@@ -12,7 +14,8 @@ def mainMethod(request):
 
 def entrants(request):
     footer_fields = Footer.objects.get(pk=1)
-    content = {"footer_fields": footer_fields}
+    contact_fields = list(Contact.objects.all())
+    content = {"footer_fields": footer_fields, "contact_fields": contact_fields}
     return render(request, "MainApp/entrants.html", content)
 
 
@@ -25,4 +28,4 @@ def science(request):
 def excursion(request):
     footer_fields = Footer.objects.get(pk=1)
     content = {"footer_fields": footer_fields}
-    return render(request, "MainApp/excursion.html", content)
+    return render(request, "MainApp/virtual_tour.html", content)

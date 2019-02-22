@@ -1,25 +1,23 @@
-.teachersMain {
-  min-height: 600px;
-  width: 1140px;
-  margin: 0 auto;
-  padding: 2vw 0;
-}
 .teachersMain h1 {
   font-family: 'Roboto';
-  margin-bottom: 40px;
-  color: #607d8b;
+  color: #34515e;
 }
 .teachersMain .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 230px);
-  grid-gap: 5.4vw;
+  grid-template-columns: repeat(4, 25%);
+  /*padding-right: 1%;*/
+  /*padding-left: 1%;*/
+  padding: 1% 1% 1% 1%;
+  justify-items: center;
+  /*grid-gap: 5.4vw;*/
 }
 .teachersMain .wrapper .gr-item {
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  padding: 5% 1% 5% 1%;
 }
 .teachersMain .wrapper .gr-item .gr-item-image {
   width: 100%;
@@ -35,8 +33,8 @@
   bottom: 0px;
 }
 .teachersMain .wrapper .gr-item .spanWrap{
-  padding: 5px;
-  width: 230px;
+  padding: 0;
+  width: 250px;
   background-color: rgb(255, 255, 255);
   font-family: 'Roboto Condensed';
   font-size: 18px;
@@ -46,4 +44,33 @@
   bottom: -100px;
   transition: .3s;
   text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  .teachersMain .wrapper {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .teachersMain .wrapper .gr-item {
+    width: 300px;
+    height: 300px;
+  }
+
+  .teachersMain .wrapper .gr-item .spanWrap {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 865px){
+  .teachersMain .wrapper{
+    grid-template-columns: repeat(1, 100%);
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px){
+  .teachersMain .wrapper .gr-item {
+    width: 250px;
+    height: 250px;
+  }
+  .teachersMain .wrapper .gr-item .spanWrap {
+    width: 250px;
+  }
 }
