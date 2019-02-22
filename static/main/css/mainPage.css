@@ -57,6 +57,7 @@
   padding-right: 5%;
   padding-left: 5%;
   justify-items: center;
+  line-height: 1;
 }
 .mainPage .teachers .wrapper .gr-item {
   width: 230px;
