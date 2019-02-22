@@ -16,7 +16,8 @@
 				<div class="img_news_one">
 					<img id="fotka_one" src="{{ MEDIA_URL }}/{{ current_news.photo }}" >
 				</div>
-				<span id="description" class="data_post_one">{{ current_news.get_post }}</span>
+				<span id="description" class="data_post_one">{{ current_news.get_post|safe }}</span>
+                {#   {{ current_news.get_post|safe }}  - читає як html з тегами...#}
                 <div class="img_news_one">
                     {% for image in image_list %}
                         <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image}}">
