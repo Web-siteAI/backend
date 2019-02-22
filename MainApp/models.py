@@ -31,8 +31,37 @@ class Footer(models.Model):
 
     def _get_translation_field(self, field_name):
         original_field_name = field_name
+        lang_code = get_language()
 
-        lang_code= get_language()
+        if lang_code != 'uk':
+            field_name = '{}_{}'.format(field_name, lang_code)
+
+        field_value = getattr(self, field_name)
+        if field_value:
+            return field_value
+        else:
+            return getattr(self, original_field_name)
+
+
+class AppContent(models.Model):
+    app_name = models.CharField(max_length=128, blank=False)
+    app_topic = models.CharField(max_length=128, blank=True)
+    app_topic_en = models.CharField(max_length=128, blank=True)
+    text = models.TextField(blank=False)
+    text_en = models.TextField(blank=False)
+
+    def __str__(self):
+        return self.app_name
+
+    def get_app_topic(self):
+        return self._get_translation_field('app_topic')
+
+    def get_text(self):
+        return self._get_translation_field('text')
+
+    def _get_translation_field(self, field_name):
+        original_field_name = field_name
+        lang_code = get_language()
 
         if lang_code != 'uk':
             field_name = '{}_{}'.format(field_name, lang_code)
@@ -43,20 +72,3 @@ class Footer(models.Model):
             return field_value
         else:
             return getattr(self, original_field_name)
-
-# from i18nfield.fields import I18nCharField
-# from translatable.models import TranslatableModel, get_translation_model
-# from parler.models import TranslatableModel, TranslatedFields
-# #from easymode.i18n.decorators import I18n
-# from translations.models import Translatable
-
-# @I18n('site', 'location', 'building')
-# class Footer(Translatable):
-#     email = models.EmailField(null=True)
-#     phone_number = models.CharField(max_length=20)
-#     location = models.CharField(max_length=255, null=True)
-#     building = models.CharField(max_length=255, null=True)
-#     site = models.CharField(max_length=255)
-#
-#     class TranslatableMeta:
-#         fields = ['location', 'building', 'site']

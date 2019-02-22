@@ -3,6 +3,8 @@ from .models import Footer
 from TeachersApp.models import Teacher
 from ContactApp.models import Contact
 
+
+
 def mainMethod(request):
     footer_fields = Footer.objects.get(pk=1)
     teachers_list = Teacher.objects.all()[:4]

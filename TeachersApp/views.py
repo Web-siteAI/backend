@@ -1037,8 +1037,8 @@ def getTeacher(request, TeacherId):
 
     t = teacher.full_name.split()
     documents = []
-    if False:
-        f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "r")
+    if os.path.isfile("static/teachers/scholar/{0}.txt".format(t[0])):
+        f = open("static/teachers/scholar/{0}.txt".format(t[0]), "r")
         buff = []
         for line in f:
             if line.strip() == "Title ВІДОМОСТІ ПРО АВТОРІВ":

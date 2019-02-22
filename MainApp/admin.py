@@ -1,8 +1,15 @@
 from django.contrib import admin
-from .models import Footer
+from .models import Footer, AppContent
 from django.conf import settings
 # Register your models here.
-#admin.site.register(Footer) #, FooterAdmin)
+
+
+class TinyMCEAdmin(admin.ModelAdmin):
+    class Media:
+        js = ('/static/tiny_mce/js/tiny_mce.js', '/static/tiny_mce/js/textareas.js',)
+
+
+admin.site.register(AppContent, TinyMCEAdmin)
 
 
 @admin.register(Footer)
@@ -41,24 +48,6 @@ def switch_lang_code(path, language):
 
     # Return the full new path
     return '/'.join(parts)
-
-# from django.conf import settings
-# from django.db import models
-# from translations.admin import TranslatableAdmin, TranslationInline
-
-
-# class FooterAdmin(TranslatableAdmin):
-#     inlines = [TranslationInline]
-# class FooterTranslationInlineAdmin(admin.StackedInline):
-#     verbose_name = "Translation"
-#     verbose_name_plural = "Translations"
-#     model = FooterTranslation
-#     max_num = len(settings.LANGUAGES)
-#     extra = 1
-#
-#
-# class FooterAdmin(admin.ModelAdmin):
-#     inlines = [FooterTranslationInlineAdmin,]
 
 
 
