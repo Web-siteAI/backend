@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from .models import Footer
+from .models import Footer, AppContent
 from TeachersApp.models import Teacher
 from ContactApp.models import Contact
-
 
 
 def mainMethod(request):
@@ -14,8 +13,9 @@ def mainMethod(request):
 
 def entrants(request):
     footer_fields = Footer.objects.get(pk=1)
+    content_fields = AppContent.objects.get(pk=2)
     contact_fields = list(Contact.objects.all())
-    content = {"footer_fields": footer_fields, "contact_fields": contact_fields}
+    content = {"footer_fields": footer_fields, "contact_fields": contact_fields, "content_fields": content_fields}
     return render(request, "MainApp/entrants.html", content)
 
 
