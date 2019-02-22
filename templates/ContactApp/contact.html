@@ -35,7 +35,7 @@
                     {% endif %}
                 {%  endfor %}
 
-                <h3> {%  trans "Контакти приймальної комісії" %}Contacts selection committee</h3>
+               <h3> {%  trans "Контакти приймальної комісії" %}</h3>{# Contacts selection committee#}
                 {%  for contact in contact_fields %}
                     {% if contact.selection_committee == False %}
                         <div>

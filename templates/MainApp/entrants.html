@@ -43,12 +43,25 @@
                     <p><b>{%  trans "Вартість навчання на контрактній формі:" %}</b>  {%  trans "13500, 14850, 16340, 17970 грн./за перший-четвертий рік відповідно." %}</p>
                     <p>{%  trans "Детальніше про правила вступу в Національний університет “Львівська політехніка” за посиланням." %}</p>
                     <p><b>{%  trans "Приймальна комісія:" %}</b></p>
-                    <ul><li>{%  trans "м. Львів, вул. Степана Бандери, 12; Головний корпус НУ “ЛП”, к.101" %}</li></ul>
-                    <p>{%  trans "Номери телефонів:" %}</p>
-                    <ul >
-                        <li>+38 (032) 258-25-37</li>
-                        <li>+38 (032) 258-22-65</li>
-                    </ul>
+                    <ul><li>{{ footer_fields.get_location }}</li></ul>
+                    <p> {%  trans "Контакти приймальної комісії" %}</p>{# Contacts selection committee#}
+                    {%  for contact in contact_fields %}
+                        {% if contact.selection_committee %}
+                        <div>
+                             {%  if contact.index == 1 %}
+                                <p> {%  trans "Номери телефонів:" %} {{ contact.name }} </p>
+                             {%  elif contact.index == 2 %}
+                                 <p> емейл: {{ contact.name }} </p>
+                             {%  elif contact.index == 3 %}
+                                  <p>social network: {{ contact.name }} </p>
+                             {%  elif contact.index == 4 %}
+                                  <p> поштовий індекс: {{ contact.name }} </p>
+                             {%  elif contact.index == 0 %}
+                                  <p> інше: {{ contact.name }} </p>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    {%  endfor %}
                 </div>
             </div>
         </div>
