@@ -22,3 +22,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=255, blank=False)
     selection_committee = models.BooleanField(default=False)
     index = models.IntegerField(choices=INDEX, default=OTHER)
+
+    def __str__(self):
+
+        return str(self.name) + ("\tselection_committee" if self.selection_committee else " ")

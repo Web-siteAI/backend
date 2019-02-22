@@ -1,6 +1,12 @@
+
 .all_news {
 	display: block;
 }
+
+.teg_news{
+	margin-bottom: 20px;
+}
+
 .tags a {
 	margin-bottom: 20px;
 }
@@ -9,6 +15,7 @@
 	background-color: #f0f0f0;
 	position: relative;
 }
+
 .title_post{
 	margin: 10px 10px 0 10px;
 	font-family: Arial;
@@ -16,28 +23,33 @@
 	font-weight: bold;
 	font-size: 26px;
 }
+
 .data_post{
 	margin-left: 10px;
 	font-family: Arial;
 	color: #34515e;
 	font-size: 18px;
 }
+
 #img_news{
 	height: 200px;
 	width: 200px;
 	margin: 10px 10px 10px 10px;
 	float: right;
 }
+
 #fotka{
 	/* object-fit: contain;*/
 	height: 100%;
 	width: 100%;
 	object-position: right;
 }
+
 .news_post:hover{
 	cursor: pointer;
 	box-shadow: 0 0 10px rgba(0,0,0,0), inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 #short_description{
 	padding-bottom: 1px;
 }
