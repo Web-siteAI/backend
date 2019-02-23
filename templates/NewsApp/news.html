@@ -62,17 +62,17 @@
                 <div class="pagination">
                     {% if news_field.has_previous %}
                         <a class="pagination-action" href="?page=1">
-                            <img  src ='{% static "news/images/prev2.png" %}'>
+                            <img  src ='{% static "news/images/prev.png" %}'>
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.previous_page_number }}">
-                            <img  src ='{% static "news/images/prev.png" %}'>
+                            <img  src ='{% static "news/images/prev2.png" %}'>
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/prev2.png" %}'>
+                            <img  src ='{% static "news/images/prev.png" %}'>
                         </a>
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/prev.png" %}'>
+                            <img  src ='{% static "news/images/prev2.png" %}'>
                         </a>
                     {% endif %}
 
