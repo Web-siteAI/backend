@@ -58,7 +58,6 @@
 .header  a:hover {
   text-decoration: none;
   border-bottom: 2px solid #ffd600;
-  font-size: larger;
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
