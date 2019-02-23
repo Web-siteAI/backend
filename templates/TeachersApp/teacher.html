@@ -31,7 +31,7 @@
                 <!-- new fields -->
                 <p>{{ teacher.get_scientific_rank}}</p>
                 <p><a href="{{ teacher.academic_site}}">{% trans "Сайт" %}</a></p>
-                <p>{{ teacher.get_description }}</p>
+                <p>{{ teacher.get_description|safe }}</p>
 
                 <span style="color: #34515e">orcid: </span>
                 <span><a href="{{ teacher.scopus_orcid }}" target="_blank">{{ teacher.scopus_orcid }}</a></span>
@@ -47,11 +47,11 @@
             <br>
             <span class="flag">{%  trans "Напрямки наукових досліджень: " %}</span>
             <br>
-            <span>{{ teacher.get_science_researches }}</span>
+            <span>{{ teacher.get_science_researches|safe }}</span>
             <br>
             <span class="flag">{%  trans "Хоббі: " %}</span>
             <br>
-            <span>{{ teacher.get_interests }}</span>
+            <span>{{ teacher.get_interests|safe }}</span>
         </div>
     </div>
     <h3 class="dosl">{%  trans "Наукові дослідження:" %}</h3>
