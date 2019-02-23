@@ -21,7 +21,6 @@ urlpatterns = [
     path('', views.mainMethod, name='mainMethod'),
 
     path('entrants/', views.entrants, name="entrants"),
-    path('science/', views.science, name="science"),
     path('virtual-tour/', views.excursion, name="excursion"),
 
     path('studying/', include("StudyingApp.urls")),
