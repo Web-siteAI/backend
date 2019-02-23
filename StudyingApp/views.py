@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from MainApp.models import Footer, PageContent
+from MainApp.models import Footer, PageContent, Page
 
 
 # Create your views here.
 def bach(request):
     footer_fields = Footer.objects.get(pk=1)
-    content_fields = PageContent.objects.get(pk=1)
+    content_fields = PageContent.objects.get(page=Page.objects.get(page_name='Bachelor'))
     content = {"footer_fields": footer_fields, "content_fields": content_fields}
     return render(request, "StudyingApp/bachelor.html", content)
 
@@ -18,6 +18,6 @@ def studying(request):
 
 def magister(request):
     footer_fields = Footer.objects.get(pk=1)
-    content_fields = PageContent.objects.get(pk=3)
+    content_fields = PageContent.objects.get(page=Page.objects.get(page_name='Magister'))
     content = {"footer_fields": footer_fields, "content_fields": content_fields}
     return render(request, "StudyingApp/magister.html", content)

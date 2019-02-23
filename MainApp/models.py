@@ -51,7 +51,7 @@ class Page(models.Model):
 
 
 class PageContent(models.Model):
-    page_name = models.ForeignKey(Page, blank=False, on_delete=models.PROTECT) # blank=False, =models.PROTECT
+    page = models.ForeignKey(Page, blank=False, on_delete=models.PROTECT)
     page_topic = models.CharField(max_length=256, blank=True)
     page_topic_en = models.CharField(max_length=256, blank=True)
     text = models.TextField(blank=False)

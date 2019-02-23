@@ -147,101 +147,18 @@ msgstr "Master's degree"
 msgid "PHD"
 msgstr "PHD"
 
-#: .\templates\MainApp\science.html:16
-msgid "Наукові дослідження кафедри СШІ"
-msgstr "Scientific researches of the AIS department"
-
-#: .\templates\MainApp\science.html:20
-msgid "Напрямки досліджень"
-msgstr "Directions of researches"
-
-#: .\templates\MainApp\science.html:21
-msgid ""
-"Науково-дослідницька робота кафедри СШІ ведеться в напрямку вирішення "
-"алгоритмічно складних задач, аналізуванні даних великих обсягів, розробленні "
-"алгоритмів обробки відео, зображень або текстів, програмуванні та керуванні "
-"роботами"
-msgstr ""
-"Researching work of the department of SSI is in the direction of solving "
-"algorithmically complex problems, analyzing large volumes of data, "
-"developing algorithms for processing video, images or texts, programming and "
-"management of robotics"
-
-#: .\templates\MainApp\science.html:23
-msgid "Теоретичні результати"
-msgstr "Theoretical results"
-
-#: .\templates\MainApp\science.html:24
-msgid "Теоретичними результатами "
-msgstr "The theoretical results "
-
-#: .\templates\MainApp\science.html:24
-msgid ""
-"виконання науково-дослідних робіт є нові математичні моделі, методи, "
-"алгоритми проектування та виробництва мікроелектронних пристроїв, а також "
-"проектування і функціонування організаційно-технічних систем"
-msgstr ""
-"of the research work are new mathematical models, methods, algorithms for "
-"the design and production of microelectronic devices, as well as the design "
-"and operation of organizational and technical systems"
-
-#: .\templates\MainApp\science.html:26
-msgid "Практичні результати"
-msgstr "Practical results"
-
-#: .\templates\MainApp\science.html:27
-msgid "Практичнимим результатами "
-msgstr "Practical results "
-
-#: .\templates\MainApp\science.html:27
-msgid ""
-"є проекти, над якими студенти та викладачі кафедри СШІ працюють впродовж "
-"року та презентують в кінці кожного семестру. На презентаціях проектів "
-"присутні представники з провідних ІТ компаній Львова, що є чудовою нагодою "
-"для студентів зарекомендувати себе"
-msgstr ""
-"are the projects on which students and professors of the Department of SRI "
-"work throughout the year and present at the end of each semester. "
-"Representatives from the leading IT companies of Lviv are present at the "
-"presentations of the projects, which is a great opportunity for students to "
-"prove themselves"
-
 #: .\templates\MainApp\virtual_tour.html:14
 msgid "Віртуальний тур кафедрою СШІ"
 msgstr "Virtual tour of the AIS department"
 
-#: .\templates\NewsApp\news.html:14 .\templates\wrapping\header.html:24
+#: .\templates\NewsApp\news.html:14
+#: .\templates\wrapping\header.html:24
 msgid "Новини"
 msgstr "News"
 
 #: .\templates\NewsApp\news.html:18
 msgid "усі новини"
 msgstr "all news"
-
-#: .\templates\StudyingApp\bachelor.html:16
-#: .\templates\StudyingApp\magister.html:20
-msgid "Карта курсів"
-msgstr "Course Map"
-
-#: .\templates\StudyingApp\bachelor.html:21
-msgid ""
-"Під час навчання, студенти будуть вивчати такі мови програмування: Java, "
-"Python, R; До базових предметів належать: лінійна алгебра та чисельні "
-"методи. З фокусом на спеціалізацію будуть вивчатися машинне навчання, бази "
-"та сховища даних, методи штучного інтелекту."
-msgstr ""
-"During the training, students will learn the following programming "
-"languages: Java,Python, R; The basic subject include: linear algebra and "
-"numericalmethods. With a focus on specialization will be studied machine "
-"learning, basesand data warehouses, methods of artificial intelligence."
-
-#: .\templates\StudyingApp\magister.html:25
-msgid ""
-"Для магістрів доступні два напрямками підготовки: «Системи штучного "
-"інтелекту» та «Системи машинного глибинного навчання»"
-msgstr ""
-"For master's degree there are two areas of studying: «Artificial "
-"Intelligence Systems» and «Systems of Machine Depth Learning»"
 
 #: .\templates\StudyingApp\studying.html:20
 msgid "Структурно-логічна схема навчальних дисциплін"
