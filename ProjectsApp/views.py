@@ -3,7 +3,6 @@ from MainApp.models import Footer
 
 
 def projectsOfStudents(request):
-
     return render(request, 'ProjectsApp/ProjectsApp.html')
 
 

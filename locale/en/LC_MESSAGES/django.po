@@ -18,14 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\ContactApp\contact.html:14
-#: .\templates\ContactApp\contact.html:19 .\templates\wrapping\header.html:41
+#: .\templates\ContactApp\contact.html:15
+#: .\templates\wrapping\header.html:41
 msgid "Контакти"
 msgstr "Contacts"
 
-#: .\templates\ContactApp\contact.html:38
-msgid "Контакти приймальної комісії"
-msgstr "Contacts of selection committee"
+#: .\templates\ContactApp\contact.html:44
+msgid "Контакти приймальної комісії: "
+msgstr "Contacts of selection committee: "
+
+#: .\templates\ContactApp\contact.html:21
+msgid "Телефон: "
+msgstr "Phone: "
+
+#: .\templates\ContactApp\contact.html:21
+msgid "Пошта: "
+msgstr "E-mail: "
+
+#: .\templates\ContactApp\contact.html:21
+msgid "Сoціальна мережа: "
+msgstr "Social network: "
+
+#: .\templates\ContactApp\contact.html:21
+#: .\templates\ContactApp\contact.html:
+msgid "Поштовий індекс: "
+msgstr "Post index: "
 
 #: .\templates\CooperationApp\cooperation.html:16
 #: .\templates\wrapping\header.html:40
@@ -40,157 +57,11 @@ msgstr ""
 "The Department of Artificial Intelligence Systems cooperates with Ukrainian "
 "and foreign organizations and local authorities:"
 
-#: .\templates\MainApp\entrants.html:16
-msgid "Вступникам"
-msgstr "Entrants"
+#: .\templates\MainApp\entrants.html:19
+msgid "Приймальна комісія: "
+msgstr "Admissions: "
 
-#: .\templates\MainApp\entrants.html:20
-msgid ""
-"Тут Ви знайдете усю необхідну інформацію щодо вступу на освітню програму "
-"“Системи штучного інтелекту”!"
-msgstr ""
-"Here you will find all the necessary information for joining the educational "
-"program “Artificial Intelligence Systems“!"
-
-#: .\templates\MainApp\entrants.html:22
-msgid "Спеціальність 122 “Комп’ютерні науки”"
-msgstr "Specialty 122 “Computer Science”"
-
-#: .\templates\MainApp\entrants.html:23
-msgid "Освітня програма (спеціалізація) “Системи штучного інтелекту”"
-msgstr "Educational program (specialization) “Artificial Intelligence Systems”"
-
-#: .\templates\MainApp\entrants.html:24
-msgid "Кафедра систем штучного інтелекту"
-msgstr "The Department of Artificial Intelligence Systems"
-
-#: .\templates\MainApp\entrants.html:25
-msgid "Інститут комп'ютерних наук та інформаційних технологій (ІКНІ)"
-msgstr "Institute of Computer Science and Information Technologies (IKNI)"
-
-#: .\templates\MainApp\entrants.html:26
-msgid "Національний університет “Львівська Політехніка”"
-msgstr "National University “Lviv Polytechnic”"
-
-#: .\templates\MainApp\entrants.html:28
-msgid "Подача документів"
-msgstr "Filing documents"
-
-#: .\templates\MainApp\entrants.html:29
-msgid ""
-"Заяви на вступ подаються в електронному вигляді. Для цього вступник повинен "
-"зареєструватись на веб-сайті."
-msgstr ""
-"Applications for entry are submitted electronically for this purpose, the "
-"entrant must register on the website."
-
-#: .\templates\MainApp\entrants.html:31
-msgid "Прийом документів відбуватиметься у електронному вигляді"
-msgstr "Documents will be received electronically"
-
-#: .\templates\MainApp\entrants.html:31
-msgid "з 12 до 26 липня (до 18:00 год.) 2018 р."
-msgstr "from July 12 to July 26 (until 18:00) in 2018."
-
-#: .\templates\MainApp\entrants.html:32
-msgid ""
-"Електронну заяву подають вступники, які хочуть взяти участь у конкурсному "
-"відборі та не мають підстав для особливих умов вступу, визначених Умовами "
-"прийому та Правилами прийому до вищого навчального закладу. Прізвище, ім’я, "
-"і по батькові вступника у документі про освіту повинні збігатись із "
-"прізвищем, ім’ям, по батькові вступника в документі, що засвідчує особу. Для "
-"тих, хто вступає на основі повної загальної середньої освіти,особисті дані "
-"повинні збігатися з інформацією у сертифікаті зовнішнього незалежного "
-"оцінювання."
-msgstr ""
-"An electronic application is submitted by entrants who wish to take part in the "
-"competitive selection and have no grounds for the special conditions of admission "
-"and admission to the higher education institution. surname, first name, patronymic "
-"of the accredited person in the document."
-"For those who enter into full secondary education, "
-"personal data must coincide with the information in the "
-"certificate of external independent "
-"evaluation."
-
-#: .\templates\MainApp\entrants.html:33
-msgid "Не забудьте поставити 1 пріорітет при подачі заяви."
-msgstr "Do not forget to put 1 priority when applying."
-
-#: .\templates\MainApp\entrants.html:34
-msgid "Перелік конкурсних предметів ЗНО:"
-msgstr "List of Competitive Subjects of external independent evaluation:"
-
-#: .\templates\MainApp\entrants.html:36
-msgid "Українська мова та література (вага предмету сертифікату - 0,35)"
-msgstr "Ukrainian language and literature (weight of the subject of the certificate - 0,35)"
-
-#: .\templates\MainApp\entrants.html:37
-msgid "Математика (вага предмету сертифікату - 0,4)"
-msgstr "Mathematics (weight of the subject of the certificate - 0,4)"
-
-#: .\templates\MainApp\entrants.html:38
-msgid ""
-"Фізика / іноземна мова (англійська мова, французька мова, німецька мова, "
-"іспанська мова) (вага предмету сертифікату - 0,25)"
-msgstr ""
-"Physics / Foreign Language (English, French, German, "
-"Spanish) (Certificate Subject Weight - 0.25)"
-
-#: .\templates\MainApp\entrants.html:40
-msgid "Ліцензований обсяг"
-msgstr "Licensed volume"
-
-#: .\templates\MainApp\entrants.html:40
-msgid ""
-"(максимальна кількість студентів, які можуть бути зараховані до університету "
-"на напрям підготовки 'Комп'ютерні науки'): 300."
-msgstr ""
-"(the maximum number of students who can be enrolled in the university for "
-"the direction of 'Computer Science' training): 300."
-
-#: .\templates\MainApp\entrants.html:41
-msgid "Максимальний обсяг державного замовлення:"
-msgstr "Maximum amount of government order:"
-
-#: .\templates\MainApp\entrants.html:41
-msgid ""
-"255, з яких min 88 місць буде відведено для студентів програми 'Штучний "
-"інтелект'."
-msgstr ""
-"255, of which min 88 seats will be allocated to students of the Artificial "
-"Intelligence program."
-
-#: .\templates\MainApp\entrants.html:42
-msgid ""
-"Після отримання рекомендації необхідно подати оригінали документів. Під час "
-"подачі оригіналів документів необхідно заповнити заявку з обраною "
-"спеціалізацією навчання - 'Системи штучного інтелекту'."
-msgstr ""
-"After receiving the recommendation, you must submit the original documents. "
-"When submitting the original documents, you must fill out the application with"
-"the chosen specialization of study - 'Artificial Intelligence Systems'."
-
-#: .\templates\MainApp\entrants.html:43
-msgid "Вартість навчання на контрактній формі:"
-msgstr "Cost of training on contract form:"
-
-#: .\templates\MainApp\entrants.html:43
-msgid "13500, 14850, 16340, 17970 грн./за перший-четвертий рік відповідно."
-msgstr "13500, 14850, 16340, 17970 UAH / for the first-fourth year respectively."
-
-#: .\templates\MainApp\entrants.html:44
-msgid ""
-"Детальніше про правила вступу в Національний університет “Львівська "
-"політехніка” за посиланням."
-msgstr ""
-"Read more about the rules of admission to the National University of “Lviv "
-"Polytechnic” under the link."
-
-#: .\templates\MainApp\entrants.html:45
-msgid "Приймальна комісія:"
-msgstr "Admissions:"
-
-#: .\templates\MainApp\entrants.html:46
+#: .\templates\MainApp\entrants.html:46                                          ------------------------------------------------------------
 msgid "м. Львів, вул. Степана Бандери, 12; Головний корпус НУ “ЛП”, к.101"
 msgstr "Lviv, st. Stepana Bandery, 12; The main building of NU “LP”, a.101"
 

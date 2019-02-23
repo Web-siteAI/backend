@@ -43,18 +43,25 @@ class Footer(models.Model):
             return getattr(self, original_field_name)
 
 
-class AppContent(models.Model):
-    app_name = models.CharField(max_length=128, blank=False)
-    app_topic = models.CharField(max_length=128, blank=True)
-    app_topic_en = models.CharField(max_length=128, blank=True)
+class Page(models.Model):
+    page_name = models.CharField(max_length=128, blank=False)
+
+    def __str__(self):
+        return self.page_name
+
+
+class PageContent(models.Model):
+    page_name = models.ForeignKey(Page, blank=False, on_delete=models.PROTECT) # blank=False, =models.PROTECT
+    page_topic = models.CharField(max_length=256, blank=True)
+    page_topic_en = models.CharField(max_length=256, blank=True)
     text = models.TextField(blank=False)
     text_en = models.TextField(blank=False)
 
     def __str__(self):
-        return self.app_name
+        return "a"
 
-    def get_app_topic(self):
-        return self._get_translation_field('app_topic')
+    def get_page_topic(self):
+        return self._get_translation_field('page_topic')
 
     def get_text(self):
         return self._get_translation_field('text')

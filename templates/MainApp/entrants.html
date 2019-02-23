@@ -12,34 +12,34 @@
     <div class="row">
             <div class="col-lg-12">
                 <h1 class="title">
-                    <span >
-                        {{ content_fields.get_app_topic }}
-                    </span>
+                    <span>{{ content_fields.get_page_topic }}</span>
                 </h1>
                 <div class="main_content">
                     {{ content_fields.get_text|safe}}
+                    <p><strong>{% trans "Приймальна комісія: " %}</strong></p>
                     <ul><li>{{ footer_fields.get_location }}</li></ul>
-                    <p> {%  trans "Контакти приймальної комісії" %}</p>{# Contacts selection committee#}
-                    {%  for contact in contact_fields %}
-                        {% if contact.selection_committee %}
-                        <div>
-                             {%  if contact.index == 1 %}
-                                <p> {%  trans "Номери телефонів:" %} {{ contact.name }} </p>
-                             {%  elif contact.index == 2 %}
-                                 <p> емейл: {{ contact.name }} </p>
-                             {%  elif contact.index == 3 %}
-                                  <p>social network: {{ contact.name }} </p>
-                             {%  elif contact.index == 4 %}
-                                  <p> поштовий індекс: {{ contact.name }} </p>
-                             {%  elif contact.index == 0 %}
-                                  <p> інше: {{ contact.name }} </p>
+                    <p><strong>{%  trans "Контакти приймальної комісії: " %}</strong> </p>
+                    <ul>
+                        {%  for contact in contact_fields %}
+                            {% if contact.selection_committee %}
+                                <li>
+                                {%  if contact.index == 1 %}
+                                    <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
+                                {%  elif contact.index == 2 %}
+                                    <p> {% trans "Пошта: " %} {{ contact.name }} </p>
+                                {%  elif contact.index == 3 %}
+                                    <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
+                                {%  elif contact.index == 4 %}
+                                    <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
+                                {%  elif contact.index == 0 %}
+                                    <p> {{ contact.name }} </p>
+                                {% endif %}
+                                </li>
                             {% endif %}
-                        </div>
-                    {% endif %}
-                    {%  endfor %}
+                        {%  endfor %}
+                     </ul>
                 </div>
             </div>
         </div>
-  </div>
-
+    </div>
 {% endblock %}
