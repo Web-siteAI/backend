@@ -1,15 +1,3 @@
-
-.all_news {
-	display: block;
-}
-
-.teg_news{
-	margin-bottom: 20px;
-}
-
-.tags a {
-	margin-bottom: 20px;
-}
 .news_post{
 	margin: 0 12% 10px 12%;
 	background-color: #f0f0f0;
@@ -29,20 +17,17 @@
 	font-family: Arial;
 	color: #34515e;
 	font-size: 18px;
+	text-align: center;
 }
-
-#img_news{
-	height: 200px;
-	width: 200px;
-	margin: 10px 10px 10px 10px;
-	float: right;
+.img_news {
+	text-align: center;
 }
 
 #fotka{
-	/* object-fit: contain;*/
-	height: 100%;
-	width: 100%;
-	object-position: right;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	max-width: 100%;
+	max-height: 200px;
 }
 
 .news_post:hover{
@@ -56,49 +41,36 @@
 .pagination_p{
 	width: 100%;
     height: 100%;
-    /*position: absolute;*/
-    top: 0;
-    left: 0;
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: center;
-    overflow: auto;
-}
-
-.pagination {
-	margin-bottom: 20px;
-}
-
-.pagination-number {
-    padding: 7px 9px 7px 9px;
-    color: #fff;
-    background-color: grey;
-	margin-right: 2px;
-}
-
-.pagination-number:hover{
-    background-color: #383d41;
-	color: lavender;
-	text-decoration: none;
 }
 
 .pagination-action {
-    margin: 4px 5px 0 5px;
+	width: 30px;
+	height: 30px;
+}
+.pagination_p a:hover{
+	text-decoration: none;
+}
+.pagination-number {
+    padding: 5px 7px 5px 7px;
+    color: #fff;
+    background-color: grey;
+}
+
+.pagination-number:hover{
+	text-decoration: none;
 }
 
 .pagination-number_pagination-current{
 	background-color: #B6BDD2;
-	padding: 7px 9px 7px 9px;
+	padding: 5px 7px 7px 7px;
     color: darkgoldenrod;
 	font-size: 20px;
 	font-weight: bold;
-	margin-right: 2px;
 	box-shadow: 0 0 20px rgba(0,0,0,0), inset 0 0 20px rgba(0, 0, 0, 0.3);
 }
 .news .container{
 	width: 100%;
 }
-.news_post .row {
-	padding: 100px 5px 0 0;
-}
+

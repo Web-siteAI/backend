@@ -58,6 +58,10 @@
 .header  a:hover {
   text-decoration: none;
   border-bottom: 2px solid #ffd600;
+  color: #FFFFFF;
+}
+.navbar-nav>li>a:hover {
+color: #FFFFFF;
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {

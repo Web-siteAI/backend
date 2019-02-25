@@ -22,36 +22,33 @@
             </div>
             {%  for news in news_field %}
                 <a href="/news/id/{{ news.id }}">
-                    <div class="container">
-                        <div class="news_post row">
-                            <div class="col-xs-9">
+                    <div class="container news_post">
+                        <div class="row">
+                            <div class="col-lg-9">
                                 <div class="title_post">
                                     <span>{{ news.get_topic }}</span>
                                 </div>
-                                <div>
-                                    <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
-                                </div>
-
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-xs-9">
-                                            <div>
-                                                {% for tag in news.tags.all %}
-                                                    #{{ tag.get_name }}
-                                                {%  endfor %}
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="data_post">
-                                                <time>{{ news.data_post }} </time>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="img_news">
+                                    <img id="fotka" src="{{ MEDIA_URL }}/{{ news.photo }}">
                                 </div>
                             </div>
-                            <div class="col-xs-3">
-                                <div id="img_news">
-                                    <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div>
+                                        {% for tag in news.tags.all %}
+                                            #{{ tag.get_name }}
+                                        {%  endfor %}
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="data_post">
+                                        <time>{{ news.data_post }} </time>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,21 +56,21 @@
                 </a>
             {% endfor %}
             <br>
-            <div class="pagination_p">
+            <div class="pagination_p col-lg-12">
                 <div class="pagination">
                     {% if news_field.has_previous %}
-                        <a class="pagination-action" href="?page=1">
-                            <img  src ='{% static "news/images/prev.png" %}'>
+                        <a href="?page=1">
+                            <img class="pagination-action" src ='{% static "news/images/prev.png" %}'>
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.previous_page_number }}">
-                            <img  src ='{% static "news/images/prev2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/prev.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev.png" %}'>
                         </a>
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/prev2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
                         </a>
                     {% endif %}
 
@@ -86,17 +83,17 @@
                     {% endfor %}
                     {% if news_field.has_next %}
                         <a class="pagination-action" href="?page={{ news_field.next_page_number }}">
-                            <img  src ='{% static "news/images/next.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next.png" %}'>
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.paginator.num_pages }}">
-                            <img  src ='{% static "news/images/next2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next2.png" %}'>
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/next.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next.png" %}'>
                         </a>
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/next2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next2.png" %}'>
                         </a>
                     {% endif %}
                 </div>
