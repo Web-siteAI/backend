@@ -14,6 +14,16 @@
   position: fixed;
   width: 100%;
 }
+.navbar-default {
+    background-color: #000000;
+    border-color: #ffd600;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffd600;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ffd600;
+}
 .navbar-default .navbar-nav>li>a {
   color: #fff;
 }
@@ -27,9 +37,6 @@
   }
   .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: #fff;
-}
-.navbar-default .navbar-toggle {
-  border-color: #fff;
 }
 .dropdown-menu>li>a {
   font-weight: 400;
@@ -50,12 +57,17 @@
 }
 .header  a:hover {
   text-decoration: none;
-  color: white;
   border-bottom: 2px solid #ffd600;
+  color: #FFFFFF;
 }
+.navbar-nav>li>a:hover {
+color: #FFFFFF;
+}
+
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
   background-color: #fff;
   border-color: #ffd600;
+  color: #ffffff;
 }
 select {
   color: #000000;

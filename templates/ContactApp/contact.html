@@ -25,16 +25,16 @@
                         {% if contact.selection_committee == False %}
                             <div>
                                  {%  if contact.index == 1 %}
-                                    <p> номер телефону: {{ contact.name }} </p>
-                                 {%  elif contact.index == 2 %}
-                                     <p> емейл: {{ contact.name }} </p>
-                                 {%  elif contact.index == 3 %}
-                                      <p>social network: {{ contact.name }} </p>
-                                 {%  elif contact.index == 4 %}
-                                      <p> поштовий індекс: {{ contact.name }} </p>
-                                 {%  elif contact.index == 0 %}
-                                      <p> інше: {{ contact.name }} </p>
-                                {% endif %}
+                                    <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
+                                {%  elif contact.index == 2 %}
+                                    <p> {% trans "Пошта: " %} {{ contact.name }} </p>
+                                {%  elif contact.index == 3 %}
+                                    <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
+                                {%  elif contact.index == 4 %}
+                                    <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
+                                {%  elif contact.index == 0 %}
+                                    <p> {{ contact.name }} </p>
+                                 {% endif %}
                              </div>
                         {% endif %}
                     {%  endfor %}
@@ -44,30 +44,28 @@
                         <h3> {%  trans "Контакти приймальної комісії" %}</h3>
                     </div>
                     {%  for contact in contact_fields %}
-                        {% if contact.selection_committee == False %}
                             <div>
-                                 {%  if contact.index == 1 %}
-                                    <p> номер телефону: {{ contact.name }} </p>
-                                 {%  elif contact.index == 2 %}
-                                     <p> емейл: {{ contact.name }} </p>
-                                 {%  elif contact.index == 3 %}
-                                      <p>social network: {{ contact.name }} </p>
-                                 {%  elif contact.index == 4 %}
-                                      <p> поштовий індекс: {{ contact.name }} </p>
-                                 {%  elif contact.index == 0 %}
-                                      <p> інше: {{ contact.name }} </p>
+                                {%  if contact.index == 1 %}
+                                    <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
+                                {%  elif contact.index == 2 %}
+                                    <p> {% trans "Пошта: " %} {{ contact.name }} </p>
+                                {%  elif contact.index == 3 %}
+                                    <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
+                                {%  elif contact.index == 4 %}
+                                    <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
+                                {%  elif contact.index == 0 %}
+                                    <p> {{ contact.name }} </p>
                                 {% endif %}
                             </div>
-                        {% endif %}
                     {%  endfor %}
                 </div>
-
+{#____________________________________________________________________________________________________________________________________#}
                 <div class="contact_address" id="contact_id">
                     <div class="title_contact">
                         <h3> {%  trans "Адреса" %}</h3>
                     </div>
-                    <p>м. Львів, вул. Князя Романа,5</p>
-                    <p>20-й навчальний корпус, кім.126</p>
+                    <p>{{ footer_fields.get_location }}</p>
+                    <p>{{ footer_fields.get_building }}</p>
                 </div>
             </div>
         </div>
