@@ -20,6 +20,11 @@ class Footer(models.Model):
     site_en = models.CharField(verbose_name=_("site_en"), max_length=255)
     site_url = models.URLField(verbose_name=_("site_url"), max_length=255)
 
+    admission_location = models.CharField(verbose_name=_("admission_location"), help_text=_("for entrants"),
+                                          max_length=255)
+    admission_location_en = models.CharField(verbose_name=_("admission_location"),  help_text=_("for entrants"),
+                                             max_length=255)
+
     def get_location(self):
         return self._get_translation_field('location')
 
@@ -28,6 +33,9 @@ class Footer(models.Model):
 
     def get_site(self):
         return self._get_translation_field('site')
+
+    def get_admission_location(self):
+        return self._get_translation_field('admission_location')
 
     def _get_translation_field(self, field_name):
         original_field_name = field_name
@@ -43,18 +51,26 @@ class Footer(models.Model):
             return getattr(self, original_field_name)
 
 
-class AppContent(models.Model):
-    app_name = models.CharField(max_length=128, blank=False)
-    app_topic = models.CharField(max_length=128, blank=True)
-    app_topic_en = models.CharField(max_length=128, blank=True)
+class Page(models.Model):
+    page_name = models.CharField(max_length=128, blank=False)
+    special_page = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.page_name + (" special" if self.special_page else "")
+
+
+class PageContent(models.Model):
+    page = models.ForeignKey(Page, blank=False, on_delete=models.PROTECT)
+    page_topic = models.CharField(max_length=256, blank=True)
+    page_topic_en = models.CharField(max_length=256, blank=True)
     text = models.TextField(blank=False)
     text_en = models.TextField(blank=False)
 
     def __str__(self):
-        return self.app_name
+        return self.page.page_name + (" special" if self.page.special_page else "") + " content"
 
-    def get_app_topic(self):
-        return self._get_translation_field('app_topic')
+    def get_page_topic(self):
+        return self._get_translation_field('page_topic')
 
     def get_text(self):
         return self._get_translation_field('text')

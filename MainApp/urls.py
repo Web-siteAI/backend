@@ -21,7 +21,6 @@ urlpatterns = [
     path('', views.mainMethod, name='mainMethod'),
 
     path('entrants/', views.entrants, name="entrants"),
-    path('science/', views.science, name="science"),
     path('virtual-tour/', views.excursion, name="excursion"),
 
     path('studying/', include("StudyingApp.urls")),
@@ -30,6 +29,6 @@ urlpatterns = [
     path('cooperation/', include("CooperationApp.urls")),
     path('news/', include("NewsApp.urls")),
     path('contacts/', include("ContactApp.urls")),
-
+    path('p/<PageName>/', views.newPage, name="<PageName>")
 ]
 

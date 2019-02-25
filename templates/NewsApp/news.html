@@ -51,26 +51,31 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xs-3">
+                                <div id="img_news">
+                                    <img id="fotka"  src="{{ MEDIA_URL }}/{{ news.photo }}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </a>
             {% endfor %}
             <br>
-            <div class="pagination_p col-lg-12">
+            <div class="pagination_p">
                 <div class="pagination">
                     {% if news_field.has_previous %}
-                        <a href="?page=1">
-                            <img class="pagination-action" src ='{% static "news/images/prev.png" %}'>
+                        <a class="pagination-action" href="?page=1">
+                            <img  src ='{% static "news/images/prev.png" %}'>
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.previous_page_number }}">
-                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
+                            <img  src ='{% static "news/images/prev2.png" %}'>
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img class="pagination-action" src ='{% static "news/images/prev.png" %}'>
+                            <img  src ='{% static "news/images/prev.png" %}'>
                         </a>
                         <a class="pagination-action" href="#">
-                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
+                            <img  src ='{% static "news/images/prev2.png" %}'>
                         </a>
                     {% endif %}
 
@@ -83,17 +88,17 @@
                     {% endfor %}
                     {% if news_field.has_next %}
                         <a class="pagination-action" href="?page={{ news_field.next_page_number }}">
-                            <img class="pagination-action" src ='{% static "news/images/next.png" %}'>
+                            <img  src ='{% static "news/images/next.png" %}'>
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.paginator.num_pages }}">
-                            <img class="pagination-action" src ='{% static "news/images/next2.png" %}'>
+                            <img  src ='{% static "news/images/next2.png" %}'>
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img class="pagination-action" src ='{% static "news/images/next.png" %}'>
+                            <img  src ='{% static "news/images/next.png" %}'>
                         </a>
                         <a class="pagination-action" href="#">
-                            <img class="pagination-action" src ='{% static "news/images/next2.png" %}'>
+                            <img  src ='{% static "news/images/next2.png" %}'>
                         </a>
                     {% endif %}
                 </div>

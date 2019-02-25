@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Footer, AppContent
+from .models import Footer, PageContent, Page
 from django.conf import settings
 # Register your models here.
 
@@ -9,7 +9,8 @@ class TinyMCEAdmin(admin.ModelAdmin):
         js = ('/static/tiny_mce/js/tiny_mce.js', '/static/tiny_mce/js/textareas.js',)
 
 
-admin.site.register(AppContent, TinyMCEAdmin)
+admin.site.register(PageContent, TinyMCEAdmin)
+admin.site.register(Page)
 
 
 @admin.register(Footer)

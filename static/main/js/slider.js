@@ -54,5 +54,5 @@ $(document).ready(function () {
       currentImage.removeClass("curry");
       nextImage.fadeIn(1000);
       nextImage.addClass("curry");
-    }, 5000);
+    }, 3500);
 });

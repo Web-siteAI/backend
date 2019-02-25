@@ -10,28 +10,19 @@
     {%  load i18n %}
     {% load staticfiles %}
 
-    <!--<h2 align="center">"Бакалаврат" %}</h2> -->
-
     <div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="title">
-					<span >
-						 {% trans "Карта курсів" %}
-					</span>
+					<span> {{ content_fields.get_page_topic }} </span>
 				</h1>
 				<div class="main_content">
-					<h4>
-					{% trans "Для магістрів доступні два напрямками підготовки: «Системи штучного інтелекту» та «Системи машинного глибинного навчання»" %}
-					</h4>
-
+					<h4>{{ content_fields.get_text|safe }}  </h4>
 					<div class="all">
 						<input checked type="radio" name="respond" id="desktop">
 							<article id="slider">
 								<input checked type="radio" name="slider" id="switch1">
 								<input type="radio" name="slider" id="switch2">
-
-
 								<div id="slides">
 									<div id="overflow">
 										<div class="image">
