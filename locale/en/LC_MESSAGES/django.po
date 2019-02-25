@@ -61,7 +61,7 @@ msgstr ""
 msgid "Приймальна комісія: "
 msgstr "Admissions: "
 
-#: .\templates\MainApp\entrants.html:46                                          ------------------------------------------------------------
+#: .\templates\MainApp\entrants.html:20                                         ------------------------------------------------------------
 msgid "м. Львів, вул. Степана Бандери, 12; Головний корпус НУ “ЛП”, к.101"
 msgstr "Lviv, st. Stepana Bandery, 12; The main building of NU “LP”, a.101"
 

@@ -17,7 +17,7 @@
                 <div class="main_content">
                     {{ content_fields.get_text|safe}}
                     <p><strong>{% trans "Приймальна комісія: " %}</strong></p>
-                    <ul><li>{{ footer_fields.get_location }}</li></ul>
+                        <ul><li> {{ footer_fields.get_admission_location }}</li></ul>
                     <p><strong>{%  trans "Контакти приймальної комісії: " %}</strong> </p>
                     <ul>
                         {%  for contact in contact_fields %}

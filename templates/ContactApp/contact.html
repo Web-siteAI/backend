@@ -44,7 +44,6 @@
                         <h3> {%  trans "Контакти приймальної комісії" %}</h3>
                     </div>
                     {%  for contact in contact_fields %}
-                        {% if contact.selection_committee == False %}
                             <div>
                                 {%  if contact.index == 1 %}
                                     <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
@@ -58,7 +57,6 @@
                                     <p> {{ contact.name }} </p>
                                 {% endif %}
                             </div>
-                        {% endif %}
                     {%  endfor %}
                 </div>
 {#____________________________________________________________________________________________________________________________________#}
@@ -66,8 +64,8 @@
                     <div class="title_contact">
                         <h3> {%  trans "Адреса" %}</h3>
                     </div>
-                    <p>м. Львів, вул. Князя Романа,5</p>
-                    <p>20-й навчальний корпус, кім.126</p>
+                    <p>{{ footer_fields.get_location }}</p>
+                    <p>{{ footer_fields.get_building }}</p>
                 </div>
             </div>
         </div>
