@@ -44,8 +44,9 @@
                         <h3> {%  trans "Контакти приймальної комісії" %}</h3>
                     </div>
                     {%  for contact in contact_fields %}
+                           {% if contact.selection_committee == True %}
                             <div>
-                                {%  if contact.index == 1 %}
+                                 {%  if contact.index == 1 %}
                                     <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
                                 {%  elif contact.index == 2 %}
                                     <p> {% trans "Пошта: " %} {{ contact.name }} </p>
@@ -55,8 +56,9 @@
                                     <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
                                 {%  elif contact.index == 0 %}
                                     <p> {{ contact.name }} </p>
-                                {% endif %}
-                            </div>
+                                 {% endif %}
+                             </div>
+                        {% endif %}
                     {%  endfor %}
                 </div>
 {#____________________________________________________________________________________________________________________________________#}

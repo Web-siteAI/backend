@@ -7,6 +7,7 @@ from django.utils.translation import get_language, ugettext_lazy as _
 class Tag(models.Model):
     name = models.CharField(max_length=255, blank=False, null=False)
     name_uk = models.CharField(max_length=255, blank=False, null=False)
+    color = models.CharField(max_length=7, blank=False)
 
     def __str__(self):
         return self.name

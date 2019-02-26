@@ -1016,6 +1016,7 @@ def citation_export(querier):
     for art in articles:
         print(art.as_citation() + '\n')
 
+
 def clock(interval, id):
     while True:
         time.sleep(interval)
@@ -1178,7 +1179,6 @@ def getTeacher(request, TeacherId):
     orcid = ""
     if id > 1000:
         content["docs"] = documents
-        print("hello")
         if os.path.isfile("./static/teachers/all/%d.html" % (id)):
             t = threading.Thread(target=clock, args=(864000, id))
             t.daemon = True
