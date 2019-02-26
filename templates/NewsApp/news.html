@@ -28,7 +28,7 @@
                                 <div class="title_post">
                                     <span>{{ news.get_topic }}</span>
                                 </div>
-                                <span id="short_description" class="data_post">{{ news.get_short_description }}</span>
+                                <span id="short_description" class="data_post">{{ news.get_short_description|safe }}</span>
                             </div>
                             <div class="col-lg-3">
                                 <div class="img_news">

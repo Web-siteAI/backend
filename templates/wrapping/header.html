@@ -19,7 +19,14 @@
             </div>
             <div class="header collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/">{%  trans "Про кафедру" %}</a></li>
+                  <li class="dropdown">
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Про кафедру" %}<b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a href="/">{%  trans "Кафедра" %}</a></li>
+                            <li><a href="/teachers/">{%  trans "Викладачі" %}</a></li>
+                            <li><a href="/virtual-tour">{%  trans "Віртуальний тур" %}</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/news/all/?page=1">{%  trans "Новини" %}</a></li>
                     <li><a href="/entrants">{%  trans "Абітурієнтам" %}</a></li>
                     <li class="dropdown">
@@ -31,13 +38,20 @@
                             <li><a href="#">{%  trans "PHD" %}</a></li>
                         </ul>
                     </li>
-                    <li> <a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a></li>
+                    <li class="dropdown">
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Cтудентські досягнення" %}<b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a href="http://ai.lpnu.ua/projects.html">{%  trans "Проекти" %}</a></li>
+                            <li><a href="#"> {% trans "Кращі студенти" %}</a> </li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Інше" %}<b class="caret"></b></a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li> <a href="/p/Science">{%  trans "Наука" %}</a></li>
                             <li><a href="/cooperation">{%  trans "Співпраця" %}</a></li>
                             <li><a href="/contacts">{%  trans "Контакти" %}</a></li>
+                            <li><a href="/partners"> {% trans "Наші партнери" %}</a> </li>
                         </ul>
                     </li>
                     <li>

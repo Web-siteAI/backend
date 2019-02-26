@@ -11,6 +11,8 @@ import os
 import re
 import sys
 import warnings
+import threading
+import time
 
 try:
     # Try importing for Python 3
@@ -1014,6 +1016,18 @@ def citation_export(querier):
     for art in articles:
         print(art.as_citation() + '\n')
 
+
+def clock(interval, id):
+    while True:
+        time.sleep(interval)
+        print("The time is %s" % time.ctime())
+        try:
+            os.remove("./static/teachers/all/%d.html" % (id))
+        except:
+            print("file not found")
+            pass
+
+
 def getTeacher(request, TeacherId):
     usage = """scholar.py [options] <query string>
         A command-line interface to Google Scholar.
@@ -1166,6 +1180,9 @@ def getTeacher(request, TeacherId):
     if id > 1000:
         content["docs"] = documents
         if os.path.isfile("./static/teachers/all/%d.html" % (id)):
+            t = threading.Thread(target=clock, args=(864000, id))
+            t.daemon = True
+            t.start()
             pass
         else:
             try:
