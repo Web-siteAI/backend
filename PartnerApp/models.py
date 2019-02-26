@@ -5,8 +5,8 @@ from django.utils.translation import get_language, ugettext_lazy as _
 
 class Partner(models.Model):
     name = models.CharField(max_length=255, blank=False)
-    description = models.CharField(max_length=1000)
-    description_en = models.CharField(max_length=1000)
+    description = models.TextField(blank=False)
+    description_en = models.TextField(blank=False)
     site = models.URLField(blank=True)
     icon = models.ImageField(blank=True, upload_to="pictures/%Y/%m/%D/")
 
