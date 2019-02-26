@@ -16,22 +16,23 @@
                     <span >
                         {%  trans "Наші партнери" %}
                     </span>
-            </h1>
+                </h1>
                 <div class="main_content">
                     <ul>
                         {% for partner in partners_list %}
-                            <div class="row partner_blok">
-                                <div class="col-lg-4">
-                                    <a href="{{ partner.site }}">
-                                        <img class="partner_icon" src="{{ MEDIA_URL }}/{{ partner.icon }}" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-lg-8">
-                                    <h2>{{ partner.name }}</h2>
-                                    <p>{{ partner.get_description|safe}}</p>
+                            <div class="row">
+                                <div class="partner_blok">
+                                    <div class="col-xs-3">
+                                        <a href="{{ partner.site }}">
+                                            <img class="partner_icon" src="{{ MEDIA_URL }}/{{ partner.icon }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <h2>{{ partner.name }}</h2>
+                                        <p>{{ partner.get_description|safe}}</p>
+                                    </div>
                                 </div>
                             </div>
-
                         {% endfor %}
                     </ul>
                 </div>
