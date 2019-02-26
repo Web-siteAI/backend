@@ -60,17 +60,19 @@
                 <div class="pagination">
                     {% if news_field.has_previous %}
                         <a class="pagination-action" href="?page=1">
-                            <img  src ='{% static "news/images/prev.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.previous_page_number }}">
-                            <img  src ='{% static "news/images/prev2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
+{#                            <i class="fas fa-chevron-circle-left"></i>#}
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/prev.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev2.png" %}'>
                         </a>
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/prev2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/prev.png" %}'>
+{#                            <i class="fas fa-chevron-circle-left"></i>#}
                         </a>
                     {% endif %}
 
@@ -82,18 +84,20 @@
                         {% endif %}
                     {% endfor %}
                     {% if news_field.has_next %}
-                        <a class="pagination-action" href="?page={{ news_field.next_page_number }}">
-                            <img  src ='{% static "news/images/next.png" %}'>
+                        <a href="?page={{ news_field.next_page_number }}">
+                            <img class="pagination-action" src ='{% static "news/images/next.png" %}'>
+{#                            <i class="fas fa-chevron-circle-right"></i>#}
                         </a>
                         <a class="pagination-action" href="?page={{ news_field.paginator.num_pages }}">
-                            <img  src ='{% static "news/images/next2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next2.png" %}'>
                         </a>
                     {% else %}
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/next.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next.png" %}'>
+{#                            <i class="fas fa-chevron-circle-right"></i>#}
                         </a>
                         <a class="pagination-action" href="#">
-                            <img  src ='{% static "news/images/next2.png" %}'>
+                            <img class="pagination-action" src ='{% static "news/images/next2.png" %}'>
                         </a>
                     {% endif %}
                 </div>
