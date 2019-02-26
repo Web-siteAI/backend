@@ -3,26 +3,34 @@
 {% load staticfiles %}
 
 {%  block script %}
-
+    <link rel="stylesheet" type="text/css" href="{% static "partner/css/partner.css" %}">
 {% endblock %}
+
 
 {%  block content %}
 
-   <div class="container">
+   <div class="container pertners">
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="title">
-              <span >
-                {%  trans "Наші партнери" %}
-              </span>
+                    <span >
+                        {%  trans "Наші партнери" %}
+                    </span>
             </h1>
                 <div class="main_content">
                     <ul>
                         {% for partner in partners_list %}
-                            {{ partner.name }}
-                            {{ partner.get_description }}
-                            {{ partner.icon }}
-                            {{ partner.site }}
+                            <div class="row partner_blok">
+                                <div class="col-lg-4">
+                                    <a href="{{ partner.site }}">
+                                        <img class="partner_icon" src="{{ MEDIA_URL }}/{{ partner.icon }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-8">
+                                    <h2>{{ partner.name }}</h2>
+                                    <p>{{ partner.get_description|safe}}</p>
+                                </div>
+                            </div>
 
                         {% endfor %}
                     </ul>
