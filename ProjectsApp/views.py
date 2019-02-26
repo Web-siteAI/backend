@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from MainApp.models import Footer
+from MainApp.models import Footer, PageContent, Page
 
 
 def projectsOfStudents(request):

@@ -52,8 +52,22 @@ class Footer(models.Model):
 
 
 class Page(models.Model):
+    NONE = 0
+    DEPARTMENT = 1
+    STUDYING = 2
+    ACHIEVEMENTS = 3
+    OTHER = 4
+
+    INDEX = (
+        (NONE, "none"),
+        (DEPARTMENT, "about department"),
+        (STUDYING, "studying"),
+        (ACHIEVEMENTS, "students achievements"),
+        (OTHER, "other")
+    )
     page_name = models.CharField(max_length=128, blank=False)
     special_page = models.BooleanField(default=False)
+    index = models.IntegerField(choices=INDEX, default=NONE)
 
     def __str__(self):
         return self.page_name + (" special" if self.special_page else "")
