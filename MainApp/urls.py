@@ -29,6 +29,7 @@ urlpatterns = [
     path('cooperation/', include("CooperationApp.urls")),
     path('news/', include("NewsApp.urls")),
     path('contacts/', include("ContactApp.urls")),
+    path('partners/', include("PartnerApp.urls")),
     path('p/<PageName>/', views.newPage, name="<PageName>")
 ]
 

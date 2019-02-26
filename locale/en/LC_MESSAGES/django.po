@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 10:56+0200\n"
+"POT-Creation-Date: 2019-02-26 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,33 +19,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\templates\ContactApp\contact.html:15
-#: .\templates\wrapping\header.html:41
+#: .\templates\ContactApp\contact.html:22 .\templates\wrapping\header.html:53
 msgid "Контакти"
 msgstr "Contacts"
 
-#: .\templates\ContactApp\contact.html:44
-msgid "Контакти приймальної комісії: "
-msgstr "Contacts of selection committee: "
-
-#: .\templates\ContactApp\contact.html:21
+#: .\templates\ContactApp\contact.html:28
+#: .\templates\ContactApp\contact.html:50 .\templates\MainApp\entrants.html:27
 msgid "Телефон: "
 msgstr "Phone: "
 
-#: .\templates\ContactApp\contact.html:21
+#: .\templates\ContactApp\contact.html:30
+#: .\templates\ContactApp\contact.html:52 .\templates\MainApp\entrants.html:29
 msgid "Пошта: "
 msgstr "E-mail: "
 
-#: .\templates\ContactApp\contact.html:21
+#: .\templates\ContactApp\contact.html:32
+#: .\templates\ContactApp\contact.html:54 .\templates\MainApp\entrants.html:31
 msgid "Сoціальна мережа: "
 msgstr "Social network: "
 
-#: .\templates\ContactApp\contact.html:21
-#: .\templates\ContactApp\contact.html:
+#: .\templates\ContactApp\contact.html:34
+#: .\templates\ContactApp\contact.html:56 .\templates\MainApp\entrants.html:33
 msgid "Поштовий індекс: "
 msgstr "Post index: "
 
+#: .\templates\ContactApp\contact.html:44
+#, fuzzy
+#| msgid "Контакти приймальної комісії: "
+msgid "Контакти приймальної комісії"
+msgstr "Contacts of admission: "
+
+#: .\templates\ContactApp\contact.html:67
+msgid "Адреса"
+msgstr "Address"
+
 #: .\templates\CooperationApp\cooperation.html:16
-#: .\templates\wrapping\header.html:40
+#: .\templates\wrapping\header.html:52
 msgid "Співпраця"
 msgstr "Collaboration"
 
@@ -61,13 +70,9 @@ msgstr ""
 msgid "Приймальна комісія: "
 msgstr "Admissions: "
 
-#: .\templates\MainApp\entrants.html:20                                         ------------------------------------------------------------
-msgid "м. Львів, вул. Степана Бандери, 12; Головний корпус НУ “ЛП”, к.101"
-msgstr "Lviv, st. Stepana Bandery, 12; The main building of NU “LP”, a.101"
-
-#: .\templates\MainApp\entrants.html:47
-msgid "Номери телефонів:"
-msgstr "Phone Numbers:"
+#: .\templates\MainApp\entrants.html:21
+msgid "Контакти приймальної комісії: "
+msgstr "Contacts of selection committee: "
 
 #: .\templates\MainApp\mainPage.html:31
 msgid "Історія кафедри"
@@ -89,11 +94,11 @@ msgid ""
 msgstr ""
 "The basis of the training of specialists was the work of Professor Nikolsky "
 "Yuri Vladimirovich,\n"
-"                                       who in 2002 developed a curriculumspecialty "
-"«Systems of Artificial Intelligence», direction «Computer "
-"Science».\n"
-"                                       In 2004 at the Department of Information Systems and "
-"Networks the first set was made."
+"                                       who in 2002 developed a "
+"curriculumspecialty «Systems of Artificial Intelligence», direction "
+"«Computer Science».\n"
+"                                       In 2004 at the Department of "
+"Information Systems and Networks the first set was made."
 
 #: .\templates\MainApp\mainPage.html:40
 msgid ""
@@ -119,7 +124,7 @@ msgstr ""
 "During September 2017, the department's laboratories were equipped with "
 "computer technology supported by the Lviv IT cluster."
 
-#: .\templates\MainApp\mainPage.html:44
+#: .\templates\MainApp\mainPage.html:44 .\templates\wrapping\header.html:27
 msgid "Віртуальний тур"
 msgstr "Virtual tour"
 
@@ -133,17 +138,17 @@ msgstr "All academics"
 
 #: .\templates\MainApp\mainPage.html:90
 #: .\templates\StudyingApp\studying.html:15
-#: .\templates\wrapping\header.html:30
+#: .\templates\wrapping\header.html:36
 msgid "Бакалаврат"
 msgstr "Bachelor"
 
 #: .\templates\MainApp\mainPage.html:93
 #: .\templates\StudyingApp\studying.html:28
-#: .\templates\wrapping\header.html:31
+#: .\templates\wrapping\header.html:37
 msgid "Магістратура"
 msgstr "Master's degree"
 
-#: .\templates\MainApp\mainPage.html:96 .\templates\wrapping\header.html:32
+#: .\templates\MainApp\mainPage.html:96 .\templates\wrapping\header.html:38
 msgid "PHD"
 msgstr "PHD"
 
@@ -151,14 +156,17 @@ msgstr "PHD"
 msgid "Віртуальний тур кафедрою СШІ"
 msgstr "Virtual tour of the AIS department"
 
-#: .\templates\NewsApp\news.html:14
-#: .\templates\wrapping\header.html:24
+#: .\templates\NewsApp\news.html:14 .\templates\wrapping\header.html:30
 msgid "Новини"
 msgstr "News"
 
 #: .\templates\NewsApp\news.html:18
 msgid "усі новини"
 msgstr "all news"
+
+#: .\templates\PartnerApp\partner.html:16 .\templates\wrapping\header.html:54
+msgid "Наші партнери"
+msgstr "Our partners"
 
 #: .\templates\StudyingApp\studying.html:20
 msgid "Структурно-логічна схема навчальних дисциплін"
@@ -192,7 +200,7 @@ msgstr "Hobby: "
 msgid "Наукові дослідження:"
 msgstr "Scientific research:"
 
-#: .\templates\TeachersApp\teachers.html:15
+#: .\templates\TeachersApp\teachers.html:16
 msgid "Викладачі кафедри СШІ"
 msgstr "Academics of the AIS department"
 
@@ -209,25 +217,41 @@ msgid "Про кафедру"
 msgstr "About department"
 
 #: .\templates\wrapping\header.html:25
+msgid "Кафедра"
+msgstr "Department"
+
+#: .\templates\wrapping\header.html:26
+msgid "Викладачі"
+msgstr "Academics"
+
+#: .\templates\wrapping\header.html:31
 msgid "Абітурієнтам"
 msgstr "Entrants"
 
-#: .\templates\wrapping\header.html:27
+#: .\templates\wrapping\header.html:33
 msgid "Навчання"
 msgstr "Studying"
 
-#: .\templates\wrapping\header.html:29
+#: .\templates\wrapping\header.html:35
 msgid "Структурно логічні схеми"
 msgstr "Structural-logical scheme"
 
-#: .\templates\wrapping\header.html:35
+#: .\templates\wrapping\header.html:42
+msgid "Cтудентські досягнення"
+msgstr "Students achievements"
+
+#: .\templates\wrapping\header.html:44
 msgid "Проекти"
 msgstr "Project"
 
-#: .\templates\wrapping\header.html:37
+#: .\templates\wrapping\header.html:45
+msgid "Кращі студенти"
+msgstr "The best student"
+
+#: .\templates\wrapping\header.html:49
 msgid "Інше"
 msgstr "Others"
 
-#: .\templates\wrapping\header.html:39
+#: .\templates\wrapping\header.html:51
 msgid "Наука"
 msgstr "Science"

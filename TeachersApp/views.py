@@ -2,7 +2,7 @@ from django.shortcuts import render
 from requests.compat import basestring
 
 from .models import Teacher
-from MainApp.models import Footer
+from MainApp.models import Footer, PageContent, Page
 import bs4
 from bs4 import BeautifulSoup
 import requests
@@ -11,6 +11,8 @@ import os
 import re
 import sys
 import warnings
+import threading
+import time
 
 try:
     # Try importing for Python 3
@@ -1014,6 +1016,18 @@ def citation_export(querier):
     for art in articles:
         print(art.as_citation() + '\n')
 
+
+def clock(interval, id):
+    while True:
+        time.sleep(interval)
+        print("The time is %s" % time.ctime())
+        try:
+            os.remove("./static/teachers/all/%d.html" % (id))
+        except:
+            print("file not found")
+            pass
+
+
 def getTeacher(request, TeacherId):
     usage = """scholar.py [options] <query string>
         A command-line interface to Google Scholar.
@@ -1027,13 +1041,16 @@ def getTeacher(request, TeacherId):
         scholar.py -c 5 -a "albert einstein" -t --none "quantum theory" --after 1970"""
     id = int(TeacherId)
     footer_fields = Footer.objects.get(pk=1)
+    page_fields = []
+    for p in list(Page.objects.filter(special_page=False)):
+        page_fields.append(PageContent.objects.get(page=p))
 
     try:
         teacher = Teacher.objects.get(scopus_id=id)
     except Exception:
         teacher = Teacher.objects.get(pk=id)
 
-    content = {"teacher": teacher, "footer_fields": footer_fields}
+    content = {"teacher": teacher, "footer_fields": footer_fields, "page_fields": page_fields}
 
     t = teacher.full_name.split()
     documents = []
@@ -1166,6 +1183,9 @@ def getTeacher(request, TeacherId):
     if id > 1000:
         content["docs"] = documents
         if os.path.isfile("./static/teachers/all/%d.html" % (id)):
+            t = threading.Thread(target=clock, args=(864000, id))
+            t.daemon = True
+            t.start()
             pass
         else:
             try:
@@ -1197,6 +1217,9 @@ def getTeacher(request, TeacherId):
 def teachers(request):
     footer_fields = Footer.objects.get(pk=1)
     teachers_list = Teacher.objects.all()
-    content = {"teachers_list": teachers_list, "footer_fields": footer_fields}
+    page_fields = []
+    for p in list(Page.objects.filter(special_page=False)):
+        page_fields.append(PageContent.objects.get(page=p))
+    content = {"teachers_list": teachers_list, "footer_fields": footer_fields, "page_fields": page_fields}
     return render(request, "TeachersApp/teachers.html", content)
 # Create your views here.
