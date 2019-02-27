@@ -14,7 +14,7 @@
 
 .news_post_one{
 	display: block;
-	margin: 10px 10% 40px 10%;
+	margin: 10px 7% 40px 7%;
 }
 
 .data_post_one{
@@ -26,9 +26,8 @@
 
 .img_news_one{
 	display: block;
- 	width: 80%;
-	margin-left: 10%;
-	/*float: right;*/
+ 	width: 89%;
+	margin-left: 5%;
 }
 #fotka_one{
 	height: 100%;
@@ -38,4 +37,23 @@
 
 #description{
 	padding-bottom: 15px;
+}
+
+.galleria{
+	max-width: 800px;
+	height: 450px;
+	background: #000;
+	margin-left: 5%;
+}
+
+@media screen and (max-width: 500px){
+	.img_news_one {
+		margin-left: 0;
+	}
+	.galleria {
+		margin-left: 0;
+	}
+	.news_post_one{
+		margin: 10px 0 40px 0;
+	}
 }
