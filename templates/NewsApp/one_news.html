@@ -4,6 +4,8 @@
 
  {%  block script %}
     <link rel="stylesheet" type="text/css" href="{% static "news/css/one_news.css" %}">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" > </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
  {% endblock %}
 
 {%  block content %}
@@ -17,12 +19,21 @@
 					<img id="fotka_one" src="{{ MEDIA_URL }}/{{ current_news.photo }}" >
 				</div>
 				<span id="description" class="data_post_one">{{ current_news.get_post|safe }}</span>
-                {#   {{ current_news.get_post|safe }}  - читає як html з тегами...#}
-                <div class="img_news_one">
-                    {% for image in image_list %}
-                        <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image}}">
-                    {% endfor %}
-                </div>
+{#                   {{ current_news.get_post|safe }}  - читає як html з тегами...#}
+
+                {% if image_list|length > 1 %}
+                    <div class="galleria">
+                        {% for image in image_list %}
+                            <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image }}">
+                        {% endfor %}
+                    </div>
+                    <script>
+                        (function() {
+                            Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+                            Galleria.run('.galleria');
+                        }());
+                    </script>
+                {% endif %}
 				<div style="text-align: right" class="data_post_one">
 					<time>{{ current_news.data_post }}</time>
 				</div>
