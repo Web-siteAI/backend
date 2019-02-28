@@ -1,6 +1,6 @@
 .teacher-main {
-    min-height: 600px;
-    width: 1140px;
+    /*min-height: 600px;*/
+    /*width: 1140px;*/
     margin: 0 auto;
     padding-top: 30px;
     background-color: aliceblue;
@@ -8,15 +8,13 @@
     margin-bottom: 30px;
 }
 .teacher-main .info-block {
-    width: 100%;
     min-height: 300px;
-    margin-bottom: 30px;
+    margin: 50px 0 30px 0;
 }
 .teacher-main .info-block .photo {
     width: 300px;
     height: 300px;
     display: inline-block;
-
     float: left;
 }
 .teacher-main .info-block .teacher-info {
@@ -51,7 +49,7 @@
 .teacher-main .info-block .teacher-info .head .scopus-info .scopus-el {
     display: inline-block;
     width: 50px;
-    height: 50px;
+    height: 60px;
     position: relative;
     line-height: 0;
 }
