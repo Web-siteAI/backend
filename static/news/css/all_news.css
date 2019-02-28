@@ -51,6 +51,7 @@
 }
 .pagination_p a:hover{
 	text-decoration: none;
+	color: white;
 }
 .pagination-number {
     padding: 5px 7px 5px 7px;
@@ -74,3 +75,6 @@
 	width: 100%;
 }
 
+a:hover{
+	opacity: 0.6;
+}
