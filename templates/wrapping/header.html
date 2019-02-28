@@ -27,7 +27,7 @@
                             <li><a href="/virtual-tour">{%  trans "Віртуальний тур" %}</a></li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 1 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}">{%  trans "Віртуальний тур" %}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>
@@ -43,7 +43,7 @@
                             <li><a href="#">{%  trans "PHD" %}</a></li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 2 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}">{%  trans "Віртуальний тур" %}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>
@@ -55,7 +55,7 @@
                             <li><a href="#"> {% trans "Кращі студенти" %}</a> </li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 3 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}/">{%  trans "Віртуальний тур" %}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}/">{{ pag.page.page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>
