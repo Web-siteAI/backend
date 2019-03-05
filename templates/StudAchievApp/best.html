@@ -1,0 +1,30 @@
+{%  extends "wrapping/wrapper.html" %}
+{%  load i18n %}
+{% load staticfiles %}
+
+{%  block script %}
+
+{% endblock %}
+
+{%  block content %}
+    {%  load i18n %}
+    {% load staticfiles %}
+
+    <div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="title">
+                    Найкращі студенти
+				</h1>
+				<div class="main_content">
+                    {% for best in best_fields %}
+                        <img src="{{ MEDIA_URL }}/{{ best.image }}">
+                        <p>{{ best.course }}</p>
+                        {{ best.student|safe }}
+                    {%  endfor %}
+                </div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

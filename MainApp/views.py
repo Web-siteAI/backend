@@ -16,7 +16,7 @@ def mainMethod(request):
 
 def entrants(request):
     footer_fields = Footer.objects.get(pk=1)
-    content_fields = PageContent.objects.get(page=Page.objects.get(page_name='Entrants'))
+    content_fields = PageContent.objects.get(page=Page.objects.get(page_name_en='Entrants'))
     contact_fields = list(Contact.objects.all())
     page_fields = []
     for p in list(Page.objects.filter(special_page=False)):

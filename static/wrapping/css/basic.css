@@ -41,6 +41,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 @media screen and (max-width: 1075px){
     .title {
         text-align: center;
