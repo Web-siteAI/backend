@@ -4,6 +4,9 @@ body {
     padding: 0;
 
 }
+h1 {
+    line-height: 0;
+}
 .main_content {
 	margin: 0 0 50px 3%;
     width: 100%;
@@ -33,6 +36,10 @@ a:hover{
 }
 .flex {
   display: flex;
+}
+ul {
+    margin: 0;
+    padding: 0;
 }
 @media screen and (max-width: 1075px){
     .title {

@@ -33,3 +33,5 @@ urlpatterns = [
     path('p/<PageName>/', views.newPage, name="<PageName>")
 ]
 
+
+

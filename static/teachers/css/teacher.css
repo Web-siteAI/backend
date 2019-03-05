@@ -1,31 +1,16 @@
 .teacher-main {
-    min-height: 600px;
-    width: 1140px;
-    margin: 0 auto;
+    margin: 50px 0 30px 0;
     padding-top: 30px;
     background-color: aliceblue;
     border-bottom: 5px solid #34515e;
-    margin-bottom: 30px;
 }
-.teacher-main .info-block {
+
+.teacher-info .container {
     width: 100%;
-    min-height: 300px;
-    margin-bottom: 30px;
 }
-.teacher-main .info-block .photo {
-    width: 300px;
-    height: 300px;
-    display: inline-block;
 
-    float: left;
-}
-.teacher-main .info-block .teacher-info {
-    display: inline-block;
-    width: calc(100% - 330px);
-    min-height: 300px;
-
-    margin-left: 30px;
-    overflow: hidden;
+.photo_id{
+    width: 100%;
 }
 
 .teacher-main .info-block .teacher-info .head{
@@ -51,7 +36,7 @@
 .teacher-main .info-block .teacher-info .head .scopus-info .scopus-el {
     display: inline-block;
     width: 50px;
-    height: 50px;
+    height: 35px;
     position: relative;
     line-height: 0;
 }
@@ -118,13 +103,11 @@
     color: #34515e;
 }
 .article {
-    min-height: 50px;
     background-color: aliceblue;
     padding: 10px;
     border-bottom: 5px solid #34515e;
-    width: 1140px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 0 auto 50px 0;
+
 }
 .article h6 {
     font-family: Roboto;
@@ -140,4 +123,11 @@
     margin-bottom: 30px;
     color: #34515e;
     font-family: Arial;
+}
+@media screen and (max-width: 1200px){
+    .photo_id{
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
 }

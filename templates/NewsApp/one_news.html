@@ -1,4 +1,4 @@
-{%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  extends "wrapping/wrapper.html" %}
 {%  load i18n %}
 {% load staticfiles %}
 
@@ -21,7 +21,7 @@
 				<span id="description" class="data_post_one">{{ current_news.get_post|safe }}</span>
 {#                   {{ current_news.get_post|safe }}  - читає як html з тегами...#}
 
-                {% if image_list|length > 1 %}
+                {% if image_list|length > 0 %}
                     <div class="galleria">
                         {% for image in image_list %}
                             <img id="fotka_one" src="{{ MEDIA_URL }}/{{ image.image }}">

@@ -1,4 +1,4 @@
-{%  extends "MainApp/../wrapping/wrapper.html" %}
+{%  extends "wrapping/wrapper.html" %}
 {%  load i18n %}
 {% load staticfiles %}
 
@@ -7,59 +7,67 @@
 {% endblock %}
 
 {%  block content %}
-
-
-    <div class="teacher-main">
-        <div class="info-block">
-            <div class="photo" style="background-image: url('{{ MEDIA_URL }}/{{teacher.photo}}')"></div>
-            <div class="teacher-info">
-                <div class="head">
-                    <div class="nameblock">
-                        <h2>{{ teacher.get_full_name }}</h2>
-                    </div>
-                    <div class="scopus-info">
-                        <div class="scopus-el orcid-block">
-                            <h1>{{ teacher.scopus_hindex }}</h1>
+    <div class="container">
+        <div class="teacher-main">
+            <div class="row info-block">
+                <div class="col-lg-3">
+                    <img class="photo_id" src="{{ MEDIA_URL }}/{{teacher.photo}}" alt="">
+                </div>
+                <div class="col-lg-9">
+                    <div class="teacher-info">
+                        <div class="head row">
+                            <div class="col-lg-9">
+                                <div class="nameblock">
+                                    <h2>{{ teacher.get_full_name }}</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="scopus-info">
+                                    <div class="scopus-el orcid-block">
+                                        <h1>{{ teacher.scopus_hindex }}</h1>
+                                    </div>
+                                    <div class="scopus-el docs-block">
+                                        <h1>{{ teacher.scopus_documents }}</h1>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="scopus-el docs-block">
-                            <h1>{{ teacher.scopus_documents }}</h1>
+                        <div class="container">
+                            <p style="color: #34515e">{{ teacher.get_role }}</p>
+                            <p>{{ teacher.get_scientific_rank}}</p>
+                            <p><a href="{{ teacher.academic_site}}" target="_blank">{% trans "Сайт" %}</a></p>
+                            <p>{{ teacher.get_description|safe }}</p>
+                            <span style="color: #34515e">orcid: </span>
+                            <span><a href="{{ teacher.scopus_orcid }}" target="_blank">{{ teacher.scopus_orcid }}</a></span>
                         </div>
                     </div>
                 </div>
-                <p style="color: #34515e">{{ teacher.get_role }}</p>
-
-                <!-- new fields -->
-                <p>{{ teacher.get_scientific_rank}}</p>
-                <p><a href="{{ teacher.academic_site}}">{% trans "Сайт" %}</a></p>
-                <p>{{ teacher.get_description|safe }}</p>
-
-                <span style="color: #34515e">orcid: </span>
-                <span><a href="{{ teacher.scopus_orcid }}" target="_blank">{{ teacher.scopus_orcid }}</a></span>
                 <br>
                 <span></span>
                 <span></span>
             </div>
+            <div class="sub-info-block">
+                <span class="flag">{%  trans "Наукові інтереси: " %}</span>
+                <br>
+                <span>{{ teacher.get_science_interests }}</span>
+                <br>
+                <span class="flag">{%  trans "Напрямки наукових досліджень: " %}</span>
+                <br>
+                <span>{{ teacher.get_science_researches|safe }}</span>
+                <br>
+                <span class="flag">{%  trans "Хоббі: " %}</span>
+                <br>
+                <span>{{ teacher.get_interests|safe }}</span>
+            </div>
         </div>
-        <div class="sub-info-block">
-            <span class="flag">{%  trans "Наукові інтереси: " %}</span>
-            <br>
-            <span>{{ teacher.get_science_interests }}</span>
-            <br>
-            <span class="flag">{%  trans "Напрямки наукових досліджень: " %}</span>
-            <br>
-            <span>{{ teacher.get_science_researches|safe }}</span>
-            <br>
-            <span class="flag">{%  trans "Хоббі: " %}</span>
-            <br>
-            <span>{{ teacher.get_interests|safe }}</span>
-        </div>
+
+        <h3 class="dosl">{%  trans "Наукові дослідження:" %}</h3>
+        {% for document in docs %}
+            <div class="article">
+                {% for el in document %}
+                    <h6>{{ el }}</h6>
+                {% endfor %}
+            </div>
+        {% endfor %}
     </div>
-    <h3 class="dosl">{%  trans "Наукові дослідження:" %}</h3>
-    {% for document in docs %}
-        <div class="article">
-            {% for el in document %}
-                <h6>{{ el }}</h6>
-            {% endfor %}
-        </div>
-    {% endfor %}
 {% endblock %}

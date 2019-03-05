@@ -1,7 +1,10 @@
 .mainPage .history h1{
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 40px;
 	color: white;
     font-size: 30px;
-    padding: 5px 20px;
+
     font-family: Arial;
     background-color: #181712;
     text-align: left;
