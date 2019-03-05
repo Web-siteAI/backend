@@ -79,10 +79,10 @@ select {
   .header a:hover {
   border-bottom: 1px solid #ffd600;
   }
-  .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-    background-color: #fff;
-    border-color: #ffd600;
-  }
+  /*.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {*/
+    /*background-color: #fff;*/
+    /*border-color: #ffd600;*/
+  /*}*/
 
     .navbar-header {
       float: none;
