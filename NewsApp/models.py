@@ -51,6 +51,10 @@ class News(models.Model):
 
     tags = models.ManyToManyField(Tag, blank=True)
 
+    class Meta:
+
+        ordering = ["data_post"]
+
     def __str__(self):
         return self.get_topic()
 

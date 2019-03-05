@@ -42,3 +42,7 @@ def newPage(request, PageName):
         page_fields.append(PageContent.objects.get(page=p))
     content = {"footer_fields": footer_fields, "content_fields": content_fields, "page_fields": page_fields}
     return render(request, "MainApp/basic.html", content)
+
+
+def error(request):
+    return render(request, "admin/error.html")
