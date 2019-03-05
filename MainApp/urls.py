@@ -30,7 +30,8 @@ urlpatterns = [
     path('news/', include("NewsApp.urls")),
     path('contacts/', include("ContactApp.urls")),
     path('partners/', include("PartnerApp.urls")),
-    path('p/<PageName>/', views.newPage, name="<PageName>")
+    path('p/<PageName>/', views.newPage, name="<PageName>"),
+    path('stud_achiev/', include("StudAchievApp.urls"))
 ]
 
 

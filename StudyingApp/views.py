@@ -5,7 +5,7 @@ from MainApp.models import Footer, PageContent, Page
 # Create your views here.
 def bach(request):
     footer_fields = Footer.objects.get(pk=1)
-    content_fields = PageContent.objects.get(page=Page.objects.get(page_name='Bachelor'))
+    content_fields = PageContent.objects.get(page=Page.objects.get(page_name_en='Bachelor'))
     page_fields = []
     for p in list(Page.objects.filter(special_page=False)):
         page_fields.append(PageContent.objects.get(page=p))
@@ -24,7 +24,7 @@ def studying(request):
 
 def magister(request):
     footer_fields = Footer.objects.get(pk=1)
-    content_fields = PageContent.objects.get(page=Page.objects.get(page_name='Magister'))
+    content_fields = PageContent.objects.get(page=Page.objects.get(page_name_en='Magister'))
     page_fields = []
     for p in list(Page.objects.filter(special_page=False)):
         page_fields.append(PageContent.objects.get(page=p))

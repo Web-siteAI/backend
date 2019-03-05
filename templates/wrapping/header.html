@@ -27,7 +27,7 @@
                             <li><a href="/virtual-tour">{%  trans "Віртуальний тур" %}</a></li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 1 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.page_name }}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.get_page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>
@@ -43,7 +43,7 @@
                             <li><a href="#">{%  trans "PHD" %}</a></li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 2 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.page_name }}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.get_page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>
@@ -52,10 +52,10 @@
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Cтудентські досягнення" %}<b class="caret"></b></a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="http://ai.lpnu.ua/projects.html" target="_blank">{%  trans "Проекти" %}</a></li>
-                            <li><a href="#"> {% trans "Кращі студенти" %}</a> </li>
+                            <li><a href="/stud_achiev/bests"> {% trans "Кращі студенти" %}</a> </li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 3 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}/">{{ pag.page.page_name }}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}/">{{ pag.page.get_page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>
@@ -68,7 +68,7 @@
                             <li><a href="/partners"> {% trans "Наші партнери" %}</a> </li>
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 4 %}
-                                    <li><a href="/p/{{ pag.page.page_name }}/">{{ pag.page.page_name }}</a></li>
+                                    <li><a href="/p/{{ pag.page.page_name }}/">{{ pag.page.get_page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>

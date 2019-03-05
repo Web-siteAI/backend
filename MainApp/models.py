@@ -66,11 +66,24 @@ class Page(models.Model):
         (OTHER, "other")
     )
     page_name = models.CharField(max_length=128, blank=False)
+    page_name_en = models.CharField(max_length=128, blank=False)
+
     special_page = models.BooleanField(default=False)
     index = models.IntegerField(choices=INDEX, default=NONE)
 
+    def get_page_name(self):
+        original_field_name = field_name = "page_name"
+        lang_code = get_language()
+        if lang_code != 'uk':
+            field_name = '{}_{}'.format(field_name, lang_code)
+        field_value = getattr(self, field_name)
+        if field_value:
+            return field_value
+        else:
+            return getattr(self, original_field_name)
+
     def __str__(self):
-        return self.page_name + (" special" if self.special_page else "")
+        return self.get_page_name() + (" special" if self.special_page else "")
 
 
 class PageContent(models.Model):
@@ -81,7 +94,7 @@ class PageContent(models.Model):
     text_en = models.TextField(blank=False)
 
     def __str__(self):
-        return self.page.page_name + (" special" if self.page.special_page else "") + " content"
+        return self.page.get_page_name() + (" special" if self.page.special_page else "") + " content"
 
     def get_page_topic(self):
         return self._get_translation_field('page_topic')
