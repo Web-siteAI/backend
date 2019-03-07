@@ -76,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
             ],
         }, },
+
 ]
 
 WSGI_APPLICATION = 'AIWeb.wsgi.application'
