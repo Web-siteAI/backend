@@ -30,618 +30,676 @@
 								<div id="slides">
 									<div id="overflow">
 										<div class="image">
-											<article>
-                                                <div class="b1">
-                                                    <div class="col-lg-6 ">
-
-                                                        <div class="col-lg-12">
-                                                            <h4>1 семестер</h4>
+                                            {% for sub_year in subject_list %}
+                                               {{ forloop.parentloop }}
+                                                <article>
+                                                    <div class="b1">
+                                                    {%  for sub_sem in sub_year%}
+                                                        <div class="col-lg-6 ">
+                                                            <div class="col-lg-12">{% widthratio forloop.parentloop.counter0 1 2 as loop %}
+                                                                <h4>{{ forloop.counter|add:loop }} {% trans " семестер"%}</h4>
+                                                            </div>
+                                                            {%  for subject in sub_sem %}
+                                                                <div class="rectangleA" style="
+                                                                background-color: {{ subject.type.color }}">
+                                                                    <div class="quarterCircleBottomRight"></div>
+                                                                    <p>{{ subject.get_name }}</p>
+                                                                    <div class="quarterCircleTopLeft"></div>
+                                                                </div>
+                                                                <div class="rectangleB" style="
+                                                                background-color: {{ subject.type.color }}">
+                                                                    <div class="quarterCircleBottomLeft"></div>
+                                                                    <p class="credit">{{ subject.get_credit }}</p>
+                                                                    <div class="quarterCircleTopRight"></div>
+                                                                </div>
+                                                            {% endfor %}
                                                         </div>
-
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Історія державності та культури України</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Лінійна алгебра та аналітична геометрія</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Математичний аналіз, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Дискретна математика</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Вступ в спеціальність</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Алгоритмізація та програмування, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
+                                                    {% endfor %}
                                                     </div>
-                                                    <div class="col-lg-6 ">
-
-                                                        <div class="col-lg-12">
-                                                            <h4>2 семестер</h4>
-                                                        </div>
-
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <div class="b1">
-                                                    <div class="col-lg-6 ">
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Історія державності та культури України</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Лінійна алгебра та аналітична геометрія</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Математичний аналіз, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Дискретна математика</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Вступ в спеціальність</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Алгоритмізація та програмування, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 ">
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <div class="b1">
-                                                    <div class="col-lg-6 ">
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Історія державності та культури України</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Лінійна алгебра та аналітична геометрія</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Математичний аналіз, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Дискретна математика</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Вступ в спеціальність</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Алгоритмізація та програмування, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 ">
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-											<article>
-                                                <div class="b1">
-                                                    <div class="col-lg-6 ">
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Історія державності та культури України</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Лінійна алгебра та аналітична геометрія</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Математичний аналіз, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="green">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Дискретна математика</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="green">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Вступ в спеціальність</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="blue">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Алгоритмізація та програмування, ч.1</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="blue">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 ">
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                        <div class="rectangleA" id="orange">
-                                                            <div class="quarterCircleBottomRight"></div>
-                                                            <p>Іноземна мова</p>
-                                                            <div class="quarterCircleTopLeft"></div>
-                                                        </div>
-                                                        <div class="rectangleB" id="orange">
-                                                            <div class="quarterCircleBottomLeft"></div>
-                                                            <p class="credit">3 кредити</p>
-                                                            <div class="quarterCircleTopRight"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
+                                                </article>
+                                            {% endfor %}
+{#											<article>#}
+{#                                                <div class="b1">#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "1 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Іноземна мова"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Історія державності та культури України"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Лінійна алгебра та аналітична геометрія"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Математичний аналіз, ч.1"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "6 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Дискретна математика"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "6 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Вступ в спеціальність"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Алгоритмізація та програмування, ч.1"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "2 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Іноземна мова"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Українська мова за професійним спрямуванням"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Диференціальні рівняння"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%} </p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Математичний аналіз, ч.2"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Фізика"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Командна робота"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Об'єктно-орієнтоване програмування"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Алгоритмізація та програмування, ч.2 (Алгоритми і структури даних)"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </article>#}
+{#                                            <article>#}
+{#                                                <div class="b1">#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "3 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Філософія"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Гуманітарна складова - за вибором студента"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Теорія ймовірності та математична стаистика"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Електротехніка та електроніка"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Теорія інформації та автоматів"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Чисельні методи"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Операційні системи"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Прикладне програмування"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "4 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Гуманітарна складова - за вибором студента"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Комп'ютерна схемотехніка та архітектура компю'терних систем"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Математичні методи дослідження операцій"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Системний аналіз"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Комп'ютерні системи та мережі"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Веб технології та веб дизайн"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Організація баз даних та знань"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "6 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </article>#}
+{#                                            <article>#}
+{#                                                <div class="b1">#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "5 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Методи та системи штучного інтелекту"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Інтелектуальна власність та ІТ-право"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Захист інформації та мережева безпека"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Інтелектуальний аналіз даних"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Людинно-машинна взаємодія"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Візуалізація даних"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Проектування інформаційних систем"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "6 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Політологія"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Професійна складова - за вибором студента"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Розподілене та паралельне програмування"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "6 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Машинне навчання"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "6 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Аналітичні сховища даних"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Функційне програмування"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Комп'ютерна графіка"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </article>#}
+{#											<article>#}
+{#                                                <div class="b1">#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "7 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="green">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Науковий процес і робота з науковими джерелами"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="green">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Професійна складова - за вибором студента"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Управління ІТ-проектами"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "6 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Хмарні технології"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Комп'ютерна лінгвістика"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Обробка і аналіз цифрових сигналів"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="red">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Практика"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="red">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                    <div class="col-lg-6 ">#}
+{##}
+{#                                                        <div class="col-lg-12">#}
+{#                                                            <h4>{% trans "8 семестер"%}</h4>#}
+{#                                                        </div>#}
+{##}
+{#                                                        <div class="rectangleA" id="orange">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Основи охорони праці та безпека життєдіяльносі"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="orange">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "3 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                       <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Обробка мови засобами штучного інтелекту"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Обробка зображень засобами штучного інтелекту"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="blue">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Основи робототехніки"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="blue">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "5.5 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="red">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Практика"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="red">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "4.5 кредити"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleA" id="red">#}
+{#                                                            <div class="quarterCircleBottomRight"></div>#}
+{#                                                            <p>{% trans "Бакалаврська робота"%}</p>#}
+{#                                                            <div class="quarterCircleTopLeft"></div>#}
+{#                                                        </div>#}
+{#                                                        <div class="rectangleB" id="red">#}
+{#                                                            <div class="quarterCircleBottomLeft"></div>#}
+{#                                                            <p class="credit">{% trans "9 кредитів"%}</p>#}
+{#                                                            <div class="quarterCircleTopRight"></div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </article>#}
 										</div>
 									</div>
 								</div>

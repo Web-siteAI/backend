@@ -10,7 +10,7 @@ class Tag(models.Model):
     color = models.CharField(max_length=7, blank=False)
 
     def __str__(self):
-        return self.name
+        return self.get_name()
 
     def get_name(self):
         return self._get_translation_field('name')
