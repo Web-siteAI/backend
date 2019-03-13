@@ -1,47 +1,39 @@
-.mainPage .history h1{
-    padding-top: 20px;
-    padding-left: 20px;
-    height: 40px;
-	color: white;
-    font-size: 30px;
-<<<<<<< HEAD
-
-=======
-    padding: 20px 20px;
->>>>>>> origin/ivan-branch
-    font-family: Arial;
-    background-color: #181712;
-    text-align: left;
-    margin-bottom: 20px;
+.block1 {
+  margin-top: 50px;
 }
-.mainPage .history p{
-    font-size: 18px;
-    line-height: 26px;
-    color: #303030;
+.title_block1 {
+  background-color: #181712;
+  color: white;
+  font-size: 30px;
+  padding: 30px 0;
 }
-.mainPage .history .building{
-    width: 90%;
-    margin: 0 10% 10%;
+.content_block1 {
+  background-image: url("/static/main/images/FON1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat ;
+  font-size: 25px;
+  line-height: 35px;
+  color: white;
+  height: 800px;
+  padding-top: 50px;
 }
-.mainPage .history h3 {
-	font-size: 24px;
-    background-color: #f0f0f0;
-    color: #181712;
-    padding: 5px 10px 10px;
-    width: 206px;
-    margin: 40px auto 30px;
-    transition: .3s;
+.black_block {
+  background-color: #181712;
+  color: white;
+  margin-bottom: 50px;
 }
-.mainPage .history  h3:hover {
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+.black_block h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
 }
-.mainPage .history  h3, a{
-  text-decoration: none;
-  color: inherit;
+.black_block p {
+  font-size: 25px;
+  line-height: 35px;
+  color: white;
+  padding: 5px 30px;
 }
-
 .mainPage .teachers {
   min-height: 400px;
   background-color: #181712;
@@ -169,25 +161,14 @@
     border: 20px ridge #808080;
 }
 @media screen and (max-width: 1200px){
-	.mainPage .history img{
-    	width: 70%;
-		margin: 0 15% 10%;
-	}
-  .wrap{
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 55%);
-  }
+  /*.wrap{*/
+    /*grid-template-columns: repeat(2, 50%);*/
+    /*grid-template-rows: repeat(2, 55%);*/
+  /*}*/
 }
 @media screen and (max-width: 992px){
-    .programs .prog {
-      margin: 40px;
-    }
 }
 
 @media screen and (max-width: 680px){
-     .wrap{
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(4, 27.5%);
-       padding-bottom: 50px;
-  }
+
 }

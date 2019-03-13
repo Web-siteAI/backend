@@ -10,41 +10,41 @@
 {% endblock %}
 
 {%  block content %}
-
     <div class="mainPage">
-
         <div class="prev slBut"></div>
         <div class="next slBut"></div>
 
         <div class="slider">
-
             <div class="img curry" style="background-image: url('{% static "main/images/img3.jpg" %}')"></div>
             <div class="img"  style="background-image: url('{% static "main/images/img4.jpg" %}')"></div>
             <div class="img"  style="background-image: url('{% static "main/images/img5.jpg" %}')"></div>
-
         </div>
 
+        <div class="block1 container">
+            <div class="row">
+                <div class="col-lg-12 title_block1">
+                    <div class="col-lg-6">
+                        <h1>ЩО ТАКЕ СИСТЕМИ ШТУЧНОГО ІНТЕЛЕКТУ?</h1>
+                    </div>
+                </div>
+                <div class="col-lg-12 content_block1">
+                    <div class="col-lg-6">
+                        <p>Штучний інтелект — це галузь, яка охоплює все: від розпізнавання тексту до механізмів, які можуть виконувати надскпадні задачі в найкоротші терміни та навчатися самостійно.
+                    </p>
+                    <p>Автопілоти в автомобілях Tesla та Google, рекомендації, кого додати в друзі в соцмережах, розпізнавання облич y Facebook, персональний помічник Apple SIRI вже сьогодні є яскравими прикладами впровадження штучного інтелекту в наше життя.
+                    </p>
+                    </div>
+                </div>
+                <div class="col-lg-12 black_block">
+                    <h1>ОСОБЛИВОСТІ НАВЧАННЯ</h1>
+                    <p>Навчання на програмі буде комбінованим, так зване blended learnmg, коли традиційні академічні підходи поєднуються з інтерактивною практикою.</p>
+                    <p>Студенти переглядатимуть лекції провідних науковців та професорів іноземних університетів.Предмети викладатимуть частково українською та англійською мовами.</p>
+                    <p>Також студенти програми матимуть змогу не тільки здобути академічні знання з дисциплін, сформованих за аналогією до провідних університетів світу, але Й створювати реальні продукти 3 використанням методів штучного інтелекту!
+                    </p>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 history">
-                     <h1>{%  trans "Історія кафедри" %}</h1>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8  history">
-                    <p>{%  trans "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року." %}</p>
-                    <p>{%  blocktrans %}В основу підготовки фахівців лягла робота професора Нікольського Юрія Володимировича,
-                                        який у 2002 році розробив навчальний план спеціальності «Системи штучного інтелекту», напрям «Комп’ютерні науки».
-                                        У 2004 році на кафедрі інформаційних систем та мереж здійснено перший набір.{% endblocktrans %}</p>
-                    <p>{%  blocktrans %}У жовтні 2016 року почалася робота з модернізації змісту навчання за ініціативи професора
-                                        кафедри інформаційних систем та мереж Інституту комп’ютерних наук та інформаційних технологій (ІКНІ)
-                                        Наталії Шаховської і випускника кафедри та Solutions Lead в Softserve Івана Загороднього.{% endblocktrans %}</p>
-                    <p>{%  blocktrans %}Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною технікою за підтримки Львівського ІТ-кластеру.{% endblocktrans %}</p>
-                    <h3 align="center"><a href="/virtual-tour">{%  trans "Віртуальний тур" %}</a></h3>
-                </div>
-                <div class="col-lg-4 history">
-                    <img class="building" src="{% static "main/images/build1.jpg" %}" alt="">
+                <div class="col-lg-4">
+{#                    <img src="{% static "main/images/AI2.png" %}" alt="">#}
                 </div>
             </div>
         </div>
@@ -84,23 +84,6 @@
                 </div>
             </a>
         </div>
-        <div class="wrapper container">
-            <div class="programs">
-                <div class="prog">
-                    <h4><a href="/studying/bachelor"> {%  trans "Бакалаврат" %}</a></h4>
-                </div>
-                <div class="prog">
-                    <h4><a href="/studying/magister">{%  trans "Магістратура" %}</a></h4>
-                </div>
-                <div class="prog">
-                    <h4><a href="/">{%  trans "PHD" %}</a></h4>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <img class="buchlet" src="{%  static 'main/images/buchlet.jpg' %}">
-        </div>
+        <script src="{% static "main/js/slider.js" %}" charset="utf-8"></script>
     </div>
-
-    <script src="{% static "main/js/slider.js" %}" charset="utf-8"></script>
 {% endblock %}
