@@ -2,10 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-
-}
-h1 {
-    line-height: 0;
+    background-image: url("/static/wrapping/images/background.png") ;
+    background-attachment:fixed ;
 }
 .main_content {
 	margin: 0 0 50px 3%;
