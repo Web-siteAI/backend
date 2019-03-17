@@ -13,18 +13,10 @@ class Tag(models.Model):
         return self.get_name()
 
     def get_name(self):
-        return self._get_translation_field('name')
-
-    def _get_translation_field(self, field_name):
-        original_field_name = field_name
-
-        lang_code = get_language()
-
-        if lang_code != 'en':
-            field_name = '{}_{}'.format(field_name, lang_code)
-
+        original_field_name = field_name = 'name'
+        if get_language() != 'uk':
+            field_name = '{}_{}'.format(field_name, get_language())
         field_value = getattr(self, field_name)
-
         if field_value:
             return field_value
         else:
