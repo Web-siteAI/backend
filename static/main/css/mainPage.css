@@ -24,8 +24,8 @@
 .black_block h1 {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0;
+  padding-bottom: 5px;
+  font-size: 30px;
 }
 .black_block p {
   font-size: 25px;
@@ -41,14 +41,15 @@
 .line_block2 {
   border-bottom: 2px solid #ffd600;
   width: 50%;
-  margin: 0 auto;
+  margin:0 auto;
 }
 .three_blocks {
   background-image: url("/static/main/images/FON1.png");
   background-size: cover;
   background-repeat: no-repeat ;
-  height: 100vh;
+  height: 55em;
   padding: 0;
+  margin: 10px 0;
 }
 .three_blocks img {
   width: 100%;
@@ -154,5 +155,11 @@
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, 27.5%);
        padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px){
+  .line_block2 {
+    width: 100%;
+    margin:0;
   }
 }
