@@ -55,12 +55,29 @@
   width: 100%;
 }
 
+.text_for_block2{
+  padding-top: 15px;
+}
+
+.text_for_block2 img{
+  width: 70px;
+  padding-top: 5px;
+}
+
+#author_for_block2{
+  text-align: right;
+  font-size: 20px;
+  padding-top: 0;
+  line-height: 20px;
+}
+
 .mainPage .teachers {
   min-height: 400px;
   background-color: #181712;
   width: 100%;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 .mainPage .teachers h1 {
   font-size: 30px;
@@ -150,11 +167,17 @@
     }
 }
 
+@media screen and (max-width: 926px){
+  .text_for_block2 img{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 680px){
-     .wrap{
+  .wrap{
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, 27.5%);
-       padding-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
 @media screen and (max-width: 400px){
