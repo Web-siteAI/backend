@@ -12,18 +12,10 @@ class SubjectType(models.Model):
         return self.get_name()
 
     def get_name(self):
-        return self._get_translation_field('name')
-
-    def _get_translation_field(self, field_name):
-        original_field_name = field_name
-
-        lang_code = get_language()
-
-        if lang_code != 'uk':
-            field_name = '{}_{}'.format(field_name, lang_code)
-
+        original_field_name = field_name = 'name'
+        if get_language() != 'uk':
+            field_name = '{}_{}'.format(field_name, get_language())
         field_value = getattr(self, field_name)
-
         if field_value:
             return field_value
         else:
@@ -38,8 +30,12 @@ class SubjectBachelor(models.Model):
     semester = models.IntegerField(choices=CHOICES, default=1, blank=False)
     credit = models.CharField(max_length=5, blank=False)
 
+    class Meta:
+        ordering = ["-semester", "type"]
+
     def __str__(self):
-        return self.get_name() + ' (' + self.type.get_name() + ') ' + self.get_credit()
+        return str(self.semester) + " sem, " + ' (' + self.type.get_name().split()[0] + ') ' + self.get_name() \
+               + " " + self.get_credit()
 
     def get_credit(self):
         credit_str = str(self.credit) + ' '
@@ -52,18 +48,10 @@ class SubjectBachelor(models.Model):
         return credit_str
 
     def get_name(self):
-        return self._get_translation_field('name')
-
-    def _get_translation_field(self, field_name):
-        original_field_name = field_name
-
-        lang_code = get_language()
-
-        if lang_code != 'uk':
-            field_name = '{}_{}'.format(field_name, lang_code)
-
+        original_field_name = field_name = 'name'
+        if get_language() != 'uk':
+            field_name = '{}_{}'.format(field_name, get_language())
         field_value = getattr(self, field_name)
-
         if field_value:
             return field_value
         else:
@@ -85,8 +73,12 @@ class SubjectMaster(models.Model):
     )
     form = models.IntegerField(choices=FORM, default=MASTER_AI)
 
+    class Meta:
+        ordering = ["-form", "-semester", "type"]
+
     def __str__(self):
-        return self.get_name() + ' (' + self.type.get_name() + ') ' + self.get_form_display() + " " + self.get_credit()
+        return str(self.semester) + " sem, (" + self.type.get_name().split()[0] + ') ' + self.get_name() + " " \
+               + self.get_form_display() + " " + self.get_credit()
 
     def get_credit(self):
         credit_str = str(self.credit) + ' '
@@ -99,18 +91,10 @@ class SubjectMaster(models.Model):
         return credit_str
 
     def get_name(self):
-        return self._get_translation_field('name')
-
-    def _get_translation_field(self, field_name):
-        original_field_name = field_name
-
-        lang_code = get_language()
-
-        if lang_code != 'uk':
-            field_name = '{}_{}'.format(field_name, lang_code)
-
+        original_field_name = field_name = 'name'
+        if get_language() != 'uk':
+            field_name = '{}_{}'.format(field_name, get_language())
         field_value = getattr(self, field_name)
-
         if field_value:
             return field_value
         else:
