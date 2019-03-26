@@ -110,7 +110,7 @@
   transition: .3s;
 }
 .mainPage .teachers .wrapper .gr-item:hover .gr-item-image {
-  filter: brightness(10%);
+  filter: brightness(45%);
 }
 .mainPage .teachers .wrapper .gr-item:hover .spanWrap{
   bottom: 0;
