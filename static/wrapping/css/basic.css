@@ -9,7 +9,7 @@ body {
     /*background: white;*/
 }
 .main_content {
-	margin: 0 0 50px 3%;
+    margin: 0 auto 50px;
     width: 100%;
     font-size: 18px;
 	color: #FFFFFF;
@@ -30,7 +30,8 @@ a {
     text-decoration: none;
 }
 a:hover{
-   text-decoration: none;
+    text-decoration: none;
+    color: #ffd600 ;
 }
 .container{
     width: 80%;
@@ -46,5 +47,10 @@ ul {
 @media screen and (max-width: 1075px){
     .title {
         text-align: center;
+    }
+}
+@media screen and (max-width: 540px){
+    .container{
+    width: 95%;
     }
 }

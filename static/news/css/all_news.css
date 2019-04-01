@@ -1,7 +1,11 @@
 .news_post{
 	margin: 0 12% 10px 12%;
-	background-color: #f0f0f0;
+	background-color: aliceblue;
 	position: relative;
+}
+.teg_news a {
+	font-size: 24px;
+	margin-right: 10px;
 }
 
 .title_post{
@@ -43,6 +47,9 @@
     height: 100%;
     display: flex;
     justify-content: center;
+}
+.tegsOnPost{
+	color: #34515e;
 }
 
 .pagination-action {
