@@ -1,6 +1,9 @@
 footer {
     background: #000000;
     color: #b0aba0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 .footer h2 {
     text-align: center;

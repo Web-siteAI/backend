@@ -8,9 +8,11 @@
 .rectangleA{
     width: 65%;
 	margin: 3px 0;
+	height: 2em;
 }
 .rectangleB{
     width: 30%;
+	height: 2em;
 }
 
 .quarterCircleBottomRight, .quarterCircleTopLeft, .quarterCircleBottomLeft, .quarterCircleTopRight{

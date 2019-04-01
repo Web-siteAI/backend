@@ -27,7 +27,7 @@
   transition: 0.3s;
 }
 .mainPage .prev {
-    top: 30%;
+    top: 25%;
     left: 5%;
 }
 .mainPage .prev::before {
@@ -35,7 +35,7 @@
   left: 12px;
 }
 .mainPage .next {
-    top: 30%;
+    top: 25%;
     right: 5%;
 }
 .mainPage .next::before {
@@ -64,7 +64,7 @@
   content: "Національний Університет \"Львівська Політехніка\"";
   font-size: 40px;
   color: white;
-  font-family: 'Roboto Condensed';
+  /*font-family: 'Roboto Condensed';*/
   display: block;
   text-align:center;
   margin-top: 130px;
@@ -73,7 +73,7 @@
   content: "Кафедра Систем Штучного Інтелекту";
   font-size: 50px;
   color: white;
-  font-family: 'Roboto Condensed';
+  /*font-family: 'Roboto Condensed';*/
   display: block;
   text-align: center;
   margin-top: 20px;
@@ -83,7 +83,7 @@
   content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
   color: white;
   font-size: 30px;
-  font-family: 'Roboto Condensed';
+  /*font-family: 'Roboto Condensed';*/
   display: block;
   width: 500px;
   text-align: center;
@@ -137,7 +137,7 @@
       content: "Національний Університет \"Львівська Політехніка\"";
       font-size: 30px;
       color: white;
-      font-family: 'Roboto Condensed';
+      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align:center;
       margin-top: 100px;
@@ -146,7 +146,7 @@
       content: "Кафедра Систем Штучного Інтелекту";
       font-size: 30px;
       color: white;
-      font-family: 'Roboto Condensed';
+      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align: center;
       margin-top: 20px;
@@ -155,7 +155,7 @@
       content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
       color: white;
       font-size: 25px;
-      font-family: 'Roboto Condensed';
+      /*font-family: 'Roboto Condensed';*/
       display: block;
       width: 70%;
       text-align: center;
@@ -167,7 +167,7 @@
       content: "Національний Університет \"Львівська Політехніка\"";
       font-size: 20px;
       color: white;
-      font-family: 'Roboto Condensed';
+      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align:center;
       margin-top: 100px;
@@ -178,7 +178,7 @@
       content: "Кафедра Систем Штучного Інтелекту";
       font-size: 20px;
       color: white;
-      font-family: 'Roboto Condensed';
+      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align: center;
       margin-top: 10px;
@@ -187,7 +187,7 @@
       content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
       color: white;
       font-size: 20px;
-      font-family: 'Roboto Condensed';
+      /*font-family: 'Roboto Condensed';*/
       display: block;
       width: 70%;
       text-align: center;

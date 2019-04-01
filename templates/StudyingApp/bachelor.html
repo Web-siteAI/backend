@@ -40,18 +40,18 @@
                                                                 <h4>{{ forloop.counter|add:loop }} {% trans " семестер"%}</h4>
                                                             </div>
                                                             {%  for subject in sub_sem %}
-                                                                <div class="rectangleA" style="
-                                                                background-color: {{ subject.type.color }}">
-                                                                    <div class="quarterCircleBottomRight"></div>
-                                                                    <p>{{ subject.get_name }}</p>
-                                                                    <div class="quarterCircleTopLeft"></div>
-                                                                </div>
-                                                                <div class="rectangleB" style="
-                                                                background-color: {{ subject.type.color }}">
-                                                                    <div class="quarterCircleBottomLeft"></div>
-                                                                    <p class="credit">{{ subject.get_credit }}</p>
-                                                                    <div class="quarterCircleTopRight"></div>
-                                                                </div>
+                                                                    <div class="rectangleA" style="
+                                                                    background-color: {{ subject.type.color }}">
+                                                                        <div class="quarterCircleBottomRight"></div>
+                                                                        <p>{{ subject.get_name }}</p>
+                                                                        <div class="quarterCircleTopLeft"></div>
+                                                                    </div>
+                                                                    <div class="rectangleB" style="
+                                                                    background-color: {{ subject.type.color }}">
+                                                                        <div class="quarterCircleBottomLeft"></div>
+                                                                        <p class="credit">{{ subject.get_credit }}</p>
+                                                                        <div class="quarterCircleTopRight"></div>
+                                                                    </div>
                                                             {% endfor %}
                                                         </div>
                                                     {% endfor %}

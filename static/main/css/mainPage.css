@@ -4,14 +4,17 @@
 .title_block1 {
   background-color: #181712;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   padding: 30px 0;
 }
+.title_block1 h1 {
+  font-size: 25px;
+}
 .content_block1 {
-  background-image: url("/static/main/images/FON1.png");
+  background-image: url("/static/main/images/fon1.jpg");
   background-size: cover;
   background-repeat: no-repeat ;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 35px;
   color: white;
   padding: 60px 0 20vh ;
@@ -25,29 +28,24 @@
   text-align: center;
   padding-top: 20px;
   padding-bottom: 5px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .black_block p {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 35px;
   color: white;
   padding: 5px 30px;
 }
-.img_block1 {
-  width: 80%;
-  margin: -165px 0 0 20% ;
-}
-
 .line_block2 {
   border-bottom: 2px solid #ffd600;
   width: 50%;
   margin:0 auto;
 }
 .three_blocks {
-  background-image: url("/static/main/images/FON1.png");
+  background-image: url("/static/main/images/fon1.jpg");
   background-size: cover;
   background-repeat: no-repeat ;
-  height: 55em;
+  height: 45em;
   padding: 0;
   margin: 10px 0;
 }
@@ -153,9 +151,6 @@
 }
 
 @media screen and (max-width: 1200px){
-  .img_block1 {
-    display: none;
-  }
   .wrap{
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 55%);
