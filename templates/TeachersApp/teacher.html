@@ -65,15 +65,15 @@
         {% for document in docs %}
             <div class="article">
                 {% for el in document %}
-                    {% if forloop.counter == 3%}
 
-                        {% for e in el %}
-                            {% if forloop.counter >= 4 %}
+                    {% if 'URL ' in el or 'http' in el %}
+                        {{ el|urlize }}
 
-                            {% endif %}
-                        {%  endfor %}
-                    {%  endif %}
-                    <h6>{{ el }}</h6>
+                        {% else %}
+                        <h6>
+                            {{ el }}
+                        </h6>
+                    {% endif %}
                 {% endfor %}
             </div>
         {% endfor %}
