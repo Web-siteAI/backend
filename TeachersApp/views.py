@@ -1053,6 +1053,7 @@ def getTeacher(request, TeacherId):
     content = {"teacher": teacher, "footer_fields": footer_fields, "page_fields": page_fields}
 
     t = teacher.full_name.split()
+    tn = teacher.full_name_en.split()
     documents = []
     if os.path.isfile("static/teachers/scholar/{0}.txt".format(t[0])):
         f = open("static/teachers/scholar/{0}.txt".format(t[0]), "r")
@@ -1123,63 +1124,71 @@ def getTeacher(request, TeacherId):
         parser.add_option_group(group)
 
         options, _ = parser.parse_args()
-        options.author = t[0]+' '+t[1]
-        options.count = 10
+        te = t[0]
+        for i in range(2):
+            if i == 0 :
+                options.author = t[0]+' '+t[1]
+            else :
+                options.author = tn[0] + ' ' + tn[1]
+            options.count = 10
 
-        querier = ScholarQuerier()
-        settings = ScholarSettings()
+            querier = ScholarQuerier()
+            settings = ScholarSettings()
 
-        querier.apply_settings(settings)
+            querier.apply_settings(settings)
 
-        if options.cluster_id:
-            query = ClusterScholarQuery(cluster=options.cluster_id)
-        else:
-            query = SearchScholarQuery()
-            if options.author:
-                query.set_author(options.author)
-            if options.allw:
-                query.set_words(options.allw)
-            if options.some:
-                query.set_words_some(options.some)
-            if options.none:
-                query.set_words_none(options.none)
-            if options.phrase:
-                query.set_phrase(options.phrase)
-            if options.title_only:
-                query.set_scope(True)
-            if options.pub:
-                query.set_pub(options.pub)
-            if options.after or options.before:
-                query.set_timeframe(options.after, options.before)
-            if options.no_patents:
-                query.set_include_patents(False)
-            if options.no_citations:
-                query.set_include_citations(False)
+            if options.cluster_id:
+                query = ClusterScholarQuery(cluster=options.cluster_id)
+            else:
+                query = SearchScholarQuery()
+                if options.author:
+                    query.set_author(options.author)
+                if options.allw:
+                    query.set_words(options.allw)
+                if options.some:
+                    query.set_words_some(options.some)
+                if options.none:
+                    query.set_words_none(options.none)
+                if options.phrase:
+                    query.set_phrase(options.phrase)
+                if options.title_only:
+                    query.set_scope(True)
+                if options.pub:
+                    query.set_pub(options.pub)
+                if options.after or options.before:
+                    query.set_timeframe(options.after, options.before)
+                if options.no_patents:
+                    query.set_include_patents(False)
+                if options.no_citations:
+                    query.set_include_citations(False)
 
-        if options.count is not None:
-            options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
-            query.set_num_page_results(options.count)
-        try:
-            querier.send_query(query)
-        except Exception:
-            querier.articles = []
+            if options.count is not None:
+                options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
+                query.set_num_page_results(options.count)
+            try:
+                querier.send_query(query)
+            except Exception:
+                querier.articles = []
 
-        txt(querier, with_globals=options.txt_globals)
-        articles = querier.articles
-        f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "w")
-        for art in articles:
-            res = art.ret_list()
-            documents.append(res)
-            for el in res:
-                f.write(el+"\n")
-        f.close()
-    # im = 'GI8N5PQAAAAJ'
-    # url = 'https://scholar.google.com/citations?view_op=list_works&hl=uk&user=%s' % (im)
-    # r = requests.get(url)
-    # print(r)
-    # with open('./static/teachers/sc/%s.html' % (im), 'w') as output_file:
-    #     output_file.write(r.text)
-    orcid = ""
+            txt(querier, with_globals=options.txt_globals)
+            articles = querier.articles
+            if i == 0:
+                f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "w")
+            else:
+                f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "a")
+            for art in articles:
+                res = art.ret_list()
+                documents.append(res)
+                for el in res:
+                    f.write(el+"\n")
+            f.close()
+        # im = 'GI8N5PQAAAAJ'
+        # url = 'https://scholar.google.com/citations?view_op=list_works&hl=uk&user=%s' % (im)
+        # r = requests.get(url)
+        # print(r)
+        # with open('./static/teachers/sc/%s.html' % (im), 'w') as output_file:
+        #     output_file.write(r.text)
+        orcid = ""
     if id > 1000:
         content["docs"] = documents
         if os.path.isfile("./static/teachers/all/%d.html" % (id)):
