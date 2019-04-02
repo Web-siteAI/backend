@@ -103,7 +103,7 @@ article img{
 #switch4:checked ~ #controls label:nth-child(3){
 	background: url('prev.png') no-repeat;
 	float: left;
-	margin: 0 0 0 -50px;
+	margin: 0 0 0 -60px;
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -116,7 +116,7 @@ article img{
 #switch4:checked ~ #controls label:nth-child(1){
 	background: url('next.png') no-repeat;
 	float: right;
-	margin: 0 -50px 0 0;
+	margin: 0 -40px 0 0;
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -152,7 +152,7 @@ label, a{
 }
 
 #controls{
-	margin: -25% 0 0 0;
+	margin: -250px 0 0 0;
 	width: 100%;
 	height: 50px;
 }
@@ -197,8 +197,40 @@ label, a{
 	transition: opacity 0.2s ease-out;
 }
 
+@media screen and (max-width: 1200px){
+	#controls{
+		margin: -380px 0 0 0;
+		width: 100%;
+		height: 210px;
+	}
+}
 @media screen and (max-width: 900px){
 	.title {
 		text-align: center;
+	}
+	#controls{
+		margin: -400px 0 0 0;
+		height: 330px;
+	}
+}
+@media screen and (max-width: 600px){
+	#controls{
+		margin: 0;
+    	height: 0;
+	}
+	#switch1:checked ~ #controls label:nth-child(4),
+	#switch2:checked ~ #controls label:nth-child(1),
+	#switch3:checked ~ #controls label:nth-child(2),
+	#switch4:checked ~ #controls label:nth-child(3){
+		margin: 70px 0 0 80px;
+	}
+
+
+	#switch1:checked ~ #controls label:nth-child(2),
+	#switch2:checked ~ #controls label:nth-child(3),
+	#switch3:checked ~ #controls label:nth-child(4),
+	#switch4:checked ~ #controls label:nth-child(1){
+		margin: 70px 80px 0 0;
+
 	}
 }
