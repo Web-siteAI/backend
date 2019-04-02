@@ -2,6 +2,7 @@
   width: 100%;
   height: 460px;
   position: relative;
+    overflow: hidden;
 }
 .mainPage .slBut {
   width: 48px;
@@ -91,6 +92,21 @@
   margin-left: 90px;
 }
 
+.sliderLinks {
+    width: 300px;
+    height: 150px;
+    z-index: 1000;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+.sliderLinks .slink {
+    height: 50px;
+    width: inherit;
+}
+.currentLink a {
+    color: red;
+}
 @media (max-width: 900px){
     .mainPage .slider {
         height: 400px;
