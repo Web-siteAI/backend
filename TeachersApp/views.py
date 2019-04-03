@@ -23,9 +23,7 @@ try:
     from http.cookiejar import MozillaCookieJar
 except ImportError:
     # Fallback for Python 2
-    from urllib2 import Request, build_opener, HTTPCookieProcessor
-    from urllib import quote, unquote
-    from cookielib import MozillaCookieJar
+    pass
 
 # Import BeautifulSoup -- try 4 first, fall back to older
 try:
