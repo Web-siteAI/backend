@@ -627,5 +627,5 @@ msgstr ""
 #~ "During September 2017, the department's laboratories were equipped with "
 #~ "computer technology supported by the Lviv IT cluster."
 
-#~ msgid "Наука"
-#~ msgstr "Science"
+msgid "Наука"
+msgstr "Science"

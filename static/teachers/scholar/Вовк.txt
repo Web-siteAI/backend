@@ -1,77 +1,74 @@
-         Title Формування англомовної граматичної компетенції у майбутніх учителів в умовах інтенсивного навчання
-           URL http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=ARD&P21DBN=ARD&Z21ID=&Image_file_name=DOC/2008/08voiuin.zip&IMAGE_FILE_DOWNLOAD=1
-          Year 2010
-     Citations 27
-      Versions 0
-    Cluster ID 2547714027366136522
-Citations list http://scholar.google.com/scholar?cites=2547714027366136522&as_sdt=2005&sciodt=0,5&hl=en
-       Excerpt Сучасний стан розвитку методики навчання іноземних мов (ІМ) як науки характеризується двома головними парадигмами - комунікативною і когнітивною. Для вирішення низки актуальних методичних проблем, які передбачають як мовленнєвий, так і інтелектуальний розвиток …
-         Title Комунікативно-когнітивна компетентність майбутніх філологів: нова парадигма сучасної освіти
-          Year 2013
+         Title The method of big data processing for distance educational system
+           URL http://scholar.google.com/https://link.springer.com/chapter/10.1007/978-3-319-70581-1_33
+          Year 2017
+     Citations 14
+      Versions 2
+    Cluster ID 2822282211097848648
+Citations list http://scholar.google.com/scholar?cites=2822282211097848648&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=2822282211097848648&hl=en&as_sdt=0,5
+       Excerpt The paper presents the main features of modern educational systems such as huge amount of information and requirements for data processing. The Big data definition and the main characteristics description The model of association between entities and characteristics isВ вЂ¦
+         Title Room temperature tunneling magnetoresistance of electron beam deposited  cermet granular films
+           URL http://scholar.google.com/https://aip.scitation.org/doi/abs/10.1063/1.1480113
+          Year 2002
+     Citations 41
+      Versions 6
+    Cluster ID 8108256563641258025
+Citations list http://scholar.google.com/scholar?cites=8108256563641258025&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=8108256563641258025&hl=en&as_sdt=0,5
+       Excerpt A series of (Co50Fe50) x-(Al2O3) 1в€’ x cermet granular thin films deposited on glass substrates by dual electron beam evaporation was studied for their structural, magnetotransport, and magnetic properties. Upon varying the magnetic volume fraction, xВ вЂ¦
+         Title Volumes
+           URL http://www.dl.begellhouse.com/journals/6ec4ba27650016b1,1563fd7b46186e0d.html
      Citations 4
-      Versions 0
-    Cluster ID 11158575164363862374
-Citations list http://scholar.google.com/scholar?cites=11158575164363862374&as_sdt=2005&sciodt=0,5&hl=en
-         Title Академічна культура дослідника в освітньо-культурному просторі університету
-           URL http://repository.sspu.sumy.ua/handle/123456789/2086
-          Year 2016
+      Versions 2
+    Cluster ID 2675122951247716106
+Citations list http://scholar.google.com/scholar?cites=2675122951247716106&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=2675122951247716106&hl=en&as_sdt=0,5
+         Title Arginine deprivation therapy: putative strategy to eradicate glioblastoma cells by radiosensitization
+           URL http://mct.aacrjournals.org/content/17/2/393.abstract
+          Year 2018
      Citations 4
-      Versions 0
-    Cluster ID 11360861974444949409
-Citations list http://scholar.google.com/scholar?cites=11360861974444949409&as_sdt=2005&sciodt=0,5&hl=en
-       Excerpt У монографії окреслено підходи до академічної культури як основи культури дослідницького навчання в університеті, здійснено ретроспективний аналіз академічних традицій університетів, особливостей формування академічної культури …
-         Title Методи та засоби підвищення життєздатності веб-сайту як інформаційного продукту
-           URL http://ena.lp.edu.ua/handle/ntb/21101
-          Year 2013
+      Versions 4
+    Cluster ID 5190434383785713528
+Citations list http://scholar.google.com/scholar?cites=5190434383785713528&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=5190434383785713528&hl=en&as_sdt=0,5
+       Excerpt Tumor cellsвЂ”even if nonauxotrophicвЂ”are often highly sensitive to arginine deficiency. We hypothesized that arginine deprivation therapy (ADT) if combined with irradiation could be a new treatment strategy for glioblastoma (GBM) patients because systemic ADT isВ вЂ¦
+         Title Using the Random Forest classification for land cover interpretation of Landsat images in the Prykarpattya region of Ukraine
+           URL http://scholar.google.com/https://ieeexplore.ieee.org/abstract/document/8526646/
+          Year 2018
+     Citations 1
+      Versions 2
+    Cluster ID 9540994797555351440
+Citations list http://scholar.google.com/scholar?cites=9540994797555351440&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=9540994797555351440&hl=en&as_sdt=0,5
+       Excerpt The Random Forest classification which has a range substantial advantages was used for land cover investigations. Such a classification algorithm was applied in R software. Main land cover areas (coniferous, deciduous, water, urban territory and grasslands) wereВ вЂ¦
+         Title Electrochemical polymerization of fullerene in organic solvents
+           URL http://scholar.google.com/https://www.tandfonline.com/doi/abs/10.1080/10587250108025750
+          Year 2001
+     Citations 1
+      Versions 4
+    Cluster ID 17622134305627029091
+Citations list http://scholar.google.com/scholar?cites=17622134305627029091&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=17622134305627029091&hl=en&as_sdt=0,5
+       Excerpt The new method of fullerene polymerization initiated by electrolysis of C60 toluene-DMFA solutions in the presence of supporting electrolytes at stationary or rotating Pt, graphite, stainless steel electrodes have proposed. Formation of insoluble in toluene polyfullereneВ вЂ¦
+         Title Association of single nucleotide polymorphisms in leptin (LEP) and leptin receptor (LEPR) genes with backfat thickness and daily weight gain in Ukrainian LargeВ вЂ¦
+           URL http://scholar.google.com/https://www.sciencedirect.com/science/article/pii/S1871141318303925
+          Year 2018
      Citations 1
       Versions 3
-    Cluster ID 8560297568642634582
-Citations list http://scholar.google.com/scholar?cites=8560297568642634582&as_sdt=2005&sciodt=0,5&hl=en
- Versions list http://scholar.google.com/scholar?cluster=8560297568642634582&hl=en&as_sdt=0,5
-       Excerpt У дисертаційній роботі розв'язано актуальну наукову задачу розроблення методів та засобів підвищення життєздатності веб-сайту як інформаційного продукту з метою подовження тривалості його життєвого циклу. Здійснено аналіз задач, пов'язаних з …
-         Title Проблеми функціонування механізму трансферу наукових технологій освітньої діяльності в логістиці
-           URL http://elartu.tntu.edu.ua/bitstream/123456789/18885/1/16koadvl_002.pdf
-          Year 2016
-     Citations 2
-      Versions 4
-    Cluster ID 16559804480129992684
-      PDF link http://elartu.tntu.edu.ua/bitstream/123456789/18885/1/16koadvl_002.pdf
-Citations list http://scholar.google.com/scholar?cites=16559804480129992684&as_sdt=2005&sciodt=0,5&hl=en
- Versions list http://scholar.google.com/scholar?cluster=16559804480129992684&hl=en&as_sdt=0,5
-       Excerpt Karpenko, O., Kovalchuk, S., Vovk, Y., Hyryla, I., Shevchuk, O., Yanush, M. (2016). Problemy funktsionuvannia mekhanizmu transferu naukovykh tekhnolohii osvitnoi diialnosti v lohistytsi [Problems functioning of the technology transfer of scientific educational activities in …
-         Title Педагогічні умови гендерної соціалізації дітей молодшого шкільного віку
-           URL http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?I21DBN=LINK&P21DBN=UJRN&Z21ID=&S21REF=10&S21CNR=20&S21STN=1&S21FMT=ASP_meta&C21COM=S&2_S21P03=FILA=&2_S21STR=Mir_2014_4_4
-          Year 2014
-     Citations 1
-      Versions 0
-    Cluster ID 5870484213119640945
-Citations list http://scholar.google.com/scholar?cites=5870484213119640945&as_sdt=2005&sciodt=0,5&hl=en
-       Excerpt В статье рассмотрены основные направления современных психологопедагогических исследований по проблеме гендерной социализации младших школьников, проанализировано содержание и направления гендерной социализации в младшем …
-         Title Принципи опрацювання навчального тексту в комунікативно-когнітивному підході
-           URL http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/Nz_p_2014_134_19.pdf
-          Year 2014
-     Citations 0
-      Versions 2
-      PDF link http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/Nz_p_2014_134_19.pdf
- Versions list http://scholar.google.com/scholar?cluster=10591927107634135436&hl=en&as_sdt=0,5
-       Excerpt Опрацювання тексту передбачає його всебічний аналіз. Проблема аналізу тексту знаходиться у фокусі уваги великої кількості вчених, як-от: ММ Бахтіна, АА Брудного, ІР Гальперіна, ТМ Дрідзе, ОО Селіванової та ін. Науковці вивчають цю проблему з різних …
-         Title ВІДОМОСТІ ПРО АВТОРІВ
-     Citations 0
-      Versions 2
- Versions list http://scholar.google.com/scholar?cluster=14678535966793168393&hl=en&as_sdt=0,5
-         Title Розвиток іншомовної стилістичної компетенції майбутніх філологів: граматичний аспект
-           URL http://journals.uran.ua/index.php/2311-6382/article/view/61848
-          Year 2015
-     Citations 0
-      Versions 6
- Versions list http://scholar.google.com/scholar?cluster=3868270026430987966&hl=en&as_sdt=0,5
-       Excerpt Анотація Запропоновано граматичний ракурс вирішення проблеми формування іншомовної стилістичної компетенції у студентів філологічного спрямування. Охарактеризовано стилістичну компетенцію як здатність будувати висловлювання у …
-         Title Система вправ для формування комунікативно-когнітивної компетентності майбутніх філологів
-           URL http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/NZTNPU_ped_2013_2_26.pdf
+    Cluster ID 3317890721465056815
+Citations list http://scholar.google.com/scholar?cites=3317890721465056815&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=3317890721465056815&hl=en&as_sdt=0,5
+       Excerpt Leptin (LEP) and leptin receptor (LEPR) genes play an important role in the regulation of fat deposition and other commercially important traits in pigs and this regulation is known to be breed-specific. The aim of the present study was to investigate the presence and frequencyВ вЂ¦
+         Title Participation of Phosphatidylinositol-3'-kinase in Perception and Signal Transduction through Galactosyl-Containing Glycoprotein Receptors of SegmentedВ вЂ¦
+           URL http://www.dl.begellhouse.com/journals/6ec4ba27650016b1,1563fd7b46186e0d,689fd3106c6f9dfe.html
           Year 2013
      Citations 0
-      Versions 4
-      PDF link http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/NZTNPU_ped_2013_2_26.pdf
- Versions list http://scholar.google.com/scholar?cluster=15176731703924880085&hl=en&as_sdt=0,5
-       Excerpt Запропонована система вправ для формування комунікативно-когнітивної компетентності студентів-філологів, побудована з метою реалізації в інтегрованій комунікативно-когнітивній діяльності з урахуванням філософських, психологічних і …
-© 2019 GitHub, Inc.
+      Versions 0
+       Excerpt The reduced amount of glycoconjugate ОІ, D-galactosyl-containing carbohydrate determinants on the cytoplasmatic membrane of segmented neutrophils (SN) of peripheral blood under type 1 diabetes mellitus (DM) has been shown to correlate with the changes inВ вЂ¦
+         Title A CONCEPTUAL FRAMEWORK OF TEACHING ENGLISH AS A FOREIGN LANGUAGE
+           URL http://iliauni.edu.ge/uploads/other/39/39086.pdf#page=39
+          Year 1901
+     Citations 0
+      Versions 2
+ Versions list http://scholar.google.com/scholar?cluster=8911028288727520001&hl=en&as_sdt=0,5
+       Excerpt This paper briefly outlines the process of a foreign language (FL) acquisition within the framework of the communicative and cognitive approach. Developing learners' communicative and cognitive competence is identified as a current target of learning a FLВ вЂ¦

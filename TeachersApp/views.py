@@ -3,8 +3,6 @@ from requests.compat import basestring
 
 from .models import Teacher
 from MainApp.models import Footer, PageContent, Page
-import bs4
-from bs4 import BeautifulSoup
 import requests
 import optparse
 import os
@@ -1124,9 +1122,9 @@ def getTeacher(request, TeacherId):
         options, _ = parser.parse_args()
         te = t[0]
         for i in range(2):
-            if i == 0 :
+            if i == 0:
                 options.author = t[0]+' '+t[1]
-            else :
+            else:
                 options.author = tn[0] + ' ' + tn[1]
             options.count = 10
 
@@ -1171,21 +1169,16 @@ def getTeacher(request, TeacherId):
             txt(querier, with_globals=options.txt_globals)
             articles = querier.articles
             if i == 0:
-                f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "w")
+                f = open("./static/teachers/scholar/{0}.txt".format(te), "w", encoding="utf-8")
             else:
-                f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "a")
+                f = open("./static/teachers/scholar/{0}.txt".format(te), "a", encoding="utf-8")
             for art in articles:
                 res = art.ret_list()
                 documents.append(res)
                 for el in res:
                     f.write(el+"\n")
             f.close()
-        # im = 'GI8N5PQAAAAJ'
-        # url = 'https://scholar.google.com/citations?view_op=list_works&hl=uk&user=%s' % (im)
-        # r = requests.get(url)
-        # print(r)
-        # with open('./static/teachers/sc/%s.html' % (im), 'w') as output_file:
-        #     output_file.write(r.text)
+
         orcid = ""
     if id > 1000:
         content["docs"] = documents
@@ -1222,11 +1215,13 @@ def getTeacher(request, TeacherId):
 
 
 def teachers(request):
-    footer_fields = Footer.objects.get(pk=1)
-    teachers_list = Teacher.objects.all()
-    page_fields = []
-    for p in list(Page.objects.filter(special_page=False)):
-        page_fields.append(PageContent.objects.get(page=p))
-    content = {"teachers_list": teachers_list, "footer_fields": footer_fields, "page_fields": page_fields}
+    try:
+        footer_fields = Footer.objects.get(pk=1)
+        teachers_list = Teacher.objects.all()
+        page_fields = []
+        for p in list(Page.objects.filter(special_page=False)):
+            page_fields.append(PageContent.objects.get(page=p))
+        content = {"teachers_list": teachers_list, "footer_fields": footer_fields, "page_fields": page_fields}
+    except:
+        pass
     return render(request, "TeachersApp/teachers.html", content)
-# Create your views here.
