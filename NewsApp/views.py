@@ -18,7 +18,7 @@ def news(request, TagIndex):
                     news_fields.append(news)
                     break                                         # news_fields = news_fields[(1 - number_page) * 10 - 1: (- number_page) * 10 - 1: -1]
     news_fields = news_fields[::-1]
-    paginator = Paginator(news_fields, 2)
+    paginator = Paginator(news_fields, 7)
     page = request.GET.get('page')
     news_fields = paginator.get_page(page)
     page_fields = []
