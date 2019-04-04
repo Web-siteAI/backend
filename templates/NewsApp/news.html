@@ -17,7 +17,7 @@
             <div class="teg_news">
                 <a href="/news/all/?page=1"> #{% trans "усі новини" %}</a>
                 {% for taga in tags_list %}
-                    <a href="/news/{{ taga }}/?page=1"> #{{ taga.get_name }} </a>
+                    <a href="/news/{{ taga.name }}/?page=1"> #{{ taga.get_name }} </a>
                 {%  endfor %}
             </div>
             {%  for news in news_field %}

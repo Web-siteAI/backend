@@ -57,13 +57,15 @@ class Page(models.Model):
     STUDYING = 2
     ACHIEVEMENTS = 3
     OTHER = 4
+    SCIENCE = 5
 
     INDEX = (
         (NONE, "none"),
         (DEPARTMENT, "about department"),
         (STUDYING, "studying"),
         (ACHIEVEMENTS, "students achievements"),
-        (OTHER, "other")
+        (OTHER, "other"),
+        (SCIENCE, "science")
     )
     page_name = models.CharField(max_length=128, blank=False)
     page_name_en = models.CharField(max_length=128, blank=False)
