@@ -97,6 +97,9 @@ label, a{
 #controls label{
 	transition: opacity 0.2s ease-out;
 }
+.b1 h3 {
+	text-align: center;
+}
 
 @media screen and (max-width: 900px){
 	.title {
