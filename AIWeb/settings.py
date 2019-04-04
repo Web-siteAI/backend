@@ -74,6 +74,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'django.template.context_processors.i18n',
             ],
         }, },
 
@@ -127,8 +128,9 @@ LOCALE_PATHS = [
 ]
 
 LANGUAGES = [
-    ('en', 'English'),
     ('uk', 'Українська'),
+    ('en', 'English'),
+
 ]
 
 # Static files (CSS, JavaScript, Images)
