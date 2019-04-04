@@ -61,6 +61,15 @@
 										</div>
 									</div>
 								</div>
+
+                                <div class="row">
+                                    {% for stype in subject_type_list %}
+                                        <div class="col-xs-4" style="background-color: {{ stype.color }}">
+                                                <p>{{ stype.get_name }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+
 								<div id="controls">
 									<label for="switch1"></label>
 									<label for="switch2"></label>

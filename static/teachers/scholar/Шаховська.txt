@@ -1,0 +1,16 @@
+         Title The personalized approach in a medical decentralized diagnostic and treatment
+           URL http://scholar.google.com/https://ieeexplore.ieee.org/abstract/document/7916139/
+          Year 2017
+     Citations 6
+      Versions 0
+    Cluster ID 4483648495830876324
+Citations list http://scholar.google.com/scholar?cites=4483648495830876324&as_sdt=2005&sciodt=0,5&hl=en
+       Excerpt In this paper proposed the clinical system of support decision medicinal solutions that based on ontology with the use of biosensors, to realize the process of decentralized diagnostics and personalized treatment. Identified objectives that are required to perform a number of …
+         Title Smart Integrated Robotics System for SMEs Controlled by Internet of Things Based on Dynamic Manufacturing Processes
+           URL http://scholar.google.com/https://link.springer.com/chapter/10.1007/978-3-030-01069-0_38
+          Year 2018
+     Citations 1
+      Versions 0
+    Cluster ID 11322184010971772596
+Citations list http://scholar.google.com/scholar?cites=11322184010971772596&as_sdt=2005&sciodt=0,5&hl=en
+       Excerpt The new technology for Industry 4.0 implementation is proposed. This technology is implemented in one of Ukrainian manufacture. The equipment identification module on the workstation is provided accounting and quality analysis of equipment. The module of the …
