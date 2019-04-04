@@ -93,19 +93,36 @@
 }
 
 .sliderLinks {
-    width: 300px;
-    height: 150px;
+    width: 400px;
+    height: 210px;
     z-index: 1000;
     position: absolute;
-    top: 200px;
-    left: 100px;
+    top: 150px;
+    left: calc(50% - 200px);
+
+
 }
 .sliderLinks .slink {
-    height: 50px;
+    height: 70px;
     width: inherit;
+    margin: auto;
+    /*padding: auto;*/
+    text-align: center;
+    padding: 15px 0;
+    font-size: 26px;
+    font-family: Arial;
+    /*display: none;*/
 }
+.sliderLinks .slink a {
+    padding: 15px 0;
+}
+.currentLink  {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
 .currentLink a {
-    color: red;
+    color: black;
 }
 @media (max-width: 900px){
     .mainPage .slider {
