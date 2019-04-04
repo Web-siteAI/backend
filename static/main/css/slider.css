@@ -65,7 +65,6 @@
   content: "Національний Університет \"Львівська Політехніка\"";
   font-size: 40px;
   color: white;
-  /*font-family: 'Roboto Condensed';*/
   display: block;
   text-align:center;
   margin-top: 130px;
@@ -74,7 +73,6 @@
   content: "Кафедра Систем Штучного Інтелекту";
   font-size: 50px;
   color: white;
-  /*font-family: 'Roboto Condensed';*/
   display: block;
   text-align: center;
   margin-top: 20px;
@@ -84,45 +82,40 @@
   content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
   color: white;
   font-size: 30px;
-  /*font-family: 'Roboto Condensed';*/
   display: block;
   width: 500px;
   text-align: center;
   margin-top: 150px;
   margin-left: 90px;
 }
-
 .sliderLinks {
-    width: 400px;
-    height: 210px;
-    z-index: 1000;
+    width: 100%;
+    z-index: 10;
     position: absolute;
-    top: 150px;
-    left: calc(50% - 200px);
-
-
+    top: 410px;
+    display: flex;
+    background-color: rgba(179, 236, 255, 0.3);
 }
 .sliderLinks .slink {
-    height: 70px;
+    height: 50px;
     width: inherit;
     margin: auto;
-    /*padding: auto;*/
     text-align: center;
-    padding: 15px 0;
     font-size: 26px;
     font-family: Arial;
-    /*display: none;*/
-}
-.sliderLinks .slink a {
-    padding: 15px 0;
+    padding: 5px 0 0 0;
+    border-color: #e8e8e8;
+    border-right-style: solid;
+    border-width: 1px;
 }
 .currentLink  {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: black;
+    background-color: rgba(179, 236, 255, 0.4);
+
+    color: #FFFFFF;
 }
 
 .currentLink a {
-    color: black;
+    color: #FFFFFF;
 }
 @media (max-width: 900px){
     .mainPage .slider {
@@ -145,11 +138,10 @@
     .mainPage .slider div:nth-child(1)::after {
         font-size: 34px;
     }
-    /*.mainPage .slider div:nth-child(2)::before {*/
-        /*font-size: 26px;*/
-        /*margin-top: 130px;*/
-        /*width: 360px;*/
-    /*}*/
+    .sliderLinks {
+        top: 350px;
+    }
+
 }
 
 @media (max-width: 699px){
@@ -168,18 +160,16 @@
 
     .mainPage .slider div:nth-child(1)::before{
       content: "Національний Університет \"Львівська Політехніка\"";
-      font-size: 30px;
+      font-size: 25px;
       color: white;
-      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align:center;
       margin-top: 100px;
     }
     .mainPage .slider div:nth-child(1)::after{
       content: "Кафедра Систем Штучного Інтелекту";
-      font-size: 30px;
+      font-size: 25px;
       color: white;
-      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align: center;
       margin-top: 20px;
@@ -187,23 +177,30 @@
     .mainPage .slider div:nth-child(2)::before {
       content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
       color: white;
-      font-size: 25px;
-      /*font-family: 'Roboto Condensed';*/
+      font-size: 20px;
       display: block;
       width: 70%;
       text-align: center;
-      margin-top: 120px;
+      margin-top: 100px;
     }
+    .sliderLinks {
+        top: 265px;
+    }
+    .sliderLinks .slink {
+        height: 35px;
+        font-size: 20px;
+        padding: 3px 0 0 0;
+    }
+
 }
-@media (max-width: 400px){
+@media (max-width: 435px){
     .mainPage .slider div:nth-child(1)::before{
       content: "Національний Університет \"Львівська Політехніка\"";
       font-size: 20px;
       color: white;
-      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align:center;
-      margin-top: 100px;
+      margin-top: 90px;
     }
 
 
@@ -211,19 +208,22 @@
       content: "Кафедра Систем Штучного Інтелекту";
       font-size: 20px;
       color: white;
-      /*font-family: 'Roboto Condensed';*/
       display: block;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 0px;
     }
     .mainPage .slider div:nth-child(2)::before {
       content: "Повністю оновлена навчальна програма, яка спрямована на підготовку затребуваних спеціалістів у галузі IT";
       color: white;
       font-size: 20px;
-      /*font-family: 'Roboto Condensed';*/
       display: block;
       width: 70%;
       text-align: center;
-      margin-top: 90px;
+      margin-top: 80px;
+    }
+    .sliderLinks .slink {
+        height: 35px;
+        font-size: 14px;
+        padding: 3px 0 0 0;
     }
 }
