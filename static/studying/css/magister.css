@@ -1,8 +1,76 @@
-#slider {
+.rectangleA, .rectangleB {
     position: relative;
-    top: 10px;
-	margin: 0 auto;
+    min-height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: inline-block;
+	margin: 3px 0;
+}
+.rectangleA{
+	margin-right: 5px;
+}
+.rectangleB{
+	padding: 0!important;
+}
 
+.quarterCircleBottomRight, .quarterCircleTopLeft, .quarterCircleBottomLeft, .quarterCircleTopRight{
+    width: 10px;
+    height: 10px;
+    background: white;
+    position: absolute;
+}
+
+.quarterCircleBottomRight{
+    border-radius: 0 0 0 10px;
+    right: 0;
+}
+
+.quarterCircleTopLeft{
+    border-radius: 10px 0 0 0;
+    bottom: 0;
+    right: 0;
+}
+
+.quarterCircleBottomLeft{
+    border-radius: 0 0 10px 0;
+	left: 0;
+}
+
+.quarterCircleTopRight{
+    border-radius: 0 10px 0 0;
+    bottom: 0;
+	left: 0;
+}
+
+#blue{
+    background: blue;
+}
+#orange{
+    background: orange;
+}
+#green{
+    background: green;
+}
+#red{
+    background: red;
+}
+.credit {
+	padding-left:1.5em;
+}
+#blue, #orange, #green, #red {
+	margin: 3px auto;
+	color: #ffff;
+	font-size: 14px;
+}
+.b1 h4 {
+	text-align: center;
+	font-weight: bold;
+}
+.b1 p {
+	vertical-align: middle;
+}
+#slides{
+	margin: 0 auto 20px;
 }
 
 #slides article{
@@ -10,30 +78,34 @@
 	float: left;
 }
 
+#slides .image{
+	width: 500%;
+}
+
 #overflow{
 	width: 100%;
 	overflow: hidden;
 }
 
-#desktop:checked ~ #slider{
-	max-width: 960px;
+article img{
+	width: 100%;
 }
-
 #switch1:checked ~ #controls label:nth-child(2),
 #switch2:checked ~ #controls label:nth-child(1){
 	background: url('prev.png') no-repeat;
 	float: left;
-	margin: 0 0 0 -50px;
+	margin: -250px 0 0 -100px;
 	display: block;
 	height: 68px;
 	width: 68px;
 }
 
-#switch1:checked ~ #controls label:nth-child(2),
+
+#switch1:checked ~ #controls label:nth-child(2), 
 #switch2:checked ~ #controls label:nth-child(1){
 	background: url('next.png') no-repeat;
 	float: right;
-	margin: 0 -50px 0 0;
+	margin: -250px -70px 0 0;
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -47,6 +119,7 @@ label, a{
 	display: none;
 }
 
+
 #switch1:checked ~ #slides .image{
 	margin-left: 0;
 }
@@ -55,10 +128,21 @@ label, a{
 	margin-left: -100%;
 }
 
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
 #controls{
-	margin: -25% 0 0 0;
-	width: 100%;
-	height: 50px;
+	margin: 0;
+	height: 0;
 }
 
 #active label{
@@ -70,7 +154,7 @@ label, a{
 }
 
 #active{
-	margin: 23% 0 0;
+	margin: 10% 0 0;
 	text-align: center;
 	margin-bottom: 100px;
 }
@@ -81,12 +165,15 @@ label, a{
 }
 
 #switch1:checked ~ #active label:nth-child(1),
-#switch2:checked ~ #active label:nth-child(2){
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
 	background: #18a3dd;
 	border-color: #18a3dd !important;
 }
 
-#slides {
+#slides .image{
 	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
 
@@ -97,12 +184,46 @@ label, a{
 #controls label{
 	transition: opacity 0.2s ease-out;
 }
-.b1 h3 {
-	text-align: center;
+
+@media screen and (max-width: 1200px){
+	#switch1:checked ~ #controls label:nth-child(4),
+	#switch2:checked ~ #controls label:nth-child(1),
+	#switch3:checked ~ #controls label:nth-child(2),
+	#switch4:checked ~ #controls label:nth-child(3){
+		margin: -450px 0 0 -100px;
+	}
+
+
+	#switch1:checked ~ #controls label:nth-child(2),
+	#switch2:checked ~ #controls label:nth-child(3),
+	#switch3:checked ~ #controls label:nth-child(4),
+	#switch4:checked ~ #controls label:nth-child(1){
+		margin: -450px -70px 0 0;
+
+	}
 }
 
 @media screen and (max-width: 900px){
 	.title {
 		text-align: center;
+	}
+}
+@media screen and (max-width: 750px){
+	.b1 p {
+		font-size: 15px;
+	}
+	#switch1:checked ~ #controls label:nth-child(4),
+	#switch2:checked ~ #controls label:nth-child(1),
+	#switch3:checked ~ #controls label:nth-child(2),
+	#switch4:checked ~ #controls label:nth-child(3){
+		margin: 0;
+	}
+
+
+	#switch1:checked ~ #controls label:nth-child(2),
+	#switch2:checked ~ #controls label:nth-child(3),
+	#switch3:checked ~ #controls label:nth-child(4),
+	#switch4:checked ~ #controls label:nth-child(1){
+		margin: 0;
 	}
 }
