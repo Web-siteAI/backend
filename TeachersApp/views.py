@@ -1,11 +1,10 @@
-from django.shortcuts import render
-from requests.compat import basestring
-
 from .models import Teacher
 from MainApp.models import Footer, PageContent, Page
-import bs4
-from bs4 import BeautifulSoup
 import requests
+
+
+from django.shortcuts import render
+# from requests.compat import basestring
 import optparse
 import os
 import re
@@ -38,15 +37,15 @@ except ImportError:
         sys.exit(1)
 
 # Support unicode in both Python 2 and 3. In Python 3, unicode is str.
-if sys.version_info[0] == 3:
-    unicode = str  # pylint: disable-msg=W0622
-    encode = lambda s: unicode(s)  # pylint: disable-msg=C0103
-else:
-    def encode(s):
-        if isinstance(s, basestring):
-            return s.encode('utf-8')  # pylint: disable-msg=C0103
-        else:
-            return str(s)
+# if sys.version_info[0] == 3:
+#     unicode = str  # pylint: disable-msg=W0622
+#     encode = lambda s: unicode(s)  # pylint: disable-msg=C0103
+# else:
+#     def encode(s):
+#         if isinstance(s, basestring):
+#             return s.encode('utf-8')  # pylint: disable-msg=C0103
+#         else:
+#             return str(s)
 
 
 class Error(Exception):
@@ -1173,12 +1172,7 @@ def getTeacher(request, TeacherId):
             for el in res:
                 f.write(el+"\n")
         f.close()
-    # im = 'GI8N5PQAAAAJ'
-    # url = 'https://scholar.google.com/citations?view_op=list_works&hl=uk&user=%s' % (im)
-    # r = requests.get(url)
-    # print(r)
-    # with open('./static/teachers/sc/%s.html' % (im), 'w') as output_file:
-    #     output_file.write(r.text)
+
     orcid = ""
     if id > 1000:
         content["docs"] = documents

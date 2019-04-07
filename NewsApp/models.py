@@ -14,7 +14,7 @@ class Tag(models.Model):
 
     def get_name(self):
         original_field_name = field_name = 'name'
-        if get_language() != 'uk':
+        if get_language() != 'en':
             field_name = '{}_{}'.format(field_name, get_language())
         field_value = getattr(self, field_name)
         if field_value:

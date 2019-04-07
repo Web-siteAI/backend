@@ -55,7 +55,7 @@
                 <br>
                 <span>{{ teacher.get_science_researches|safe }}</span>
                 <br>
-                <span class="flag">{%  trans "Хоббі: " %}</span>
+                <span class="flag">{%  t   rans "Хоббі: " %}</span>
                 <br>
                 <span>{{ teacher.get_interests|safe }}</span>
             </div>
@@ -65,7 +65,11 @@
         {% for document in docs %}
             <div class="article">
                 {% for el in document %}
-                    <h6>{{ el }}</h6>
+                    {%  if "URL " in el %}
+                        {{ el|slicestring:"4:"}}
+                    {% else %}
+                        {{ el }}
+                    {% endif %}
                 {% endfor %}
             </div>
         {% endfor %}
