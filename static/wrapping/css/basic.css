@@ -2,20 +2,21 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-
-}
-h1 {
-    line-height: 0;
+    background-image: url("/static/wrapping/images/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-attachment: fixed ;
+    /*background: white;*/
 }
 .main_content {
-	margin: 0 0 50px 3%;
+    margin: 0 auto 50px;
     width: 100%;
     font-size: 18px;
-	color: #000000;
+	color: #FFFFFF;
 }
 .title {
 	line-height: 1.5;
-	color: #34515e;
+	color: #FFFFFF;
 	font-weight: bold;
 	font-size: 40px;
 	margin-top: 100px;
@@ -25,11 +26,12 @@ h1 {
 	margin:0 auto;
 }
 a {
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
 }
 a:hover{
-   text-decoration: none;
+    text-decoration: none;
+    color: #ffd600 ;
 }
 .container{
     width: 80%;
@@ -45,5 +47,10 @@ ul {
 @media screen and (max-width: 1075px){
     .title {
         text-align: center;
+    }
+}
+@media screen and (max-width: 540px){
+    .container{
+    width: 95%;
     }
 }

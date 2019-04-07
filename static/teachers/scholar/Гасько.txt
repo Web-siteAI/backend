@@ -1,0 +1,56 @@
+         Title The method of big data processing for distance educational system
+           URL http://scholar.google.com/https://link.springer.com/chapter/10.1007/978-3-319-70581-1_33
+          Year 2017
+     Citations 14
+      Versions 2
+    Cluster ID 2822282211097848648
+Citations list http://scholar.google.com/scholar?cites=2822282211097848648&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=2822282211097848648&hl=en&as_sdt=0,5
+       Excerpt The paper presents the main features of modern educational systems such as huge amount of information and requirements for data processing. The Big data definition and the main characteristics description The model of association between entities and characteristics is …
+         Title Thermal annealing of soft magnetic materials and measurements of its magnetoelastic properties
+           URL http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.baztech-article-BSW1-0109-0076
+          Year 2013
+     Citations 8
+      Versions 6
+    Cluster ID 7675985755968181606
+Citations list http://scholar.google.com/scholar?cites=7675985755968181606&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=7675985755968181606&hl=en&as_sdt=0,5
+       Excerpt Paper presents both methods of the most advanced thermal annealing as well as available methods of testing the magnetoelastic properties of soft magnetic materials for technical applications. Selected features and conditions important for annealing of ring-shaped cores …
+         Title Tripled learning: conception and first steps
+           URL http://ceur-ws.org/Vol-2105/10000481.pdf
+          Year 2018
+     Citations 3
+      Versions 0
+    Cluster ID 10604365562003989902
+      PDF link http://ceur-ws.org/Vol-2105/10000481.pdf
+Citations list http://scholar.google.com/scholar?cites=10604365562003989902&as_sdt=2005&sciodt=0,5&hl=en
+       Excerpt Recently, there is a tendency for students to lose interest in research and learning in general. The main reason for this development is lack of motivation. Students do not have the opportunity to concentrate on their studies, they more like games or research [1]. Thanks to the …
+         Title The Student Training System Based on the Approaches of Gamification
+           URL http://scholar.google.com/https://link.springer.com/chapter/10.1007/978-3-030-16621-2_54
+          Year 2019
+     Citations 0
+      Versions 0
+       Excerpt The paper discusses a virtual computer game laboratory named SAUDAI as an innovative method of teaching IT students that will encourage them to learn and generate students' interest in learning and research. The system is designed to provide students with …
+         Title Ñreating electronic device macromodels by quadratic and Ñhebyshev approximation
+           URL http://ena.lp.edu.ua/handle/ntb/16404
+          Year 2012
+     Citations 0
+      Versions 3
+ Versions list http://scholar.google.com/scholar?cluster=4128583738211741068&hl=en&as_sdt=0,5
+       Excerpt In the article the problem of mathematical macromodeling of electronic devices has been considered. The results of macromodeling by the least squares approximation and the Chebyshev approximation for frequency detectors, multivibrators, and oscillators have been …
+         Title Peculiarities of approximations application to the identification of mathematical macromodels
+           URL http://scholar.google.com/https://ieeexplore.ieee.org/abstract/document/6192721/
+          Year 2012
+     Citations 0
+      Versions 4
+ Versions list http://scholar.google.com/scholar?cluster=5938012844233224997&hl=en&as_sdt=0,5
+       Excerpt The problem of mathematical macromodeling electronic devices. The results of macromodeling using approximations by the method of least squares and chebyshev approximation for the frequency detector, multivibrator and oscillator. The expediency of the …
+         Title Creation of third generation e-learning systems using telepresence robot and specialized visual programming language
+           URL http://cejsh.icm.edu.pl/cejsh/element/bwmeta1.element.desklight-77ef50ce-8400-4d15-ad54-fe4c2526cbfa
+          Year 2013
+     Citations 1
+      Versions 8
+    Cluster ID 17210195507025752078
+Citations list http://scholar.google.com/scholar?cites=17210195507025752078&as_sdt=2005&sciodt=0,5&hl=en
+ Versions list http://scholar.google.com/scholar?cluster=17210195507025752078&hl=en&as_sdt=0,5
+       Excerpt E-learning systems as one of the important elements of the educational process can augment the quality of education. Web technology development products including content management systems, all have characteristic features and require the skills in the creation …

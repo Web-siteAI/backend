@@ -1,45 +1,72 @@
-.mainPage .history h1{
-    padding-top: 20px;
-    padding-left: 20px;
-    height: 40px;
-	color: white;
-    font-size: 30px;
-<<<<<<< HEAD
+.block1 {
+  margin-top: 50px;
+}
+.title_block1 {
+  background-color: #181712;
+  color: white;
+  font-size: 25px;
+  padding: 30px 0;
+}
+.title_block1 h1 {
+  font-size: 25px;
+}
+.content_block1 {
+  background-image: url("/static/main/images/fon1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat ;
+  font-size: 20px;
+  line-height: 35px;
+  color: white;
+  padding: 60px 0 20vh ;
+}
+.black_block {
+  background-color: #181712;
+  color: white;
+  margin-bottom: 50px;
+}
+.black_block h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 25px;
+}
+.black_block p {
+  font-size: 20px;
+  line-height: 35px;
+  color: white;
+  padding: 5px 30px;
+}
+.line_block2 {
+  border-bottom: 2px solid #ffd600;
+  width: 50%;
+  margin:0 auto;
+}
+.three_blocks {
+  background-image: url("/static/main/images/fon1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat ;
+  height: 45em;
+  padding: 0;
+  margin: 10px 0;
+}
+.three_blocks img {
+  width: 100%;
+}
 
-=======
-    padding: 20px 20px;
->>>>>>> origin/ivan-branch
-    font-family: Arial;
-    background-color: #181712;
-    text-align: left;
-    margin-bottom: 20px;
+.text_for_block2{
+  padding-top: 15px;
 }
-.mainPage .history p{
-    font-size: 18px;
-    line-height: 26px;
-    color: #303030;
+
+.text_for_block2 img{
+  width: 70px;
+  padding-top: 5px;
 }
-.mainPage .history .building{
-    width: 90%;
-    margin: 0 10% 10%;
-}
-.mainPage .history h3 {
-	font-size: 24px;
-    background-color: #f0f0f0;
-    color: #181712;
-    padding: 5px 10px 10px;
-    width: 206px;
-    margin: 40px auto 30px;
-    transition: .3s;
-}
-.mainPage .history  h3:hover {
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.mainPage .history  h3, a{
-  text-decoration: none;
-  color: inherit;
+
+#author_for_block2{
+  text-align: right;
+  font-size: 20px;
+  padding-top: 0;
+  line-height: 20px;
 }
 
 .mainPage .teachers {
@@ -48,6 +75,7 @@
   width: 100%;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 .mainPage .teachers h1 {
   font-size: 30px;
@@ -57,7 +85,6 @@
   margin-bottom: 25px;
   margin-top: 25px;
 }
-
 .wrap{
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -81,13 +108,12 @@
   transition: .3s;
 }
 .mainPage .teachers .wrapper .gr-item:hover .gr-item-image {
-  filter: brightness(10%);
+  filter: brightness(45%);
 }
 .mainPage .teachers .wrapper .gr-item:hover .spanWrap{
   bottom: 0;
 }
 .mainPage .teachers .wrapper .gr-item .spanWrap{
-  font-family: 'Roboto Condensed';
   font-size: 18px;
   width: 230px;
   color: #b0aba0;
@@ -100,7 +126,6 @@
   text-align: center;
   background-color: #181712;
 }
-
 .teachers-but {
   display: inline-block;
   width: 230px;
@@ -125,54 +150,7 @@
   transition: .3s;
 }
 
-.programs{
-  min-height: 300px;
-  width: 100%;
-  background-color: white;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.programs .prog {
-  width: 240px;
-  height: 200px;
-  display: inline-block;
-  background-color: #f0f0f0;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3), inset 0 0 10px rgba(0,0,0,0);
-  transition: .3s;
-}
-.programs .prog:hover {
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0), inset 0 0 10px rgba(0, 0, 0, 0.3);
-}
-.programs .prog:hover h4 {
-  font-size: 23px;
-}
-.programs .prog h4 {
-  text-align: center;
-  vert-align: middle;
-  line-height: 200px;
-  transition: .3s;
-  color: #181712;
-  font-size: 24px;
-}
-.prog a{
-    margin-top: -10px;
-  display: block;
-}
-.buchlet {
-    width: 100%;
-    border: 20px ridge #808080;
-}
 @media screen and (max-width: 1200px){
-	.mainPage .history img{
-    	width: 70%;
-		margin: 0 15% 10%;
-	}
   .wrap{
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 55%);
@@ -184,10 +162,22 @@
     }
 }
 
+@media screen and (max-width: 926px){
+  .text_for_block2 img{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 680px){
-     .wrap{
+  .wrap{
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, 27.5%);
-       padding-bottom: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px){
+  .line_block2 {
+    width: 100%;
+    margin:0;
   }
 }

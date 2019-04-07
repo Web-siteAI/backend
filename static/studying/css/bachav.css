@@ -4,12 +4,13 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     display: inline-block;
+	margin: 3px 0;
 }
 .rectangleA{
-    width: 65%;
+	margin-right: 5px;
 }
 .rectangleB{
-    width: 30%;
+	padding: 0!important;
 }
 
 .quarterCircleBottomRight, .quarterCircleTopLeft, .quarterCircleBottomLeft, .quarterCircleTopRight{
@@ -32,11 +33,13 @@
 
 .quarterCircleBottomLeft{
     border-radius: 0 0 10px 0;
+	left: 0;
 }
 
 .quarterCircleTopRight{
     border-radius: 0 10px 0 0;
     bottom: 0;
+	left: 0;
 }
 
 #blue{
@@ -57,19 +60,17 @@
 #blue, #orange, #green, #red {
 	margin: 3px auto;
 	color: #ffff;
-	font-size: 15px;
+	font-size: 14px;
 }
 .b1 h4 {
 	text-align: center;
+	font-weight: bold;
 }
-
-#slider {
-    position: relative;
-    top: 10px;
+.b1 p {
+	vertical-align: middle;
 }
-
-#slider{
-	margin: 0 auto;
+#slides{
+	margin: 0 auto 20px;
 }
 
 #slides article{
@@ -89,14 +90,13 @@
 article img{
 	width: 100%;
 }
-
 #switch1:checked ~ #controls label:nth-child(4), 
 #switch2:checked ~ #controls label:nth-child(1),
 #switch3:checked ~ #controls label:nth-child(2),
 #switch4:checked ~ #controls label:nth-child(3){
 	background: url('prev.png') no-repeat;
 	float: left;
-	margin: 0 0 0 -50px;
+	margin: -250px 0 0 -100px;
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -109,7 +109,7 @@ article img{
 #switch4:checked ~ #controls label:nth-child(1){
 	background: url('next.png') no-repeat;
 	float: right;
-	margin: 0 -50px 0 0;
+	margin: -250px -70px 0 0;
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -145,9 +145,8 @@ label, a{
 }
 
 #controls{
-	margin: -25% 0 0 0;
-	width: 100%;
-	height: 50px;
+	margin: 0;
+	height: 0;
 }
 
 #active label{
@@ -159,7 +158,7 @@ label, a{
 }
 
 #active{
-	margin: 23% 0 0;
+	margin: 10% 0 0;
 	text-align: center;
 	margin-bottom: 100px;
 }
@@ -190,8 +189,45 @@ label, a{
 	transition: opacity 0.2s ease-out;
 }
 
+@media screen and (max-width: 1200px){
+	#switch1:checked ~ #controls label:nth-child(4),
+	#switch2:checked ~ #controls label:nth-child(1),
+	#switch3:checked ~ #controls label:nth-child(2),
+	#switch4:checked ~ #controls label:nth-child(3){
+		margin: -450px 0 0 -100px;
+	}
+
+
+	#switch1:checked ~ #controls label:nth-child(2),
+	#switch2:checked ~ #controls label:nth-child(3),
+	#switch3:checked ~ #controls label:nth-child(4),
+	#switch4:checked ~ #controls label:nth-child(1){
+		margin: -450px -70px 0 0;
+
+	}
+}
+
 @media screen and (max-width: 900px){
 	.title {
 		text-align: center;
+	}
+}
+@media screen and (max-width: 750px){
+	.b1 p {
+		font-size: 15px;
+	}
+	#switch1:checked ~ #controls label:nth-child(4),
+	#switch2:checked ~ #controls label:nth-child(1),
+	#switch3:checked ~ #controls label:nth-child(2),
+	#switch4:checked ~ #controls label:nth-child(3){
+		margin: 0;
+	}
+
+
+	#switch1:checked ~ #controls label:nth-child(2),
+	#switch2:checked ~ #controls label:nth-child(3),
+	#switch3:checked ~ #controls label:nth-child(4),
+	#switch4:checked ~ #controls label:nth-child(1){
+		margin: 0;
 	}
 }

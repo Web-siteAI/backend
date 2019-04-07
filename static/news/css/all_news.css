@@ -1,7 +1,11 @@
 .news_post{
 	margin: 0 12% 10px 12%;
-	background-color: #f0f0f0;
+	background-color: aliceblue;
 	position: relative;
+}
+.teg_news a {
+	font-size: 24px;
+	margin-right: 10px;
 }
 
 .title_post{
@@ -32,7 +36,7 @@
 
 .news_post:hover{
 	cursor: pointer;
-	box-shadow: 0 0 10px rgba(0,0,0,0), inset 0 0 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 15px rgba(0,0,0,0), inset 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 #short_description{
@@ -43,6 +47,9 @@
     height: 100%;
     display: flex;
     justify-content: center;
+}
+.tegsOnPost{
+	color: #34515e;
 }
 
 .pagination-action {
@@ -66,7 +73,7 @@
 .pagination-number_pagination-current{
 	background-color: #B6BDD2;
 	padding: 5px 7px 7px 7px;
-    color: darkgoldenrod;
+
 	font-size: 20px;
 	font-weight: bold;
 	box-shadow: 0 0 20px rgba(0,0,0,0), inset 0 0 20px rgba(0, 0, 0, 0.3);

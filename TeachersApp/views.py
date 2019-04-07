@@ -1,10 +1,9 @@
+from django.shortcuts import render
+from requests.compat import basestring
+
 from .models import Teacher
 from MainApp.models import Footer, PageContent, Page
 import requests
-
-
-from django.shortcuts import render
-# from requests.compat import basestring
 import optparse
 import os
 import re
@@ -22,9 +21,7 @@ try:
     from http.cookiejar import MozillaCookieJar
 except ImportError:
     # Fallback for Python 2
-    from urllib2 import Request, build_opener, HTTPCookieProcessor
-    from urllib import quote, unquote
-    from cookielib import MozillaCookieJar
+    pass
 
 # Import BeautifulSoup -- try 4 first, fall back to older
 try:
@@ -37,15 +34,15 @@ except ImportError:
         sys.exit(1)
 
 # Support unicode in both Python 2 and 3. In Python 3, unicode is str.
-# if sys.version_info[0] == 3:
-#     unicode = str  # pylint: disable-msg=W0622
-#     encode = lambda s: unicode(s)  # pylint: disable-msg=C0103
-# else:
-#     def encode(s):
-#         if isinstance(s, basestring):
-#             return s.encode('utf-8')  # pylint: disable-msg=C0103
-#         else:
-#             return str(s)
+if sys.version_info[0] == 3:
+    unicode = str  # pylint: disable-msg=W0622
+    encode = lambda s: unicode(s)  # pylint: disable-msg=C0103
+else:
+    def encode(s):
+        if isinstance(s, basestring):
+            return s.encode('utf-8')  # pylint: disable-msg=C0103
+        else:
+            return str(s)
 
 
 class Error(Exception):
@@ -1052,6 +1049,7 @@ def getTeacher(request, TeacherId):
     content = {"teacher": teacher, "footer_fields": footer_fields, "page_fields": page_fields}
 
     t = teacher.full_name.split()
+    tn = teacher.full_name_en.split()
     documents = []
     if os.path.isfile("static/teachers/scholar/{0}.txt".format(t[0])):
         f = open("static/teachers/scholar/{0}.txt".format(t[0]), "r")
@@ -1122,58 +1120,66 @@ def getTeacher(request, TeacherId):
         parser.add_option_group(group)
 
         options, _ = parser.parse_args()
-        options.author = t[0]+' '+t[1]
-        options.count = 10
+        te = t[0]
+        for i in range(2):
+            if i == 0:
+                options.author = t[0]+' '+t[1]
+            else:
+                options.author = tn[0] + ' ' + tn[1]
+            options.count = 10
 
-        querier = ScholarQuerier()
-        settings = ScholarSettings()
+            querier = ScholarQuerier()
+            settings = ScholarSettings()
 
-        querier.apply_settings(settings)
+            querier.apply_settings(settings)
 
-        if options.cluster_id:
-            query = ClusterScholarQuery(cluster=options.cluster_id)
-        else:
-            query = SearchScholarQuery()
-            if options.author:
-                query.set_author(options.author)
-            if options.allw:
-                query.set_words(options.allw)
-            if options.some:
-                query.set_words_some(options.some)
-            if options.none:
-                query.set_words_none(options.none)
-            if options.phrase:
-                query.set_phrase(options.phrase)
-            if options.title_only:
-                query.set_scope(True)
-            if options.pub:
-                query.set_pub(options.pub)
-            if options.after or options.before:
-                query.set_timeframe(options.after, options.before)
-            if options.no_patents:
-                query.set_include_patents(False)
-            if options.no_citations:
-                query.set_include_citations(False)
+            if options.cluster_id:
+                query = ClusterScholarQuery(cluster=options.cluster_id)
+            else:
+                query = SearchScholarQuery()
+                if options.author:
+                    query.set_author(options.author)
+                if options.allw:
+                    query.set_words(options.allw)
+                if options.some:
+                    query.set_words_some(options.some)
+                if options.none:
+                    query.set_words_none(options.none)
+                if options.phrase:
+                    query.set_phrase(options.phrase)
+                if options.title_only:
+                    query.set_scope(True)
+                if options.pub:
+                    query.set_pub(options.pub)
+                if options.after or options.before:
+                    query.set_timeframe(options.after, options.before)
+                if options.no_patents:
+                    query.set_include_patents(False)
+                if options.no_citations:
+                    query.set_include_citations(False)
 
-        if options.count is not None:
-            options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
-            query.set_num_page_results(options.count)
-        try:
-            querier.send_query(query)
-        except Exception:
-            querier.articles = []
+            if options.count is not None:
+                options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
+                query.set_num_page_results(options.count)
+            try:
+                querier.send_query(query)
+            except Exception:
+                querier.articles = []
 
-        txt(querier, with_globals=options.txt_globals)
-        articles = querier.articles
-        f = open("./static/teachers/scholar/{0}.txt".format(t[0]), "w")
-        for art in articles:
-            res = art.ret_list()
-            documents.append(res)
-            for el in res:
-                f.write(el+"\n")
-        f.close()
+            txt(querier, with_globals=options.txt_globals)
+            articles = querier.articles
+            if i == 0:
+                f = open("./static/teachers/scholar/{0}.txt".format(te), "w", encoding="utf-8")
+            else:
+                f = open("./static/teachers/scholar/{0}.txt".format(te), "a", encoding="utf-8")
+            for art in articles:
+                res = art.ret_list()
+                documents.append(res)
+                for el in res:
+                    f.write(el+"\n")
+            f.close()
 
-    orcid = ""
+        orcid = ""
     if id > 1000:
         content["docs"] = documents
         if os.path.isfile("./static/teachers/all/%d.html" % (id)):
@@ -1209,11 +1215,13 @@ def getTeacher(request, TeacherId):
 
 
 def teachers(request):
-    footer_fields = Footer.objects.get(pk=1)
-    teachers_list = Teacher.objects.all()
-    page_fields = []
-    for p in list(Page.objects.filter(special_page=False)):
-        page_fields.append(PageContent.objects.get(page=p))
-    content = {"teachers_list": teachers_list, "footer_fields": footer_fields, "page_fields": page_fields}
+    try:
+        footer_fields = Footer.objects.get(pk=1)
+        teachers_list = Teacher.objects.all()
+        page_fields = []
+        for p in list(Page.objects.filter(special_page=False)):
+            page_fields.append(PageContent.objects.get(page=p))
+        content = {"teachers_list": teachers_list, "footer_fields": footer_fields, "page_fields": page_fields}
+    except:
+        pass
     return render(request, "TeachersApp/teachers.html", content)
-# Create your views here.

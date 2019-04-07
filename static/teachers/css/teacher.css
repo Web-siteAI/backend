@@ -1,6 +1,7 @@
 .teacher-main {
-    margin: 50px 0 30px 0;
+    margin: 100px 0 30px 0;
     padding-top: 30px;
+    padding-left: 10px;
     background-color: aliceblue;
     border-bottom: 5px solid #34515e;
 }
@@ -22,15 +23,13 @@
 .teacher-main .info-block .teacher-info .head .nameblock h2 {
     margin: 0;
     float: left;
-    font-family: "Arial";
 }
 
 .teacher-main .info-block .teacher-info .head .scopus-info {
     width: 120px;
     height: 50px;
     position: relative;
-    float: right;
-    margin-right: 20px;
+    margin: 0 auto 20px;
 }
 
 .teacher-main .info-block .teacher-info .head .scopus-info .scopus-el {
@@ -49,18 +48,20 @@
 
 .teacher-main .info-block .teacher-info .head .scopus-info  h1 {
     font-size: 40px;
-    font-family: Arial;
     color: #8eacbb;
     text-align: center;
+    line-height: 0;
 }
 
 .teacher-main .info-block .photo {
     background-size: cover;
 }
+.teacher-main a {
+    color: #34515e;
+}
 .teacher-main .info-block .teacher-info .head .scopus-info .scopus-el::after{
     position: absolute;
     font-size: 10px;
-    font-family: "Roboto";
     bottom: -5px;
 }
 .teacher-main .info-block .teacher-info .head .scopus-info .orcid-block::after {
@@ -114,6 +115,9 @@
     color: #34515e;
     font-size: 18px;
 }
+.article a {
+    color: #34515e;
+}
 .article h6:first-child {
     font-size: 22px;
     font-weight: bold;
@@ -121,7 +125,7 @@
 .dosl {
     text-align: center;
     margin-bottom: 30px;
-    color: #34515e;
+    color: #ffffff;
     font-family: Arial;
 }
 @media screen and (max-width: 1200px){
@@ -129,5 +133,17 @@
         width: 60%;
         display: block;
         margin: auto;
+    }
+    .teacher-main .info-block .teacher-info .head .scopus-info {
+        text-align: center;
+        margin: 0 auto 50px;
+    }
+    .nameblock h2 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1200px){
+    .tsinfo p:first-child{
+        padding-top: 50px!important;
     }
 }

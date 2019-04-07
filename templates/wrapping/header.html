@@ -1,7 +1,7 @@
 {%  load staticfiles %}
 {%  load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <body>
 {% get_current_language as LANGUAGE_CODE %}
     <nav class="navbar navbar-default" role="navigation">
@@ -13,13 +13,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#">
+                <a href="/">
                     <img src="{% static "wrapping/images/logo.png" %}" class="logo" alt="">
                 </a>
             </div>
             <div class="header collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
+                    <li class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Про кафедру" %}<b class="caret"></b></a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="/">{%  trans "Кафедра" %}</a></li>
@@ -56,6 +56,16 @@
                             {% for pag in page_fields %}
                                 {%  if pag.page.index == 3 %}
                                     <li><a href="/p/{{ pag.page.page_name }}/">{{ pag.page.get_page_name }}</a></li>
+                                {%  endif %}
+                            {%  endfor %}
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{%  trans "Наука" %}<b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            {% for pag in page_fields %}
+                                {%  if pag.page.index == 5 %}
+                                    <li><a href="/p/{{ pag.page.page_name }}">{{ pag.page.get_page_name }}</a></li>
                                 {%  endif %}
                             {%  endfor %}
                         </ul>

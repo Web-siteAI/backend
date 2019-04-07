@@ -4,11 +4,10 @@
 
 {%  block script %}
      <link rel="stylesheet" type="text/css" href="{% static "studying/css/magister.css" %}">
+{#     <link rel="stylesheet" type="text/css" href="{% static "studying/css/bachav.css" %}">#}
 {% endblock %}
 
 {%  block content %}
-    {%  load i18n %}
-    {% load staticfiles %}
 
     <div class="container">
 		<div class="row">
@@ -26,11 +25,55 @@
 								<div id="slides">
 									<div id="overflow">
 										<div class="image">
-											<article> <img src='{% static "studying\images\1m.jpg" %}'></article>
-											<article> <img src='{% static "studying\images\2m.jpg" %}'></article>
+                                            {% for sub_form in subject_list %}
+                                                <article>
+                                                    <div class="b1">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <h3>
+                                                                {%  if forloop.counter == 1  %}
+                                                                   {%  trans "Системи штучного інтелекту" %}
+                                                                {%  else %}
+                                                                    {%  trans "Системи машинного глибинного навчання" %}
+                                                                {%  endif %}
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                    {%  for sub_sem in sub_form%}
+                                                        <div class="col-lg-6 ">
+                                                            <div class="row">
+                                                                <h4>{{ forloop.counter }} {% trans " семестер"%}</h4>
+                                                            </div>
+                                                            {%  for subject in sub_sem %}
+                                                                <div class="row" style="display: flex;">
+                                                                    <div class="col-xs-8 rectangleA" style="background-color: {{ subject.type.color }}">
+                                                                        <div class="quarterCircleBottomRight"></div>
+                                                                        <p>{{ subject.get_name }}</p>
+                                                                        <div class="quarterCircleTopLeft"></div>
+                                                                    </div>
+                                                                    <div class="col-xs-3 rectangleB" style="background-color: {{ subject.type.color }}">
+                                                                        <div class="quarterCircleBottomLeft"></div>
+                                                                        <p class="credit">{{ subject.get_credit }}</p>
+                                                                        <div class="quarterCircleTopRight"></div>
+                                                                    </div>
+                                                                </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                    {% endfor %}
+                                                    </div>
+                                                </article>
+                                            {% endfor %}
 										</div>
 									</div>
 								</div>
+
+                                <div class="row">
+                                    {% for stype in subject_type_list %}
+                                        <div class="col-xs-4" style="background-color: {{ stype.color }}">
+                                                <p>{{ stype.get_name }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
 
 								<div id="controls">
 									<label for="switch1"></label>

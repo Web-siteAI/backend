@@ -1,0 +1,14 @@
+         Title Recovery gaps in experimental data
+           URL http://ceur-ws.org/Vol-2136/10000108.pdf
+     Citations 1
+      Versions 0
+    Cluster ID 9920250503397831181
+      PDF link http://ceur-ws.org/Vol-2136/10000108.pdf
+Citations list http://scholar.google.com/scholar?cites=9920250503397831181&as_sdt=2005&sciodt=0,5&hl=en
+       Excerpt In advanced information technology of statistical analysis, often data for which there are no properties, parameters, characteristics and their values is found. In this situation, the actual becomes the problem of recovering missing data. It's almost impossible to set a value which …
+         Title Methods of Statistical Research for Information Managers
+           URL http://scholar.google.com/https://ieeexplore.ieee.org/abstract/document/8526588/
+          Year 2018
+     Citations 0
+      Versions 0
+       Excerpt The suggested innovative methodological approaches to statistical research by information institutions allow to conduct an effective evaluation of their activities, improve their work of in future. The “case of the information manager” will become a convenient tool for information …

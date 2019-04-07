@@ -25,7 +25,6 @@ urlpatterns = [
 
     path('studying/', include("StudyingApp.urls")),
     path('teachers/', include("TeachersApp.urls")),
-    path('projects/', include("ProjectsApp.urls")),
     path('cooperation/', include("CooperationApp.urls")),
     path('news/', include("NewsApp.urls")),
     path('contacts/', include("ContactApp.urls")),

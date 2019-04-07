@@ -58,10 +58,10 @@
 .header  a:hover {
   text-decoration: none;
   border-bottom: 2px solid #ffd600;
-  color: #FFFFFF;
+  color: #ffd600!important;
 }
 .navbar-nav>li>a:hover {
-color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
@@ -104,7 +104,7 @@ select {
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1070px) {
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: white;
   }

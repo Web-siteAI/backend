@@ -16,58 +16,64 @@
                     </span>
                 </h1>
             </div>
-            <div class="main_content">
-                <div class="contact_all" id="contact_id">
-                    <div class="title_contact">
-                        <h3> {%  trans "Контакти" %}</h3>
+            <div class="main_content row">
+                <div class=" col-lg-4">
+                    <div class="contact_all" id="contact_id">
+                        <div class="title_contact">
+                            <h3> {%  trans "Контакти" %}</h3>
+                        </div>
+                        {%  for contact in contact_fields %}
+                            {% if contact.selection_committee == False %}
+                                <div>
+                                     {%  if contact.index == 1 %}
+                                        <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
+                                    {%  elif contact.index == 2 %}
+                                        <p> {% trans "Пошта: " %} {{ contact.name }} </p>
+                                    {%  elif contact.index == 3 %}
+                                        <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
+                                    {%  elif contact.index == 4 %}
+                                        <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
+                                    {%  elif contact.index == 0 %}
+                                        <p> {{ contact.name }} </p>
+                                     {% endif %}
+                                 </div>
+                            {% endif %}
+                        {%  endfor %}
                     </div>
-                    {%  for contact in contact_fields %}
-                        {% if contact.selection_committee == False %}
-                            <div>
-                                 {%  if contact.index == 1 %}
-                                    <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
-                                {%  elif contact.index == 2 %}
-                                    <p> {% trans "Пошта: " %} {{ contact.name }} </p>
-                                {%  elif contact.index == 3 %}
-                                    <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
-                                {%  elif contact.index == 4 %}
-                                    <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
-                                {%  elif contact.index == 0 %}
-                                    <p> {{ contact.name }} </p>
-                                 {% endif %}
-                             </div>
-                        {% endif %}
-                    {%  endfor %}
                 </div>
-                <div class="contact_comitet" id="contact_id">
-                    <div class="title_contact">
-                        <h3> {%  trans "Контакти приймальної комісії" %}</h3>
-                    </div>
-                    {%  for contact in contact_fields %}
+                <div class="col-lg-4">
+                    <div class="contact_comitet" id="contact_id">
+                        <div class="title_contact">
+                            <h3> {%  trans "Контакти приймальної комісії" %}</h3>
+                        </div>
+                        {%  for contact in contact_fields %}
                            {% if contact.selection_committee == True %}
-                            <div>
-                                 {%  if contact.index == 1 %}
-                                    <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
-                                {%  elif contact.index == 2 %}
-                                    <p> {% trans "Пошта: " %} {{ contact.name }} </p>
-                                {%  elif contact.index == 3 %}
-                                    <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
-                                {%  elif contact.index == 4 %}
-                                    <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
-                                {%  elif contact.index == 0 %}
-                                    <p> {{ contact.name }} </p>
-                                 {% endif %}
-                             </div>
-                        {% endif %}
-                    {%  endfor %}
+                                <div>
+                                     {%  if contact.index == 1 %}
+                                        <p> {%  trans "Телефон: " %} {{ contact.name }} </p>
+                                    {%  elif contact.index == 2 %}
+                                        <p> {% trans "Пошта: " %} {{ contact.name }} </p>
+                                    {%  elif contact.index == 3 %}
+                                        <p>{% trans "Сoціальна мережа: " %}{{ contact.name }} </p>
+                                    {%  elif contact.index == 4 %}
+                                        <p>{% trans "Поштовий індекс: " %}{{ contact.name }} </p>
+                                    {%  elif contact.index == 0 %}
+                                        <p> {{ contact.name }} </p>
+                                     {% endif %}
+                                 </div>
+                            {% endif %}
+                        {%  endfor %}
+                    </div>
                 </div>
 
-                <div class="contact_address" id="contact_id">
-                    <div class="title_contact">
-                        <h3> {%  trans "Адреса" %}</h3>
+                <div class="col-lg-4">
+                    <div class="contact_address" id="contact_id">
+                        <div class="title_contact">
+                            <h3> {%  trans "Адреса" %}</h3>
+                        </div>
+                        <p>{{ footer_fields.get_location }}</p>
+                        <p>{{ footer_fields.get_building }}</p>
                     </div>
-                    <p>{{ footer_fields.get_location }}</p>
-                    <p>{{ footer_fields.get_building }}</p>
                 </div>
             </div>
         </div>

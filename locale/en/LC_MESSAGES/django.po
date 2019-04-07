@@ -8,53 +8,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 13:38+0200\n"
+"POT-Creation-Date: 2019-04-04 00:20+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\templates\StudAchievApp\best.html:17
+msgid "Найкращі студенти"
+msgstr "Best students"
+
 #: .\templates\ContactApp\contact.html:15
-#: .\templates\ContactApp\contact.html:22 .\templates\wrapping\header.html:53
+#: .\templates\ContactApp\contact.html:23 .\templates\wrapping\header.html:67
 msgid "Контакти"
 msgstr "Contacts"
 
-#: .\templates\ContactApp\contact.html:28
-#: .\templates\ContactApp\contact.html:50 .\templates\MainApp\entrants.html:27
+#: .\templates\ContactApp\contact.html:29
+#: .\templates\ContactApp\contact.html:53 .\templates\MainApp\entrants.html:27
 msgid "Телефон: "
 msgstr "Phone: "
 
-#: .\templates\ContactApp\contact.html:30
-#: .\templates\ContactApp\contact.html:52 .\templates\MainApp\entrants.html:29
+#: .\templates\ContactApp\contact.html:31
+#: .\templates\ContactApp\contact.html:55 .\templates\MainApp\entrants.html:29
 msgid "Пошта: "
 msgstr "E-mail: "
 
-#: .\templates\ContactApp\contact.html:32
-#: .\templates\ContactApp\contact.html:54 .\templates\MainApp\entrants.html:31
+#: .\templates\ContactApp\contact.html:33
+#: .\templates\ContactApp\contact.html:57 .\templates\MainApp\entrants.html:31
 msgid "Сoціальна мережа: "
 msgstr "Social network: "
 
-#: .\templates\ContactApp\contact.html:34
-#: .\templates\ContactApp\contact.html:56 .\templates\MainApp\entrants.html:33
+#: .\templates\ContactApp\contact.html:35
+#: .\templates\ContactApp\contact.html:59 .\templates\MainApp\entrants.html:33
 msgid "Поштовий індекс: "
 msgstr "Post index: "
 
-#: .\templates\ContactApp\contact.html:44
-#, fuzzy
+#: .\templates\ContactApp\contact.html:47
 #| msgid "Контакти приймальної комісії: "
 msgid "Контакти приймальної комісії"
 msgstr "Contacts of admission: "
 
-#: .\templates\ContactApp\contact.html:67
+#: .\templates\ContactApp\contact.html:72
 msgid "Адреса"
 msgstr "Address"
 
 #: .\templates\CooperationApp\cooperation.html:16
-#: .\templates\wrapping\header.html:52
+#: .\templates\wrapping\header.html:66
 msgid "Співпраця"
 msgstr "Collaboration"
 
@@ -74,89 +77,117 @@ msgstr "Admissions: "
 msgid "Контакти приймальної комісії: "
 msgstr "Contacts of selection committee: "
 
-#: .\templates\MainApp\mainPage.html:31
-msgid "Історія кафедри"
-msgstr "Department history"
-
-#: .\templates\MainApp\mainPage.html:36
-msgid "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року."
-msgstr "The Department of Artificial Intelligence Systems was formed on June 26, 2017."
+#: .\templates\MainApp\mainPage.html:32
+msgid "ЩО ТАКЕ СИСТЕМИ ШТУЧНОГО ІНТЕЛЕКТУ?"
+msgstr "WHAT IS SYSTEM OF ARTIFICIAL INTELLIGENCE?"
 
 #: .\templates\MainApp\mainPage.html:37
 msgid ""
-"В основу підготовки фахівців лягла робота професора Нікольського Юрія "
-"Володимировича,\n"
-"                                        який у 2002 році розробив навчальний "
-"план спеціальності «Системи штучного інтелекту», напрям «Комп’ютерні "
-"науки».\n"
-"                                        У 2004 році на кафедрі інформаційних "
-"систем та мереж здійснено перший набір."
+"Штучний інтелект — це галузь, яка охоплює все: від розпізнавання тексту до "
+"механізмів, які можуть виконувати надскпадні задачі в найкоротші терміни та "
+"навчатися самостійно."
 msgstr ""
-"The basis of the training of specialists was the work of Professor Nikolsky "
-"Yuri Vladimirovich,\n"
-"                                       who in 2002 developed a "
-"curriculumspecialty «Systems of Artificial Intelligence», direction "
-"«Computer Science».\n"
-"                                       In 2004 at the Department of "
-"Information Systems and Networks the first set was made."
+"Artificial Intelligence is an industry, which covers everything: from text "
+"recognition to the mechanisms that can to fulfill subclass tasks in the shortest "
+"terms and studying by yourself."
 
-#: .\templates\MainApp\mainPage.html:40
+#: .\templates\MainApp\mainPage.html:38
 msgid ""
-"У жовтні 2016 року почалася робота з модернізації змісту навчання за "
-"ініціативи професора\n"
-"                                        кафедри інформаційних систем та "
-"мереж Інституту комп’ютерних наук та інформаційних технологій (ІКНІ)\n"
-"                                        Наталії Шаховської і випускника "
-"кафедри та Solutions Lead в Softserve Івана Загороднього."
+"Автопілоти в автомобілях Tesla та Google, рекомендації, кого додати в друзі "
+"в соцмережах, розпізнавання облич y Facebook, персональний помічник Apple "
+"SIRI вже сьогодні є яскравими прикладами впровадження штучного інтелекту в "
+"наше життя."
 msgstr ""
-"In October 2016, the work on updating the content of the training beganon "
-"the initiative of the professor\n"
-"                       Department of Information Systems and Networks of the "
-"InstituteComputer Science and Information Technology (IKNI)\n"
-"                       Natalia Shakhovskaya and graduate of the department "
-"and solutionsLead in Softserve Ivan Zagorodni."
+"Autopilots in cars Tesla and Google, recommendations for adding"
+"friends in social networks, face recognition in Facebook, personal Apple SIRI Assistant "
+"already are today's bright examples implementation of artificial intelligence in"
+"our life."
+
+#: .\templates\MainApp\mainPage.html:42
+msgid "ОСОБЛИВОСТІ НАВЧАННЯ"
+msgstr "FEATURES OF TEACHING"
 
 #: .\templates\MainApp\mainPage.html:43
 msgid ""
-"Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною "
-"технікою за підтримки Львівського ІТ-кластеру."
+"Навчання на програмі буде комбінованим, так зване blended learnmg, коли "
+"традиційні академічні підходи поєднуються з інтерактивною практикою."
 msgstr ""
-"During September 2017, the department's laboratories were equipped with "
-"computer technology supported by the Lviv IT cluster."
+"The training will be in the combinedprogram so-called blended learning when traditional "
+"academic approaches are combined with interactive practice."
 
-#: .\templates\MainApp\mainPage.html:44 .\templates\wrapping\header.html:27
-msgid "Віртуальний тур"
-msgstr "Virtual tour"
+#: .\templates\MainApp\mainPage.html:44
+msgid ""
+"Студенти переглядатимуть лекції провідних науковців та професорів іноземних "
+"університетів. Предмети викладатимуть частково українською та англійською "
+"мовами."
+msgstr ""
+"Students will review lectures of leading scientists and professors of"
+"foreign universities. Subjects will be taught in"
+"Ukrainian and English."
+
+#: .\templates\MainApp\mainPage.html:45
+msgid ""
+"Також студенти програми матимуть змогу не тільки здобути академічні знання з "
+"дисциплін, сформованих за аналогією до провідних університетів світу, але й "
+"створювати реальні продукти з використанням методів штучного інтелекту!"
+msgstr ""
+"Students of the program will be able to not only to gain academic knowledge from "
+"disciplines formed for analogous to the leading ones Universities of the world, "
+"but I have to create real products using methods of artificial intelligence!"
 
 #: .\templates\MainApp\mainPage.html:53
+msgid "БАКАЛАВРСЬКА ПРОГРАМА АІ - ЦЕ:"
+msgstr "BACHELOR AI PROGRAM - IT IS:"
+
+#: .\templates\MainApp\mainPage.html:57
+msgid "Якісні знання"
+msgstr "Qualitative knowledge"
+
+#: .\templates\MainApp\mainPage.html:59
+msgid ""
+"Навчальний план для програми Штучний інтелект розробляла робоча група з 40 "
+"осіб, в яку увійшли експерти львівських ІТ компаній та викладачі Львівської "
+"політехніки."
+msgstr ""
+"Curriculum for Artificial intelligence program was developed by working group of 40 "
+"people which entered experts of Lviv IT companies and teachers "
+"of Lviv Polytechnic."
+
+#: .\templates\MainApp\mainPage.html:64
+msgid "Сучасні технології"
+msgstr "Modern technology"
+
+#: .\templates\MainApp\mainPage.html:66
+msgid ""
+"Навчаючись на програмі АІ, ти зможеш стати не просто програмістом чи "
+"тестувальником програмного забезпечення, а й брати участь у проектах, які "
+"розташовані y перших рядах інтелектуальних технологій."
+msgstr ""
+"After studying on the AI program, you can become not only programmer or"
+"software tester but also get participation in projects "
+"located inthe first rows of intellectual technologies."
+
+#: .\templates\MainApp\mainPage.html:71
+msgid "Практичні навики"
+msgstr "Practical skills"
+
+#: .\templates\MainApp\mainPage.html:73
+msgid "3 першого семестру навчання студенти працюють над реальними проектами."
+msgstr "Students works with real projects from the first semester of studying "
+
+#: .\templates\MainApp\mainPage.html:83
 msgid "Професорсько-викладацький склад кафедри"
 msgstr "Professorial and academics staff of the department"
 
-#: .\templates\MainApp\mainPage.html:83
+#: .\templates\MainApp\mainPage.html:113
 msgid "Усі викладачі"
 msgstr "All academics"
-
-#: .\templates\MainApp\mainPage.html:90
-#: .\templates\StudyingApp\studying.html:15
-#: .\templates\wrapping\header.html:36
-msgid "Бакалаврат"
-msgstr "Bachelor"
-
-#: .\templates\MainApp\mainPage.html:93
-#: .\templates\StudyingApp\studying.html:28
-#: .\templates\wrapping\header.html:37
-msgid "Магістратура"
-msgstr "Master's degree"
-
-#: .\templates\MainApp\mainPage.html:96 .\templates\wrapping\header.html:38
-msgid "PHD"
-msgstr "PHD"
 
 #: .\templates\MainApp\virtual_tour.html:14
 msgid "Віртуальний тур кафедрою СШІ"
 msgstr "Virtual tour of the AIS department"
 
-#: .\templates\NewsApp\news.html:14 .\templates\wrapping\header.html:30
+#: .\templates\NewsApp\news.html:14 .\templates\wrapping\header.html:35
 msgid "Новини"
 msgstr "News"
 
@@ -164,13 +195,28 @@ msgstr "News"
 msgid "усі новини"
 msgstr "all news"
 
-#: .\templates\PartnerApp\partner.html:16 .\templates\wrapping\header.html:54
+#: .\templates\PartnerApp\partner.html:17 .\templates\wrapping\header.html:68
 msgid "Наші партнери"
 msgstr "Our partners"
+
+#: .\templates\StudyingApp\bachelor.html:40
+#: .\templates\StudyingApp\magister.html:34
+msgid " семестер"
+msgstr " semester"
+
+#: .\templates\StudyingApp\studying.html:15
+#: .\templates\wrapping\header.html:41
+msgid "Бакалаврат"
+msgstr "Bachelor"
 
 #: .\templates\StudyingApp\studying.html:20
 msgid "Структурно-логічна схема навчальних дисциплін"
 msgstr "Structural-logical scheme of educational disciplines"
+
+#: .\templates\StudyingApp\studying.html:28
+#: .\templates\wrapping\header.html:42
+msgid "Магістратура"
+msgstr "Master's degree"
 
 #: .\templates\StudyingApp\studying.html:33
 msgid "Вибірковий блок 'Системи штучного інтелекту'"
@@ -180,23 +226,23 @@ msgstr "'Artificial Intelligence Systems' selective block"
 msgid "Вибірковий блок 'Системи машинного глибинного навчання'"
 msgstr "'Machine Deep Learning System»' selective block"
 
-#: .\templates\TeachersApp\teacher.html:33
+#: .\templates\TeachersApp\teacher.html:38
 msgid "Сайт"
 msgstr "Site"
 
-#: .\templates\TeachersApp\teacher.html:44
+#: .\templates\TeachersApp\teacher.html:50
 msgid "Наукові інтереси: "
 msgstr "Scientific interests: "
 
-#: .\templates\TeachersApp\teacher.html:48
+#: .\templates\TeachersApp\teacher.html:54
 msgid "Напрямки наукових досліджень: "
 msgstr "Areas of research: "
 
-#: .\templates\TeachersApp\teacher.html:52
+#: .\templates\TeachersApp\teacher.html:58
 msgid "Хоббі: "
 msgstr "Hobby: "
 
-#: .\templates\TeachersApp\teacher.html:57
+#: .\templates\TeachersApp\teacher.html:64
 msgid "Наукові дослідження:"
 msgstr "Scientific research:"
 
@@ -224,34 +270,362 @@ msgstr "Department"
 msgid "Викладачі"
 msgstr "Academics"
 
-#: .\templates\wrapping\header.html:31
+#: .\templates\wrapping\header.html:27
+msgid "Віртуальний тур"
+msgstr "Virtual tour"
+
+#: .\templates\wrapping\header.html:36
 msgid "Абітурієнтам"
 msgstr "Entrants"
 
-#: .\templates\wrapping\header.html:33
+#: .\templates\wrapping\header.html:38
 msgid "Навчання"
 msgstr "Studying"
 
-#: .\templates\wrapping\header.html:35
+#: .\templates\wrapping\header.html:40
 msgid "Структурно логічні схеми"
 msgstr "Structural-logical scheme"
 
-#: .\templates\wrapping\header.html:42
+#: .\templates\wrapping\header.html:43
+msgid "PHD"
+msgstr "PHD"
+
+#: .\templates\wrapping\header.html:52
 msgid "Cтудентські досягнення"
 msgstr "Students achievements"
 
-#: .\templates\wrapping\header.html:44
+#: .\templates\wrapping\header.html:54
 msgid "Проекти"
 msgstr "Project"
 
-#: .\templates\wrapping\header.html:45
+#: .\templates\wrapping\header.html:55
 msgid "Кращі студенти"
 msgstr "The best student"
 
-#: .\templates\wrapping\header.html:49
+#: .\templates\wrapping\header.html:64
 msgid "Інше"
 msgstr "Others"
 
-#: .\templates\wrapping\header.html:51
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:16
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "jan"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "feb"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "mar"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "apr"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "may"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "jun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "jul"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "aug"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "sep"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "oct"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "nov"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "dec"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:33
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+
+#~ msgid "Історія кафедри"
+#~ msgstr "Department history"
+
+#~ msgid "Кафедра систем штучного інтелекту утворилась 26 червня 2017 року."
+#~ msgstr ""
+#~ "The Department of Artificial Intelligence Systems was formed on June 26, "
+#~ "2017."
+
+#~ msgid ""
+#~ "В основу підготовки фахівців лягла робота професора Нікольського Юрія "
+#~ "Володимировича,\n"
+#~ "                                        який у 2002 році розробив "
+#~ "навчальний план спеціальності «Системи штучного інтелекту», напрям "
+#~ "«Комп’ютерні науки».\n"
+#~ "                                        У 2004 році на кафедрі "
+#~ "інформаційних систем та мереж здійснено перший набір."
+#~ msgstr ""
+#~ "The basis of the training of specialists was the work of Professor "
+#~ "Nikolsky Yuri Vladimirovich,\n"
+#~ "                                       who in 2002 developed a "
+#~ "curriculumspecialty «Systems of Artificial Intelligence», direction "
+#~ "«Computer Science».\n"
+#~ "                                       In 2004 at the Department of "
+#~ "Information Systems and Networks the first set was made."
+
+#~ msgid ""
+#~ "У жовтні 2016 року почалася робота з модернізації змісту навчання за "
+#~ "ініціативи професора\n"
+#~ "                                        кафедри інформаційних систем та "
+#~ "мереж Інституту комп’ютерних наук та інформаційних технологій (ІКНІ)\n"
+#~ "                                        Наталії Шаховської і випускника "
+#~ "кафедри та Solutions Lead в Softserve Івана Загороднього."
+#~ msgstr ""
+#~ "In October 2016, the work on updating the content of the training beganon "
+#~ "the initiative of the professor\n"
+#~ "                       Department of Information Systems and Networks of "
+#~ "the InstituteComputer Science and Information Technology (IKNI)\n"
+#~ "                       Natalia Shakhovskaya and graduate of the "
+#~ "department and solutionsLead in Softserve Ivan Zagorodni."
+
+#~ msgid ""
+#~ "Протягом вересня 2017 лабораторії кафедри були обладнані комп’ютерною "
+#~ "технікою за підтримки Львівського ІТ-кластеру."
+#~ msgstr ""
+#~ "During September 2017, the department's laboratories were equipped with "
+#~ "computer technology supported by the Lviv IT cluster."
+
 msgid "Наука"
 msgstr "Science"

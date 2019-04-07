@@ -16,12 +16,12 @@
                 <div class="col-lg-9">
                     <div class="teacher-info">
                         <div class="head row">
-                            <div class="col-lg-9">
+                            <div class="col-md-9">
                                 <div class="nameblock">
                                     <h2>{{ teacher.get_full_name }}</h2>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-md-3">
                                 <div class="scopus-info">
                                     <div class="scopus-el orcid-block">
                                         <h1>{{ teacher.scopus_hindex }}</h1>
@@ -32,8 +32,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="container">
-                            <p style="color: #34515e">{{ teacher.get_role }}</p>
+                        <div class="container tsinfo">
+                            <p style= "color: #34515e">{{ teacher.get_role }}</p>
                             <p>{{ teacher.get_scientific_rank}}</p>
                             <p><a href="{{ teacher.academic_site}}" target="_blank">{% trans "Сайт" %}</a></p>
                             <p>{{ teacher.get_description|safe }}</p>
@@ -55,7 +55,7 @@
                 <br>
                 <span>{{ teacher.get_science_researches|safe }}</span>
                 <br>
-                <span class="flag">{%  t   rans "Хоббі: " %}</span>
+                <span class="flag">{%  trans "Хоббі: " %}</span>
                 <br>
                 <span>{{ teacher.get_interests|safe }}</span>
             </div>
@@ -65,10 +65,14 @@
         {% for document in docs %}
             <div class="article">
                 {% for el in document %}
-                    {%  if "URL " in el %}
-                        {{ el|slicestring:"4:"}}
-                    {% else %}
-                        {{ el }}
+
+                    {% if 'URL ' in el or 'http' in el %}
+                        {{ el|urlize }}
+
+                        {% else %}
+                        <h6>
+                            {{ el }}
+                        </h6>
                     {% endif %}
                 {% endfor %}
             </div>
