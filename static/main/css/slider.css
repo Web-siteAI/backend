@@ -108,6 +108,10 @@
     border-right-style: solid;
     border-width: 1px;
 }
+.sliderLinks a{
+    width: inherit;
+    font-size: 26px;
+}
 .currentLink  {
     background-color: rgba(179, 236, 255, 0.4);
 
